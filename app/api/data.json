@@ -22,6 +22,8 @@
     "continent": "North America",
     "flag": "https://flagcdn.com/w40/us.png",
     "population": 341685984,
+    "gdpNominal": 27720700000000,
+    "worldGdpShare": 26.11,
     "coordinates": {
       "latitude": 37.0902,
       "longitude": -95.7129
@@ -144,6 +146,8 @@
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/uk.png",
     "population": 68682962,
+    "gdpNominal": 3380850000000,
+    "worldGdpShare": 3.18,
     "coordinates": {
       "latitude": 51.5074,
       "longitude": -0.0799
@@ -287,6 +291,8 @@
     "continent": "Asia",
     "flag": "https://flagcdn.com/w40/jp.png",
     "population": 124370947,
+    "gdpNominal": 4204490000000,
+    "worldGdpShare": 3.96,
     "coordinates": {
       "latitude": 36.2048,
       "longitude": 138.2529
@@ -429,6 +435,8 @@
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/it.png",
     "population": 59499453,
+    "gdpNominal": 2300940000000,
+    "worldGdpShare": 2.17,
     "coordinates": {
       "latitude": 41.9033,
       "longitude": 12.4534
@@ -539,6 +547,8 @@
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/fr.png",
     "population": 66438822,
+    "gdpNominal": 3051830000000,
+    "worldGdpShare": 2.87,
     "coordinates": {
       "latitude": 46.2276,
       "longitude": 2.2137
@@ -652,6 +662,8 @@
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/de.png",
     "population": 84548231,
+    "gdpNominal": 4525700000000,
+    "worldGdpShare": 4.26,
     "coordinates": {
       "latitude": 52.52,
       "longitude": 13.405
@@ -779,6 +791,8 @@
     "continent": "North America",
     "flag": "https://flagcdn.com/w40/ca.png",
     "population": 39299105,
+    "gdpNominal": 2142470000000,
+    "worldGdpShare": 2.02,
     "coordinates": {
       "latitude": 45.4215,
       "longitude": -75.6904

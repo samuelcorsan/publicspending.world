@@ -30,94 +30,94 @@
       {
         "name": "Individual Income Tax",
         "subtype": "income-tax",
-        "amount": "2426000000000 USD"
+        "amount": 2426000000000
       },
       {
         "name": "Corporate Income Tax",
         "subtype": "income-tax",
-        "amount": "530000000000 USD"
+        "amount": 530000000000
       },
       {
         "name": "Social Insurance (Payroll Taxes)",
         "subtype": "payroll-tax",
-        "amount": "1710000000000 USD"
+        "amount": 1710000000000
       },
       {
         "name": "Excise Taxes",
         "subtype": "excise-tax",
-        "amount": "102000000000 USD"
+        "amount": 102000000000
       },
       {
         "name": "Customs Duties",
         "subtype": "customs-duty",
-        "amount": "100000000000 USD"
+        "amount": 100000000000
       },
       {
         "name": "Estate and Gift Taxes",
         "subtype": "inheritance-tax",
-        "amount": "30000000000 USD"
+        "amount": 30000000000
       },
       {
         "name": "Miscellaneous Revenues",
         "subtype": "non-tax-revenue",
-        "amount": "21000000000 USD"
+        "amount": 21000000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "4919000000000 USD"
+        "amount": 4919000000000
       }
     ],
     "spending": [
       {
         "name": "Social Security",
         "subtype": "pensions",
-        "amount": "1448000000000 USD"
+        "amount": 1448000000000
       },
       {
         "name": "Medicare",
         "subtype": "health",
-        "amount": "870000000000 USD"
+        "amount": 870000000000
       },
       {
         "name": "Medicaid",
         "subtype": "health",
-        "amount": "618000000000 USD"
+        "amount": 618000000000
       },
       {
         "name": "Defense (Military)",
         "subtype": "defense",
-        "amount": "826000000000 USD"
+        "amount": 826000000000
       },
       {
         "name": "Net Interest on Debt",
         "subtype": "debt-service",
-        "amount": "949000000000 USD"
+        "amount": 949000000000
       },
       {
         "name": "Veterans Affairs",
         "subtype": "welfare",
-        "amount": "325000000000 USD"
+        "amount": 325000000000
       },
       {
         "name": "Education (Federal)",
         "subtype": "education",
-        "amount": "268000000000 USD"
+        "amount": 268000000000
       },
       {
         "name": "Income Security Programs",
         "subtype": "welfare",
-        "amount": "347000000000 USD"
+        "amount": 347000000000
       },
       {
         "name": "Other Spending",
         "subtype": "other",
-        "amount": "1051000000000 USD"
+        "amount": 1051000000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "6752000000000 USD"
+        "amount": 6752000000000
       }
     ],
     "lastUpdated": "27-04-2025"
@@ -153,115 +153,115 @@
       {
         "name": "Income Tax",
         "subtype": "income-tax",
-        "amount": "273300000000 GBP"
+        "amount": 273300000000
       },
       {
         "name": "National Insurance Contributions",
         "subtype": "social-contribution",
-        "amount": "180000000000 GBP"
+        "amount": 180000000000
       },
       {
         "name": "Value Added Tax (VAT)",
         "subtype": "consumption-tax",
-        "amount": "170000000000 GBP"
+        "amount": 170000000000
       },
       {
         "name": "Corporation Tax",
         "subtype": "income-tax",
-        "amount": "85000000000 GBP"
+        "amount": 85000000000
       },
       {
         "name": "Fuel Duty",
         "subtype": "fuel-tax",
-        "amount": "25000000000 GBP"
+        "amount": 25000000000
       },
       {
         "name": "Alcohol Duty",
         "subtype": "excise-tax",
-        "amount": "12000000000 GBP"
+        "amount": 12000000000
       },
       {
         "name": "Tobacco Duty",
         "subtype": "excise-tax",
-        "amount": "9000000000 GBP"
+        "amount": 9000000000
       },
       {
         "name": "Business Rates (England)",
         "subtype": "property-tax",
-        "amount": "30000000000 GBP"
+        "amount": 30000000000
       },
       {
         "name": "Stamp Duties (Land and Shares)",
         "subtype": "property-tax",
-        "amount": "17000000000 GBP"
+        "amount": 17000000000
       },
       {
         "name": "Inheritance Tax",
         "subtype": "inheritance-tax",
-        "amount": "7000000000 GBP"
+        "amount": 7000000000
       },
       {
         "name": "Insurance Premium Tax",
         "subtype": "excise-tax",
-        "amount": "7000000000 GBP"
+        "amount": 7000000000
       },
       {
         "name": "Other Taxes",
         "subtype": "other-tax",
-        "amount": "10000000000 GBP"
+        "amount": 10000000000
       },
       {
         "name": "Non-Tax Revenues",
         "subtype": "non-tax-revenue",
-        "amount": "100000000000 GBP"
+        "amount": 100000000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "1099000000000 GBP"
+        "amount": 1099000000000
       }
     ],
     "spending": [
       {
         "name": "Social Protection (Pensions & Welfare)",
         "subtype": "welfare",
-        "amount": "300000000000 GBP"
+        "amount": 300000000000
       },
       {
         "name": "Health (NHS)",
         "subtype": "health",
-        "amount": "230000000000 GBP"
+        "amount": 230000000000
       },
       {
         "name": "Education",
         "subtype": "education",
-        "amount": "100000000000 GBP"
+        "amount": 100000000000
       },
-      { "name": "Defence", "subtype": "defense", "amount": "60000000000 GBP" },
+      { "name": "Defence", "subtype": "defense", "amount": 60000000000 },
       {
         "name": "Interest on Debt",
         "subtype": "debt-service",
-        "amount": "100000000000 GBP"
+        "amount": 100000000000
       },
       {
         "name": "Public Order and Safety",
         "subtype": "public-safety",
-        "amount": "40000000000 GBP"
+        "amount": 40000000000
       },
       {
         "name": "Transport",
         "subtype": "transport",
-        "amount": "30000000000 GBP"
+        "amount": 30000000000
       },
       {
         "name": "Other Spending",
         "subtype": "other",
-        "amount": "290000000000 GBP"
+        "amount": 290000000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "1150000000000 GBP"
+        "amount": 1150000000000
       }
     ]
   },
@@ -296,114 +296,114 @@
       {
         "name": "所得税 (Shotoku-zei, Income Tax)",
         "subtype": "income-tax",
-        "amount": "17905000000000 JPY"
+        "amount": 17905000000000
       },
       {
         "name": "法人税 (Hōjin-zei, Corporate Tax)",
         "subtype": "income-tax",
-        "amount": "17046000000000 JPY"
+        "amount": 17046000000000
       },
       {
         "name": "消費税 (Shōhizei, Consumption Tax)",
         "subtype": "consumption-tax",
-        "amount": "23823000000000 JPY"
+        "amount": 23823000000000
       },
       {
         "name": "相続税 (Sōzoku-zei, Inheritance Tax)",
         "subtype": "inheritance-tax",
-        "amount": "3292000000000 JPY"
+        "amount": 3292000000000
       },
       {
         "name": "揮発油税 (Kihatsuyu-zei, Gasoline Tax)",
         "subtype": "fuel-tax",
-        "amount": "2018000000000 JPY"
+        "amount": 2018000000000
       },
       {
         "name": "酒税 (Shuzei, Liquor Tax)",
         "subtype": "excise-tax",
-        "amount": "1209000000000 JPY"
+        "amount": 1209000000000
       },
       {
         "name": "たばこ税 (Tabako-zei, Tobacco Tax)",
         "subtype": "excise-tax",
-        "amount": "948000000000 JPY"
+        "amount": 948000000000
       },
       {
         "name": "関税 (Kanzei, Customs Duties)",
         "subtype": "customs-duty",
-        "amount": "917000000000 JPY"
+        "amount": 917000000000
       },
       {
         "name": "石油石炭税 (Sekiyu sekitan-zei, Oil & Coal Tax)",
         "subtype": "excise-tax",
-        "amount": "606000000000 JPY"
+        "amount": 606000000000
       },
       {
         "name": "自動車重量税 (Jidōsha jūryō-zei, Vehicle Weight Tax)",
         "subtype": "excise-tax",
-        "amount": "402000000000 JPY"
+        "amount": 402000000000
       },
       {
         "name": "電源開発促進税 (Dengen kaihatsu sokushin-zei, Electric Power Development Tax)",
         "subtype": "excise-tax",
-        "amount": "311000000000 JPY"
+        "amount": 311000000000
       },
       {
         "name": "印紙収入 (Inshi shūnyū, Stamp Duty)",
         "subtype": "stamp-duty",
-        "amount": "1042000000000 JPY"
+        "amount": 1042000000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "69608000000000 JPY"
+        "amount": 69608000000000
       }
     ],
     "spending": [
       {
         "name": "社会保障関係費 (Social Security)",
         "subtype": "welfare",
-        "amount": "37719300000000 JPY"
+        "amount": 37719300000000
       },
       {
         "name": "防衛関係費 (Defense)",
         "subtype": "defense",
-        "amount": "7917200000000 JPY"
+        "amount": 7917200000000
       },
       {
         "name": "公共事業関係費 (Public Works)",
         "subtype": "transport",
-        "amount": "6082800000000 JPY"
+        "amount": 6082800000000
       },
       {
         "name": "文教及び科学振興費 (Education & Science)",
         "subtype": "education",
-        "amount": "5471600000000 JPY"
+        "amount": 5471600000000
       },
       {
         "name": "地方交付税交付金等 (Local Government Transfers)",
         "subtype": "other",
-        "amount": "17786300000000 JPY"
+        "amount": 17786300000000
       },
       {
         "name": "国債費-利払費 (Interest on Debt)",
         "subtype": "debt-service",
-        "amount": "9713300000000 JPY"
+        "amount": 9713300000000
       },
       {
         "name": "国債費-元本償還 (Debt Redemption)",
         "subtype": "debt-service",
-        "amount": "17295700000000 JPY"
+        "amount": 17295700000000
       },
       {
         "name": "その他経費 (Other Spending)",
         "subtype": "other",
-        "amount": "9585500000000 JPY"
+        "amount": 9585500000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "112571700000000 JPY"
+        "amount": 112571700000000
       }
     ]
   },
@@ -438,80 +438,80 @@
       {
         "name": "IRPEF (Imposta sul reddito delle persone fisiche)",
         "subtype": "income-tax",
-        "amount": "236000000000 EUR"
+        "amount": 236000000000
       },
       {
         "name": "IVA (Imposta sul valore aggiunto)",
         "subtype": "consumption-tax",
-        "amount": "178000000000 EUR"
+        "amount": 178000000000
       },
       {
         "name": "IRES (Imposta sul reddito delle società)",
         "subtype": "income-tax",
-        "amount": "57000000000 EUR"
+        "amount": 57000000000
       },
       {
         "name": "Accise su energia, tabacchi e alcoli",
         "subtype": "excise-tax",
-        "amount": "30000000000 EUR"
+        "amount": 30000000000
       },
       {
         "name": "Imposta di registro e altri tributi minori",
         "subtype": "other-tax",
-        "amount": "20000000000 EUR"
+        "amount": 20000000000
       },
       {
         "name": "Entrate non tributarie",
         "subtype": "non-tax-revenue",
-        "amount": "15000000000 EUR"
+        "amount": 15000000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "556000000000 EUR"
+        "amount": 556000000000
       }
     ],
     "spending": [
       {
         "name": "Previdenza (Pensioni pubbliche)",
         "subtype": "pensions",
-        "amount": "300000000000 EUR"
+        "amount": 300000000000
       },
       {
         "name": "Sanità (Fondi sanitari alle regioni)",
         "subtype": "health",
-        "amount": "130000000000 EUR"
+        "amount": 130000000000
       },
       {
         "name": "Istruzione e Ricerca",
         "subtype": "education",
-        "amount": "80000000000 EUR"
+        "amount": 80000000000
       },
-      { "name": "Difesa", "subtype": "defense", "amount": "30000000000 EUR" },
+      { "name": "Difesa", "subtype": "defense", "amount": 30000000000 },
       {
         "name": "Servizio del debito (Interessi)",
         "subtype": "debt-service",
-        "amount": "70000000000 EUR"
+        "amount": 70000000000
       },
       {
         "name": "Sicurezza pubblica e giustizia",
         "subtype": "public-safety",
-        "amount": "40000000000 EUR"
+        "amount": 40000000000
       },
       {
         "name": "Trasporti e infrastrutture",
         "subtype": "transport",
-        "amount": "20000000000 EUR"
+        "amount": 20000000000
       },
       {
         "name": "Altre spese",
         "subtype": "other",
-        "amount": "100000000000 EUR"
+        "amount": 100000000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "770000000000 EUR"
+        "amount": 770000000000
       }
     ]
   },
@@ -548,85 +548,85 @@
       {
         "name": "Taxe sur la valeur ajoutée (TVA)",
         "subtype": "consumption-tax",
-        "amount": "100806000000 EUR"
+        "amount": 100806000000
       },
       {
         "name": "Impôt sur le revenu (IR)",
         "subtype": "income-tax",
-        "amount": "93364000000 EUR"
+        "amount": 93364000000
       },
       {
         "name": "Impôt sur les sociétés (IS)",
         "subtype": "income-tax",
-        "amount": "72047000000 EUR"
+        "amount": 72047000000
       },
       {
         "name": "Taxe intérieure de consommation sur les produits énergétiques (TICPE)",
         "subtype": "fuel-tax",
-        "amount": "15390000000 EUR"
+        "amount": 15390000000
       },
       {
         "name": "Autres impôts et taxes",
         "subtype": "other-tax",
-        "amount": "66785000000 EUR"
+        "amount": 66785000000
       },
       {
         "name": "Recettes non fiscales",
         "subtype": "non-tax-revenue",
-        "amount": "22704000000 EUR"
+        "amount": 22704000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "311917000000 EUR"
+        "amount": 311917000000
       }
     ],
     "spending": [
       {
         "name": "Enseignement scolaire",
         "subtype": "education",
-        "amount": "60000000000 EUR"
+        "amount": 60000000000
       },
-      { "name": "Défense", "subtype": "defense", "amount": "44000000000 EUR" },
+      { "name": "Défense", "subtype": "defense", "amount": 44000000000 },
       {
         "name": "Recherche et enseignement supérieur",
         "subtype": "education",
-        "amount": "30000000000 EUR"
+        "amount": 30000000000
       },
       {
         "name": "Charge de la dette (intérêts)",
         "subtype": "debt-service",
-        "amount": "40000000000 EUR"
+        "amount": 40000000000
       },
       {
         "name": "Pensions civiles et militaires",
         "subtype": "pensions",
-        "amount": "60000000000 EUR"
+        "amount": 60000000000
       },
       {
         "name": "Sécurité (Police et Gendarmerie)",
         "subtype": "public-safety",
-        "amount": "20000000000 EUR"
+        "amount": 20000000000
       },
       {
         "name": "Justice",
         "subtype": "public-safety",
-        "amount": "10000000000 EUR"
+        "amount": 10000000000
       },
       {
         "name": "Transferts aux collectivités locales",
         "subtype": "other",
-        "amount": "67000000000 EUR"
+        "amount": 67000000000
       },
       {
         "name": "Autres dépenses",
         "subtype": "other",
-        "amount": "83000000000 EUR"
+        "amount": 83000000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "453241000000 EUR"
+        "amount": 453241000000
       }
     ]
   },
@@ -661,99 +661,99 @@
       {
         "name": "Lohn- und Einkommensteuer (Personal Income Tax)",
         "subtype": "income-tax",
-        "amount": "127000000000 EUR"
+        "amount": 127000000000
       },
       {
         "name": "Körperschaftsteuer (Corporate Income Tax)",
         "subtype": "income-tax",
-        "amount": "20000000000 EUR"
+        "amount": 20000000000
       },
       {
         "name": "Umsatzsteuer (Value Added Tax)",
         "subtype": "consumption-tax",
-        "amount": "135000000000 EUR"
+        "amount": 135000000000
       },
       {
         "name": "Solidaritätszuschlag (Solidarity Surcharge)",
         "subtype": "surtax",
-        "amount": "11000000000 EUR"
+        "amount": 11000000000
       },
       {
         "name": "Energie- und Kraftstoffsteuern (Energy & Fuel Excises)",
         "subtype": "excise-tax",
-        "amount": "35100000000 EUR"
+        "amount": 35100000000
       },
       {
         "name": "Tabaksteuer (Tobacco Tax)",
         "subtype": "excise-tax",
-        "amount": "14000000000 EUR"
+        "amount": 14000000000
       },
       {
         "name": "Versicherungssteuer (Insurance Tax)",
         "subtype": "excise-tax",
-        "amount": "15000000000 EUR"
+        "amount": 15000000000
       },
       {
         "name": "Kfz-Steuer (Motor Vehicle Tax)",
         "subtype": "excise-tax",
-        "amount": "9000000000 EUR"
+        "amount": 9000000000
       },
       {
         "name": "Zölle (Customs Duties)",
         "subtype": "customs-duty",
-        "amount": "3000000000 EUR"
+        "amount": 3000000000
       },
       {
         "name": "Sonstige Einnahmen (Other Revenues)",
         "subtype": "non-tax-revenue",
-        "amount": "21000000000 EUR"
+        "amount": 21000000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "374900000000 EUR"
+        "amount": 374900000000
       }
     ],
     "spending": [
       {
         "name": "Soziale Sicherung (Social Security & Labor)",
         "subtype": "welfare",
-        "amount": "219800000000 EUR"
+        "amount": 219800000000
       },
       {
         "name": "Verteidigung (Defence)",
         "subtype": "defense",
-        "amount": "58560000000 EUR"
+        "amount": 58560000000
       },
       {
         "name": "Verkehr und digitale Infrastruktur (Transport & Comms)",
         "subtype": "transport",
-        "amount": "36000000000 EUR"
+        "amount": 36000000000
       },
       {
         "name": "Bildung und Forschung (Education & Research)",
         "subtype": "education",
-        "amount": "30720000000 EUR"
+        "amount": 30720000000
       },
       {
         "name": "Zinsausgaben (Interest on Debt)",
         "subtype": "debt-service",
-        "amount": "39000000000 EUR"
+        "amount": 39000000000
       },
       {
         "name": "Allgemeine Verwaltung (General Government)",
         "subtype": "other",
-        "amount": "30000000000 EUR"
+        "amount": 30000000000
       },
       {
         "name": "Übrige Ausgaben (Other Spending)",
         "subtype": "other",
-        "amount": "105100000000 EUR"
+        "amount": 105100000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "480000000000 EUR"
+        "amount": 480000000000
       }
     ]
   },
@@ -788,89 +788,89 @@
       {
         "name": "Personal Income Tax",
         "subtype": "income-tax",
-        "amount": "230000000000 CAD"
+        "amount": 230000000000
       },
       {
         "name": "Corporate Income Tax",
         "subtype": "income-tax",
-        "amount": "90000000000 CAD"
+        "amount": 90000000000
       },
       {
         "name": "Goods and Services Tax (GST)",
         "subtype": "consumption-tax",
-        "amount": "50000000000 CAD"
+        "amount": 50000000000
       },
       {
         "name": "Non-Resident Withholding Tax",
         "subtype": "income-tax",
-        "amount": "10000000000 CAD"
+        "amount": 10000000000
       },
       {
         "name": "Excise Taxes and Duties",
         "subtype": "excise-tax",
-        "amount": "12000000000 CAD"
+        "amount": 12000000000
       },
       {
         "name": "Employment Insurance Premiums",
         "subtype": "social-contribution",
-        "amount": "25000000000 CAD"
+        "amount": 25000000000
       },
       {
         "name": "Other Revenues (fees, dividends, etc.)",
         "subtype": "non-tax-revenue",
-        "amount": "30000000000 CAD"
+        "amount": 30000000000
       },
       {
         "name": "Total Revenue",
         "subtype": "total",
-        "amount": "498000000000 CAD"
+        "amount": 498000000000
       }
     ],
     "spending": [
       {
         "name": "Elderly Benefits (OAS, GIS)",
         "subtype": "pensions",
-        "amount": "70000000000 CAD"
+        "amount": 70000000000
       },
       {
         "name": "Canada Health Transfer",
         "subtype": "health",
-        "amount": "50000000000 CAD"
+        "amount": 50000000000
       },
       {
         "name": "Canada Social Transfer",
         "subtype": "welfare",
-        "amount": "16000000000 CAD"
+        "amount": 16000000000
       },
       {
         "name": "Children Benefits (CCB)",
         "subtype": "welfare",
-        "amount": "25000000000 CAD"
+        "amount": 25000000000
       },
       {
         "name": "National Defence",
         "subtype": "defense",
-        "amount": "30000000000 CAD"
+        "amount": 30000000000
       },
       {
         "name": "Public Safety and Security",
         "subtype": "public-safety",
-        "amount": "20000000000 CAD"
+        "amount": 20000000000
       },
       {
         "name": "Debt Servicing (Interest)",
         "subtype": "debt-service",
-        "amount": "40000000000 CAD"
+        "amount": 40000000000
       },
       {
         "name": "Other Program Spending",
         "subtype": "other",
-        "amount": "228000000000 CAD"
+        "amount": 228000000000
       },
       {
         "name": "Total Spending",
         "subtype": "total",
-        "amount": "538000000000 CAD"
+        "amount": 538000000000
       }
     ]
   }

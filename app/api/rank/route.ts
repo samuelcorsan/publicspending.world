@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import data from "../data.json";
 
+const parseAmount = (amount: string | number): number => {
+  if (typeof amount === "number") return amount;
+  return parseFloat(amount.split(" ")[0]);
+};
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const sortBy = searchParams.get("sortBy"); // "population" or "gdpNominal" or "worldGdpShare" or "spending" or "revenue"
@@ -22,24 +27,32 @@ export async function GET(request: Request) {
           : b.worldGdpShare - a.worldGdpShare;
       } else if (sortBy === "spending") {
         return sortOrder === "asc"
-          ? (a.spending.find((item) => item.name === "Total Spending")
-              ?.amount ?? 0) -
-              (b.spending.find((item) => item.name === "Total Spending")
-                ?.amount ?? 0)
-          : (b.spending.find((item) => item.name === "Total Spending")
-              ?.amount ?? 0) -
-              (a.spending.find((item) => item.name === "Total Spending")
-                ?.amount ?? 0);
+          ? parseAmount(
+              a.spending.find((item) => item.subtype === "total")?.amount ?? 0
+            ) -
+              parseAmount(
+                b.spending.find((item) => item.subtype === "total")?.amount ?? 0
+              )
+          : parseAmount(
+              b.spending.find((item) => item.subtype === "total")?.amount ?? 0
+            ) -
+              parseAmount(
+                a.spending.find((item) => item.subtype === "total")?.amount ?? 0
+              );
       } else if (sortBy === "revenue") {
         return sortOrder === "asc"
-          ? (a.revenue.find((item) => item.name === "Total Revenue")?.amount ??
-              0) -
-              (b.revenue.find((item) => item.name === "Total Revenue")
-                ?.amount ?? 0)
-          : (b.revenue.find((item) => item.name === "Total Revenue")?.amount ??
-              0) -
-              (a.revenue.find((item) => item.name === "Total Revenue")
-                ?.amount ?? 0);
+          ? parseAmount(
+              a.revenue.find((item) => item.subtype === "total")?.amount ?? 0
+            ) -
+              parseAmount(
+                b.revenue.find((item) => item.subtype === "total")?.amount ?? 0
+              )
+          : parseAmount(
+              b.revenue.find((item) => item.subtype === "total")?.amount ?? 0
+            ) -
+              parseAmount(
+                a.revenue.find((item) => item.subtype === "total")?.amount ?? 0
+              );
       }
       return 0;
     })

@@ -887,5 +887,623 @@
         "amount": 538000000000
       }
     ]
+  },
+  {
+    "name": "Brazil",
+    "code": "BR",
+    "year": 2024,
+    "currency": "BRL",
+    "organizations": [
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "BRICS"
+    ],
+    "capital": "Brasília",
+    "timezone": "America/Sao_Paulo",
+    "continent": "South America",
+    "flag": "https://flagcdn.com/w40/br.png",
+    "population": 211140729,
+    "gdpNominal": 2173670000000,
+    "worldGdpShare": 2.02,
+    "coordinates": {
+      "latitude": -14.235,
+      "longitude": -51.9253
+    },
+    "languages": ["Portuguese"],
+
+    "revenue": [
+      {
+        "name": "Imposto de Renda (IR)",
+        "subtype": "income-tax",
+        "amount": 583000000000
+      },
+      {
+        "name": "Imposto sobre Produtos Industrializados (IPI)",
+        "subtype": "excise-tax",
+        "amount": 69000000000
+      },
+      {
+        "name": "Imposto sobre Operações Financeiras (IOF)",
+        "subtype": "financial-tax",
+        "amount": 37000000000
+      },
+      {
+        "name": "Contribuições Previdenciárias (INSS)",
+        "subtype": "social-contribution",
+        "amount": 526000000000
+      },
+      {
+        "name": "Contribuição para o Financiamento da Seguridade Social (COFINS)",
+        "subtype": "consumption-tax",
+        "amount": 340000000000
+      },
+      {
+        "name": "Programa de Integração Social (PIS/PASEP)",
+        "subtype": "consumption-tax",
+        "amount": 87000000000
+      },
+      {
+        "name": "Receitas não-tributárias",
+        "subtype": "non-tax-revenue",
+        "amount": 290000000000
+      },
+      {
+        "name": "Total Receita",
+        "subtype": "total",
+        "amount": 1936000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Previdência Social",
+        "subtype": "pensions",
+        "amount": 913000000000
+      },
+      {
+        "name": "Educação",
+        "subtype": "education",
+        "amount": 179000000000
+      },
+      { "name": "Saúde", "subtype": "health", "amount": 215000000000 },
+      {
+        "name": "Defesa Nacional",
+        "subtype": "defense",
+        "amount": 130000000000
+      },
+      {
+        "name": "Assistência Social",
+        "subtype": "welfare",
+        "amount": 150000000000
+      },
+      {
+        "name": "Pagamento de Juros da Dívida",
+        "subtype": "debt-service",
+        "amount": 720000000000
+      },
+      {
+        "name": "Outras Despesas",
+        "subtype": "other",
+        "amount": 250000000000
+      },
+      {
+        "name": "Total Despesa",
+        "subtype": "total",
+        "amount": 2557000000000
+      }
+    ]
+  },
+  {
+    "name": "India",
+    "code": "IN",
+    "year": 2024,
+    "currency": "INR",
+    "organizations": [
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "BRICS"
+    ],
+    "capital": "New Delhi",
+    "timezone": "Asia/Kolkata",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w40/in.png",
+    "population": 1438069596,
+    "gdpNominal": 3567550000000,
+    "worldGdpShare": 2.02,
+    "coordinates": {
+      "latitude": 20.5937,
+      "longitude": 78.9629
+    },
+    "revenue": [
+      {
+        "name": "Corporation Tax",
+        "subtype": "income-tax",
+        "amount": 10359000000000
+      },
+      {
+        "name": "Income Tax (Individuals)",
+        "subtype": "income-tax",
+        "amount": 9360000000000
+      },
+      {
+        "name": "Goods and Services Tax (GST)",
+        "subtype": "consumption-tax",
+        "amount": 9830000000000
+      },
+      {
+        "name": "Customs",
+        "subtype": "customs-duty",
+        "amount": 2300000000000
+      },
+      {
+        "name": "Union Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 3200000000000
+      },
+      {
+        "name": "Non-Tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 3300000000000
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": 38389000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Defence",
+        "subtype": "defense",
+        "amount": 6224000000000
+      },
+      {
+        "name": "Subsidies",
+        "subtype": "welfare",
+        "amount": 4500000000000
+      },
+      {
+        "name": "Pensions",
+        "subtype": "pensions",
+        "amount": 2240000000000
+      },
+      {
+        "name": "Education",
+        "subtype": "education",
+        "amount": 1120000000000
+      },
+      { "name": "Health", "subtype": "health", "amount": 860000000000 },
+      {
+        "name": "Interest Payments",
+        "subtype": "debt-service",
+        "amount": 11100000000000
+      },
+      {
+        "name": "Other Expenditure",
+        "subtype": "other",
+        "amount": 7800000000000
+      },
+      {
+        "name": "Total Expenditure",
+        "subtype": "total",
+        "amount": 40434000000000
+      }
+    ]
+  },
+  {
+    "name": "China",
+    "code": "CN",
+    "year": 2024,
+    "currency": "CNY",
+    "organizations": [
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "BRICS"
+    ],
+    "capital": "Beijing",
+    "timezone": "Asia/Shanghai",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w40/cn.png",
+    "population": 1422584933,
+    "gdpNominal": 17794800000000,
+    "worldGdpShare": 16.5,
+    "coordinates": {
+      "latitude": 35.8617,
+      "longitude": 104.1954
+    },
+    "languages": ["Chinese"],
+
+    "revenue": [
+      {
+        "name": "增值税 (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 7350000000000
+      },
+      {
+        "name": "企业所得税 (Corporate Income Tax)",
+        "subtype": "income-tax",
+        "amount": 4500000000000
+      },
+      {
+        "name": "个人所得税 (Individual Income Tax)",
+        "subtype": "income-tax",
+        "amount": 1750000000000
+      },
+      {
+        "name": "资源税 (Resource Tax)",
+        "subtype": "resource-tax",
+        "amount": 300000000000
+      },
+      {
+        "name": "关税 (Customs Duties)",
+        "subtype": "customs-duty",
+        "amount": 400000000000
+      },
+      {
+        "name": "其他收入 (Other Non-Tax Revenues)",
+        "subtype": "non-tax-revenue",
+        "amount": 2000000000000
+      },
+      { "name": "总收入", "subtype": "total", "amount": 16350000000000 }
+    ],
+    "spending": [
+      {
+        "name": "教育支出 (Education)",
+        "subtype": "education",
+        "amount": 3800000000000
+      },
+      {
+        "name": "社会保障与就业支出 (Social Security and Employment)",
+        "subtype": "social-security",
+        "amount": 6000000000000
+      },
+      {
+        "name": "医疗卫生支出 (Health)",
+        "subtype": "health",
+        "amount": 2500000000000
+      },
+      {
+        "name": "国防支出 (Defense)",
+        "subtype": "defense",
+        "amount": 1570000000000
+      },
+      {
+        "name": "一般公共服务支出 (General Public Services)",
+        "subtype": "other",
+        "amount": 1200000000000
+      },
+      {
+        "name": "还本付息支出 (Debt Service)",
+        "subtype": "debt-service",
+        "amount": 1600000000000
+      },
+      {
+        "name": "其他支出 (Other Expenditure)",
+        "subtype": "other",
+        "amount": 2100000000000
+      },
+      { "name": "总支出", "subtype": "total", "amount": 18770000000000 }
+    ]
+  },
+  {
+    "name": "Russia",
+    "code": "RU",
+    "year": 2024,
+    "currency": "RUB",
+    "organizations": [
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "BRICS"
+    ],
+    "capital": "Moscow",
+    "timezone": "Europe/Moscow",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/ru.png",
+    "population": 145440500,
+    "gdpNominal": 2021420000000,
+    "worldGdpShare": 1.35,
+    "coordinates": {
+      "latitude": 55.7558,
+      "longitude": 37.6173
+    },
+    "languages": ["Russian"],
+
+    "revenue": [
+      {
+        "name": "Налог на прибыль организаций (Corporate Profit Tax)",
+        "subtype": "income-tax",
+        "amount": 5700000000000
+      },
+      {
+        "name": "Налог на доходы физических лиц (Personal Income Tax)",
+        "subtype": "income-tax",
+        "amount": 5800000000000
+      },
+      {
+        "name": "Налог на добавленную стоимость (НДС, VAT)",
+        "subtype": "consumption-tax",
+        "amount": 11300000000000
+      },
+      {
+        "name": "Акцизы (Excise Taxes)",
+        "subtype": "excise-tax",
+        "amount": 1200000000000
+      },
+      {
+        "name": "Таможенные пошлины (Customs Duties)",
+        "subtype": "customs-duty",
+        "amount": 1800000000000
+      },
+      {
+        "name": "Нефтегазовые доходы (Oil and Gas Revenues)",
+        "subtype": "resource-tax",
+        "amount": 9500000000000
+      },
+      {
+        "name": "Прочие неналоговые доходы (Other Non-Tax Revenues)",
+        "subtype": "non-tax-revenue",
+        "amount": 3000000000000
+      },
+      {
+        "name": "Общий доход",
+        "subtype": "total",
+        "amount": 37800000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Социальная политика (Social Policy)",
+        "subtype": "welfare",
+        "amount": 8700000000000
+      },
+      {
+        "name": "Оборона (Defense)",
+        "subtype": "defense",
+        "amount": 6800000000000
+      },
+      {
+        "name": "Национальная экономика (Economic Development)",
+        "subtype": "economic",
+        "amount": 5200000000000
+      },
+      {
+        "name": "Образование (Education)",
+        "subtype": "education",
+        "amount": 2000000000000
+      },
+      {
+        "name": "Здравоохранение (Healthcare)",
+        "subtype": "health",
+        "amount": 1700000000000
+      },
+      {
+        "name": "Обслуживание госдолга (Debt Service)",
+        "subtype": "debt-service",
+        "amount": 1500000000000
+      },
+      {
+        "name": "Прочие расходы (Other Expenditure)",
+        "subtype": "other",
+        "amount": 8000000000000
+      },
+      {
+        "name": "Общие расходы",
+        "subtype": "total",
+        "amount": 33900000000000
+      }
+    ]
+  },
+  {
+    "name": "Mexico",
+    "code": "MX",
+    "year": 2024,
+    "currency": "MXN",
+    "organizations": ["G20", "UN", "OECD", "WTO", "IMF", "World Bank", "APEC"],
+    "capital": "Mexico City",
+    "timezone": "America/Mexico_City",
+    "continent": "North America",
+    "flag": "https://flagcdn.com/w40/mx.png",
+    "population": 129739759,
+    "gdpNominal": 1789110000000,
+    "worldGdpShare": 1.04,
+    "coordinates": {
+      "latitude": 23.6345,
+      "longitude": -102.5528
+    },
+    "languages": ["Spanish"],
+
+    "revenue": [
+      {
+        "name": "Impuesto sobre la Renta (ISR)",
+        "subtype": "income-tax",
+        "amount": 2700000000000
+      },
+      {
+        "name": "Impuesto al Valor Agregado (IVA)",
+        "subtype": "consumption-tax",
+        "amount": 1400000000000
+      },
+      {
+        "name": "Impuestos Especiales sobre Producción y Servicios (IEPS)",
+        "subtype": "excise-tax",
+        "amount": 550000000000
+      },
+      {
+        "name": "Derechos de exportación (Export Duties)",
+        "subtype": "customs-duty",
+        "amount": 200000000000
+      },
+      {
+        "name": "Otros Ingresos No Tributarios",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000000
+      },
+      {
+        "name": "Ingresos Petroleros",
+        "subtype": "resource-tax",
+        "amount": 870000000000
+      },
+      {
+        "name": "Total de Ingresos",
+        "subtype": "total",
+        "amount": 6020000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Educación Pública",
+        "subtype": "education",
+        "amount": 960000000000
+      },
+      {
+        "name": "Salud Pública",
+        "subtype": "health",
+        "amount": 600000000000
+      },
+      {
+        "name": "Seguridad Social y Pensiones",
+        "subtype": "pensions",
+        "amount": 1800000000000
+      },
+      {
+        "name": "Defensa Nacional",
+        "subtype": "defense",
+        "amount": 150000000000
+      },
+      {
+        "name": "Pago de Intereses de la Deuda",
+        "subtype": "debt-service",
+        "amount": 930000000000
+      },
+      {
+        "name": "Infraestructura y Transporte",
+        "subtype": "transport",
+        "amount": 400000000000
+      },
+      {
+        "name": "Otros gastos",
+        "subtype": "other",
+        "amount": 850000000000
+      },
+      {
+        "name": "Gasto Total",
+        "subtype": "total",
+        "amount": 5680000000000
+      }
+    ]
+  },
+  {
+    "name": "Spain",
+    "code": "ES",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": ["G20", "UN", "OECD", "WTO", "IMF", "World Bank", "APEC"],
+    "capital": "Madrid",
+    "timezone": "Europe/Madrid",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/es.png",
+    "population": 47911579,
+    "gdpNominal": 1620090000000,
+    "worldGdpShare": 1.03,
+    "coordinates": {
+      "latitude": 40.4168,
+      "longitude": -3.7038
+    },
+    "languages": ["Spanish"],
+
+    "revenue": [
+      {
+        "name": "Impuesto sobre la Renta de las Personas Físicas (IRPF)",
+        "subtype": "income-tax",
+        "amount": 116000000000
+      },
+      {
+        "name": "Impuesto sobre el Valor Añadido (IVA)",
+        "subtype": "consumption-tax",
+        "amount": 87000000000
+      },
+      {
+        "name": "Impuesto de Sociedades",
+        "subtype": "income-tax",
+        "amount": 27000000000
+      },
+      {
+        "name": "Impuestos Especiales",
+        "subtype": "excise-tax",
+        "amount": 19000000000
+      },
+      {
+        "name": "Cotizaciones Sociales (Social Contributions)",
+        "subtype": "social-contribution",
+        "amount": 150000000000
+      },
+      {
+        "name": "Otros Ingresos no Tributarios",
+        "subtype": "non-tax-revenue",
+        "amount": 32000000000
+      },
+      {
+        "name": "Total Ingresos",
+        "subtype": "total",
+        "amount": 431000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Pensiones Públicas",
+        "subtype": "pensions",
+        "amount": 190000000000
+      },
+      {
+        "name": "Sanidad Pública",
+        "subtype": "health",
+        "amount": 90000000000
+      },
+      {
+        "name": "Educación Pública",
+        "subtype": "education",
+        "amount": 59000000000
+      },
+      { "name": "Defensa", "subtype": "defense", "amount": 15000000000 },
+      {
+        "name": "Pago de Intereses de la Deuda",
+        "subtype": "debt-service",
+        "amount": 32000000000
+      },
+      {
+        "name": "Política de Vivienda y Urbanismo",
+        "subtype": "housing",
+        "amount": 12000000000
+      },
+      {
+        "name": "Otros gastos",
+        "subtype": "other",
+        "amount": 43000000000
+      },
+      {
+        "name": "Gasto Total",
+        "subtype": "total",
+        "amount": 444000000000
+      }
+    ]
   }
 ]

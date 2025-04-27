@@ -1,0 +1,877 @@
+[
+  {
+    "name": "United States",
+    "code": "US",
+    "organizations": [
+      "NATO",
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "Five Eyes",
+      "Permanent Five"
+    ],
+    "capital": "Washington, D.C.",
+    "currency": "USD",
+    "languages": ["English"],
+    "timezone": "America/New_York",
+    "continent": "North America",
+    "flag": "https://flagcdn.com/w40/us.png",
+    "population": 341685984,
+    "coordinates": {
+      "latitude": 37.0902,
+      "longitude": -95.7129
+    },
+    "revenue": [
+      {
+        "name": "Individual Income Tax",
+        "subtype": "income-tax",
+        "amount": "2426000000000 USD"
+      },
+      {
+        "name": "Corporate Income Tax",
+        "subtype": "income-tax",
+        "amount": "530000000000 USD"
+      },
+      {
+        "name": "Social Insurance (Payroll Taxes)",
+        "subtype": "payroll-tax",
+        "amount": "1710000000000 USD"
+      },
+      {
+        "name": "Excise Taxes",
+        "subtype": "excise-tax",
+        "amount": "102000000000 USD"
+      },
+      {
+        "name": "Customs Duties",
+        "subtype": "customs-duty",
+        "amount": "100000000000 USD"
+      },
+      {
+        "name": "Estate and Gift Taxes",
+        "subtype": "inheritance-tax",
+        "amount": "30000000000 USD"
+      },
+      {
+        "name": "Miscellaneous Revenues",
+        "subtype": "non-tax-revenue",
+        "amount": "21000000000 USD"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "4919000000000 USD"
+      }
+    ],
+    "spending": [
+      {
+        "name": "Social Security",
+        "subtype": "pensions",
+        "amount": "1448000000000 USD"
+      },
+      {
+        "name": "Medicare",
+        "subtype": "health",
+        "amount": "870000000000 USD"
+      },
+      {
+        "name": "Medicaid",
+        "subtype": "health",
+        "amount": "618000000000 USD"
+      },
+      {
+        "name": "Defense (Military)",
+        "subtype": "defense",
+        "amount": "826000000000 USD"
+      },
+      {
+        "name": "Net Interest on Debt",
+        "subtype": "debt-service",
+        "amount": "949000000000 USD"
+      },
+      {
+        "name": "Veterans Affairs",
+        "subtype": "welfare",
+        "amount": "325000000000 USD"
+      },
+      {
+        "name": "Education (Federal)",
+        "subtype": "education",
+        "amount": "268000000000 USD"
+      },
+      {
+        "name": "Income Security Programs",
+        "subtype": "welfare",
+        "amount": "347000000000 USD"
+      },
+      {
+        "name": "Other Spending",
+        "subtype": "other",
+        "amount": "1051000000000 USD"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "6752000000000 USD"
+      }
+    ],
+    "lastUpdated": "27-04-2025"
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GB",
+    "year": 2024,
+    "currency": "GBP",
+    "organizations": [
+      "NATO",
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "Five Eyes",
+      "Commonwealth of Nations"
+    ],
+    "capital": "London",
+    "timezone": "Europe/London",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/uk.png",
+    "population": 68682962,
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.0799
+    },
+    "languages": ["English"],
+    "revenue": [
+      {
+        "name": "Income Tax",
+        "subtype": "income-tax",
+        "amount": "273300000000 GBP"
+      },
+      {
+        "name": "National Insurance Contributions",
+        "subtype": "social-contribution",
+        "amount": "180000000000 GBP"
+      },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": "170000000000 GBP"
+      },
+      {
+        "name": "Corporation Tax",
+        "subtype": "income-tax",
+        "amount": "85000000000 GBP"
+      },
+      {
+        "name": "Fuel Duty",
+        "subtype": "fuel-tax",
+        "amount": "25000000000 GBP"
+      },
+      {
+        "name": "Alcohol Duty",
+        "subtype": "excise-tax",
+        "amount": "12000000000 GBP"
+      },
+      {
+        "name": "Tobacco Duty",
+        "subtype": "excise-tax",
+        "amount": "9000000000 GBP"
+      },
+      {
+        "name": "Business Rates (England)",
+        "subtype": "property-tax",
+        "amount": "30000000000 GBP"
+      },
+      {
+        "name": "Stamp Duties (Land and Shares)",
+        "subtype": "property-tax",
+        "amount": "17000000000 GBP"
+      },
+      {
+        "name": "Inheritance Tax",
+        "subtype": "inheritance-tax",
+        "amount": "7000000000 GBP"
+      },
+      {
+        "name": "Insurance Premium Tax",
+        "subtype": "excise-tax",
+        "amount": "7000000000 GBP"
+      },
+      {
+        "name": "Other Taxes",
+        "subtype": "other-tax",
+        "amount": "10000000000 GBP"
+      },
+      {
+        "name": "Non-Tax Revenues",
+        "subtype": "non-tax-revenue",
+        "amount": "100000000000 GBP"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "1099000000000 GBP"
+      }
+    ],
+    "spending": [
+      {
+        "name": "Social Protection (Pensions & Welfare)",
+        "subtype": "welfare",
+        "amount": "300000000000 GBP"
+      },
+      {
+        "name": "Health (NHS)",
+        "subtype": "health",
+        "amount": "230000000000 GBP"
+      },
+      {
+        "name": "Education",
+        "subtype": "education",
+        "amount": "100000000000 GBP"
+      },
+      { "name": "Defence", "subtype": "defense", "amount": "60000000000 GBP" },
+      {
+        "name": "Interest on Debt",
+        "subtype": "debt-service",
+        "amount": "100000000000 GBP"
+      },
+      {
+        "name": "Public Order and Safety",
+        "subtype": "public-safety",
+        "amount": "40000000000 GBP"
+      },
+      {
+        "name": "Transport",
+        "subtype": "transport",
+        "amount": "30000000000 GBP"
+      },
+      {
+        "name": "Other Spending",
+        "subtype": "other",
+        "amount": "290000000000 GBP"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "1150000000000 GBP"
+      }
+    ]
+  },
+  {
+    "name": "Japan",
+    "code": "JP",
+    "year": 2024,
+    "currency": "JPY",
+    "organizations": [
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "ASEAN+3",
+      "CPTPP"
+    ],
+    "capital": "Tokyo",
+    "timezone": "Asia/Tokyo",
+    "continent": "Asia",
+    "flag": "https://flagcdn.com/w40/jp.png",
+    "population": 124370947,
+    "coordinates": {
+      "latitude": 36.2048,
+      "longitude": 138.2529
+    },
+    "languages": ["Japanese"],
+    "revenue": [
+      {
+        "name": "所得税 (Shotoku-zei, Income Tax)",
+        "subtype": "income-tax",
+        "amount": "17905000000000 JPY"
+      },
+      {
+        "name": "法人税 (Hōjin-zei, Corporate Tax)",
+        "subtype": "income-tax",
+        "amount": "17046000000000 JPY"
+      },
+      {
+        "name": "消費税 (Shōhizei, Consumption Tax)",
+        "subtype": "consumption-tax",
+        "amount": "23823000000000 JPY"
+      },
+      {
+        "name": "相続税 (Sōzoku-zei, Inheritance Tax)",
+        "subtype": "inheritance-tax",
+        "amount": "3292000000000 JPY"
+      },
+      {
+        "name": "揮発油税 (Kihatsuyu-zei, Gasoline Tax)",
+        "subtype": "fuel-tax",
+        "amount": "2018000000000 JPY"
+      },
+      {
+        "name": "酒税 (Shuzei, Liquor Tax)",
+        "subtype": "excise-tax",
+        "amount": "1209000000000 JPY"
+      },
+      {
+        "name": "たばこ税 (Tabako-zei, Tobacco Tax)",
+        "subtype": "excise-tax",
+        "amount": "948000000000 JPY"
+      },
+      {
+        "name": "関税 (Kanzei, Customs Duties)",
+        "subtype": "customs-duty",
+        "amount": "917000000000 JPY"
+      },
+      {
+        "name": "石油石炭税 (Sekiyu sekitan-zei, Oil & Coal Tax)",
+        "subtype": "excise-tax",
+        "amount": "606000000000 JPY"
+      },
+      {
+        "name": "自動車重量税 (Jidōsha jūryō-zei, Vehicle Weight Tax)",
+        "subtype": "excise-tax",
+        "amount": "402000000000 JPY"
+      },
+      {
+        "name": "電源開発促進税 (Dengen kaihatsu sokushin-zei, Electric Power Development Tax)",
+        "subtype": "excise-tax",
+        "amount": "311000000000 JPY"
+      },
+      {
+        "name": "印紙収入 (Inshi shūnyū, Stamp Duty)",
+        "subtype": "stamp-duty",
+        "amount": "1042000000000 JPY"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "69608000000000 JPY"
+      }
+    ],
+    "spending": [
+      {
+        "name": "社会保障関係費 (Social Security)",
+        "subtype": "welfare",
+        "amount": "37719300000000 JPY"
+      },
+      {
+        "name": "防衛関係費 (Defense)",
+        "subtype": "defense",
+        "amount": "7917200000000 JPY"
+      },
+      {
+        "name": "公共事業関係費 (Public Works)",
+        "subtype": "transport",
+        "amount": "6082800000000 JPY"
+      },
+      {
+        "name": "文教及び科学振興費 (Education & Science)",
+        "subtype": "education",
+        "amount": "5471600000000 JPY"
+      },
+      {
+        "name": "地方交付税交付金等 (Local Government Transfers)",
+        "subtype": "other",
+        "amount": "17786300000000 JPY"
+      },
+      {
+        "name": "国債費-利払費 (Interest on Debt)",
+        "subtype": "debt-service",
+        "amount": "9713300000000 JPY"
+      },
+      {
+        "name": "国債費-元本償還 (Debt Redemption)",
+        "subtype": "debt-service",
+        "amount": "17295700000000 JPY"
+      },
+      {
+        "name": "その他経費 (Other Spending)",
+        "subtype": "other",
+        "amount": "9585500000000 JPY"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "112571700000000 JPY"
+      }
+    ]
+  },
+  {
+    "name": "Italy",
+    "code": "IT",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "NATO",
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "EU",
+      "Schengen Area"
+    ],
+    "capital": "Rome",
+    "timezone": "Europe/Rome",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/it.png",
+    "population": 59499453,
+    "coordinates": {
+      "latitude": 41.9033,
+      "longitude": 12.4534
+    },
+    "languages": ["Italian"],
+    "revenue": [
+      {
+        "name": "IRPEF (Imposta sul reddito delle persone fisiche)",
+        "subtype": "income-tax",
+        "amount": "236000000000 EUR"
+      },
+      {
+        "name": "IVA (Imposta sul valore aggiunto)",
+        "subtype": "consumption-tax",
+        "amount": "178000000000 EUR"
+      },
+      {
+        "name": "IRES (Imposta sul reddito delle società)",
+        "subtype": "income-tax",
+        "amount": "57000000000 EUR"
+      },
+      {
+        "name": "Accise su energia, tabacchi e alcoli",
+        "subtype": "excise-tax",
+        "amount": "30000000000 EUR"
+      },
+      {
+        "name": "Imposta di registro e altri tributi minori",
+        "subtype": "other-tax",
+        "amount": "20000000000 EUR"
+      },
+      {
+        "name": "Entrate non tributarie",
+        "subtype": "non-tax-revenue",
+        "amount": "15000000000 EUR"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "556000000000 EUR"
+      }
+    ],
+    "spending": [
+      {
+        "name": "Previdenza (Pensioni pubbliche)",
+        "subtype": "pensions",
+        "amount": "300000000000 EUR"
+      },
+      {
+        "name": "Sanità (Fondi sanitari alle regioni)",
+        "subtype": "health",
+        "amount": "130000000000 EUR"
+      },
+      {
+        "name": "Istruzione e Ricerca",
+        "subtype": "education",
+        "amount": "80000000000 EUR"
+      },
+      { "name": "Difesa", "subtype": "defense", "amount": "30000000000 EUR" },
+      {
+        "name": "Servizio del debito (Interessi)",
+        "subtype": "debt-service",
+        "amount": "70000000000 EUR"
+      },
+      {
+        "name": "Sicurezza pubblica e giustizia",
+        "subtype": "public-safety",
+        "amount": "40000000000 EUR"
+      },
+      {
+        "name": "Trasporti e infrastrutture",
+        "subtype": "transport",
+        "amount": "20000000000 EUR"
+      },
+      {
+        "name": "Altre spese",
+        "subtype": "other",
+        "amount": "100000000000 EUR"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "770000000000 EUR"
+      }
+    ]
+  },
+  {
+    "name": "France",
+    "code": "FR",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "NATO",
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "EU",
+      "Schengen Area",
+      "Permanent Five",
+      "La Francophonie"
+    ],
+    "capital": "Paris",
+    "timezone": "Europe/Paris",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/fr.png",
+    "population": 66438822,
+    "coordinates": {
+      "latitude": 46.2276,
+      "longitude": 2.2137
+    },
+    "languages": ["French"],
+    "revenue": [
+      {
+        "name": "Taxe sur la valeur ajoutée (TVA)",
+        "subtype": "consumption-tax",
+        "amount": "100806000000 EUR"
+      },
+      {
+        "name": "Impôt sur le revenu (IR)",
+        "subtype": "income-tax",
+        "amount": "93364000000 EUR"
+      },
+      {
+        "name": "Impôt sur les sociétés (IS)",
+        "subtype": "income-tax",
+        "amount": "72047000000 EUR"
+      },
+      {
+        "name": "Taxe intérieure de consommation sur les produits énergétiques (TICPE)",
+        "subtype": "fuel-tax",
+        "amount": "15390000000 EUR"
+      },
+      {
+        "name": "Autres impôts et taxes",
+        "subtype": "other-tax",
+        "amount": "66785000000 EUR"
+      },
+      {
+        "name": "Recettes non fiscales",
+        "subtype": "non-tax-revenue",
+        "amount": "22704000000 EUR"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "311917000000 EUR"
+      }
+    ],
+    "spending": [
+      {
+        "name": "Enseignement scolaire",
+        "subtype": "education",
+        "amount": "60000000000 EUR"
+      },
+      { "name": "Défense", "subtype": "defense", "amount": "44000000000 EUR" },
+      {
+        "name": "Recherche et enseignement supérieur",
+        "subtype": "education",
+        "amount": "30000000000 EUR"
+      },
+      {
+        "name": "Charge de la dette (intérêts)",
+        "subtype": "debt-service",
+        "amount": "40000000000 EUR"
+      },
+      {
+        "name": "Pensions civiles et militaires",
+        "subtype": "pensions",
+        "amount": "60000000000 EUR"
+      },
+      {
+        "name": "Sécurité (Police et Gendarmerie)",
+        "subtype": "public-safety",
+        "amount": "20000000000 EUR"
+      },
+      {
+        "name": "Justice",
+        "subtype": "public-safety",
+        "amount": "10000000000 EUR"
+      },
+      {
+        "name": "Transferts aux collectivités locales",
+        "subtype": "other",
+        "amount": "67000000000 EUR"
+      },
+      {
+        "name": "Autres dépenses",
+        "subtype": "other",
+        "amount": "83000000000 EUR"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "453241000000 EUR"
+      }
+    ]
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "NATO",
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "EU",
+      "Schengen Area"
+    ],
+    "capital": "Berlin",
+    "timezone": "Europe/Berlin",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/de.png",
+    "population": 84548231,
+    "coordinates": {
+      "latitude": 52.52,
+      "longitude": 13.405
+    },
+    "languages": ["German"],
+    "revenue": [
+      {
+        "name": "Lohn- und Einkommensteuer (Personal Income Tax)",
+        "subtype": "income-tax",
+        "amount": "127000000000 EUR"
+      },
+      {
+        "name": "Körperschaftsteuer (Corporate Income Tax)",
+        "subtype": "income-tax",
+        "amount": "20000000000 EUR"
+      },
+      {
+        "name": "Umsatzsteuer (Value Added Tax)",
+        "subtype": "consumption-tax",
+        "amount": "135000000000 EUR"
+      },
+      {
+        "name": "Solidaritätszuschlag (Solidarity Surcharge)",
+        "subtype": "surtax",
+        "amount": "11000000000 EUR"
+      },
+      {
+        "name": "Energie- und Kraftstoffsteuern (Energy & Fuel Excises)",
+        "subtype": "excise-tax",
+        "amount": "35100000000 EUR"
+      },
+      {
+        "name": "Tabaksteuer (Tobacco Tax)",
+        "subtype": "excise-tax",
+        "amount": "14000000000 EUR"
+      },
+      {
+        "name": "Versicherungssteuer (Insurance Tax)",
+        "subtype": "excise-tax",
+        "amount": "15000000000 EUR"
+      },
+      {
+        "name": "Kfz-Steuer (Motor Vehicle Tax)",
+        "subtype": "excise-tax",
+        "amount": "9000000000 EUR"
+      },
+      {
+        "name": "Zölle (Customs Duties)",
+        "subtype": "customs-duty",
+        "amount": "3000000000 EUR"
+      },
+      {
+        "name": "Sonstige Einnahmen (Other Revenues)",
+        "subtype": "non-tax-revenue",
+        "amount": "21000000000 EUR"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "374900000000 EUR"
+      }
+    ],
+    "spending": [
+      {
+        "name": "Soziale Sicherung (Social Security & Labor)",
+        "subtype": "welfare",
+        "amount": "219800000000 EUR"
+      },
+      {
+        "name": "Verteidigung (Defence)",
+        "subtype": "defense",
+        "amount": "58560000000 EUR"
+      },
+      {
+        "name": "Verkehr und digitale Infrastruktur (Transport & Comms)",
+        "subtype": "transport",
+        "amount": "36000000000 EUR"
+      },
+      {
+        "name": "Bildung und Forschung (Education & Research)",
+        "subtype": "education",
+        "amount": "30720000000 EUR"
+      },
+      {
+        "name": "Zinsausgaben (Interest on Debt)",
+        "subtype": "debt-service",
+        "amount": "39000000000 EUR"
+      },
+      {
+        "name": "Allgemeine Verwaltung (General Government)",
+        "subtype": "other",
+        "amount": "30000000000 EUR"
+      },
+      {
+        "name": "Übrige Ausgaben (Other Spending)",
+        "subtype": "other",
+        "amount": "105100000000 EUR"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "480000000000 EUR"
+      }
+    ]
+  },
+  {
+    "name": "Canada",
+    "code": "CA",
+    "year": 2024,
+    "currency": "CAD",
+    "organizations": [
+      "NATO",
+      "G7",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC",
+      "Five Eyes"
+    ],
+    "capital": "Ottawa",
+    "timezone": "America/Toronto",
+    "continent": "North America",
+    "flag": "https://flagcdn.com/w40/ca.png",
+    "population": 39299105,
+    "coordinates": {
+      "latitude": 45.4215,
+      "longitude": -75.6904
+    },
+    "languages": ["English", "French"],
+    "revenue": [
+      {
+        "name": "Personal Income Tax",
+        "subtype": "income-tax",
+        "amount": "230000000000 CAD"
+      },
+      {
+        "name": "Corporate Income Tax",
+        "subtype": "income-tax",
+        "amount": "90000000000 CAD"
+      },
+      {
+        "name": "Goods and Services Tax (GST)",
+        "subtype": "consumption-tax",
+        "amount": "50000000000 CAD"
+      },
+      {
+        "name": "Non-Resident Withholding Tax",
+        "subtype": "income-tax",
+        "amount": "10000000000 CAD"
+      },
+      {
+        "name": "Excise Taxes and Duties",
+        "subtype": "excise-tax",
+        "amount": "12000000000 CAD"
+      },
+      {
+        "name": "Employment Insurance Premiums",
+        "subtype": "social-contribution",
+        "amount": "25000000000 CAD"
+      },
+      {
+        "name": "Other Revenues (fees, dividends, etc.)",
+        "subtype": "non-tax-revenue",
+        "amount": "30000000000 CAD"
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": "498000000000 CAD"
+      }
+    ],
+    "spending": [
+      {
+        "name": "Elderly Benefits (OAS, GIS)",
+        "subtype": "pensions",
+        "amount": "70000000000 CAD"
+      },
+      {
+        "name": "Canada Health Transfer",
+        "subtype": "health",
+        "amount": "50000000000 CAD"
+      },
+      {
+        "name": "Canada Social Transfer",
+        "subtype": "welfare",
+        "amount": "16000000000 CAD"
+      },
+      {
+        "name": "Children Benefits (CCB)",
+        "subtype": "welfare",
+        "amount": "25000000000 CAD"
+      },
+      {
+        "name": "National Defence",
+        "subtype": "defense",
+        "amount": "30000000000 CAD"
+      },
+      {
+        "name": "Public Safety and Security",
+        "subtype": "public-safety",
+        "amount": "20000000000 CAD"
+      },
+      {
+        "name": "Debt Servicing (Interest)",
+        "subtype": "debt-service",
+        "amount": "40000000000 CAD"
+      },
+      {
+        "name": "Other Program Spending",
+        "subtype": "other",
+        "amount": "228000000000 CAD"
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": "538000000000 CAD"
+      }
+    ]
+  }
+]

@@ -3,9 +3,8 @@ import data from "../data.json";
 
 export async function GET(
   request: Request,
-  context: { params: { countryCode: string } }
+  { params }: { params: { countryCode: string } }
 ) {
-  const params = await context.params;
   const countryCode = params.countryCode;
   const countryData = data.find((item) => item.code === countryCode);
   return NextResponse.json(countryData);

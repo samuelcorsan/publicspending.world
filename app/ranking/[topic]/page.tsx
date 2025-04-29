@@ -83,7 +83,8 @@ const TopicDescriptions: Record<ValidTopic, string> = {
     "Countries ranked by government revenue. Compare tax collection and public income across different nations.",
 };
 
-export async function generateMetadata({
+//TODO: To fix
+/* export async function generateMetadata({
   params,
 }: {
   params: Promise<{ topic: string }>;
@@ -110,7 +111,7 @@ export async function generateMetadata({
       canonical: `https://publicspending.world/ranking/${topic}`,
     },
   };
-}
+} */
 
 export default function RankingPage({ params }: { params: { topic: string } }) {
   if (!validTopics.includes(params.topic as ValidTopic)) {

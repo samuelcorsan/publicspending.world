@@ -3,6 +3,7 @@ import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
+import { Metadata } from "next";
 
 async function getCountryData(country: string) {
   try {
@@ -27,11 +28,9 @@ async function getCountryData(country: string) {
   }
 }
 
-export default async function CountryPage({
-  params,
-}: {
-  params: { country: string };
-}) {
+type CountryPageProps = { params: { country: string } };
+
+export default async function CountryPage({ params }: CountryPageProps) {
   const countryData = await getCountryData(params.country);
 
   return (
@@ -129,11 +128,11 @@ export default async function CountryPage({
   );
 }
 
+type MetadataProps = { params: { country: string } };
+
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ country: string }>;
-}) {
+}: MetadataProps): Promise<Metadata> {
   const paramsData = await params;
   const country = paramsData.country;
   const countryName = formatCountryName(country);

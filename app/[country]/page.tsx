@@ -28,10 +28,14 @@ async function getCountryData(country: string) {
   }
 }
 
-type CountryPageProps = { params: { country: string } };
+type CountryPageProps = {
+  params: Promise<{ country: string }>;
+};
 
 export default async function CountryPage({ params }: CountryPageProps) {
-  const countryData = await getCountryData(params.country);
+  const { country } = await params;
+
+  const countryData = await getCountryData(country);
 
   return (
     <main className="min-h-screen bg-gray-50">

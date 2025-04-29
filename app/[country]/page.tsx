@@ -135,3 +135,20 @@ export default async function CountryPage({ params }: Props) {
     </main>
   );
 }
+
+// TODO: To fix params error in build
+/* export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { country } = await params;
+  const countryName = formatCountryName(country);
+  return {
+    title: `${countryName} - Public Spending`,
+    description: `Public spending and revenue information for ${countryName}`,
+  };
+} */
+
+function formatCountryName(country: string): string {
+  return country
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}

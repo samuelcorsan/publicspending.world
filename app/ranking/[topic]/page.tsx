@@ -164,7 +164,7 @@ export default async function RankingPage({ params }: Props) {
                     <p className="text-lg font-semibold text-gray-900">
                       {topic === "world-gdp-share"
                         ? `${country.worldGdpShare}%`
-                        : formatNumber(getValue(country, topic))}
+                        : formatNumber(getValue(country, topic as ValidTopic))}
                     </p>
                   </div>
                 </Link>

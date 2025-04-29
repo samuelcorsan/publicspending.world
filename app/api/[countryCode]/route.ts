@@ -3,9 +3,9 @@ import data from "../data.json";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { countryCode: string } }
+  { params }: { params: Promise<{ countryCode: string }> }
 ) {
-  const countryCode = params.countryCode;
+  const { countryCode } = await params;
   const countryData = data.find((item) => item.code === countryCode);
   return NextResponse.json(countryData);
 }

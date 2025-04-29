@@ -87,7 +87,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ topic: string }>;
-}): Promise<Metadata> {
+}) {
   const { topic } = await params;
   if (!validTopics.includes(topic as ValidTopic)) {
     notFound();

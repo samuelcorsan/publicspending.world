@@ -10,11 +10,10 @@ function formatCountryName(urlCountry: string): string {
 
 export async function GET(
   request: Request,
-  context: { params: { country: string } }
+  { params }: { params: Promise<{ country: string }> }
 ) {
   try {
-    const params = await context.params;
-    const country = params.country;
+    const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
     let countryData = data.find((item) => item.name === formattedCountryName);

@@ -86,15 +86,15 @@ const TopicDescriptions: Record<ValidTopic, string> = {
 export async function generateMetadata({
   params,
 }: {
-  params: { topic: string };
+  params: Promise<{ topic: string }>;
 }): Promise<Metadata> {
-  if (!validTopics.includes(params.topic as ValidTopic)) {
+  const { topic } = await params;
+  if (!validTopics.includes(topic as ValidTopic)) {
     notFound();
   }
 
-  const topic = params.topic as ValidTopic;
-  const title = TopicTitles[topic];
-  const description = TopicDescriptions[topic];
+  const title = TopicTitles[topic as ValidTopic];
+  const description = TopicDescriptions[topic as ValidTopic];
 
   return {
     title: `${title} Ranking | publicspending.world`,

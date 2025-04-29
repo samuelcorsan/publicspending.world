@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { GithubIcon } from "lucide-react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,11 @@ export function Navbar() {
     { name: "Home", href: "/" },
     { name: "Rankings", href: "/ranking/population" },
     { name: "Compare", href: "/compare" },
-    { name: "About", href: "/about" },
+    {
+      name: "About",
+      href: "https://github.com/samuelcorsan/publicspending.world/blob/main/README.md",
+      target: "_blank",
+    },
   ];
 
   return (
@@ -37,23 +42,28 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop menu */}
           <div className="hidden sm:flex sm:items-center">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
+                target={item.target ? "_blank" : undefined}
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50 transition-colors"
               >
                 {item.name}
               </Link>
             ))}
-            <button className="ml-4 px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
-              Get Started
-            </button>
+            <Link
+              href="https://github.com/samuelcorsan/publicspending.world/pulls"
+              target="_blank"
+            >
+              <button className="flex items-center cursor-pointer ml-4 px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
+                <GithubIcon className="w-4 mr-1" />
+                Contribute on GitHub
+              </button>
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}

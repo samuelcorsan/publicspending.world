@@ -7,7 +7,7 @@ const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Public Spending World - Better insights, better transparency, no barriers",
+    "World Public Spending - Transparency and Open Data on Public Spending",
   description: "Explore public spending data from countries around the world",
 };
 

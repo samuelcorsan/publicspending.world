@@ -21,7 +21,7 @@ export default function RankingLayout({
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 <Link
-                  href="/ranking/spending"
+                  href="/"
                   className="text-xl font-bold text-gray-800 hover:text-gray-600"
                 >
                   publicspending.world

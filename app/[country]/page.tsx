@@ -12,10 +12,7 @@ type Props = {
 async function getCountryData(country: string) {
   try {
     const res = await fetch(
-      `${
-        process.env.VERCEL_URL || "http://localhost:3000"
-      }/api/name/${country}`,
-      { cache: "no-store" }
+      `${process.env.VERCEL_URL || "http://localhost:3000"}/api/name/${country}`
     );
 
     if (!res.ok) {

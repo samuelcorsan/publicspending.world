@@ -3,6 +3,7 @@ import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -43,7 +44,7 @@ export default async function CountryPage({ params }: Props) {
       <div className="bg-white">
         <div className="container mx-auto px-4 py-4">
           <p className="text-xl font-bold text-gray-900 text-center hover:underline">
-            <a href="/">publicspending.world</a>
+            <Link href="/">publicspending.world</Link>
           </p>
         </div>
       </div>

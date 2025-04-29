@@ -8,8 +8,8 @@ const parseAmount = (amount: string | number): number => {
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const sortBy = searchParams.get("sortBy"); // "population" or "gdpNominal" or "worldGdpShare" or "spending" or "revenue"
-  const sortOrder = searchParams.get("sortOrder"); // "asc" or "desc"
+  const sortBy = searchParams.get("sortBy");
+  const sortOrder = searchParams.get("sortOrder");
 
   const sortedData = [...data]
     .sort((a, b) => {

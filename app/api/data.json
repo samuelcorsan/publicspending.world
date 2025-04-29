@@ -1416,7 +1416,28 @@
     "code": "ES",
     "year": 2024,
     "currency": "EUR",
-    "organizations": ["G20", "UN", "OECD", "WTO", "IMF", "World Bank", "APEC"],
+    "organizations": [
+      "NATO",
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC"
+    ],
+    "national_incidents": [
+      {
+        "id": "es-blackout-2024",
+        "title": "Nationwide Blackout",
+        "description": "Major electrical grid failure affecting the entire country. Already resolved.",
+        "date": "2024-04-28",
+        "severity": "critical",
+        "status": "resolved",
+        "news_url": "https://x.com/CNN/status/1916814964397949173",
+        "type": "infrastructure"
+      }
+    ],
     "capital": "Madrid",
     "timezone": "Europe/Madrid",
     "continent": "Europe",

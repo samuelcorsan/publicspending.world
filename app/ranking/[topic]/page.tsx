@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import data from "../../api/data.json";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
 
 const validTopics = [
   "population",
@@ -113,14 +112,19 @@ const TopicDescriptions: Record<ValidTopic, string> = {
   };
 } */
 
-export default function RankingPage({ params }: { params: { topic: string } }) {
-  if (!validTopics.includes(params.topic as ValidTopic)) {
+type Props = {
+  params: Promise<{ topic: string }>;
+};
+
+export default async function RankingPage({ params }: Props) {
+  const { topic } = await params;
+
+  if (!validTopics.includes(topic as ValidTopic)) {
     notFound();
   }
 
-  const topic = params.topic as ValidTopic;
-  const rankingData = getTopicData(topic);
-  const topicTitle = TopicTitles[topic];
+  const rankingData = getTopicData(topic as ValidTopic);
+  const topicTitle = TopicTitles[topic as ValidTopic];
 
   return (
     <div className="min-h-screen bg-gray-50">

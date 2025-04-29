@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import data from "../data.json";
 
 export async function GET(
-  request: Request,
-  { params }: { params: { countryCode: string } }
+  req: NextRequest,
+  { params }: { params: { country: string } }
 ) {
-  const countryCode = params.countryCode;
+  const countryCode = params.country;
   const countryData = data.find((item) => item.code === countryCode);
   return NextResponse.json(countryData);
 }

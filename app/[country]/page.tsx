@@ -5,6 +5,10 @@ import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
 import { Metadata } from "next";
 
+type Props = {
+  params: Promise<{ country: string }>;
+};
+
 async function getCountryData(country: string) {
   try {
     const res = await fetch(
@@ -32,7 +36,7 @@ type CountryPageProps = {
   params: Promise<{ country: string }>;
 };
 
-export default async function CountryPage({ params }: CountryPageProps) {
+export default async function CountryPage({ params }: Props) {
   const { country } = await params;
 
   const countryData = await getCountryData(country);
@@ -132,13 +136,8 @@ export default async function CountryPage({ params }: CountryPageProps) {
   );
 }
 
-type MetadataProps = { params: { country: string } };
-
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
-  const paramsData = await params;
-  const country = paramsData.country;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { country } = await params;
   const countryName = formatCountryName(country);
   return {
     title: `${countryName} - Public Spending`,

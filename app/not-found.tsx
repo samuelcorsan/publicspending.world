@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/navigation/Navbar";
 import { Ghost } from "lucide-react";
 import Link from "next/link";
 

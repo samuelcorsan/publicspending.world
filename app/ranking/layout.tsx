@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Navbar } from "../../components/Navbar";
+import { Navbar } from "../../components/navigation/Navbar";
 
 const topics = [
   { id: "population", name: "Population List" },

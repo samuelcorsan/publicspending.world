@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { CountryCard } from "@/components/CountryCard";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/navigation/Navbar";
 import countryData from "./api/data.json";
 import { useRouter } from "next/navigation";
 

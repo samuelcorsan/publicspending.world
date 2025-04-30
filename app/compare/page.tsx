@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
-import { Navbar } from "@/components/Navbar";
-import countryData from "@/app/api/data.json";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Navbar } from "@/components/Navbar";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
+import countryData from "@/app/api/data.json";
 import type { Country } from "@/lib/types";
 
 function ComparePage() {

@@ -2,26 +2,7 @@ import { notFound } from "next/navigation";
 import data from "../../api/data.json";
 import Image from "next/image";
 import Link from "next/link";
-
-const validTopics = [
-  "population",
-  "gdp-nominal",
-  "world-gdp-share",
-  "spending",
-  "revenue",
-] as const;
-type ValidTopic = (typeof validTopics)[number];
-
-interface CountryData {
-  name: string;
-  flag: string;
-  code: string;
-  population: number;
-  gdpNominal: number;
-  worldGdpShare: number;
-  spending: number;
-  revenue: number;
-}
+import { Country, validTopics, ValidTopic } from "@/lib/types";
 
 const formatNumber = (num: number) => {
   if (num >= 1e12) {
@@ -38,13 +19,22 @@ const getCountrySlug = (name: string): string => {
   return name.toLowerCase().replace(/\s+/g, "-");
 };
 
-const getValue = (country: CountryData, topic: ValidTopic): number => {
+const getValue = (country: Country, topic: ValidTopic): number => {
   if (topic === "gdp-nominal") return country.gdpNominal;
   if (topic === "world-gdp-share") return country.worldGdpShare;
-  return country[topic];
+  if (topic === "spending")
+    return (
+      country.spending.find((item) => item.subtype === "total")?.amount ?? 0
+    );
+  if (topic === "revenue")
+    return (
+      country.revenue.find((item) => item.subtype === "total")?.amount ?? 0
+    );
+  if (topic === "population") return country.population;
+  return 0;
 };
 
-const getTopicData = (topic: ValidTopic): CountryData[] => {
+const getTopicData = (topic: ValidTopic): Country[] => {
   let sortedData = [...data].map((country) => ({
     name: country.name,
     flag: country.flag.replace("w40", "w320"),
@@ -52,10 +42,12 @@ const getTopicData = (topic: ValidTopic): CountryData[] => {
     population: country.population,
     gdpNominal: country.gdpNominal,
     worldGdpShare: country.worldGdpShare,
-    spending:
-      country.spending.find((item) => item.subtype === "total")?.amount ?? 0,
-    revenue:
-      country.revenue.find((item) => item.subtype === "total")?.amount ?? 0,
+    spending: country.spending,
+    revenue: country.revenue,
+    currency: country.currency,
+    capital: country.capital,
+    taxBurdenPerCapita: country.taxBurdenPerCapita,
+    debtToGdp: country.debtToGdp,
   }));
 
   return sortedData.sort((a, b) => getValue(b, topic) - getValue(a, topic));
@@ -69,6 +61,7 @@ const TopicTitles: Record<ValidTopic, string> = {
   revenue: "Government Revenue",
 };
 
+/* 
 const TopicDescriptions: Record<ValidTopic, string> = {
   population:
     "Countries ranked by total population size. Compare demographic data and population statistics for all nations.",
@@ -81,6 +74,7 @@ const TopicDescriptions: Record<ValidTopic, string> = {
   revenue:
     "Countries ranked by government revenue. Compare tax collection and public income across different nations.",
 };
+*/
 
 //TODO: To fix
 /* export async function generateMetadata({

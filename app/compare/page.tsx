@@ -1,32 +1,13 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
-import countryData from "../api/data.json";
+import countryData from "@/app/api/data.json";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
-
-interface Country {
-  name: string;
-  code: string;
-  flag: string;
-  population: number;
-  gdpNominal: number;
-  worldGdpShare: number;
-  revenue: Array<{ name: string; amount: number; subtype: string }>;
-  spending: Array<{ name: string; amount: number; subtype: string }>;
-  currency: string;
-  capital?: string;
-  taxBurdenPerCapita?: {
-    amount: number;
-    currency: string;
-    convertedCurrencyAmount?: number;
-    convertedCurrency?: string;
-  };
-  debtToGdp?: number;
-}
+import type { Country } from "@/lib/types";
 
 function ComparePage() {
   const router = useRouter();
@@ -197,7 +178,6 @@ function ComparePage() {
             </div>
           </div>
 
-          {/* Show comparison only if both are selected */}
           {selectedA && selectedB && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
               {[selectedA, selectedB].map((country, idx) => (

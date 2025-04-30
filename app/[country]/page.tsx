@@ -178,7 +178,7 @@ export default async function CountryPage({ params }: Props) {
           <section className="bg-white rounded-xl shadow-sm p-8">
             <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
               <Wallet className="w-6 h-6 mr-2 text-orange-500" /> Tax Burden Per
-              Capita
+              Capita (beta)
               <span className="relative ml-2 group">
                 <Info
                   tabIndex={0}
@@ -260,8 +260,7 @@ export default async function CountryPage({ params }: Props) {
 }
 
 // TODO: To fix params error in build
-/* 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+/* export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { country } = await params;
   const countryName = formatCountryName(country);
   return {

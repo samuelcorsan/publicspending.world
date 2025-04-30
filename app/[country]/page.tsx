@@ -50,9 +50,6 @@ export default async function CountryPage({ params }: Props) {
   const { country } = await params;
 
   const countryData = await getCountryData(country);
-
-  const showDetails = true; // Replace with logic if you want to toggle with a button
-
   return (
     <main className="min-h-screen bg-gray-50">
       <NationalIncidentsToast incidents={countryData.national_incidents} />
@@ -94,22 +91,8 @@ export default async function CountryPage({ params }: Props) {
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className="flex justify-end mb-4">
-          <form method="GET">
-            <button
-              type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-            >
-              More Information
-            </button>
-          </form>
-        </div>
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 transition-all duration-700 ${
-            showDetails
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-8 pointer-events-none"
-          }`}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 transition-all duration-700`}
         >
           <section className="bg-white rounded-xl shadow-sm p-8">
             <RevenuePieChart countryData={countryData} />
@@ -119,11 +102,7 @@ export default async function CountryPage({ params }: Props) {
           </section>
         </div>
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700 ${
-            showDetails
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-8 pointer-events-none"
-          }`}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700`}
         >
           <section className="bg-white rounded-xl shadow-sm p-8">
             <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">

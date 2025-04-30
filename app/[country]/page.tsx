@@ -203,7 +203,6 @@ export default async function CountryPage({ params }: Props) {
                 debtToGdp={countryData.debtToGdp}
                 gdpNominal={countryData.gdpNominal}
                 taxBurdenPerCapita={countryData.taxBurdenPerCapita}
-                currency={countryData.currency}
               />
             </div>
           </section>
@@ -211,30 +210,80 @@ export default async function CountryPage({ params }: Props) {
             <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
               <Wallet className="w-6 h-6 mr-2 text-orange-500" /> Tax Burden Per
               Capita
-              <Tooltip text="Shows the average tax paid per person, helping to compare the tax load across countries and understand the funding base for public services." />
+              <span className="relative ml-2 group">
+                <Info
+                  tabIndex={0}
+                  className="inline w-6 h-6 text-gray-400 cursor-pointer hover:text-blue-600 focus:text-blue-600 outline-none"
+                />
+                <span className="absolute left-1/2 top-8 z-10 w-72 -translate-x-1/2 rounded bg-gray-900 px-4 py-3 text-xs text-white opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-200 shadow-lg">
+                  <b>Tax Burden Level:</b>
+                  <br />
+                  <span className="block mt-1">
+                    <span className="text-green-300 font-bold">
+                      Green (Low):
+                    </span>{" "}
+                    Less than $10,000 per capita
+                  </span>
+                  <span className="block">
+                    <span className="text-orange-300 font-bold">
+                      Orange (Moderate):
+                    </span>{" "}
+                    $10,000 - $20,000 per capita
+                  </span>
+                  <span className="block">
+                    <span className="text-red-300 font-bold">Red (High):</span>{" "}
+                    $20,000 - $30,000 per capita
+                  </span>
+                  <span className="block">
+                    <span className="text-purple-300 font-bold">
+                      Purple (Very High):
+                    </span>{" "}
+                    Over $30,000 per capita
+                  </span>
+                </span>
+              </span>
             </h3>
-            <p className="mb-2 text-gray-700">
+            <div className="mb-2 flex flex-col items-start">
               {countryData.taxBurdenPerCapita &&
               countryData.taxBurdenPerCapita.amount ? (
                 <>
-                  <span>
+                  <span className="text-2xl font-bold text-gray-900">
                     ${countryData.taxBurdenPerCapita.amount.toLocaleString()}{" "}
                     USD
                   </span>
                   {countryData.taxBurdenPerCapita.convertedCurrencyAmount &&
                     countryData.taxBurdenPerCapita.convertedCurrency && (
-                      <span>
-                        {" "}
-                        (
+                      <span className="text-lg text-gray-700">
                         {countryData.taxBurdenPerCapita.convertedCurrencyAmount.toLocaleString()}{" "}
-                        {countryData.taxBurdenPerCapita.convertedCurrency})
+                        {countryData.taxBurdenPerCapita.convertedCurrency}
                       </span>
                     )}
+                  {/* Level display below, in color */}
+                  {(() => {
+                    const amount = countryData.taxBurdenPerCapita.amount;
+                    let color = "text-green-500";
+                    let label = "Low";
+                    if (amount > 10000 && amount <= 20000) {
+                      color = "text-orange-400";
+                      label = "Moderate";
+                    } else if (amount > 20000 && amount <= 30000) {
+                      color = "text-red-500";
+                      label = "High";
+                    } else if (amount > 30000) {
+                      color = "text-purple-600";
+                      label = "Very High";
+                    }
+                    return (
+                      <span className="mt-2 text-base font-semibold">
+                        Level: <span className={color}>{label}</span>
+                      </span>
+                    );
+                  })()}
                 </>
               ) : (
-                "No data available."
+                <span>No data available.</span>
               )}
-            </p>
+            </div>
           </section>
         </div>
       </div>

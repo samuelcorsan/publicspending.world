@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface DebtToGdpDisplayProps {
   debtToGdp?: number;
@@ -10,14 +9,12 @@ interface DebtToGdpDisplayProps {
     convertedCurrencyAmount?: number;
     convertedCurrency?: string;
   };
-  currency?: string;
 }
 
 export function DebtToGdpDisplay({
   debtToGdp,
   gdpNominal,
   taxBurdenPerCapita,
-  currency,
 }: DebtToGdpDisplayProps) {
   const [showLocal, setShowLocal] = useState(false);
 

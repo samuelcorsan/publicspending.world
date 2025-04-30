@@ -10,7 +10,6 @@ import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
 
-// Define the Country type based on the data.json structure
 interface Country {
   name: string;
   code: string;
@@ -41,7 +40,6 @@ export default function ComparePage() {
   const [focusA, setFocusA] = useState(false);
   const [focusB, setFocusB] = useState(false);
 
-  // Filter countries for search dropdown
   const filteredA = (countryData as Country[]).filter((c) =>
     c.name.toLowerCase().includes(searchA.toLowerCase())
   );
@@ -49,7 +47,6 @@ export default function ComparePage() {
     c.name.toLowerCase().includes(searchB.toLowerCase())
   );
 
-  // On mount, check URL params and preselect countries if present
   useEffect(() => {
     const a = searchParams.get("a");
     const b = searchParams.get("b");
@@ -73,7 +70,6 @@ export default function ComparePage() {
     }
   }, [searchParams]);
 
-  // When both countries are selected, update the URL
   useEffect(() => {
     if (selectedA && selectedB) {
       const slugA = selectedA.name.toLowerCase().replace(/\s+/g, "-");
@@ -82,29 +78,49 @@ export default function ComparePage() {
     }
   }, [selectedA, selectedB, router]);
 
-  // Handle country selection
   const handleSelectA = (country: Country) => {
+    if (selectedB && country.code === selectedB.code) return;
     setSelectedA(country);
     setFocusA(false);
     setSearchA(country.name);
   };
   const handleSelectB = (country: Country) => {
+    if (selectedA && country.code === selectedA.code) return;
     setSelectedB(country);
     setFocusB(false);
     setSearchB(country.name);
   };
 
+  const bothSelected = !!(selectedA && selectedB);
+  const mainPadding = bothSelected ? "pt-16" : "pt-24";
+  const containerPadding = bothSelected ? "py-6" : "py-12";
+  const selectorsMargin = bothSelected ? "mb-6" : "mb-12";
+  const titleMargin = bothSelected ? "mb-4" : "mb-10";
+  const selectorsJustify = bothSelected ? "items-center" : "items-center";
+  const selectorsTopMargin = bothSelected ? "mt-4" : "";
+
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gray-50 pt-8">
-        <div className="container mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-center mb-6 text-gray-900">
-            Compare Countries
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-            {/* Selector A */}
-            <div className="flex flex-col items-center">
+      <main className={`min-h-screen bg-gray-50 ${mainPadding}`}>
+        <div className={`container mx-auto px-4 ${containerPadding}`}>
+          {!bothSelected && (
+            <>
+              <h1
+                className={`text-4xl md:text-5xl font-extrabold text-center text-gray-900 ${titleMargin}`}
+              >
+                Compare Countries
+              </h1>
+              <p className="text-lg text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+                Select two countries to see a side-by-side comparison of their
+                public spending, revenue, and key economic indicators.
+              </p>
+            </>
+          )}
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${selectorsMargin} ${selectorsTopMargin}`}
+          >
+            <div className={`flex flex-col ${selectorsJustify}`}>
               <div className="w-full max-w-md relative mb-4">
                 <input
                   type="text"
@@ -119,26 +135,31 @@ export default function ComparePage() {
                 />
                 {focusA && (
                   <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-lg border border-gray-200 shadow-lg max-h-60 overflow-auto z-10">
-                    {filteredA.map((country) => (
-                      <button
-                        key={country.name}
-                        className="flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left"
-                        onClick={() => handleSelectA(country)}
-                      >
-                        <img
-                          src={country.flag}
-                          alt={`${country.name} flag`}
-                          className="w-6 h-6 rounded-full object-cover"
-                        />
-                        <span>{country.name}</span>
-                      </button>
-                    ))}
+                    {filteredA
+                      .filter(
+                        (country) =>
+                          !selectedB || country.code !== selectedB.code
+                      )
+                      .map((country) => (
+                        <button
+                          key={country.name}
+                          className="flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left"
+                          onClick={() => handleSelectA(country)}
+                        >
+                          <img
+                            src={country.flag}
+                            alt={`${country.name} flag`}
+                            className="w-6 h-6 rounded-full object-cover"
+                          />
+                          <span>{country.name}</span>
+                        </button>
+                      ))}
                   </div>
                 )}
               </div>
             </div>
-            {/* Selector B */}
-            <div className="flex flex-col items-center">
+
+            <div className={`flex flex-col ${selectorsJustify}`}>
               <div className="w-full max-w-md relative mb-4">
                 <input
                   type="text"
@@ -153,20 +174,25 @@ export default function ComparePage() {
                 />
                 {focusB && (
                   <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-lg border border-gray-200 shadow-lg max-h-60 overflow-auto z-10">
-                    {filteredB.map((country) => (
-                      <button
-                        key={country.name}
-                        className="flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left"
-                        onClick={() => handleSelectB(country)}
-                      >
-                        <img
-                          src={country.flag}
-                          alt={`${country.name} flag`}
-                          className="w-6 h-6 rounded-full object-cover"
-                        />
-                        <span>{country.name}</span>
-                      </button>
-                    ))}
+                    {filteredB
+                      .filter(
+                        (country) =>
+                          !selectedA || country.code !== selectedA.code
+                      )
+                      .map((country) => (
+                        <button
+                          key={country.name}
+                          className="flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left"
+                          onClick={() => handleSelectB(country)}
+                        >
+                          <img
+                            src={country.flag}
+                            alt={`${country.name} flag`}
+                            className="w-6 h-6 rounded-full object-cover"
+                          />
+                          <span>{country.name}</span>
+                        </button>
+                      ))}
                   </div>
                 )}
               </div>

@@ -258,7 +258,6 @@ export default async function CountryPage({ params }: Props) {
                         {countryData.taxBurdenPerCapita.convertedCurrency}
                       </span>
                     )}
-                  {/* Level display below, in color */}
                   {(() => {
                     const amount = countryData.taxBurdenPerCapita.amount;
                     let color = "text-green-500";

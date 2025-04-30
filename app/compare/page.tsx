@@ -1,7 +1,5 @@
 "use client";
-
-import { useState, useEffect } from "react";
-import { CountryCard } from "@/components/CountryCard";
+import { useState, useEffect, Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import countryData from "../api/data.json";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -30,7 +28,7 @@ interface Country {
   debtToGdp?: number;
 }
 
-export default function ComparePage() {
+function ComparePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [searchA, setSearchA] = useState("");
@@ -259,5 +257,13 @@ export default function ComparePage() {
         </div>
       </main>
     </>
+  );
+}
+
+export default function ComparePageWithSuspense() {
+  return (
+    <Suspense>
+      <ComparePage />
+    </Suspense>
   );
 }

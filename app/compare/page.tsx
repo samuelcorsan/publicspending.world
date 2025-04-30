@@ -1,0 +1,237 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { CountryCard } from "@/components/CountryCard";
+import { Navbar } from "@/components/Navbar";
+import countryData from "../api/data.json";
+import { useRouter, useSearchParams } from "next/navigation";
+import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
+import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
+import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
+import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
+
+// Define the Country type based on the data.json structure
+interface Country {
+  name: string;
+  code: string;
+  flag: string;
+  population: number;
+  gdpNominal: number;
+  worldGdpShare: number;
+  revenue: Array<{ name: string; amount: number; subtype: string }>;
+  spending: Array<{ name: string; amount: number; subtype: string }>;
+  currency: string;
+  capital?: string;
+  taxBurdenPerCapita?: {
+    amount: number;
+    currency: string;
+    convertedCurrencyAmount?: number;
+    convertedCurrency?: string;
+  };
+  debtToGdp?: number;
+}
+
+export default function ComparePage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [searchA, setSearchA] = useState("");
+  const [searchB, setSearchB] = useState("");
+  const [selectedA, setSelectedA] = useState<Country | null>(null);
+  const [selectedB, setSelectedB] = useState<Country | null>(null);
+  const [focusA, setFocusA] = useState(false);
+  const [focusB, setFocusB] = useState(false);
+
+  // Filter countries for search dropdown
+  const filteredA = (countryData as Country[]).filter((c) =>
+    c.name.toLowerCase().includes(searchA.toLowerCase())
+  );
+  const filteredB = (countryData as Country[]).filter((c) =>
+    c.name.toLowerCase().includes(searchB.toLowerCase())
+  );
+
+  // On mount, check URL params and preselect countries if present
+  useEffect(() => {
+    const a = searchParams.get("a");
+    const b = searchParams.get("b");
+    if (a) {
+      const foundA = (countryData as Country[]).find(
+        (c) => c.name.toLowerCase().replace(/\s+/g, "-") === a.toLowerCase()
+      );
+      if (foundA) {
+        setSelectedA(foundA);
+        setSearchA(foundA.name);
+      }
+    }
+    if (b) {
+      const foundB = (countryData as Country[]).find(
+        (c) => c.name.toLowerCase().replace(/\s+/g, "-") === b.toLowerCase()
+      );
+      if (foundB) {
+        setSelectedB(foundB);
+        setSearchB(foundB.name);
+      }
+    }
+  }, [searchParams]);
+
+  // When both countries are selected, update the URL
+  useEffect(() => {
+    if (selectedA && selectedB) {
+      const slugA = selectedA.name.toLowerCase().replace(/\s+/g, "-");
+      const slugB = selectedB.name.toLowerCase().replace(/\s+/g, "-");
+      router.replace(`/compare?a=${slugA}&b=${slugB}`);
+    }
+  }, [selectedA, selectedB, router]);
+
+  // Handle country selection
+  const handleSelectA = (country: Country) => {
+    setSelectedA(country);
+    setFocusA(false);
+    setSearchA(country.name);
+  };
+  const handleSelectB = (country: Country) => {
+    setSelectedB(country);
+    setFocusB(false);
+    setSearchB(country.name);
+  };
+
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gray-50 pt-8">
+        <div className="container mx-auto px-4 py-4">
+          <h1 className="text-2xl font-bold text-center mb-6 text-gray-900">
+            Compare Countries
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            {/* Selector A */}
+            <div className="flex flex-col items-center">
+              <div className="w-full max-w-md relative mb-4">
+                <input
+                  type="text"
+                  placeholder="Select first country..."
+                  value={searchA}
+                  onChange={(e) => {
+                    setSearchA(e.target.value);
+                    setFocusA(true);
+                  }}
+                  onFocus={() => setFocusA(true)}
+                  className="w-full px-6 py-4 rounded-full border border-gray-200 focus:outline-none focus:border-blue-500 shadow-sm"
+                />
+                {focusA && (
+                  <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-lg border border-gray-200 shadow-lg max-h-60 overflow-auto z-10">
+                    {filteredA.map((country) => (
+                      <button
+                        key={country.name}
+                        className="flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left"
+                        onClick={() => handleSelectA(country)}
+                      >
+                        <img
+                          src={country.flag}
+                          alt={`${country.name} flag`}
+                          className="w-6 h-6 rounded-full object-cover"
+                        />
+                        <span>{country.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+            {/* Selector B */}
+            <div className="flex flex-col items-center">
+              <div className="w-full max-w-md relative mb-4">
+                <input
+                  type="text"
+                  placeholder="Select second country..."
+                  value={searchB}
+                  onChange={(e) => {
+                    setSearchB(e.target.value);
+                    setFocusB(true);
+                  }}
+                  onFocus={() => setFocusB(true)}
+                  className="w-full px-6 py-4 rounded-full border border-gray-200 focus:outline-none focus:border-blue-500 shadow-sm"
+                />
+                {focusB && (
+                  <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-lg border border-gray-200 shadow-lg max-h-60 overflow-auto z-10">
+                    {filteredB.map((country) => (
+                      <button
+                        key={country.name}
+                        className="flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left"
+                        onClick={() => handleSelectB(country)}
+                      >
+                        <img
+                          src={country.flag}
+                          alt={`${country.name} flag`}
+                          className="w-6 h-6 rounded-full object-cover"
+                        />
+                        <span>{country.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Show comparison only if both are selected */}
+          {selectedA && selectedB && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
+              {[selectedA, selectedB].map((country, idx) => (
+                <section
+                  key={country.code + "-" + idx}
+                  className="bg-white rounded-xl shadow-sm p-8 flex flex-col items-center"
+                >
+                  <h2 className="text-xl font-bold mb-2 text-gray-900">
+                    {country.name}
+                  </h2>
+                  <span className="text-gray-500 mb-4">{country.code}</span>
+                  <AnimatedCountryStats
+                    name={country.name}
+                    code={country.code}
+                    gdpNominal={country.gdpNominal}
+                    population={country.population}
+                    capital={country.capital || ""}
+                    currency={country.currency}
+                  />
+                  <div className="w-full mt-6">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Revenue
+                    </h3>
+                    <RevenuePieChart countryData={country} />
+                  </div>
+                  <div className="w-full mt-6">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Spending
+                    </h3>
+                    <SpendingPieChart countryData={country} />
+                  </div>
+                  <div className="w-full mt-6">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Tax Burden Per Capita
+                    </h3>
+                    <span className="text-xl font-bold text-gray-900">
+                      {country.taxBurdenPerCapita &&
+                      country.taxBurdenPerCapita.amount
+                        ? `$${country.taxBurdenPerCapita.amount.toLocaleString()} USD`
+                        : "No data"}
+                    </span>
+                  </div>
+                  <div className="w-full mt-6">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Debt to GDP
+                    </h3>
+                    <DebtToGdpDisplay
+                      debtToGdp={country.debtToGdp}
+                      gdpNominal={country.gdpNominal}
+                      taxBurdenPerCapita={country.taxBurdenPerCapita}
+                    />
+                  </div>
+                </section>
+              ))}
+            </div>
+          )}
+        </div>
+      </main>
+    </>
+  );
+}

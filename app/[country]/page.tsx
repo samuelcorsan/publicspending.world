@@ -247,7 +247,7 @@ export default async function CountryPage({ params }: Props) {
               {countryData.taxBurdenPerCapita &&
               countryData.taxBurdenPerCapita.amount ? (
                 <>
-                  <span className="text-2xl font-bold text-gray-900">
+                  <span className="text-xl font-bold text-gray-900">
                     ${countryData.taxBurdenPerCapita.amount.toLocaleString()}{" "}
                     USD
                   </span>

@@ -14,23 +14,19 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
 
-  // Filter countries for search dropdown only
   const filteredCountries = countryData.filter((country) =>
     country.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // Function to convert country name to URL-friendly slug
   const getCountrySlug = (name: string) => {
     return name.toLowerCase().replace(/\s+/g, "-");
   };
 
-  // Handle country selection
   const handleCountrySelect = (countryName: string) => {
     const slug = getCountrySlug(countryName);
     router.push(`/${slug}`);
   };
 
-  // Handle click outside of search dropdown
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -59,7 +55,7 @@ export default function Home() {
     const scroll = () => {
       if (!carouselRef.current) return;
 
-      currentScroll += 1; // Adjust speed by changing this value
+      currentScroll += 1;
       if (currentScroll >= totalWidth - containerWidth) {
         currentScroll = 0;
       }

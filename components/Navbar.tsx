@@ -4,18 +4,31 @@ import { useState } from "react";
 import Link from "next/link";
 import { GithubIcon } from "lucide-react";
 
-export function Navbar() {
+export type RankingTopic = { id: string; name: string };
+
+interface NavbarProps {
+  rankingTopics?: RankingTopic[];
+  hideAbout?: boolean;
+}
+
+export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "Rankings", href: "/ranking/population" },
+    ...(!rankingTopics
+      ? [{ name: "Rankings", href: "/ranking/population" }]
+      : []),
     { name: "Compare", href: "/compare" },
-    {
-      name: "About",
-      href: "https://github.com/samuelcorsan/publicspending.world/blob/main/README.md",
-      target: "_blank",
-    },
+    ...(!hideAbout
+      ? [
+          {
+            name: "About",
+            href: "https://github.com/samuelcorsan/publicspending.world/blob/main/README.md",
+            target: "_blank",
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -53,6 +66,16 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
+            {rankingTopics &&
+              rankingTopics.map((topic) => (
+                <Link
+                  key={topic.id}
+                  href={`/ranking/${topic.id}`}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50 transition-colors"
+                >
+                  {topic.name}
+                </Link>
+              ))}
             <Link
               href="https://github.com/samuelcorsan/publicspending.world/pulls"
               target="_blank"
@@ -107,6 +130,17 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
+            {rankingTopics &&
+              rankingTopics.map((topic) => (
+                <Link
+                  key={topic.id}
+                  href={`/ranking/${topic.id}`}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {topic.name}
+                </Link>
+              ))}
             <Link
               href="https://github.com/samuelcorsan/publicspending.world/pulls"
               target="_blank"

@@ -59,24 +59,17 @@ export function DebtToGdpDisplay({
                 maximumFractionDigits: 0,
               })} USD`}
         </span>
-        <button
-          type="button"
-          aria-label="Toggle currency"
-          className={`flex items-center cursor-pointer ml-2 px-3 py-1 rounded-full text-sm font-medium border border-blue-600 transition-colors
-            ${
-              canToggle
-                ? "bg-blue-500 text-white hover:bg-blue-600"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed opacity-60"
-            }`}
-          onClick={() => canToggle && setShowLocal((v) => !v)}
-          disabled={!canToggle}
-        >
-          {canToggle
-            ? showLocal
-              ? "Show in USD"
-              : "Show in local currency"
-            : "Show in local currency"}
-        </button>
+        {canToggle && (
+          <button
+            type="button"
+            aria-label="Toggle currency"
+            className={`flex items-center cursor-pointer ml-2 px-3 py-1 rounded-full text-sm font-medium border border-blue-600 transition-colors
+              bg-blue-500 text-white hover:bg-blue-600`}
+            onClick={() => setShowLocal((v) => !v)}
+          >
+            {showLocal ? "Show in USD" : "Show in local currency"}
+          </button>
+        )}
       </div>
     </div>
   );

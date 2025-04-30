@@ -1,13 +1,4 @@
 "use client";
-
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from "recharts";
 import { Card } from "./ui/card";
 
 interface CountryCardProps {

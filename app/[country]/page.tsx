@@ -6,6 +6,7 @@ import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
 import Link from "next/link";
 import { AlertCircle, Gauge, BarChart2, Wallet, Info } from "lucide-react";
 import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
+import { Tooltip } from "@/components/ui/tooltip";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -33,17 +34,6 @@ async function getCountryData(country: string) {
     console.error("Error fetching country data:", error);
     throw error;
   }
-}
-
-function Tooltip({ text }: { text: string }) {
-  return (
-    <span className="relative group inline-block align-middle">
-      <Info className="inline w-5 h-5 ml-2 text-gray-400 group-hover:text-blue-600 cursor-pointer" />
-      <span className="absolute left-1/2 font-medium z-10 hidden w-64 -translate-x-1/2 rounded bg-gray-900 px-3 py-2 text-xs text-white group-hover:block group-hover:animate-fade-in pointer-events-none mt-2 shadow-lg">
-        {text}
-      </span>
-    </span>
-  );
 }
 
 export default async function CountryPage({ params }: Props) {
@@ -270,18 +260,19 @@ export default async function CountryPage({ params }: Props) {
 }
 
 // TODO: To fix params error in build
-/* export async function generateMetadata({ params }: Props): Promise<Metadata> {
+/* 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { country } = await params;
   const countryName = formatCountryName(country);
   return {
     title: `${countryName} - Public Spending`,
     description: `Public spending and revenue information for ${countryName}`,
   };
-} */
-
+} 
 function formatCountryName(country: string): string {
   return country
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 }
+*/

@@ -231,7 +231,7 @@ function ComparePage() {
                   </div>
                   <div className="w-full mt-6">
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                      Tax Burden Per Capita
+                      Tax Burden Per Capita (beta)
                     </h3>
                     <span className="text-xl font-bold text-gray-900">
                       {country.taxBurdenPerCapita &&

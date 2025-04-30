@@ -4,6 +4,8 @@ import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
 import Link from "next/link";
+import { AlertCircle, Gauge, BarChart2, Wallet, Info } from "lucide-react";
+import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -33,10 +35,23 @@ async function getCountryData(country: string) {
   }
 }
 
+function Tooltip({ text }: { text: string }) {
+  return (
+    <span className="relative group inline-block align-middle">
+      <Info className="inline w-5 h-5 ml-2 text-gray-400 group-hover:text-blue-600 cursor-pointer" />
+      <span className="absolute left-1/2 font-medium z-10 hidden w-64 -translate-x-1/2 rounded bg-gray-900 px-3 py-2 text-xs text-white group-hover:block group-hover:animate-fade-in pointer-events-none mt-2 shadow-lg">
+        {text}
+      </span>
+    </span>
+  );
+}
+
 export default async function CountryPage({ params }: Props) {
   const { country } = await params;
 
   const countryData = await getCountryData(country);
+
+  const showDetails = true; // Replace with logic if you want to toggle with a button
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -79,20 +94,42 @@ export default async function CountryPage({ params }: Props) {
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="flex justify-end mb-4">
+          <form method="GET">
+            <button
+              type="submit"
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+            >
+              More Information
+            </button>
+          </form>
+        </div>
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 transition-all duration-700 ${
+            showDetails
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-8 pointer-events-none"
+          }`}
+        >
           <section className="bg-white rounded-xl shadow-sm p-8">
             <RevenuePieChart countryData={countryData} />
           </section>
-
           <section className="bg-white rounded-xl shadow-sm p-8">
             <SpendingPieChart countryData={countryData} />
           </section>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700 ${
+            showDetails
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-8 pointer-events-none"
+          }`}
+        >
           <section className="bg-white rounded-xl shadow-sm p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Revenue Sources
+            <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">
+              <BarChart2 className="w-6 h-6 mr-2 text-blue-500" /> Revenue
+              Sources
+              <Tooltip text="Shows the main sources of government income, helping to understand how the country funds its public services." />
             </h3>
             <div className="space-y-4">
               {countryData.revenue.map((item: any) => (
@@ -108,10 +145,11 @@ export default async function CountryPage({ params }: Props) {
               ))}
             </div>
           </section>
-
           <section className="bg-white rounded-xl shadow-sm p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Spending Allocation
+            <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">
+              <BarChart2 className="w-6 h-6 mr-2 text-green-500" /> Spending
+              Allocation
+              <Tooltip text="Shows how government funds are distributed across different sectors, revealing national priorities and commitments." />
             </h3>
             <div className="space-y-4">
               {countryData.spending.map((item: any) => (
@@ -126,6 +164,77 @@ export default async function CountryPage({ params }: Props) {
                 </div>
               ))}
             </div>
+          </section>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <section className="bg-white rounded-xl shadow-sm p-8">
+            <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
+              <AlertCircle className="w-6 h-6 mr-2 text-red-500" />{" "}
+              Controversies
+              <Tooltip text="Fiscal controversies highlight political, social, or economic challenges that can affect a country's stability and future policy direction." />
+            </h3>
+            <p className="mb-2 text-gray-700">
+              {countryData.controversies || "No major controversies reported."}
+            </p>
+          </section>
+          <section className="bg-white rounded-xl shadow-sm p-8">
+            <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
+              <Gauge className="w-6 h-6 mr-2 text-yellow-500" /> Spending
+              Efficiency
+              <Tooltip text="Measures how well public funds are used to achieve desired outcomes. High efficiency means more value for taxpayers and better services." />
+            </h3>
+            <p className="mb-2 text-gray-700">
+              {countryData.spendingEfficiency ||
+                "No data on spending efficiency."}
+            </p>
+          </section>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section className="bg-white rounded-xl shadow-sm p-8">
+            <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
+              <BarChart2 className="w-6 h-6 mr-2 text-purple-500" /> Debt to GDP
+              <Tooltip text="Shows the size of a country's government debt compared to its economy. High ratios may signal fiscal risk, while lower ratios suggest more sustainable finances." />
+            </h3>
+            <div className="mb-2 text-gray-700">
+              <DebtToGdpDisplay
+                debtToGdp={countryData.debtToGdp}
+                gdpNominal={countryData.gdpNominal}
+                taxBurdenPerCapita={countryData.taxBurdenPerCapita}
+                currency={countryData.currency}
+              />
+            </div>
+          </section>
+          <section className="bg-white rounded-xl shadow-sm p-8">
+            <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
+              <Wallet className="w-6 h-6 mr-2 text-orange-500" /> Tax Burden Per
+              Capita
+              <Tooltip text="Shows the average tax paid per person, helping to compare the tax load across countries and understand the funding base for public services." />
+            </h3>
+            <p className="mb-2 text-gray-700">
+              {countryData.taxBurdenPerCapita &&
+              countryData.taxBurdenPerCapita.amount ? (
+                <>
+                  <span>
+                    ${countryData.taxBurdenPerCapita.amount.toLocaleString()}{" "}
+                    USD
+                  </span>
+                  {countryData.taxBurdenPerCapita.convertedCurrencyAmount &&
+                    countryData.taxBurdenPerCapita.convertedCurrency && (
+                      <span>
+                        {" "}
+                        (
+                        {countryData.taxBurdenPerCapita.convertedCurrencyAmount.toLocaleString()}{" "}
+                        {countryData.taxBurdenPerCapita.convertedCurrency})
+                      </span>
+                    )}
+                </>
+              ) : (
+                "No data available."
+              )}
+            </p>
           </section>
         </div>
       </div>

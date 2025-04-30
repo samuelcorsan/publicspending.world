@@ -95,7 +95,6 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="sm:hidden pb-4">
             {menuItems.map((item) => (
@@ -108,9 +107,15 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <button className="mt-2 w-full px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
-              Get Started
-            </button>
+            <Link
+              href="https://github.com/samuelcorsan/publicspending.world/pulls"
+              target="_blank"
+            >
+              <button className="w-full flex items-center cursor-pointer px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
+                <GithubIcon className="w-4 mr-1" />
+                Contribute on GitHub
+              </button>
+            </Link>
           </div>
         )}
       </div>

@@ -93,7 +93,6 @@ export default function Home() {
                 barriers.
               </p>
 
-              {/* Country Search */}
               <div className="w-full max-w-2xl relative mb-16" ref={searchRef}>
                 <input
                   type="text"
@@ -148,7 +147,6 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Featured Countries Section */}
               <div className="w-full">
                 <div className="flex items-center justify-between mb-8">
                   <h2 className="text-xl font-semibold">Featured Countries</h2>
@@ -164,7 +162,6 @@ export default function Home() {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                   >
-                    {/* Double the items for seamless infinite scroll */}
                     {[...countryData, ...countryData].map((country, index) => (
                       <div
                         key={`${country.name}-${index}`}

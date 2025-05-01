@@ -1755,5 +1755,138 @@
         "amount": 115900000000
       }
     ]
+  },
+  {
+    "name": "Australia",
+    "code": "AU",
+    "year": 2025,
+    "currency": "AUD",
+    "organizations": [
+      "UN",
+      "G20",
+      "APEC",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "Commonwealth of Nations"
+    ],
+    "national_incidents": [
+      {
+        "id": "au-north-qld-floods-2025",
+        "title": "North Queensland Floods",
+        "description": "Extreme rainfall and riverine flooding across North Queensland from 29 January to 28 February 2025 displaced thousands and caused widespread infrastructure damage. The federal government declared a disaster and deployed emergency relief efforts; most communities had returned to normal by March.",
+        "date": "2025-01-29",
+        "severity": "critical",
+        "status": "resolved",
+        "news_url": "https://www.servicesaustralia.gov.au/north-queensland-floods-january-february-2025",
+        "type": "natural-disaster"
+      }
+    ],
+    "capital": "Canberra",
+    "timezone": "Australia/Sydney",
+    "continent": "Oceania",
+    "flag": "https://flagcdn.com/w40/au.png",
+    "population": 26930748,
+    "gdpNominal": 1660550000000,
+    "worldGdpShare": 1.62,
+    "coordinates": {
+      "latitude": -25.2744,
+      "longitude": 133.7751
+    },
+    "languages": ["English"],
+    "taxBurdenPerCapita": {
+      "amount": 29000,
+      "currency": "AUD",
+      "convertedCurrencyAmount": 18850,
+      "convertedCurrency": "USD"
+    },
+    "controversies": "Australia’s gradual 'stage three' personal tax cuts, due from July 2024, have drawn criticism for favoring higher-income earners and risking further bracket creep; debates over federal-state health funding and water rights in the Murray–Darling basin remain highly contentious.",
+    "spendingEfficiency": "Despite high per-capita health expenditure, public hospital wait times and elective surgery backlogs remain among the longest in the OECD; infrastructure project cost overruns (e.g. Melbourne Metro, WestConnex) highlight weaknesses in project evaluation and procurement processes.",
+    "debtToGdp": 49.01,
+    "revenue": [
+      {
+        "name": "Individual Income Tax",
+        "subtype": "income-tax",
+        "amount": 335600000000
+      },
+      {
+        "name": "Goods and Services Tax (GST)",
+        "subtype": "consumption-tax",
+        "amount": 92100000000
+      },
+      {
+        "name": "Company & Resource Rent Taxes",
+        "subtype": "income-tax",
+        "amount": 143800000000
+      },
+      {
+        "name": "Excise & Customs",
+        "subtype": "excise-tax",
+        "amount": 47300000000
+      },
+      {
+        "name": "Superannuation Taxes",
+        "subtype": "other-tax",
+        "amount": 19800000000
+      },
+      {
+        "name": "Non-Tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 52500000000
+      },
+      {
+        "name": "Other Taxes",
+        "subtype": "other-tax",
+        "amount": 16300000000
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": 711500000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Public Pensions & Welfare",
+        "subtype": "pensions",
+        "amount": 200000000000
+      },
+      {
+        "name": "Public Health",
+        "subtype": "health",
+        "amount": 70000000000
+      },
+      {
+        "name": "Public Education",
+        "subtype": "education",
+        "amount": 38000000000
+      },
+      {
+        "name": "Defense",
+        "subtype": "defense",
+        "amount": 55700000000
+      },
+      {
+        "name": "Interest Payments",
+        "subtype": "debt-service",
+        "amount": 22900000000
+      },
+      {
+        "name": "Housing & Urban Policy",
+        "subtype": "housing",
+        "amount": 11300000000
+      },
+      {
+        "name": "Other Expenses",
+        "subtype": "other",
+        "amount": 268600000000
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": 738400000000
+      }
+    ]
   }
 ]

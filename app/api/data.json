@@ -1635,5 +1635,125 @@
         "amount": 444000000000
       }
     ]
+  },
+  {
+    "name": "Ireland",
+    "code": "IE",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "EU",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "Council of Europe"
+    ],
+    "capital": "Dublin",
+    "timezone": "Europe/Dublin",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/ie.png",
+    "population": 5255017,
+    "gdpNominal": 551395000000,
+    "worldGdpShare": 0.53,
+    "coordinates": {
+      "latitude": 53.3498,
+      "longitude": -6.2603
+    },
+    "languages": ["English", "Irish"],
+    "taxBurdenPerCapita": {
+      "amount": 23000,
+      "currency": "USD",
+      "convertedCurrencyAmount": 21310,
+      "convertedCurrency": "EUR"
+    },
+    "controversies": "Ireland’s heavy reliance on corporate tax—88% paid by foreign multinationals, with the top 10 firms contributing 57% of receipts—has drawn EU scrutiny and highlighted vulnerability to U.S. policy shifts. Domestic debates over housing affordability and water charges continue to spark protests.",
+    "spendingEfficiency": "Ireland’s universal healthcare faces long waiting lists for elective procedures, driving uptake of private insurance; social housing delivery lags, exacerbating homelessness and fueling voter frustration over public service quality. The OECD recommends streamlining hospital capacity planning and enhancing procurement frameworks to boost impact per euro spent.",
+    "debtToGdp": 41.6,
+    "revenue": [
+      {
+        "name": "Income Tax (including USC)",
+        "subtype": "income-tax",
+        "amount": 33000000000
+      },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 29093000000
+      },
+      {
+        "name": "Corporation Tax",
+        "subtype": "income-tax",
+        "amount": 23842000000
+      },
+      {
+        "name": "PRSI & Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 21281000000
+      },
+      {
+        "name": "Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 4130000000
+      },
+      {
+        "name": "Other Taxes",
+        "subtype": "other-tax",
+        "amount": 890000000
+      },
+      {
+        "name": "Other Non-Tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 17000000000
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": 131848000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Public Pensions",
+        "subtype": "pensions",
+        "amount": 18200000000
+      },
+      {
+        "name": "Public Health",
+        "subtype": "health",
+        "amount": 24500000000
+      },
+      {
+        "name": "Public Education",
+        "subtype": "education",
+        "amount": 15000000000
+      },
+      {
+        "name": "Defense",
+        "subtype": "defense",
+        "amount": 1020000000
+      },
+      {
+        "name": "Debt Service Interest Payments",
+        "subtype": "debt-service",
+        "amount": 9200000000
+      },
+      {
+        "name": "Housing and Urban Policy",
+        "subtype": "housing",
+        "amount": 3600000000
+      },
+      {
+        "name": "Other Expenses",
+        "subtype": "other",
+        "amount": 44380000000
+      },
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": 115900000000
+      }
+    ]
   }
 ]

@@ -1665,7 +1665,7 @@
     "taxBurdenPerCapita": {
       "amount": 23000,
       "currency": "USD",
-      "convertedCurrencyAmount": 21310,
+      "convertedCurrencyAmount": 14677,
       "convertedCurrency": "EUR"
     },
     "controversies": "Ireland’s heavy reliance on corporate tax—88% paid by foreign multinationals, with the top 10 firms contributing 57% of receipts—has drawn EU scrutiny and highlighted vulnerability to U.S. policy shifts. Domestic debates over housing affordability and water charges continue to spark protests.",
@@ -1798,7 +1798,7 @@
     "taxBurdenPerCapita": {
       "amount": 29000,
       "currency": "AUD",
-      "convertedCurrencyAmount": 18850,
+      "convertedCurrencyAmount": 18506,
       "convertedCurrency": "USD"
     },
     "controversies": "Australia’s gradual 'stage three' personal tax cuts, due from July 2024, have drawn criticism for favoring higher-income earners and risking further bracket creep; debates over federal-state health funding and water rights in the Murray–Darling basin remain highly contentious.",
@@ -1886,6 +1886,123 @@
         "name": "Total Spending",
         "subtype": "total",
         "amount": 738400000000
+      }
+    ]
+  },
+  {
+    "name": "Austria",
+    "code": "AT",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE",
+      "OPEC"
+    ],
+    "national_incidents": [],
+    "capital": "Vienna",
+    "timezone": "Europe/Vienna",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/at.png",
+    "population": 9159993,
+    "gdpNominal": 559220000000,
+    "worldGdpShare": 0.34,
+    "coordinates": {
+      "latitude": 48.2082,
+      "longitude": 16.3738
+    },
+    "languages": ["German"],
+    "taxBurdenPerCapita": {
+      "amount": 13900,
+      "currency": "USD",
+      "convertedCurrencyAmount": 12860,
+      "convertedCurrency": "EUR"
+    },
+    "controversies": "Pension reform in Austria is debated due to rising costs, with expenditures set to reach 15% of GDP by 2030. Key issues include raising the retirement age, linking it to life expectancy, and cutting benefits, which may impact vulnerable groups. Without reform, future pension spending will continue to grow.",
+    "spendingEfficiency": "Austria’s healthcare system ranks highly for outcomes but faces challenges with cost containment and regional disparities; education performance is strong though the OECD recommends enhanced vocational training pathways.",
+    "debtToGdp": 81.8,
+    "revenue": [
+      {
+        "name": "Income Tax",
+        "subtype": "income-tax",
+        "amount": 75000000000
+      },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 80000000000
+      },
+      {
+        "name": "Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 20000000000
+      },
+      {
+        "name": "Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 10000000000
+      },
+      {
+        "name": "Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 120000000000
+      },
+      {
+        "name": "Other Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 18000000000
+      },
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": 248800000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Public Pensions",
+        "subtype": "pensions",
+        "amount": 110000000000
+      },
+      {
+        "name": "Public Healthcare",
+        "subtype": "health",
+        "amount": 60000000000
+      },
+      {
+        "name": "Public Education",
+        "subtype": "education",
+        "amount": 40000000000
+      },
+      {
+        "name": "Defense",
+        "subtype": "defense",
+        "amount": 3000000000
+      },
+      {
+        "name": "Debt Interest",
+        "subtype": "debt-service",
+        "amount": 15000000000
+      },
+      {
+        "name": "Housing and Urban Policy",
+        "subtype": "housing",
+        "amount": 8000000000
+      },
+      {
+        "name": "Other Expenditure",
+        "subtype": "other",
+        "amount": 37600000000
+      },
+      {
+        "name": "Total Expenditure",
+        "subtype": "total",
+        "amount": 271300000000
       }
     ]
   }

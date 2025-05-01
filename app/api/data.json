@@ -2005,5 +2005,54 @@
         "amount": 271300000000
       }
     ]
+  },
+  {
+    "name": "Peru",
+    "code": "PE",
+    "year": 2024,
+    "currency": "PEN",
+    "organizations": [
+      "United Nations",
+      "World Trade Organization",
+      "International Monetary Fund",
+      "World Bank",
+      "Organization of American States",
+      "Asia-Pacific Economic Cooperation",
+      "Pacific Alliance",
+      "Community of Latin American and Caribbean States"
+    ],
+    "capital": "Lima",
+    "timezone": "PET (UTC−05:00)",
+    "continent": "South America",
+    "flag": "https://flagcdn.com/w40/pe.png",
+    "population": 34517139,
+    "gdpNominal": 294903000000,
+    "worldGdpShare": 0.27,
+    "coordinates": {
+      "latitude": -9.19,
+      "longitude": -75.0152
+    },
+    "languages": ["Spanish", "Quechua", "Aymara", "Other indigenous"],
+    "taxBurdenPerCapita": {
+      "amount": 1497,
+      "currency": "USD"
+    },
+    "controversies": "High presidential turnover and continuous cabinet changes in 2023-2024 have undermined confidence in institutional stability, prompting debates on far-reaching political reforms.",
+    "spendingEfficiency": "Although health and education coverage is extensive, logistical bottlenecks persist in the Andean and Amazonian regions, and the OECD recommends improving programme evaluation to optimise resources.",
+    "debtToGdp": 34.0,
+    "revenue": [
+      {
+        "name": "Total Revenues",
+        "subtype": "total",
+        "amount": 51400000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Total Spending",
+        "subtype": "total",
+        "amount": 36500000000
+      }
+    ]
   }
 ]

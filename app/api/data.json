@@ -704,7 +704,7 @@
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/de.png",
     "population": 84548231,
-    "gdpNominal": 4525700000000,
+    "gdpNominal": 4745700000000,
     "worldGdpShare": 4.26,
     "coordinates": {
       "latitude": 52.52,
@@ -968,7 +968,7 @@
     "timezone": "America/Sao_Paulo",
     "continent": "South America",
     "flag": "https://flagcdn.com/w40/br.png",
-    "population": 211140729,
+    "population": 212677722,
     "gdpNominal": 2173670000000,
     "worldGdpShare": 2.02,
     "coordinates": {

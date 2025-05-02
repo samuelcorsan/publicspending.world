@@ -2159,5 +2159,102 @@
         "amount": 122000000000
       }
     ]
+  },
+  {
+    "name": "Bulgaria",
+    "code": "BG",
+    "year": 2024,
+    "currency": "BGN",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Sofia",
+    "timezone": "Europe/Sofia",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/bg.png",
+    "population": 6817548,
+    "gdpNominal": 88960000000,
+    "worldGdpShare": 0.08,
+    "coordinates": {
+      "latitude": 42.6977,
+      "longitude": 23.3219
+    },
+    "languages": ["Bulgarian"],
+    "taxBurdenPerCapita": {
+      "amount": 6467,
+      "currency": "USD",
+      "convertedCurrencyAmount": 5722,
+      "convertedCurrency": "EUR"
+    },
+    "controversies": "High levels of perceived corruption in public procurement and slow judicial reforms have repeatedly triggered EU infringement procedures and conditional funding clauses. ",
+    "spendingEfficiency": "Healthcare indicators lag regional peers despite moderate spending; recent PISA performance is improving but vocational pathways remain underdeveloped. ",
+    "debtToGdp": 25.6,
+    "revenue": [
+      { "name": "Income Tax", "subtype": "income-tax", "amount": 6400000000 },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 18000000000
+      },
+      {
+        "name": "Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 14000000000
+      },
+      {
+        "name": "Other Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 2000000000
+      },
+      { "name": "Total Revenue", "subtype": "total", "amount": 48900000000 }
+    ],
+    "spending": [
+      {
+        "name": "Public Pensions",
+        "subtype": "pensions",
+        "amount": 18000000000
+      },
+      {
+        "name": "Public Healthcare",
+        "subtype": "health",
+        "amount": 9000000000
+      },
+      {
+        "name": "Public Education",
+        "subtype": "education",
+        "amount": 5000000000
+      },
+      { "name": "Defense", "subtype": "defense", "amount": 800000000 },
+      {
+        "name": "Debt Interest",
+        "subtype": "debt-service",
+        "amount": 400000000
+      },
+      {
+        "name": "Housing and Urban Policy",
+        "subtype": "housing",
+        "amount": 600000000
+      },
+      { "name": "Other Expenditure", "subtype": "other", "amount": 9000000000 },
+      { "name": "Total Expenditure", "subtype": "total", "amount": 41700000000 }
+    ]
   }
 ]

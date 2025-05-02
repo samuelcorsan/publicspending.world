@@ -2054,5 +2054,110 @@
         "amount": 36500000000
       }
     ]
+  },
+  {
+    "name": "Hungary",
+    "code": "HU",
+    "year": 2024,
+    "currency": "HUF",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE",
+      "NATO"
+    ],
+    "national_incidents": [],
+    "capital": "Budapest",
+    "timezone": "Europe/Budapest",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/hu.png",
+    "population": 9584627,
+    "gdpNominal": 245619000000,
+    "worldGdpShare": 0.23,
+    "coordinates": {
+      "latitude": 47.4979,
+      "longitude": 19.0402
+    },
+    "languages": ["Hungarian"],
+    "taxBurdenPerCapita": {
+      "amount": 9645,
+      "currency": "USD",
+      "convertedCurrencyAmount": 8534,
+      "convertedCurrency": "EUR"
+    },
+    "controversies": "Ongoing rule-of-law disputes with the EU over judicial independence, media freedom and electoral reforms, leading to conditional budget disbursements under the Recovery and Resilience Facility. ",
+    "spendingEfficiency": "Healthcare outcomes outperform spending levels but suffer regional inequalities; PISA scores remain below the OECD average, with calls to strengthen vocational training. ",
+    "debtToGdp": 71.8,
+    "revenue": [
+      { "name": "Income Tax", "subtype": "income-tax", "amount": 24600000000 },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 17100000000
+      },
+      {
+        "name": "Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 7350000000
+      },
+      {
+        "name": "Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 4900000000
+      },
+      {
+        "name": "Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 39500000000
+      },
+      {
+        "name": "Other Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 10700000000
+      },
+      { "name": "Total Revenue", "subtype": "total", "amount": 112700000000 }
+    ],
+    "spending": [
+      {
+        "name": "Public Pensions",
+        "subtype": "pensions",
+        "amount": 55000000000
+      },
+      {
+        "name": "Public Healthcare",
+        "subtype": "health",
+        "amount": 30000000000
+      },
+      {
+        "name": "Public Education",
+        "subtype": "education",
+        "amount": 15000000000
+      },
+      { "name": "Defense", "subtype": "defense", "amount": 2000000000 },
+      {
+        "name": "Debt Interest",
+        "subtype": "debt-service",
+        "amount": 4000000000
+      },
+      {
+        "name": "Housing and Urban Policy",
+        "subtype": "housing",
+        "amount": 3000000000
+      },
+      {
+        "name": "Other Expenditure",
+        "subtype": "other",
+        "amount": 13000000000
+      },
+      {
+        "name": "Total Expenditure",
+        "subtype": "total",
+        "amount": 122000000000
+      }
+    ]
   }
 ]

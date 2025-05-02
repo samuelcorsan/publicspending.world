@@ -2256,5 +2256,101 @@
       { "name": "Other Expenditure", "subtype": "other", "amount": 9000000000 },
       { "name": "Total Expenditure", "subtype": "total", "amount": 41700000000 }
     ]
+  },
+  {
+    "name": "Croatia",
+    "code": "HR",
+    "year": 2024,
+    "currency": "HRK",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Zagreb",
+    "timezone": "Europe/Zagreb",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/hr.png",
+    "population": 4003453,
+    "gdpNominal": 71930000000,
+    "worldGdpShare": 0.07,
+    "coordinates": {
+      "latitude": 45.815,
+      "longitude": 15.9819
+    },
+    "languages": ["Croatian"],
+    "taxBurdenPerCapita": {
+      "amount": 8721,
+      "currency": "USD",
+      "convertedCurrencyAmount": 8035,
+      "convertedCurrency": "EUR"
+    },
+    "controversies": "Slow judicial reform and backlog in the European Court of Human Rights, as well as tourism‐driven housing pressures, have sparked social and EU‐level debates. ",
+    "spendingEfficiency": "Healthcare outcomes are on par with regional EU peers; educational reform is in progress to boost STEM and vocational training. ",
+    "debtToGdp": 71.2,
+    "revenue": [
+      { "name": "Income Tax", "subtype": "income-tax", "amount": 12500000000 },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 17500000000
+      },
+      {
+        "name": "Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 5500000000
+      },
+      {
+        "name": "Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 2500000000
+      },
+      {
+        "name": "Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 21000000000
+      },
+      {
+        "name": "Other Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 4000000000
+      },
+      { "name": "Total Revenue", "subtype": "total", "amount": 61000000000 }
+    ],
+    "spending": [
+      {
+        "name": "Public Pensions",
+        "subtype": "pensions",
+        "amount": 25000000000
+      },
+      {
+        "name": "Public Healthcare",
+        "subtype": "health",
+        "amount": 13000000000
+      },
+      {
+        "name": "Public Education",
+        "subtype": "education",
+        "amount": 7000000000
+      },
+      { "name": "Defense", "subtype": "defense", "amount": 1000000000 },
+      {
+        "name": "Debt Interest",
+        "subtype": "debt-service",
+        "amount": 3000000000
+      },
+      {
+        "name": "Housing and Urban Policy",
+        "subtype": "housing",
+        "amount": 500000000
+      },
+      { "name": "Other Expenditure", "subtype": "other", "amount": 9500000000 },
+      { "name": "Total Expenditure", "subtype": "total", "amount": 58500000000 }
+    ]
   }
 ]

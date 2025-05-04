@@ -5,13 +5,13 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Privacy Policy
-          </h1>
+      <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto mt-8">
+          <div className="bg-white rounded-lg p-6 space-y-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Privacy Policy
+            </h1>
 
-          <div className="bg-white shadow rounded-lg p-6 space-y-8">
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 Introduction

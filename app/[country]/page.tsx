@@ -4,15 +4,7 @@ import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
 import Link from "next/link";
-import {
-  AlertCircle,
-  Gauge,
-  BarChart2,
-  Wallet,
-  Info,
-  ChartPieIcon,
-  BarChart4Icon,
-} from "lucide-react";
+import { AlertCircle, Gauge, BarChart2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Footer } from "@/components/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";

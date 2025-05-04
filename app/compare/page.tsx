@@ -5,7 +5,6 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
-import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
 import countryData from "@/app/api/data.json";
 import type { Country } from "@/lib/types";
 import { Footer } from "@/components/Footer";
@@ -209,27 +208,6 @@ function ComparePage() {
                       Spending
                     </h3>
                     <SpendingPieChart countryData={country} />
-                  </div>
-                  <div className="w-full mt-6">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                      Tax Burden Per Capita (beta)
-                    </h3>
-                    <span className="text-xl font-bold text-gray-900">
-                      {country.taxBurdenPerCapita &&
-                      country.taxBurdenPerCapita.amount
-                        ? `$${country.taxBurdenPerCapita.amount.toLocaleString()} USD`
-                        : "No data"}
-                    </span>
-                  </div>
-                  <div className="w-full mt-6">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                      Debt to GDP
-                    </h3>
-                    <DebtToGdpDisplay
-                      debtToGdp={country.debtToGdp}
-                      gdpNominal={country.gdpNominal}
-                      taxBurdenPerCapita={country.taxBurdenPerCapita}
-                    />
                   </div>
                 </section>
               ))}

@@ -56,7 +56,6 @@ const getTopicData = (topic: ValidTopic): Country[] => {
     revenue: country.revenue,
     currency: country.currency,
     capital: country.capital,
-    taxBurdenPerCapita: country.taxBurdenPerCapita,
     debtToGdp: country.debtToGdp,
   }));
 

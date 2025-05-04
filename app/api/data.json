@@ -1460,18 +1460,6 @@
       "World Bank",
       "APEC"
     ],
-    "national_incidents": [
-      {
-        "id": "es-blackout-2024",
-        "title": "Nationwide Blackout",
-        "description": "Major electrical grid failure affecting the entire country. Already resolved.",
-        "date": "2024-04-28",
-        "severity": "critical",
-        "status": "resolved",
-        "news_url": "https://x.com/CNN/status/1916814964397949173",
-        "type": "infrastructure"
-      }
-    ],
     "capital": "Madrid",
     "timezone": "Europe/Madrid",
     "continent": "Europe",
@@ -2684,6 +2672,116 @@
         "name": "Renteudgifter",
         "subtype": "debt-service",
         "amount": 20000000000
+      }
+    ]
+  },
+  {
+    "name": "Estonia",
+    "code": "EE",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Tallinn",
+    "timezone": "Europe/Tallinn",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/ee.png",
+    "population": 1369995,
+    "gdpNominal": 43486000000,
+    "worldGdpShare": 0.0435,
+    "coordinates": {
+      "latitude": 59.417,
+      "longitude": 24.75
+    },
+    "controversies": "Estonia’s defence budget row erupted in late 2024 when a €1.6 billion ammunition package and the resignation of Permanent Secretary Kusti Salm laid bare weaknesses in parliamentary oversight. The transition to a voluntary second-pillar pension scheme at the start of 2024 unleashed a liquidity surge equal to nearly 5 % of GDP, prompting warnings of economic overheating and intergenerational unfairness. Justice Minister Kalle Laanet’s sudden spring 2024 resignation over a €12,000 state-funded rental expense scandal highlighted ethics and transparency lapses at the highest level.",
+    "spendingEfficiency": "Estonia’s public finances are characterized by a lean government structure and a strong commitment to digital innovation, which together enable the country to deliver high-quality services at relatively low cost. By keeping overall spending below the OECD average and harnessing pioneering e-governance platforms, Estonia minimizes administrative overhead and streamlines citizen access to services. In healthcare, despite only moderate expenditure, Estonia achieves outcomes that rival those of wealthier peers.",
+    "languages": ["Estonian"],
+    "revenue": [
+      {
+        "name": "Füüsilise isiku tulumaks",
+        "subtype": "income-tax",
+        "amount": 200000000
+      },
+      {
+        "name": "Juriidilise isiku tulumaks",
+        "subtype": "income-tax",
+        "amount": 800000000
+      },
+      {
+        "name": "Käibemaks",
+        "subtype": "consumption-tax",
+        "amount": 3000000000
+      },
+      { "name": "Aktsiisid", "subtype": "excise-tax", "amount": 1000000000 },
+      { "name": "Tollimaksud", "subtype": "customs-duty", "amount": 50000000 },
+      {
+        "name": "Sotsiaalmaks (pensionikindlustus)",
+        "subtype": "social-contribution",
+        "amount": 2400000000
+      },
+      {
+        "name": "Sotsiaalmaks (ravikindlustus)",
+        "subtype": "social-contribution",
+        "amount": 1600000000
+      },
+      {
+        "name": "Dividendid riigiettevõtetelt",
+        "subtype": "non-tax-revenue",
+        "amount": 100000000
+      },
+      {
+        "name": "Riigilõivud ja tasud",
+        "subtype": "non-tax-revenue",
+        "amount": 200000000
+      },
+      {
+        "name": "Muud tulud",
+        "subtype": "non-tax-revenue",
+        "amount": 200000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensionid", "subtype": "pensions", "amount": 2500000000 },
+      { "name": "Tervishoid", "subtype": "health", "amount": 1700000000 },
+      { "name": "Haridus", "subtype": "education", "amount": 1000000000 },
+      { "name": "Kaitse", "subtype": "defense", "amount": 800000000 },
+      {
+        "name": "Avalik kord ja julgeolek",
+        "subtype": "public-safety",
+        "amount": 500000000
+      },
+      {
+        "name": "Teed ja transport",
+        "subtype": "transport",
+        "amount": 500000000
+      },
+      {
+        "name": "Võlgade teenindamine",
+        "subtype": "debt-service",
+        "amount": 100000000
+      },
+      {
+        "name": "Sotsiaalkaitse",
+        "subtype": "social-protection",
+        "amount": 800000000
+      },
+      {
+        "name": "Riigivalitsemine",
+        "subtype": "administration",
+        "amount": 300000000
+      },
+      {
+        "name": "Majanduse kulud",
+        "subtype": "economic-affairs",
+        "amount": 500000000
       }
     ]
   }

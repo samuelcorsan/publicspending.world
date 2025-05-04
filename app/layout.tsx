@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={`${merriweather.className} antialiased`}>
         {children}
         <Toaster richColors expand={true} position="top-right" />
+        <Analytics />
       </body>
     </html>
   );

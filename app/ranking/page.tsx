@@ -1,6 +1,4 @@
 "use client";
-
-import { notFound } from "next/navigation";
 import data from "../api/data.json";
 import Image from "next/image";
 import Link from "next/link";
@@ -89,7 +87,6 @@ const TopicDescriptions: Record<ValidTopic, string> = {
 const RankingList = ({ topic }: { topic: ValidTopic }) => {
   const rankingData = getTopicData(topic);
   const topicTitle = TopicTitles[topic];
-  const TopicIcon = TopicIcons[topic];
 
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">

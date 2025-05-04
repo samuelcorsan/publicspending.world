@@ -8,6 +8,7 @@ import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
 import countryData from "@/app/api/data.json";
 import type { Country } from "@/lib/types";
+import { Footer } from "@/components/Footer";
 
 function ComparePage() {
   const router = useRouter();
@@ -236,6 +237,7 @@ function ComparePage() {
           )}
         </div>
       </main>
+      <Footer />
     </>
   );
 }

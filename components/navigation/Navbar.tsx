@@ -16,16 +16,13 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    ...(!rankingTopics
-      ? [{ name: "Rankings", href: "/ranking/population" }]
-      : []),
+    ...(!rankingTopics ? [{ name: "Rankings", href: "/ranking" }] : []),
     { name: "Compare", href: "/compare" },
     ...(!hideAbout
       ? [
           {
             name: "About",
-            href: "https://github.com/samuelcorsan/publicspending.world/blob/main/README.md",
-            target: "_blank",
+            href: "/about",
           },
         ]
       : []),
@@ -60,7 +57,6 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
               <Link
                 key={item.name}
                 href={item.href}
-                target={item.target ? "_blank" : undefined}
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50 transition-colors"
               >
                 {item.name}

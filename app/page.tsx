@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CountryCard } from "@/components/CountryCard";
 import { Navbar } from "@/components/navigation/Navbar";
+import { Footer } from "@/components/Footer";
 import countryData from "./api/data.json";
 import { useRouter } from "next/navigation";
 
@@ -146,7 +147,7 @@ export default function Home() {
               <div className="w-full">
                 <div className="flex items-center justify-between mb-8">
                   <h2 className="text-xl font-semibold">Featured Countries</h2>
-                  <button className="text-blue-500 hover:underline">
+                  <button className="text-blue-500 hover:underline cursor-pointer">
                     View All ↗
                   </button>
                 </div>
@@ -185,6 +186,7 @@ export default function Home() {
           </main>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

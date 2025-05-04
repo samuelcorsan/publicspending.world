@@ -1,14 +1,5 @@
-import Link from "next/link";
 import { Navbar } from "../../components/navigation/Navbar";
-
-const topics = [
-  { id: "population", name: "Population List" },
-  { id: "gdp-nominal", name: "GDP List" },
-  { id: "world-gdp-share", name: "GDP Share List" },
-  { id: "spending", name: "Spending List" },
-  { id: "revenue", name: "Revenue List" },
-];
-
+import { Footer } from "../../components/Footer";
 export default function RankingLayout({
   children,
 }: {
@@ -16,8 +7,9 @@ export default function RankingLayout({
 }) {
   return (
     <div>
-      <Navbar rankingTopics={topics} hideAbout={true} />
+      <Navbar />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }

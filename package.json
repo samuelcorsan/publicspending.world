@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/samuelcorsan/publicspending.world.git"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "author": "",
   "bugs": {
     "url": "https://github.com/samuelcorsan/publicspending.world/issues"
@@ -19,6 +22,7 @@
   "homepage": "https://github.com/samuelcorsan/publicspending.world#readme",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@radix-ui/react-tabs": "^1.1.9",
     "@tailwindcss/postcss": "^4.1.4",
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.9.2",

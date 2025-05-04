@@ -128,7 +128,8 @@
         "subtype": "total",
         "amount": 6752000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "United Kingdom",
@@ -282,7 +283,8 @@
         "subtype": "total",
         "amount": 1150000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Japan",
@@ -436,7 +438,8 @@
         "subtype": "total",
         "amount": 112571700000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Italy",
@@ -555,7 +558,8 @@
         "subtype": "total",
         "amount": 770000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "France",
@@ -680,7 +684,8 @@
         "subtype": "total",
         "amount": 453241000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Germany",
@@ -818,7 +823,8 @@
         "subtype": "total",
         "amount": 480000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Canada",
@@ -947,7 +953,8 @@
         "subtype": "total",
         "amount": 538000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Brazil",
@@ -1064,7 +1071,8 @@
         "subtype": "total",
         "amount": 2557000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "India",
@@ -1176,7 +1184,8 @@
         "subtype": "total",
         "amount": 40434000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "China",
@@ -1284,7 +1293,8 @@
         "amount": 2100000000000
       },
       { "name": "总支出", "subtype": "total", "amount": 18770000000000 }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Russia",
@@ -1404,7 +1414,8 @@
         "subtype": "total",
         "amount": 33900000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Mexico",
@@ -1510,7 +1521,8 @@
         "subtype": "total",
         "amount": 5680000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Spain",
@@ -1634,7 +1646,8 @@
         "subtype": "total",
         "amount": 444000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Ireland",
@@ -1754,7 +1767,8 @@
         "subtype": "total",
         "amount": 115900000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Australia",
@@ -1887,7 +1901,8 @@
         "subtype": "total",
         "amount": 738400000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Austria",
@@ -2004,7 +2019,8 @@
         "subtype": "total",
         "amount": 271300000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Peru",
@@ -2053,7 +2069,8 @@
         "subtype": "total",
         "amount": 36500000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Hungary",
@@ -2158,7 +2175,8 @@
         "subtype": "total",
         "amount": 122000000000
       }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Bulgaria",
@@ -2255,7 +2273,8 @@
       },
       { "name": "Other Expenditure", "subtype": "other", "amount": 9000000000 },
       { "name": "Total Expenditure", "subtype": "total", "amount": 41700000000 }
-    ]
+    ],
+    "sources": []
   },
   {
     "name": "Croatia",
@@ -2351,6 +2370,7 @@
       },
       { "name": "Other Expenditure", "subtype": "other", "amount": 9500000000 },
       { "name": "Total Expenditure", "subtype": "total", "amount": 58500000000 }
-    ]
+    ],
+    "sources": []
   }
 ]

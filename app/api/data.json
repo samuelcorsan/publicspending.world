@@ -22,7 +22,7 @@
     "continent": "North America",
     "flag": "https://flagcdn.com/w40/us.png",
     "population": 341685984,
-    "gdpNominal": 27720700000000,
+    "gdpNominal": 30507000000000,
     "worldGdpShare": 26.11,
     "coordinates": {
       "latitude": 37.0902,
@@ -124,8 +124,7 @@
         "subtype": "total",
         "amount": 6752000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "United Kingdom",
@@ -273,8 +272,7 @@
         "subtype": "total",
         "amount": 1150000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Japan",
@@ -422,8 +420,7 @@
         "subtype": "total",
         "amount": 112571700000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Italy",
@@ -536,8 +533,7 @@
         "subtype": "total",
         "amount": 770000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "France",
@@ -657,8 +653,7 @@
         "subtype": "total",
         "amount": 453241000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Germany",
@@ -790,8 +785,7 @@
         "subtype": "total",
         "amount": 480000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Canada",
@@ -914,8 +908,7 @@
         "subtype": "total",
         "amount": 538000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Brazil",
@@ -1026,8 +1019,7 @@
         "subtype": "total",
         "amount": 2557000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "India",
@@ -1133,8 +1125,7 @@
         "subtype": "total",
         "amount": 40434000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "China",
@@ -1156,7 +1147,7 @@
     "continent": "Asia",
     "flag": "https://flagcdn.com/w40/cn.png",
     "population": 1422584933,
-    "gdpNominal": 17794800000000,
+    "gdpNominal": 19230000000000,
     "worldGdpShare": 16.5,
     "coordinates": {
       "latitude": 35.8617,
@@ -1236,8 +1227,7 @@
         "amount": 2100000000000
       },
       { "name": "总支出", "subtype": "total", "amount": 18770000000000 }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Russia",
@@ -1352,8 +1342,7 @@
         "subtype": "total",
         "amount": 33900000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Mexico",
@@ -1454,8 +1443,7 @@
         "subtype": "total",
         "amount": 5680000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Spain",
@@ -1573,8 +1561,7 @@
         "subtype": "total",
         "amount": 444000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Ireland",
@@ -1688,8 +1675,7 @@
         "subtype": "total",
         "amount": 115900000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Australia",
@@ -1816,8 +1802,7 @@
         "subtype": "total",
         "amount": 738400000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Austria",
@@ -1851,85 +1836,123 @@
     "spendingEfficiency": "Austria’s healthcare system ranks highly for outcomes but faces challenges with cost containment and regional disparities; education performance is strong though the OECD recommends enhanced vocational training pathways.",
     "debtToGdp": 81.8,
     "revenue": [
+      { "name": "Lohnsteuer", "subtype": "income-tax", "amount": 35300000000 },
       {
-        "name": "Income Tax",
+        "name": "Einkommensteuer (veranlagt)",
         "subtype": "income-tax",
-        "amount": 75000000000
+        "amount": 5000000000
       },
       {
-        "name": "Value Added Tax (VAT)",
+        "name": "Körperschaftsteuer",
+        "subtype": "income-tax",
+        "amount": 12500000000
+      },
+      {
+        "name": "Umsatzsteuer",
         "subtype": "consumption-tax",
-        "amount": 80000000000
+        "amount": 40100000000
       },
       {
-        "name": "Corporate Tax",
+        "name": "Kapitalertragsteuer",
         "subtype": "income-tax",
-        "amount": 20000000000
+        "amount": 5600000000
       },
       {
-        "name": "Excise Duties",
+        "name": "Mineralölsteuer",
         "subtype": "excise-tax",
-        "amount": 10000000000
+        "amount": 4000000000
+      },
+      { "name": "Tabaksteuer", "subtype": "excise-tax", "amount": 2000000000 },
+      {
+        "name": "Normverbrauchsabgabe",
+        "subtype": "excise-tax",
+        "amount": 800000000
       },
       {
-        "name": "Social Contributions",
-        "subtype": "social-contribution",
-        "amount": 120000000000
+        "name": "Motorbezogene Versicherungssteuer",
+        "subtype": "property-tax",
+        "amount": 2800000000
       },
       {
-        "name": "Other Non-tax Revenue",
+        "name": "Grunderwerbsteuer",
+        "subtype": "property-tax",
+        "amount": 1400000000
+      },
+      { "name": "Zölle", "subtype": "customs-duty", "amount": 200000000 },
+      {
+        "name": "Übrige Steuern und Abgaben",
+        "subtype": "other-tax",
+        "amount": 6100000000
+      },
+      {
+        "name": "Gebühren",
         "subtype": "non-tax-revenue",
-        "amount": 18000000000
+        "amount": 2000000000
       },
       {
-        "name": "Total Revenue",
-        "subtype": "total",
-        "amount": 248800000000
+        "name": "Gewinnausschüttungen der Bundesbeteiligungen",
+        "subtype": "non-tax-revenue",
+        "amount": 1000000000
+      },
+      {
+        "name": "Sonstige Einnahmen",
+        "subtype": "non-tax-revenue",
+        "amount": 1000000000
       }
     ],
     "spending": [
       {
-        "name": "Public Pensions",
+        "name": "Pensionsversicherung",
         "subtype": "pensions",
-        "amount": 110000000000
+        "amount": 16658000000
       },
       {
-        "name": "Public Healthcare",
-        "subtype": "health",
-        "amount": 60000000000
+        "name": "Beamtenpensionen",
+        "subtype": "pensions",
+        "amount": 12807700000
+      },
+      { "name": "Arbeit", "subtype": "unemployment", "amount": 9469600000 },
+      {
+        "name": "Soziales und Konsumentenschutz",
+        "subtype": "social-protection",
+        "amount": 5884000000
       },
       {
-        "name": "Public Education",
-        "subtype": "education",
-        "amount": 40000000000
+        "name": "Familie und Jugend",
+        "subtype": "social-protection",
+        "amount": 8841700000
       },
+      { "name": "Gesundheit", "subtype": "health", "amount": 3249300000 },
+      { "name": "Bildung", "subtype": "education", "amount": 11517600000 },
       {
-        "name": "Defense",
+        "name": "Wissenschaft und Forschung",
+        "subtype": "R&D",
+        "amount": 6417700000
+      },
+      { "name": "Mobilität", "subtype": "transport", "amount": 5917100000 },
+      {
+        "name": "Klima, Umwelt und Energie",
+        "subtype": "environment",
+        "amount": 3834000000
+      },
+      { "name": "Inneres", "subtype": "public-safety", "amount": 4072000000 },
+      {
+        "name": "Landesverteidigung",
         "subtype": "defense",
-        "amount": 3000000000
+        "amount": 2700000000
+      },
+      { "name": "Justiz", "subtype": "public-safety", "amount": 2977900000 },
+      {
+        "name": "Intergovernmental Transfers (Bund-Länder-Ausgleiche)",
+        "subtype": "transfers",
+        "amount": 3694100000
       },
       {
-        "name": "Debt Interest",
+        "name": "Schuldenzinsen",
         "subtype": "debt-service",
-        "amount": 15000000000
-      },
-      {
-        "name": "Housing and Urban Policy",
-        "subtype": "housing",
-        "amount": 8000000000
-      },
-      {
-        "name": "Other Expenditure",
-        "subtype": "other",
-        "amount": 37600000000
-      },
-      {
-        "name": "Total Expenditure",
-        "subtype": "total",
-        "amount": 271300000000
+        "amount": 9152900000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Peru",
@@ -1974,8 +1997,7 @@
         "subtype": "total",
         "amount": 36500000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Hungary",
@@ -2074,8 +2096,7 @@
         "subtype": "total",
         "amount": 122000000000
       }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Bulgaria",
@@ -2166,8 +2187,7 @@
       },
       { "name": "Other Expenditure", "subtype": "other", "amount": 9000000000 },
       { "name": "Total Expenditure", "subtype": "total", "amount": 41700000000 }
-    ],
-    "sources": []
+    ]
   },
   {
     "name": "Croatia",
@@ -2257,7 +2277,202 @@
       },
       { "name": "Other Expenditure", "subtype": "other", "amount": 9500000000 },
       { "name": "Total Expenditure", "subtype": "total", "amount": 58500000000 }
+    ]
+  },
+  {
+    "name": "Belgium",
+    "code": "BE",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
     ],
-    "sources": []
+    "national_incidents": [],
+    "capital": "Brussels",
+    "timezone": "Europe/Brussels",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/be.png",
+    "population": 11860000,
+    "gdpNominal": 689360000000,
+    "worldGdpShare": 0.44,
+    "coordinates": {
+      "latitude": 50.84667,
+      "longitude": 4.3525
+    },
+    "controversies": "Belgium’s budget deficit rose to 4.6% of GDP in 2024, risking EU rule violations and drawing criticism for poor fiscal coordination. Controversy surrounds reclassifying infrastructure and frozen assets to meet NATO defence targets. Meanwhile, Brussels is under scrutiny after a Huawei-linked EU bribery probe exposed lobbying and transparency failures.",
+    "spendingEfficiency": "Belgium spends over 54% of GDP on public services, among the highest in the OECD, but with limited efficiency, especially in healthcare, long-term care, and education. The OECD and IMF urge comprehensive spending reviews, better digital tools, and stricter coordination between federal and regional governments to improve value-for-money and reduce wasteful outlays.",
+    "languages": ["Dutch", "French", "German"],
+    "revenue": [
+      {
+        "name": "Impôt des personnes physiques",
+        "subtype": "income-tax",
+        "amount": 50000000000
+      },
+      {
+        "name": "Impôt des sociétés",
+        "subtype": "income-tax",
+        "amount": 15000000000
+      },
+      {
+        "name": "Taxe sur la valeur ajoutée",
+        "subtype": "consumption-tax",
+        "amount": 35000000000
+      },
+      {
+        "name": "Droits d'accise",
+        "subtype": "excise-tax",
+        "amount": 12000000000
+      },
+      {
+        "name": "Précompte mobilier",
+        "subtype": "income-tax",
+        "amount": 7000000000
+      },
+      {
+        "name": "Droits de douane",
+        "subtype": "customs-duty",
+        "amount": 500000000
+      },
+      {
+        "name": "Autres taxes fédérales",
+        "subtype": "other-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Recettes non fiscales diverses",
+        "subtype": "non-tax-revenue",
+        "amount": 2000000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensions", "subtype": "pensions", "amount": 50000000000 },
+      { "name": "Soins de santé", "subtype": "health", "amount": 15000000000 },
+      {
+        "name": "Chômage et aide sociale",
+        "subtype": "social-protection",
+        "amount": 8000000000
+      },
+      { "name": "Défense", "subtype": "defense", "amount": 6000000000 },
+      {
+        "name": "Sécurité publique (police & justice)",
+        "subtype": "public-safety",
+        "amount": 5000000000
+      },
+      { "name": "Transports", "subtype": "transport", "amount": 4000000000 },
+      {
+        "name": "Intérêts de la dette",
+        "subtype": "debt-service",
+        "amount": 10000000000
+      },
+      {
+        "name": "Services généraux de l'État",
+        "subtype": "administration",
+        "amount": 5000000000
+      }
+    ]
+  },
+  {
+    "name": "Cyprus",
+    "code": "CY",
+    "year": 2024,
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Nicosia",
+    "timezone": "Europe/Nicosia",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/cy.png",
+    "population": 1368780,
+    "gdpNominal": 38736000000,
+    "worldGdpShare": 0.034,
+    "coordinates": {
+      "latitude": 35.1725,
+      "longitude": 33.365
+    },
+    "controversies": "Cyprus’s main public‐spending woes are an inflated wage bill (especially in education) and meagre R&D investment; a costly “golden passports” VAT fraud; major procurement scandals (a €542 M LNG terminal and a €46 M waste‐treatment plant); and weak oversight, seen in the Auditor‐General’s dismissal and dwindling tender competition",
+    "spendingEfficiency": "Cyprus spends 40 % of GDP, with strong governance and a falling debt ratio, but efficiency is limited by weak procurement, poor SOE oversight, and low R&D and environmental investment. Reforms like accrual accounting and digital services are improving transparency, but challenges remain despite credit-rating upgrades.",
+    "revenue": [
+      {
+        "name": "Φόρος εισοδήματος φυσικών προσώπων",
+        "subtype": "income-tax",
+        "amount": 800000000
+      },
+      {
+        "name": "Φόρος εισοδήματος εταιρειών",
+        "subtype": "income-tax",
+        "amount": 1200000000
+      },
+      {
+        "name": "Φόρος Προστιθέμενης Αξίας (ΦΠΑ)",
+        "subtype": "consumption-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Ειδικοί φόροι κατανάλωσης",
+        "subtype": "excise-tax",
+        "amount": 700000000
+      },
+      {
+        "name": "Τελωνειακοί δασμοί",
+        "subtype": "customs-duty",
+        "amount": 50000000
+      },
+      {
+        "name": "Κοινωνικές ασφαλιστικές εισφορές",
+        "subtype": "social-contribution",
+        "amount": 2000000000
+      },
+      {
+        "name": "Τέλη και δικαιώματα",
+        "subtype": "non-tax-revenue",
+        "amount": 200000000
+      },
+      {
+        "name": "Μερίσματα και λοιπά έσοδα",
+        "subtype": "non-tax-revenue",
+        "amount": 200000000
+      }
+    ],
+    "spending": [
+      { "name": "Συντάξεις", "subtype": "pensions", "amount": 2000000000 },
+      { "name": "Υγεία", "subtype": "health", "amount": 500000000 },
+      { "name": "Παιδεία", "subtype": "education", "amount": 1000000000 },
+      { "name": "Άμυνα", "subtype": "defense", "amount": 600000000 },
+      {
+        "name": "Δημόσια Τάξη και Ασφάλεια",
+        "subtype": "public-safety",
+        "amount": 400000000
+      },
+      { "name": "Μεταφορές", "subtype": "transport", "amount": 200000000 },
+      {
+        "name": "Τόκοι δημοσίου χρέους",
+        "subtype": "debt-service",
+        "amount": 400000000
+      },
+      {
+        "name": "Κοινωνικές παροχές",
+        "subtype": "social-protection",
+        "amount": 300000000
+      },
+      {
+        "name": "Δημόσια διοίκηση",
+        "subtype": "administration",
+        "amount": 500000000
+      }
+    ]
   }
 ]

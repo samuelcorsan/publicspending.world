@@ -1041,7 +1041,7 @@
     "continent": "Asia",
     "flag": "https://flagcdn.com/w40/in.png",
     "population": 1438069596,
-    "gdpNominal": 3567550000000,
+    "gdpNominal": 4190000000000,
     "worldGdpShare": 2.02,
     "coordinates": {
       "latitude": 20.5937,
@@ -2305,6 +2305,7 @@
       "latitude": 50.84667,
       "longitude": 4.3525
     },
+
     "controversies": "Belgium’s budget deficit rose to 4.6% of GDP in 2024, risking EU rule violations and drawing criticism for poor fiscal coordination. Controversy surrounds reclassifying infrastructure and frozen assets to meet NATO defence targets. Meanwhile, Brussels is under scrutiny after a Huawei-linked EU bribery probe exposed lobbying and transparency failures.",
     "spendingEfficiency": "Belgium spends over 54% of GDP on public services, among the highest in the OECD, but with limited efficiency, especially in healthcare, long-term care, and education. The OECD and IMF urge comprehensive spending reviews, better digital tools, and stricter coordination between federal and regional governments to improve value-for-money and reduce wasteful outlays.",
     "languages": ["Dutch", "French", "German"],
@@ -2405,6 +2406,7 @@
     },
     "controversies": "Cyprus’s main public‐spending woes are an inflated wage bill (especially in education) and meagre R&D investment; a costly “golden passports” VAT fraud; major procurement scandals (a €542 M LNG terminal and a €46 M waste‐treatment plant); and weak oversight, seen in the Auditor‐General’s dismissal and dwindling tender competition",
     "spendingEfficiency": "Cyprus spends 40 % of GDP, with strong governance and a falling debt ratio, but efficiency is limited by weak procurement, poor SOE oversight, and low R&D and environmental investment. Reforms like accrual accounting and digital services are improving transparency, but challenges remain despite credit-rating upgrades.",
+    "languages": ["Greek", "Turkish"],
     "revenue": [
       {
         "name": "Φόρος εισοδήματος φυσικών προσώπων",
@@ -2472,6 +2474,216 @@
         "name": "Δημόσια διοίκηση",
         "subtype": "administration",
         "amount": 500000000
+      }
+    ]
+  },
+  {
+    "name": "Czech Republic",
+    "code": "CZ",
+    "year": 2024,
+    "currency": "CZK",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Prague",
+    "timezone": "Europe/Prague",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/cz.png",
+    "population": 10900555,
+    "gdpNominal": 343208000000,
+    "worldGdpShare": 0.32,
+    "coordinates": {
+      "latitude": 50.0755,
+      "longitude": 14.4378
+    },
+    "controversies": "Despite generally strong institutions, the Czech Republic contends with recurring procurement and corruption scandals—most notably the 2025 Motol Hospital bribery case and EU subsidy fraud allegations against prominent political figures—underscoring weaknesses in public contracting and delayed anti-corruption reforms.",
+    "spendingEfficiency": "Government spending runs at about 43.7% of GDP, supported by falling debt, accrual accounting, and expanding digital services; however, efficiency is undermined by weak procurement oversight, low R&D investment (~2% of GDP), and ongoing integrity challenges in public contracting.",
+    "languages": ["Czech"],
+    "revenue": [
+      {
+        "name": "Daň z příjmů fyzických osob",
+        "subtype": "income-tax",
+        "amount": 70000000000
+      },
+      {
+        "name": "Daň z příjmů právnických osob",
+        "subtype": "income-tax",
+        "amount": 100000000000
+      },
+      {
+        "name": "Daň z přidané hodnoty (DPH)",
+        "subtype": "consumption-tax",
+        "amount": 330000000000
+      },
+      {
+        "name": "Spotřební daně",
+        "subtype": "excise-tax",
+        "amount": 170000000000
+      },
+      { "name": "Clo", "subtype": "customs-duty", "amount": 10000000000 },
+      {
+        "name": "Ostatní daně (hazard, atd.)",
+        "subtype": "other-tax",
+        "amount": 10000000000
+      },
+      {
+        "name": "Pojistné na sociální zabezpečení",
+        "subtype": "social-contribution",
+        "amount": 600000000000
+      },
+      {
+        "name": "Dividendy státních podniků",
+        "subtype": "non-tax-revenue",
+        "amount": 10000000000
+      },
+      {
+        "name": "Poplatky a ostatní příjmy",
+        "subtype": "non-tax-revenue",
+        "amount": 40000000000
+      }
+    ],
+    "spending": [
+      { "name": "Důchody", "subtype": "pensions", "amount": 690000000000 },
+      { "name": "Zdravotnictví", "subtype": "health", "amount": 80000000000 },
+      { "name": "Školství", "subtype": "education", "amount": 150000000000 },
+      { "name": "Obrana", "subtype": "defense", "amount": 140000000000 },
+      {
+        "name": "Veřejný pořádek a bezpečnost",
+        "subtype": "public-safety",
+        "amount": 100000000000
+      },
+      { "name": "Doprava", "subtype": "transport", "amount": 100000000000 },
+      {
+        "name": "Obsluha státního dluhu",
+        "subtype": "debt-service",
+        "amount": 60000000000
+      },
+      {
+        "name": "Sociální dávky",
+        "subtype": "social-protection",
+        "amount": 80000000000
+      },
+      {
+        "name": "Státní správa",
+        "subtype": "administration",
+        "amount": 50000000000
+      },
+      {
+        "name": "Hospodářské záležitosti (vč. zemědělství)",
+        "subtype": "economic-affairs",
+        "amount": 50000000000
+      }
+    ]
+  },
+  {
+    "name": "Denmark",
+    "code": "DK",
+    "year": 2024,
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Copenhagen",
+    "timezone": "Europe/Copenhagen",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/dk.png",
+    "population": 5998555,
+    "gdpNominal": 431230000000,
+    "worldGdpShare": 0.26,
+    "coordinates": {
+      "latitude": 56.2639,
+      "longitude": 9.5018
+    },
+    "spendingEfficiency": "Denmark consistently ranks among the top OECD countries for converting public funds into high-quality services, thanks to its rigorous, centrally coordinated spending reviews that target genuine efficiency gains rather than across-the-board cuts. Its procurement system, representing roughly 14 % of GDP, is guided by transparent rules and digital oversight, ensuring value for money and minimal waste. Public investment levels hover around the OECD average, with capital projects regularly re-evaluated to maximize long-term returns.",
+    "languages": ["Danish"],
+    "currency": "DKK",
+    "revenue": [
+      {
+        "name": "Indkomstskat til staten",
+        "subtype": "income-tax",
+        "amount": 200000000000
+      },
+      {
+        "name": "Selskabsskat",
+        "subtype": "income-tax",
+        "amount": 80000000000
+      },
+      { "name": "Moms", "subtype": "consumption-tax", "amount": 280000000000 },
+      {
+        "name": "Punktafgifter",
+        "subtype": "excise-tax",
+        "amount": 70000000000
+      },
+      {
+        "name": "Arbejdsmarkedsbidrag",
+        "subtype": "income-tax",
+        "amount": 90000000000
+      },
+      {
+        "name": "Ejendomsværdiskat",
+        "subtype": "property-tax",
+        "amount": 10000000000
+      },
+      { "name": "Told", "subtype": "customs-duty", "amount": 4000000000 },
+      { "name": "Andre skatter", "subtype": "other-tax", "amount": 5000000000 },
+      {
+        "name": "Udbytter og indtægter fra offentlige virksomheder",
+        "subtype": "non-tax-revenue",
+        "amount": 5000000000
+      },
+      {
+        "name": "Øvrige ikke-skatte indtægter",
+        "subtype": "non-tax-revenue",
+        "amount": 5000000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensioner", "subtype": "pensions", "amount": 140000000000 },
+      { "name": "Sundhedsvæsen", "subtype": "health", "amount": 120000000000 },
+      { "name": "Uddannelse", "subtype": "education", "amount": 100000000000 },
+      { "name": "Forsvar", "subtype": "defense", "amount": 40000000000 },
+      {
+        "name": "Politi og retsvæsen",
+        "subtype": "public-safety",
+        "amount": 30000000000
+      },
+      {
+        "name": "Transport og infrastruktur",
+        "subtype": "transport",
+        "amount": 20000000000
+      },
+      {
+        "name": "Arbejdsmarked og sociale ydelser",
+        "subtype": "social-protection",
+        "amount": 50000000000
+      },
+      {
+        "name": "Familieydelser",
+        "subtype": "social-protection",
+        "amount": 20000000000
+      },
+      {
+        "name": "Offentlig administration",
+        "subtype": "administration",
+        "amount": 20000000000
+      },
+      {
+        "name": "Renteudgifter",
+        "subtype": "debt-service",
+        "amount": 20000000000
       }
     ]
   }

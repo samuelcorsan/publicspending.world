@@ -169,7 +169,7 @@ export default async function CountryPage({ params }: Props) {
                   </h3>
                   <p className="mb-2 text-gray-700">
                     {countryData.controversies ||
-                      "No major controversies reported."}
+                      "No major recent controversies reported."}
                   </p>
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">

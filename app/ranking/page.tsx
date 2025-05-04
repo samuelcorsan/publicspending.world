@@ -94,10 +94,10 @@ const RankingList = ({ topic }: { topic: ValidTopic }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
-      <div className="grid grid-cols-[auto_1fr_auto] gap-4 px-6 py-4 bg-gray-50 border-b border-gray-200">
-        <div className="w-24 font-medium text-gray-500">Rank</div>
+      <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
+        <div className="w-16 sm:w-24 font-medium text-gray-500">Rank</div>
         <div className="font-medium text-gray-500">Country</div>
-        <div className="w-48 text-right font-medium text-gray-500">
+        <div className="w-32 sm:w-48 text-right font-medium text-gray-500">
           {topicTitle}
         </div>
       </div>
@@ -109,12 +109,12 @@ const RankingList = ({ topic }: { topic: ValidTopic }) => {
           >
             <Link
               href={`/${getCountrySlug(country.name)}`}
-              className="px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center"
+              className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center"
             >
-              <div className="w-24 flex items-center">
+              <div className="w-16 sm:w-24 flex items-center">
                 <span
                   className={`
-                  text-2xl font-bold rounded-lg px-4 py-2
+                  text-lg sm:text-2xl font-bold rounded-lg px-2 sm:px-4 py-1 sm:py-2
                   ${
                     index === 0
                       ? "bg-yellow-100 text-yellow-700"
@@ -129,8 +129,8 @@ const RankingList = ({ topic }: { topic: ValidTopic }) => {
                   #{index + 1}
                 </span>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="h-10 w-10 flex-shrink-0">
+              <div className="flex items-center gap-2 sm:gap-4">
+                <div className="h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0">
                   <Image
                     src={country.flag}
                     alt={`${country.name} flag`}
@@ -141,12 +141,16 @@ const RankingList = ({ topic }: { topic: ValidTopic }) => {
                   />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">{country.name}</p>
-                  <p className="text-sm text-gray-500">{country.capital}</p>
+                  <p className="font-medium text-gray-900 text-sm sm:text-base">
+                    {country.name}
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-500">
+                    {country.capital}
+                  </p>
                 </div>
               </div>
-              <div className="w-48 text-right">
-                <p className="text-lg font-semibold text-gray-900">
+              <div className="w-32 sm:w-48 text-right">
+                <p className="text-base sm:text-lg font-semibold text-gray-900">
                   {topic === "world-gdp-share"
                     ? `${country.worldGdpShare}%`
                     : formatNumber(getValue(country, topic))}
@@ -163,17 +167,20 @@ const RankingList = ({ topic }: { topic: ValidTopic }) => {
 export default function RankingPage() {
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <Tabs defaultValue="population" className="w-full space-y-8">
+      <div className="max-w-7xl mx-auto py-6 sm:py-12 px-3 sm:px-6 lg:px-8">
+        <Tabs
+          defaultValue="population"
+          className="w-full space-y-4 sm:space-y-8"
+        >
           <div className="space-y-4">
-            <TabsList className="w-full flex justify-center bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
+            <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
               {validTopics.map((topic) => {
                 const TopicIcon = TopicIcons[topic];
                 return (
                   <TabsTrigger
                     key={topic}
                     value={topic}
-                    className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"
+                    className="flex-shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"
                   >
                     <TopicIcon className="w-4 h-4" />
                     {TopicTitles[topic]}

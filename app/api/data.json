@@ -28,10 +28,6 @@
       "latitude": 37.0902,
       "longitude": -95.7129
     },
-    "taxBurdenPerCapita": {
-      "amount": 20436,
-      "currency": "USD"
-    },
     "controversies": "There is an ongoing and highly politicized debate over raising the federal debt ceiling to avoid default, as well as concerns about the long-term sustainability of large deficits accumulated during and after the COVID-19 pandemic. The Biden administration's proposed tax reforms targeting high earners and corporate rate adjustments have sparked heated discussions on fairness, economic growth impact, and potential revenue shortfalls.",
     "spendingEfficiency": "The United States consistently ranks highly on global indicators of government effectiveness and transparency, but inefficiencies remain, particularly in the health care sector where administrative costs are among the highest worldwide. Social insurance programs are well-administered, yet overlapping welfare schemes and complex eligibility rules create administrative burdens and resource waste.",
     "debtToGdp": 125.0,
@@ -158,12 +154,6 @@
     "coordinates": {
       "latitude": 51.5074,
       "longitude": -0.0799
-    },
-    "taxBurdenPerCapita": {
-      "amount": 17229,
-      "currency": "USD",
-      "convertedCurrencyAmount": 15138,
-      "convertedCurrency": "EUR"
     },
     "controversies": "Recent budgets have reignited controversy over planned spending cuts and proposed increases in corporation tax to close fiscal gaps. Debates over the ‘migration levy’ on employers and shifts in VAT rates for digital services and hospitality have also been contentious, drawing criticism from industry groups about competitiveness and consumer impact.",
     "spendingEfficiency": "The UK performs well on transparency and budget execution metrics, but suffers from service delivery bottlenecks in the NHS leading to long waiting times. Devolved administrations add complexity to program delivery, causing duplication of administrative functions despite high overall public sector productivity.",
@@ -315,12 +305,6 @@
       "longitude": 138.2529
     },
     "languages": ["Japanese"],
-    "taxBurdenPerCapita": {
-      "amount": 11700,
-      "currency": "USD",
-      "convertedCurrencyAmount": 1665042,
-      "convertedCurrency": "JPY"
-    },
     "controversies": "The 2019 consumption tax increase from 8% to 10% remains politically sensitive, with critics arguing it dampened household spending. Ongoing proposals to raise the retirement age and adjust pension formulas to sustain the system have faced public protests amid concerns over fairness for aging workers.",
 
     "spendingEfficiency": "Japan scores very high on government effectiveness indices and achieves excellent social outcomes in health and longevity, but there is recognized inefficiency in health care spending and administrative overlap across central and local governments. Streamlining these processes could yield significant savings.",
@@ -470,12 +454,6 @@
       "longitude": 12.4534
     },
     "languages": ["Italian"],
-    "taxBurdenPerCapita": {
-      "amount": 16382,
-      "currency": "USD",
-      "convertedCurrencyAmount": 14392,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Italy’s complex tax code fuels high levels of tax evasion, and repeated postponements of planned VAT increases to stimulate growth have raised questions about long-term fiscal stability. Pension reform proposals, including raising retirement ages and modifying benefit calculations, continue to provoke public sector strikes.",
     "spendingEfficiency": "EU and IMF assessments highlight inefficiencies due to regional budget fragmentation and bureaucratic overhead, particularly in health care and justice systems. Improving administrative digitalization and consolidating regional procurement could significantly enhance budgetary productivity.",
     "debtToGdp": 135.3,
@@ -592,11 +570,6 @@
       "longitude": 2.2137
     },
     "languages": ["French"],
-    "taxBurdenPerCapita": {
-      "amount": 19530,
-      "currency": "USD",
-      "source": "https://www.insee.fr/en/statistiques/fiscal-revenue"
-    },
     "controversies": "Pension reform raising the retirement age to 64 has sparked widespread protests and strikes. Revisions to wealth taxes and targeted VAT reductions for tourism sectors have also triggered debates over equity and budgetary impact.",
     "spendingEfficiency": "France is transparent and effective in budget execution, but the high cost of public services, especially in health and education, yields mixed performance outcomes. Streamlining spending in these sectors could further improve value for money.",
     "debtToGdp": 110.6,
@@ -716,12 +689,6 @@
       "longitude": 13.405
     },
     "languages": ["German"],
-    "taxBurdenPerCapita": {
-      "amount": 20326,
-      "currency": "USD",
-      "convertedCurrencyAmount": 17869,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Debates around the constitutional ‘debt brake’ focus on whether to relax borrowing limits for infrastructure and green investments. The phased repeal of the Soli surcharge has also prompted discussions on replacing lost revenue without raising other taxes.",
     "spendingEfficiency": "Germany scores very high on efficiency and transparency indices; its health system delivers good outcomes at moderate cost. Challenges remain in digitalizing federal and state services to reduce redundancy and improve citizen access.",
     "debtToGdp": 62.0,
@@ -855,12 +822,6 @@
       "longitude": -75.6904
     },
     "languages": ["English", "French"],
-    "taxBurdenPerCapita": {
-      "amount": 18582,
-      "currency": "USD",
-      "convertedCurrencyAmount": 25709,
-      "convertedCurrency": "CAD"
-    },
     "controversies": "The federal carbon tax has been challenged by several provinces as overreaching, and debates over introducing a global minimum corporate tax have drawn industry lobbying against increased rates. Calls to expand child care subsidies also fuel discussions on where to allocate new revenues.",
     "spendingEfficiency": "Canada ranks highly for the efficiency of its health care and education spending, but provincial variations lead to uneven service delivery and duplication. Further central–provincial coordination could yield cost savings and improve access.",
 
@@ -983,12 +944,6 @@
       "longitude": -51.9253
     },
     "languages": ["Portuguese"],
-    "taxBurdenPerCapita": {
-      "amount": 3030,
-      "currency": "USD",
-      "convertedCurrencyAmount": 17150,
-      "convertedCurrency": "BRL"
-    },
     "controversies": "Proposals for a comprehensive tax reform to unify multiple federal and state levies into a single value-added tax have stalled amid political disagreements. High subsidies to energy sectors and delayed pension reform continue to strain public finances and provoke legal challenges.",
     "spendingEfficiency": "Despite high social spending, outcomes in health and education lag OECD peers, reflecting inefficiencies in procurement, lack of oversight in federal transfers, and fragmentation across states. Transparency initiatives have improved data access but have yet to translate into efficiency gains.",
     "debtToGdp": 76.1,
@@ -1101,12 +1056,6 @@
       "longitude": 78.9629
     },
     "languages": ["Hindi", "English"],
-    "taxBurdenPerCapita": {
-      "amount": 460,
-      "currency": "USD",
-      "convertedCurrencyAmount": 38900,
-      "convertedCurrency": "INR"
-    },
     "controversies": "Implementation of the unified Goods and Services Tax (GST) encountered compliance hurdles and legal challenges from states seeking exemptions. Ongoing debates center on broadening the tax base to include informal sectors and introducing a wealth tax to boost revenues without hampering growth.",
     "spendingEfficiency": "India scores low on transparency and government effectiveness rankings, with high levels of leakage in subsidy programs and underfunded health and education systems. Digitization of welfare transfers has improved targeting but overall efficiency remains constrained by bureaucratic complexity.",
     "debtToGdp": 85.0,
@@ -1214,12 +1163,6 @@
       "longitude": 104.1954
     },
     "languages": ["Chinese"],
-    "taxBurdenPerCapita": {
-      "amount": 2840,
-      "currency": "USD",
-      "convertedCurrencyAmount": 20645,
-      "convertedCurrency": "CNY"
-    },
     "controversies": "Recent VAT rate reductions for small businesses have raised concerns over narrowing the tax base without compensatory revenue measures. Pilots of property taxes in select cities have faced local resistance and calls for clearer central guidelines on wealth taxation.",
     "spendingEfficiency": "China’s rapid infrastructure build-out demonstrates strong execution capacity, yet IMF reviews point to inefficiencies in overlapping local government projects and overinvestment in unprofitable state-owned enterprises. Greater transparency in budget reporting could improve resource allocation.",
     "debtToGdp": 70.0,
@@ -1323,11 +1266,6 @@
       "longitude": 37.6173
     },
     "languages": ["Russian"],
-    "taxBurdenPerCapita": {
-      "amount": 5700,
-      "currency": "USD",
-      "source": "https://rosstat.gov.ru/storage/mediabank/FTS_2024.pdf"
-    },
     "controversies": "Elevated reliance on oil and gas revenues skews budget stability, while the recent VAT hike to 22% has been criticized for fueling inflation. Discussions are underway on introducing environmental and digital services taxes to diversify revenue.",
     "spendingEfficiency": "Russia’s budget transparency is low, with significant off-budget military and security expenditures. World Bank assessments point to inefficient health and education spending, hampered by bureaucratic delays and underinvestment in regional infrastructures.",
     "debtToGdp": 14.6,
@@ -1435,11 +1373,6 @@
       "longitude": -102.5528
     },
     "languages": ["Spanish"],
-    "taxBurdenPerCapita": {
-      "amount": 1500,
-      "currency": "USD",
-      "source": "https://www.shcp.gob.mx/estadisticas_publicaciones/ingresos_federales_2024.pdf"
-    },
     "controversies": "The gradual corporate tax cut from 30% to 25% has sparked debate on its adequacy to stimulate investment versus the resulting revenue shortfall. The regressive nature of exemptions on basic food items under the VAT regime also remains highly contested.",
     "spendingEfficiency": "Mexico’s spending on health and education yields outcomes below OECD averages, due in part to program fragmentation across federal, state, and municipal levels. Anti-corruption measures and better performance tracking are needed to improve value-for-money.",
     "debtToGdp": 54.0,
@@ -1563,12 +1496,6 @@
       "longitude": -3.7038
     },
     "languages": ["Spanish"],
-    "taxBurdenPerCapita": {
-      "amount": 9700,
-      "currency": "USD",
-      "convertedCurrencyAmount": 8533,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Spain’s pension system currently runs a structural deficit—as of 2024 absorbing about 25 % of public spending—due to a declining worker-to-retiree ratio. Recent income-tax bracket adjustments favoring middle earners have prompted concerns over fairness and revenue stability, while proposed regional wealth taxes on high-net-worth individuals remain the subject of ongoing debate.",
     "spendingEfficiency": "Spain’s universal health and education systems are well-ranked for coverage, but inefficiencies persist in hospital wait times and regional disparities in school performance. The OCDE recommends stronger program evaluation frameworks to redirect funding to highest-impact areas.",
     "debtToGdp": 110.0,
@@ -1675,12 +1602,6 @@
       "longitude": -6.2603
     },
     "languages": ["English", "Irish"],
-    "taxBurdenPerCapita": {
-      "amount": 23000,
-      "currency": "USD",
-      "convertedCurrencyAmount": 14677,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Ireland’s heavy reliance on corporate tax—88% paid by foreign multinationals, with the top 10 firms contributing 57% of receipts—has drawn EU scrutiny and highlighted vulnerability to U.S. policy shifts. Domestic debates over housing affordability and water charges continue to spark protests.",
     "spendingEfficiency": "Ireland’s universal healthcare faces long waiting lists for elective procedures, driving uptake of private insurance; social housing delivery lags, exacerbating homelessness and fueling voter frustration over public service quality. The OECD recommends streamlining hospital capacity planning and enhancing procurement frameworks to boost impact per euro spent.",
     "debtToGdp": 41.6,
@@ -1809,12 +1730,6 @@
       "longitude": 133.7751
     },
     "languages": ["English"],
-    "taxBurdenPerCapita": {
-      "amount": 29000,
-      "currency": "AUD",
-      "convertedCurrencyAmount": 18506,
-      "convertedCurrency": "USD"
-    },
     "controversies": "Australia’s gradual 'stage three' personal tax cuts, due from July 2024, have drawn criticism for favoring higher-income earners and risking further bracket creep; debates over federal-state health funding and water rights in the Murray–Darling basin remain highly contentious.",
     "spendingEfficiency": "Despite high per-capita health expenditure, public hospital wait times and elective surgery backlogs remain among the longest in the OECD; infrastructure project cost overruns (e.g. Melbourne Metro, WestConnex) highlight weaknesses in project evaluation and procurement processes.",
     "debtToGdp": 49.01,
@@ -1932,12 +1847,6 @@
       "longitude": 16.3738
     },
     "languages": ["German"],
-    "taxBurdenPerCapita": {
-      "amount": 13900,
-      "currency": "USD",
-      "convertedCurrencyAmount": 12860,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Pension reform in Austria is debated due to rising costs, with expenditures set to reach 15% of GDP by 2030. Key issues include raising the retirement age, linking it to life expectancy, and cutting benefits, which may impact vulnerable groups. Without reform, future pension spending will continue to grow.",
     "spendingEfficiency": "Austria’s healthcare system ranks highly for outcomes but faces challenges with cost containment and regional disparities; education performance is strong though the OECD recommends enhanced vocational training pathways.",
     "debtToGdp": 81.8,
@@ -2049,10 +1958,6 @@
       "longitude": -75.0152
     },
     "languages": ["Spanish", "Quechua", "Aymara", "Other indigenous"],
-    "taxBurdenPerCapita": {
-      "amount": 1497,
-      "currency": "USD"
-    },
     "controversies": "High presidential turnover and continuous cabinet changes in 2023-2024 have undermined confidence in institutional stability, prompting debates on far-reaching political reforms.",
     "spendingEfficiency": "Although health and education coverage is extensive, logistical bottlenecks persist in the Andean and Amazonian regions, and the OECD recommends improving programme evaluation to optimise resources.",
     "debtToGdp": 34.0,
@@ -2100,12 +2005,6 @@
       "longitude": 19.0402
     },
     "languages": ["Hungarian"],
-    "taxBurdenPerCapita": {
-      "amount": 9645,
-      "currency": "USD",
-      "convertedCurrencyAmount": 8534,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Ongoing rule-of-law disputes with the EU over judicial independence, media freedom and electoral reforms, leading to conditional budget disbursements under the Recovery and Resilience Facility. ",
     "spendingEfficiency": "Healthcare outcomes outperform spending levels but suffer regional inequalities; PISA scores remain below the OECD average, with calls to strengthen vocational training. ",
     "debtToGdp": 71.8,
@@ -2206,12 +2105,6 @@
       "longitude": 23.3219
     },
     "languages": ["Bulgarian"],
-    "taxBurdenPerCapita": {
-      "amount": 6467,
-      "currency": "USD",
-      "convertedCurrencyAmount": 5722,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "High levels of perceived corruption in public procurement and slow judicial reforms have repeatedly triggered EU infringement procedures and conditional funding clauses. ",
     "spendingEfficiency": "Healthcare indicators lag regional peers despite moderate spending; recent PISA performance is improving but vocational pathways remain underdeveloped. ",
     "debtToGdp": 25.6,
@@ -2303,12 +2196,6 @@
       "longitude": 15.9819
     },
     "languages": ["Croatian"],
-    "taxBurdenPerCapita": {
-      "amount": 8721,
-      "currency": "USD",
-      "convertedCurrencyAmount": 8035,
-      "convertedCurrency": "EUR"
-    },
     "controversies": "Slow judicial reform and backlog in the European Court of Human Rights, as well as tourism‐driven housing pressures, have sparked social and EU‐level debates. ",
     "spendingEfficiency": "Healthcare outcomes are on par with regional EU peers; educational reform is in progress to boost STEM and vocational training. ",
     "debtToGdp": 71.2,

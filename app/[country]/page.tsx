@@ -5,7 +5,6 @@ import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
 import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
 import Link from "next/link";
 import { AlertCircle, Gauge, BarChart2, Wallet, Info } from "lucide-react";
-import { DebtToGdpDisplay } from "@/components/DebtToGdpDisplay";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Footer } from "@/components/Footer";
 
@@ -162,102 +161,6 @@ export default async function CountryPage({ params }: Props) {
                 {countryData.spendingEfficiency ||
                   "No data on spending efficiency."}
               </p>
-            </section>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <section className="bg-white rounded-xl shadow-sm p-8">
-              <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
-                <BarChart2 className="w-6 h-6 mr-2 text-purple-500" /> Debt to
-                GDP
-                <Tooltip text="Shows the size of a country's government debt compared to its economy. High ratios may signal fiscal risk, while lower ratios suggest more sustainable finances." />
-              </h3>
-              <div className="mb-2 text-gray-700">
-                <DebtToGdpDisplay
-                  debtToGdp={countryData.debtToGdp}
-                  gdpNominal={countryData.gdpNominal}
-                  taxBurdenPerCapita={countryData.taxBurdenPerCapita}
-                />
-              </div>
-            </section>
-            <section className="bg-white rounded-xl shadow-sm p-8">
-              <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
-                <Wallet className="w-6 h-6 mr-2 text-orange-500" /> Tax Burden
-                Per Capita (beta)
-                <span className="relative ml-2 group">
-                  <Info
-                    tabIndex={0}
-                    className="inline w-6 h-6 text-gray-400 cursor-pointer hover:text-blue-600 focus:text-blue-600 outline-none"
-                  />
-                  <span className="absolute left-1/2 top-8 z-10 w-72 -translate-x-1/2 rounded bg-gray-900 px-4 py-3 text-xs text-white opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-200 shadow-lg">
-                    <b>Tax Burden Level:</b>
-                    <br />
-                    <span className="block mt-1">
-                      <span className="text-green-300 font-bold">
-                        Green (Low):
-                      </span>{" "}
-                      Less than $10,000 per capita
-                    </span>
-                    <span className="block">
-                      <span className="text-orange-300 font-bold">
-                        Orange (Moderate):
-                      </span>{" "}
-                      $10,000 - $20,000 per capita
-                    </span>
-                    <span className="block">
-                      <span className="text-red-300 font-bold">
-                        Red (High):
-                      </span>{" "}
-                      $20,000 - $30,000 per capita
-                    </span>
-                    <span className="block">
-                      <span className="text-purple-300 font-bold">
-                        Purple (Very High):
-                      </span>{" "}
-                      Over $30,000 per capita
-                    </span>
-                  </span>
-                </span>
-              </h3>
-              <div className="mb-2 flex flex-col items-start">
-                {countryData.taxBurdenPerCapita &&
-                countryData.taxBurdenPerCapita.amount ? (
-                  <>
-                    <span className="text-xl font-bold text-gray-900">
-                      ${countryData.taxBurdenPerCapita.amount.toLocaleString()}{" "}
-                      USD
-                    </span>
-                    {countryData.taxBurdenPerCapita.convertedCurrencyAmount &&
-                      countryData.taxBurdenPerCapita.convertedCurrency && (
-                        <span className="text-lg text-gray-700">
-                          {countryData.taxBurdenPerCapita.convertedCurrencyAmount.toLocaleString()}{" "}
-                          {countryData.taxBurdenPerCapita.convertedCurrency}
-                        </span>
-                      )}
-                    {(() => {
-                      const amount = countryData.taxBurdenPerCapita.amount;
-                      let color = "text-green-500";
-                      let label = "Low";
-                      if (amount > 10000 && amount <= 20000) {
-                        color = "text-orange-400";
-                        label = "Moderate";
-                      } else if (amount > 20000 && amount <= 30000) {
-                        color = "text-red-500";
-                        label = "High";
-                      } else if (amount > 30000) {
-                        color = "text-purple-600";
-                        label = "Very High";
-                      }
-                      return (
-                        <span className="mt-2 text-base font-semibold">
-                          Level: <span className={color}>{label}</span>
-                        </span>
-                      );
-                    })()}
-                  </>
-                ) : (
-                  <span>No data available.</span>
-                )}
-              </div>
             </section>
           </div>
         </div>

@@ -2784,5 +2784,106 @@
         "amount": 500000000
       }
     ]
+  },
+  {
+    "name": "Finland",
+    "year": 2024,
+    "code": "FI",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Helsinki",
+    "timezone": "Europe/Helsinki",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/fi.png",
+    "population": 5640437,
+    "gdpNominal": 306083000000,
+    "worldGdpShare": 0.28,
+    "coordinates": {
+      "latitude": 64.0,
+      "longitude": 26.0
+    },
+    "languages": ["Finnish", "Swedish"],
+    "currency": "EUR",
+    "spendingEfficiency": "Finland is widely recognized for its high-quality public services, with citizen satisfaction levels well above OECD averages. Its governance and stakeholder engagement in budgeting are strong, though green budgeting and healthcare efficiency need improvement. The well-being services counties, which now manage healthcare, face rising deficits, challenging sustainability. The OECD urges Finland to enhance cost-effectiveness, especially in these regions. Overall, public spending remains effective, but fiscal pressures are mounting.",
+    "controversies": "In 2024, Finland breached EU debt and deficit limits, sparking heated debate over planned spending cuts and tax hikes. Over half of the country’s new healthcare counties admitted they cannot meet legal budget balance deadlines, with some refusing to comply. The government faces criticism for failing to provide realistic funding or flexibility. At the same time, Finland’s €9.6 billion F-35 fighter jet deal raised concerns over underestimated operating costs. Together, these issues highlight deepening fiscal tensions despite Finland’s reputation for sound governance.",
+    "revenue": [
+      {
+        "name": "Valtion tulovero",
+        "subtype": "income-tax",
+        "amount": 6500000000
+      },
+      { "name": "Yhteisövero", "subtype": "income-tax", "amount": 3500000000 },
+      {
+        "name": "Arvonlisävero (ALV)",
+        "subtype": "consumption-tax",
+        "amount": 22000000000
+      },
+      {
+        "name": "Valmisteverot",
+        "subtype": "excise-tax",
+        "amount": 5000000000
+      },
+      { "name": "Tulli", "subtype": "customs-duty", "amount": 200000000 },
+      {
+        "name": "Perintö- ja lahjavero",
+        "subtype": "income-tax",
+        "amount": 800000000
+      },
+      {
+        "name": "Yleisradiovero (Yle-vero)",
+        "subtype": "other-tax",
+        "amount": 500000000
+      },
+      {
+        "name": "Muut verot ja maksut",
+        "subtype": "other-tax",
+        "amount": 1000000000
+      },
+      {
+        "name": "Sairausvakuutusmaksut",
+        "subtype": "social-contribution",
+        "amount": 2000000000
+      },
+      {
+        "name": "Osinkotulot ja muut tulot",
+        "subtype": "non-tax-revenue",
+        "amount": 2000000000
+      }
+    ],
+    "spending": [
+      { "name": "Eläkkeet", "subtype": "pensions", "amount": 6000000000 },
+      { "name": "Terveydenhuolto", "subtype": "health", "amount": 14000000000 },
+      { "name": "Koulutus", "subtype": "education", "amount": 5000000000 },
+      { "name": "Puolustus", "subtype": "defense", "amount": 6000000000 },
+      {
+        "name": "Sisäinen turvallisuus",
+        "subtype": "public-safety",
+        "amount": 3700000000
+      },
+      {
+        "name": "Liikenne ja viestintä",
+        "subtype": "transport",
+        "amount": 3000000000
+      },
+      {
+        "name": "Velanhoitokulut",
+        "subtype": "debt-service",
+        "amount": 1500000000
+      },
+      {
+        "name": "Sosiaaliturva",
+        "subtype": "social-protection",
+        "amount": 4000000000
+      },
+      { "name": "Hallinto", "subtype": "administration", "amount": 2000000000 }
+    ]
   }
 ]

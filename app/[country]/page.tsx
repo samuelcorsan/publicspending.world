@@ -87,7 +87,7 @@ export default async function CountryPage({ params }: Props) {
             defaultValue="overview"
             className="w-full space-y-4 sm:space-y-8"
           >
-            <TabsList className="w-full flex justify-center bg-white/50 backdrop-blur-sm p-1.5 rounded-xl shadow-sm border border-gray-200">
+            <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
               <TabsTrigger
                 value="overview"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"

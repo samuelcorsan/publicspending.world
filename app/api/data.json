@@ -2019,70 +2019,75 @@
     "spendingEfficiency": "Healthcare outcomes outperform spending levels but suffer regional inequalities; PISA scores remain below the OECD average, with calls to strengthen vocational training. ",
     "debtToGdp": 71.8,
     "revenue": [
-      { "name": "Income Tax", "subtype": "income-tax", "amount": 24600000000 },
       {
-        "name": "Value Added Tax (VAT)",
-        "subtype": "consumption-tax",
-        "amount": 17100000000
-      },
-      {
-        "name": "Corporate Tax",
+        "name": "Személyi jövedelemadó (SZJA)",
         "subtype": "income-tax",
-        "amount": 7350000000
+        "amount": 3500000000000
       },
       {
-        "name": "Excise Duties",
+        "name": "Társasági adó",
+        "subtype": "income-tax",
+        "amount": 800000000000
+      },
+      {
+        "name": "Általános forgalmi adó (ÁFA)",
+        "subtype": "consumption-tax",
+        "amount": 6500000000000
+      },
+      {
+        "name": "Jövedéki adó",
         "subtype": "excise-tax",
-        "amount": 4900000000
+        "amount": 1500000000000
       },
+      { "name": "Vámok", "subtype": "customs-duty", "amount": 50000000000 },
+      { "name": "Illetékek", "subtype": "other-tax", "amount": 200000000000 },
+      { "name": "Különadók", "subtype": "other-tax", "amount": 500000000000 },
       {
-        "name": "Social Contributions",
+        "name": "Társadalombiztosítási járulékok",
         "subtype": "social-contribution",
-        "amount": 39500000000
+        "amount": 6500000000000
       },
       {
-        "name": "Other Non-tax Revenue",
+        "name": "Egyéb bevételek (osztalék, bírság)",
         "subtype": "non-tax-revenue",
-        "amount": 10700000000
+        "amount": 400000000000
       },
-      { "name": "Total Revenue", "subtype": "total", "amount": 112700000000 }
+      {
+        "name": "EU támogatások",
+        "subtype": "non-tax-revenue",
+        "amount": 2000000000000
+      }
     ],
     "spending": [
+      { "name": "Nyugdíjak", "subtype": "pensions", "amount": 5000000000000 },
+      { "name": "Egészségügy", "subtype": "health", "amount": 3000000000000 },
+      { "name": "Oktatás", "subtype": "education", "amount": 2500000000000 },
+      { "name": "Honvédelem", "subtype": "defense", "amount": 1000000000000 },
       {
-        "name": "Public Pensions",
-        "subtype": "pensions",
-        "amount": 55000000000
+        "name": "Közrend és biztonság",
+        "subtype": "public-safety",
+        "amount": 1500000000000
       },
+      { "name": "Közlekedés", "subtype": "transport", "amount": 2000000000000 },
       {
-        "name": "Public Healthcare",
-        "subtype": "health",
-        "amount": 30000000000
-      },
-      {
-        "name": "Public Education",
-        "subtype": "education",
-        "amount": 15000000000
-      },
-      { "name": "Defense", "subtype": "defense", "amount": 2000000000 },
-      {
-        "name": "Debt Interest",
+        "name": "Adósságszolgálat",
         "subtype": "debt-service",
-        "amount": 4000000000
+        "amount": 2250000000000
       },
       {
-        "name": "Housing and Urban Policy",
-        "subtype": "housing",
-        "amount": 3000000000
+        "name": "Államigazgatás",
+        "subtype": "administration",
+        "amount": 1000000000000
       },
       {
-        "name": "Other Expenditure",
-        "subtype": "other",
-        "amount": 13000000000
+        "name": "Szociális ellátások",
+        "subtype": "social-protection",
+        "amount": 1000000000000
       },
       {
-        "name": "Total Expenditure",
-        "subtype": "total",
-        "amount": 122000000000
+        "name": "Gazdasági ügyek és támogatások",
+        "subtype": "economic-affairs",
+        "amount": 1000000000000
       }
     ]
   },
@@ -2884,6 +2889,302 @@
         "amount": 4000000000
       },
       { "name": "Hallinto", "subtype": "administration", "amount": 2000000000 }
+    ]
+  },
+  {
+    "name": "Greece",
+    "year": 2024,
+    "code": "GR",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Athens",
+    "timezone": "Europe/Athens",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/gr.png",
+    "population": 10400720,
+    "gdpNominal": 267348000000,
+    "worldGdpShare": 0.22,
+    "coordinates": {
+      "latitude": 37.983807,
+      "longitude": 23.727583
+    },
+    "languages": ["Greek"],
+    "controversies": "Greece’s bid in April 2025 to exempt €500 million of defence spending from the EU’s 3 % deficit ceiling reignited debate over fiscal discipline versus security needs. In May 2025, revelations of opaque contracts between the ruling New Democracy party and a PR firm spurred calls for an independent probe into campaign-finance and procurement breaches. Meanwhile, endemic “envelope” bribery—spotlighted by a Rhodes planning officer raid—alongside a national civil-service strike in November 2024 and fresh EU cohesion-funds oversight concerns have all underscored deep governance challenges.",
+    "spendingEfficiency": "Despite solid growth, Greece’s fragmented social-benefit system and heavy tilt toward current consumption hamper long-term returns on public outlays. A debt-to-GDP ratio near 162 % further constrains fiscal leeway and heightens market vulnerability. Consistently low scores in global government-efficiency and economic-freedom indices reflect lingering bureaucracy, red-tape hurdles and widespread tax evasion that erode both revenue mobilisation and public trust.",
+    "revenue": [
+      {
+        "name": "Φόρος εισοδήματος φυσικών προσώπων",
+        "subtype": "income-tax",
+        "amount": 11000000000
+      },
+      {
+        "name": "Φόρος εισοδήματος νομικών προσώπων",
+        "subtype": "income-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Φόρος Προστιθέμενης Αξίας (ΦΠΑ)",
+        "subtype": "consumption-tax",
+        "amount": 20000000000
+      },
+      {
+        "name": "Ειδικοί φόροι κατανάλωσης",
+        "subtype": "excise-tax",
+        "amount": 8000000000
+      },
+      {
+        "name": "ΕΝΦΙΑ (Ενιαίος Φόρος Ακινήτων)",
+        "subtype": "property-tax",
+        "amount": 2500000000
+      },
+      {
+        "name": "Τέλη κυκλοφορίας",
+        "subtype": "other-tax",
+        "amount": 1100000000
+      },
+      {
+        "name": "Φόρος ασφαλίστρων",
+        "subtype": "other-tax",
+        "amount": 300000000
+      },
+      {
+        "name": "Λοιποί φόροι και δασμοί",
+        "subtype": "other-tax",
+        "amount": 300000000
+      },
+      {
+        "name": "Μη φορολογικά έσοδα",
+        "subtype": "non-tax-revenue",
+        "amount": 2000000000
+      }
+    ],
+    "spending": [
+      { "name": "Συντάξεις", "subtype": "pensions", "amount": 18000000000 },
+      { "name": "Υγεία", "subtype": "health", "amount": 5000000000 },
+      { "name": "Εκπαίδευση", "subtype": "education", "amount": 6000000000 },
+      { "name": "Άμυνα", "subtype": "defense", "amount": 7000000000 },
+      {
+        "name": "Δημόσια Τάξη και Ασφάλεια",
+        "subtype": "public-safety",
+        "amount": 5000000000
+      },
+      {
+        "name": "Μεταφορές και Υποδομές",
+        "subtype": "transport",
+        "amount": 3000000000
+      },
+      {
+        "name": "Τόκοι Δημοσίου Χρέους",
+        "subtype": "debt-service",
+        "amount": 6000000000
+      },
+      {
+        "name": "Κοινωνική Προστασία",
+        "subtype": "social-protection",
+        "amount": 3000000000
+      },
+      {
+        "name": "Δημόσια Διοίκηση",
+        "subtype": "administration",
+        "amount": 2000000000
+      }
+    ]
+  },
+  {
+    "name": "Latvia",
+    "year": 2024,
+    "code": "LV",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Riga",
+    "timezone": "Europe/Riga",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/lv.png",
+    "population": 1877445,
+    "gdpNominal": 42250000000,
+    "worldGdpShare": 0.000398,
+    "coordinates": {
+      "latitude": 56.946285,
+      "longitude": 24.105078
+    },
+    "languages": ["Latvian"],
+    "revenue": [
+      {
+        "name": "Iedzīvotāju ienākuma nodoklis (IIN)",
+        "subtype": "income-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Uzņēmumu ienākuma nodoklis (UIN)",
+        "subtype": "income-tax",
+        "amount": 100000000
+      },
+      {
+        "name": "Pievienotās vērtības nodoklis (PVN)",
+        "subtype": "consumption-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Akcīzes nodoklis",
+        "subtype": "excise-tax",
+        "amount": 1000000000
+      },
+      {
+        "name": "Muitas nodokļi",
+        "subtype": "customs-duty",
+        "amount": 50000000
+      },
+      {
+        "name": "Sociālās apdrošināšanas iemaksas",
+        "subtype": "social-contribution",
+        "amount": 3500000000
+      },
+      {
+        "name": "Nodokļiem nepiederošie ieņēmumi",
+        "subtype": "non-tax-revenue",
+        "amount": 300000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensijas", "subtype": "pensions", "amount": 3000000000 },
+      { "name": "Veselība", "subtype": "health", "amount": 1500000000 },
+      { "name": "Izglītība", "subtype": "education", "amount": 1000000000 },
+      { "name": "Aizsardzība", "subtype": "defense", "amount": 900000000 },
+      {
+        "name": "Sabiedriskā kārtība un drošība",
+        "subtype": "public-safety",
+        "amount": 700000000
+      },
+      { "name": "Transports", "subtype": "transport", "amount": 500000000 },
+      {
+        "name": "Parāda apkalpošana",
+        "subtype": "debt-service",
+        "amount": 300000000
+      },
+      {
+        "name": "Sociālā aizsardzība (cits)",
+        "subtype": "social-protection",
+        "amount": 500000000
+      },
+      {
+        "name": "Valsts pārvalde",
+        "subtype": "administration",
+        "amount": 200000000
+      }
+    ]
+  },
+  {
+    "name": "Lithuania",
+    "year": 2024,
+    "code": "LT",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Vilnius",
+    "timezone": "Europe/Vilnius",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/lt.png",
+    "population": 2854099,
+    "gdpNominal": 79790000000,
+    "worldGdpShare": 0.08,
+    "coordinates": {
+      "latitude": 55.169438,
+      "longitude": 23.881275
+    },
+    "languages": ["Lithuanian"],
+    "revenue": [
+      {
+        "name": "Gyventojų pajamų mokestis (GPM)",
+        "subtype": "income-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Pelno mokestis",
+        "subtype": "income-tax",
+        "amount": 1000000000
+      },
+      {
+        "name": "Pridėtinės vertės mokestis (PVM)",
+        "subtype": "consumption-tax",
+        "amount": 5000000000
+      },
+      { "name": "Akcizai", "subtype": "excise-tax", "amount": 1500000000 },
+      {
+        "name": "Muito mokesčiai",
+        "subtype": "customs-duty",
+        "amount": 100000000
+      },
+      {
+        "name": "Socialinio draudimo įmokos",
+        "subtype": "social-contribution",
+        "amount": 6000000000
+      },
+      {
+        "name": "Nefiskalinės pajamos (dividendai ir kt.)",
+        "subtype": "non-tax-revenue",
+        "amount": 300000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensijos", "subtype": "pensions", "amount": 5000000000 },
+      {
+        "name": "Sveikatos apsauga",
+        "subtype": "health",
+        "amount": 2000000000
+      },
+      { "name": "Švietimas", "subtype": "education", "amount": 2000000000 },
+      { "name": "Gynyba", "subtype": "defense", "amount": 1200000000 },
+      {
+        "name": "Viešasis saugumas",
+        "subtype": "public-safety",
+        "amount": 1000000000
+      },
+      {
+        "name": "Transportas ir ryšiai",
+        "subtype": "transport",
+        "amount": 800000000
+      },
+      {
+        "name": "Skolos aptarnavimas",
+        "subtype": "debt-service",
+        "amount": 400000000
+      },
+      {
+        "name": "Socialinė apsauga (kita)",
+        "subtype": "social-protection",
+        "amount": 1000000000
+      },
+      {
+        "name": "Valstybinis valdymas",
+        "subtype": "administration",
+        "amount": 500000000
+      }
     ]
   }
 ]

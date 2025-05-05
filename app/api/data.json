@@ -3026,6 +3026,8 @@
       "longitude": 24.105078
     },
     "languages": ["Latvian"],
+    "spendingEfficiency": "Latvia continues to face challenges with public spending efficiency, especially in healthcare, pensions, and internal security. International institutions urge better targeting of social aid and strategic tax shifts to improve outcomes. Recent reforms to budget planning have laid a foundation for improved control and oversight. However, maximizing EU fund absorption remains critical to support growth without increasing deficits.",
+    "controversies": "The Rail Baltica project's cost explosion to nearly €10 billion has sparked outrage, with lawmakers calling it a major fiscal failure. Defence prepayments caused unexpected budget deficits in early 2025, raising questions about spending priorities. Latvia's rapid expenditure growth has also drawn EU warnings over breaching deficit thresholds. These controversies reflect deeper governance and accountability issues in managing public funds.",
     "revenue": [
       {
         "name": "Iedzīvotāju ienākuma nodoklis (IIN)",
@@ -3111,13 +3113,15 @@
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/lt.png",
     "population": 2854099,
-    "gdpNominal": 79790000000,
+    "gdpNominal": 87980000000,
     "worldGdpShare": 0.08,
     "coordinates": {
       "latitude": 55.169438,
       "longitude": 23.881275
     },
     "languages": ["Lithuanian"],
+    "spendingEfficiency": "Lithuania faces persistent inefficiencies in public spending, especially in healthcare, with high preventable deaths and low outcomes despite moderate funding. The shadow economy and aging population strain finances, prompting calls for reforms like digital tax systems, better spending reviews, and boosting property tax revenues.",
+    "controversies": "Major scandals in 2024–2025 exposed deep flaws in Lithuania’s public finance oversight, from fintech-linked laundering and rigged tenders to large-scale embezzlement and bribery in state agencies. These incidents triggered resignations, EU-level investigations, and demands for stronger regulatory and ethical safeguards.",
     "revenue": [
       {
         "name": "Gyventojų pajamų mokestis (GPM)",
@@ -3182,6 +3186,105 @@
       },
       {
         "name": "Valstybinis valdymas",
+        "subtype": "administration",
+        "amount": 500000000
+      }
+    ]
+  },
+  {
+    "name": "Luxembourg",
+    "year": 2024,
+    "code": "LU",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Luxembourg",
+    "timezone": "Europe/Luxembourg",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/lu.png",
+    "population": 672050,
+    "gdpNominal": 96993000000,
+    "worldGdpShare": 0.081,
+    "coordinates": {
+      "latitude": 49.77,
+      "longitude": 6.13
+    },
+    "languages": ["Luxembourgish", "French", "German"],
+    "spendingEfficiency": "Luxembourg maintains a high level of public service delivery while keeping total spending below the OECD average, signaling efficient use of resources. Strong investment in infrastructure and digitalization reflects strategic prioritization. Public procurement practices are well-aligned with international standards. The push for performance-based budgeting aims to further enhance fiscal accountability.",
+    "controversies": "Recent fiscal controversies have raised concerns about oversight and transparency in Luxembourg’s public spending. A €61 million embezzlement scandal within Caritas Luxembourg shook public confidence. The EU flagged the 2024 budget for breaching spending growth limits. Continued broad subsidies and rising fraud investigations have intensified scrutiny of fiscal governance.",
+    "revenue": [
+      {
+        "name": "Impôt sur le revenu des personnes physiques",
+        "subtype": "income-tax",
+        "amount": 5000000000
+      },
+      {
+        "name": "Impôt sur le revenu des collectivités",
+        "subtype": "income-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Taxe sur la valeur ajoutée (TVA)",
+        "subtype": "consumption-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Droits d'accise",
+        "subtype": "excise-tax",
+        "amount": 1500000000
+      },
+      {
+        "name": "Droits de douane",
+        "subtype": "customs-duty",
+        "amount": 50000000
+      },
+      {
+        "name": "Impôt sur la fortune (sociétés)",
+        "subtype": "other-tax",
+        "amount": 500000000
+      },
+      {
+        "name": "Taxe d'abonnement",
+        "subtype": "other-tax",
+        "amount": 1000000000
+      },
+      {
+        "name": "Recettes non fiscales (dividendes, etc.)",
+        "subtype": "non-tax-revenue",
+        "amount": 300000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensions", "subtype": "pensions", "amount": 4000000000 },
+      { "name": "Santé", "subtype": "health", "amount": 2000000000 },
+      { "name": "Éducation", "subtype": "education", "amount": 1500000000 },
+      { "name": "Défense", "subtype": "defense", "amount": 500000000 },
+      {
+        "name": "Police et sécurité",
+        "subtype": "public-safety",
+        "amount": 600000000
+      },
+      { "name": "Transports", "subtype": "transport", "amount": 1000000000 },
+      {
+        "name": "Intérêts de la dette",
+        "subtype": "debt-service",
+        "amount": 100000000
+      },
+      {
+        "name": "Protection sociale (allocations familiales etc.)",
+        "subtype": "social-protection",
+        "amount": 1000000000
+      },
+      {
+        "name": "Administration publique",
         "subtype": "administration",
         "amount": 500000000
       }

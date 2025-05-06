@@ -3289,5 +3289,256 @@
         "amount": 500000000
       }
     ]
+  },
+  {
+    "name": "Malta",
+    "year": 2024,
+    "code": "MT",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "Commonwealth of Nations",
+      "European Union",
+      "Council of Europe",
+      "World Trade Organization",
+      "International Monetary Fund",
+      "World Bank",
+      "Organization for Security and Co-operation in Europe"
+    ],
+    "national_incidents": [],
+    "capital": "Valletta",
+    "timezone": "Europe/Malta",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/mt.png",
+    "population": 519562,
+    "gdpNominal": 22737000000,
+    "worldGdpShare": 0.02,
+    "coordinates": {
+      "latitude": 35.9,
+      "longitude": 14.517
+    },
+    "languages": ["Maltese", "English"],
+    "spendingEfficiency": "Malta continues to underperform relative to its EU peers, with non‐parametric analysis placing its efficiency score at just 0.38—suggesting that over 60 % of current outlays could be trimmed without jeopardizing core service delivery. Recent IMF assessments emphasize the need for a full Public Investment Management Assessment alongside the digitalization of procurement to secure better value in infrastructure and health projects. Strategic measures in the 2025 Budget target reductions in energy subsidies and non-essential recurrent spending while shielding social transfers, aiming to streamline expenditure and improve fiscal sustainability.",
+    "controversies": "High-profile scandals have shaken Malta’s public finances, notably the self-suspension of the Central Bank governor—formerly finance minister—amid fraud allegations linked to a 2015 hospitals privatization ruled fraudulent by Maltese courts. The €15 million settlement by Steward Health Care over a disputed hospital concession highlighted opaque practices in public–private deals . Meanwhile, the European Public Prosecutor’s Office has brought charges against customs officers and intermediaries in a major fraud and corruption probe, underlining systemic procurement and revenue-collection weaknesses.",
+    "revenue": [
+      {
+        "name": "Taxxa fuq id-dħul (individwi)",
+        "subtype": "income-tax",
+        "amount": 800000000
+      },
+      {
+        "name": "Taxxa fuq id-dħul (kumpaniji)",
+        "subtype": "income-tax",
+        "amount": 1100000000
+      },
+      {
+        "name": "Taxxa fuq il-Valur Miżjud (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 1200000000
+      },
+      {
+        "name": "Dazju tas-sisa (akċízi)",
+        "subtype": "excise-tax",
+        "amount": 300000000
+      },
+      {
+        "name": "Dazji doganali",
+        "subtype": "customs-duty",
+        "amount": 50000000
+      },
+      {
+        "name": "Dazju tal-bolla",
+        "subtype": "other-tax",
+        "amount": 200000000
+      },
+      {
+        "name": "Kontribuzzjonijiet tas-sigurtà soċjali",
+        "subtype": "social-contribution",
+        "amount": 1000000000
+      },
+      {
+        "name": "Ħlasijiet u tariffi",
+        "subtype": "non-tax-revenue",
+        "amount": 100000000
+      },
+      {
+        "name": "Dividendi u profitti",
+        "subtype": "non-tax-revenue",
+        "amount": 100000000
+      }
+    ],
+    "spending": [
+      { "name": "Penzjonijiet", "subtype": "pensions", "amount": 1000000000 },
+      { "name": "Saħħa", "subtype": "health", "amount": 800000000 },
+      { "name": "Edukazzjoni", "subtype": "education", "amount": 600000000 },
+      { "name": "Difiża", "subtype": "defense", "amount": 70000000 },
+      {
+        "name": "Sigurtà pubblika",
+        "subtype": "public-safety",
+        "amount": 300000000
+      },
+      {
+        "name": "Trasport u infrastruttura",
+        "subtype": "transport",
+        "amount": 200000000
+      },
+      {
+        "name": "Ħlas ta' imgħax",
+        "subtype": "debt-service",
+        "amount": 200000000
+      },
+      {
+        "name": "Protezzjoni soċjali",
+        "subtype": "social-protection",
+        "amount": 300000000
+      },
+      {
+        "name": "Amministrazzjoni pubblika",
+        "subtype": "administration",
+        "amount": 200000000
+      }
+    ]
+  },
+  {
+    "name": "Netherlands",
+    "year": 2024,
+    "code": "NL",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Amsterdam",
+    "timezone": "Europe/Amsterdam",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/nl.png",
+    "population": 18066249,
+    "gdpNominal": 1154360000000,
+    "worldGdpShare": 1.1,
+    "coordinates": {
+      "latitude": 52.132633,
+      "longitude": 5.291266
+    },
+    "languages": ["Dutch", "Frisian"],
+    "spendingEfficiency": "The Netherlands is recognized for its highly efficient public spending, underpinned by rigorous processes such as systematic spending reviews and a sophisticated public procurement framework. With procurement accounting for over 20% of GDP—well above the OECD average—the Dutch government leverages its institutional maturity to ensure value for money across sectors. Longstanding practices of evaluating and adjusting budget programs have helped sustain fiscal discipline while maintaining high-quality public services. Despite emerging pressures from an ageing population and climate-related investments, the country’s prudent management has generally allowed for well-targeted and effective use of public funds.",
+    "controversies": "Despite its reputation for fiscal prudence, the Netherlands has recently faced growing criticism over its budget trajectory. In 2024, it was singled out as the only EU country to fail the European Commission’s deficit-and-debt test for 2025, casting doubt on the credibility of its spending plans. Political tensions have also flared over steep cuts to overseas aid and the prospect of major increases in defence expenditure to meet NATO commitments. A new right-leaning coalition has prioritized deficit reduction, but its approach has sparked controversy at home and in Brussels, exposing deep divides over how to balance fiscal rules with evolving geopolitical and social priorities.",
+    "revenue": [
+      {
+        "name": "Inkomstenbelasting",
+        "subtype": "income-tax",
+        "amount": 15000000000
+      },
+      {
+        "name": "Premies sociale verzekeringen",
+        "subtype": "social-contribution",
+        "amount": 60000000000
+      },
+      {
+        "name": "Belasting over de toegevoegde waarde (BTW)",
+        "subtype": "consumption-tax",
+        "amount": 65000000000
+      },
+      { "name": "Accijnzen", "subtype": "excise-tax", "amount": 14000000000 },
+      {
+        "name": "Vennootschapsbelasting",
+        "subtype": "income-tax",
+        "amount": 30000000000
+      },
+      {
+        "name": "Dividendbelasting",
+        "subtype": "income-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Overdrachtsbelasting",
+        "subtype": "property-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Motorrijtuigenbelasting",
+        "subtype": "property-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Erf- en schenkbelasting",
+        "subtype": "other-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Assurantiebelasting",
+        "subtype": "other-tax",
+        "amount": 1000000000
+      },
+      {
+        "name": "Douanerechten",
+        "subtype": "customs-duty",
+        "amount": 500000000
+      },
+      {
+        "name": "Aardgasbaten",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000
+      },
+      {
+        "name": "Dividenden van staatsdeelnemingen",
+        "subtype": "non-tax-revenue",
+        "amount": 200000000
+      },
+      {
+        "name": "Overige inkomsten",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Pensioenen (AOW)",
+        "subtype": "pensions",
+        "amount": 50000000000
+      },
+      {
+        "name": "Sociale uitkeringen (overige)",
+        "subtype": "social-protection",
+        "amount": 20000000000
+      },
+      { "name": "Zorg", "subtype": "health", "amount": 20000000000 },
+      {
+        "name": "Onderwijs, Cultuur en Wetenschap",
+        "subtype": "education",
+        "amount": 50000000000
+      },
+      { "name": "Defensie", "subtype": "defense", "amount": 15000000000 },
+      {
+        "name": "Justitie en Veiligheid",
+        "subtype": "public-safety",
+        "amount": 15000000000
+      },
+      {
+        "name": "Infrastructuur en Waterstaat",
+        "subtype": "transport",
+        "amount": 10000000000
+      },
+      {
+        "name": "Rente op staatsschuld",
+        "subtype": "debt-service",
+        "amount": 5000000000
+      },
+      {
+        "name": "Economische Zaken en Klimaat",
+        "subtype": "economic-affairs",
+        "amount": 5000000000
+      },
+      {
+        "name": "Buitenlandse Zaken & Ontwikkelingssamenwerking",
+        "subtype": "administration",
+        "amount": 5000000000
+      }
+    ]
   }
 ]

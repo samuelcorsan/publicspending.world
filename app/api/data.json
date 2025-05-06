@@ -1452,6 +1452,7 @@
     "currency": "EUR",
     "organizations": [
       "NATO",
+      "European Union",
       "G20",
       "UN",
       "OECD",
@@ -3538,6 +3539,255 @@
         "name": "Buitenlandse Zaken & Ontwikkelingssamenwerking",
         "subtype": "administration",
         "amount": 5000000000
+      }
+    ]
+  },
+  {
+    "name": "Poland",
+    "year": 2024,
+    "code": "PL",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Warsaw",
+    "timezone": "Europe/Warsaw",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/pl.png",
+    "population": 39616730,
+    "gdpNominal": 809201000000,
+    "worldGdpShare": 0.77,
+    "coordinates": {
+      "latitude": 52.237049,
+      "longitude": 21.017532
+    },
+    "languages": ["Polish"],
+    "spendingEfficiency": "Poland has made some strides in aligning its budgetary outlays with strategic priorities, yet efficiency gains remain uneven across sectors. While the government has introduced a framework for spending reviews and medium-term expenditure ceilings, the actual reallocation of resources toward high-impact areas—especially healthcare and defence—has been limited. Demographic pressures, notably an ageing population and rising pension commitments, further strain public finances, underscoring the need for more rigorous cost-benefit analyses and performance-based budgeting to ensure that each zloty spent delivers measurable social and economic returns.",
+    "controversies": "Recent years have seen Poland enmeshed in high-profile disputes over the use and oversight of public funds. Allegations of “suspected illegal spending” under the former administration have led to criminal investigations into hundreds of officials and potential irregularities amounting to tens of billions of zlotys. Brussels has also flexed its conditionality powers, withholding and imposing fines on EU budget transfers in response to rule-of-law concerns, while procurement integrity disputes and debates over defence spending thresholds highlight ongoing challenges in transparency and accountability.",
+    "currency": "PLN",
+    "revenue": [
+      {
+        "name": "Podatek od towarów i usług (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 300000000000
+      },
+      {
+        "name": "Podatek dochodowy od osób fizycznych (PIT)",
+        "subtype": "income-tax",
+        "amount": 80000000000
+      },
+      {
+        "name": "Podatek dochodowy od osób prawnych (CIT)",
+        "subtype": "income-tax",
+        "amount": 70000000000
+      },
+      {
+        "name": "Podatek akcyzowy",
+        "subtype": "excise-tax",
+        "amount": 85000000000
+      },
+      { "name": "Cło", "subtype": "customs-duty", "amount": 5000000000 },
+      {
+        "name": "Podatek od gier",
+        "subtype": "other-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Podatek od wydobycia niektórych kopalin",
+        "subtype": "other-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Podatek od sprzedaży detalicznej",
+        "subtype": "other-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Podatek od instytucji finansowych",
+        "subtype": "other-tax",
+        "amount": 5000000000
+      },
+      {
+        "name": "Składki na ubezpieczenia społeczne",
+        "subtype": "social-contribution",
+        "amount": 300000000000
+      },
+      {
+        "name": "Dywidendy i wpłaty z zysku",
+        "subtype": "non-tax-revenue",
+        "amount": 10000000000
+      },
+      {
+        "name": "Opłaty i pozostałe dochody",
+        "subtype": "non-tax-revenue",
+        "amount": 5000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Emerytury i renty",
+        "subtype": "pensions",
+        "amount": 370000000000
+      },
+      {
+        "name": "Ochrona zdrowia",
+        "subtype": "health",
+        "amount": 180000000000
+      },
+      {
+        "name": "Edukacja i nauka",
+        "subtype": "education",
+        "amount": 110000000000
+      },
+      {
+        "name": "Obrona narodowa",
+        "subtype": "defense",
+        "amount": 120000000000
+      },
+      {
+        "name": "Bezpieczeństwo publiczne i wymiar sprawiedliwości",
+        "subtype": "public-safety",
+        "amount": 40000000000
+      },
+      {
+        "name": "Transport i łączność",
+        "subtype": "transport",
+        "amount": 50000000000
+      },
+      {
+        "name": "Obsługa długu publicznego",
+        "subtype": "debt-service",
+        "amount": 60000000000
+      },
+      {
+        "name": "Świadczenia rodzinne",
+        "subtype": "social-protection",
+        "amount": 40000000000
+      },
+      {
+        "name": "Pomoc społeczna",
+        "subtype": "social-protection",
+        "amount": 10000000000
+      },
+      {
+        "name": "Rolnictwo i rozwój wsi",
+        "subtype": "economic-affairs",
+        "amount": 20000000000
+      },
+      {
+        "name": "Administracja publiczna",
+        "subtype": "administration",
+        "amount": 20000000000
+      }
+    ]
+  },
+  {
+    "name": "Portugal",
+    "year": 2024,
+    "code": "PT",
+    "currency": "EUR",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Lisbon",
+    "timezone": "Europe/Lisbon",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/pt.png",
+    "population": 10639726,
+    "gdpNominal": 289800000000,
+    "worldGdpShare": 0.28,
+    "coordinates": {
+      "latitude": 39.3999,
+      "longitude": -8.2245
+    },
+    "languages": ["Portuguese"],
+    "spendingEfficiency": "Portugal has made gradual progress in improving public spending efficiency, largely under pressure from the European Union and the OECD. Reforms have focused on institutionalizing spending reviews, particularly in social protection, health and education, and on introducing performance-based budgeting. Despite these steps, inefficiencies remain widespread—especially in procurement processes and digital infrastructure management. International bodies continue to urge Portugal to broaden its expenditure reviews and strengthen links between spending and outcomes to better support long-term fiscal sustainability.",
+    "controversies": "In the past two years, Portugal has faced a wave of fiscal scandals that have shaken its political system. The most prominent include Operation Influencer, a corruption probe into lithium and hydrogen contracts that implicated top government officials, and a major IT-procurement investigation involving multiple public institutions. Political fallout from ethics violations led to the collapse of the minority government in early 2025, while tensions over tax policies nearly derailed the 2025 budget. At the same time, controversies over state aid to TAP Air Portugal and a sharp drop in the budget surplus have raised fresh concerns about transparency and financial discipline.",
+    "revenue": [
+      {
+        "name": "Imposto sobre o Rendimento das Pessoas Singulares (IRS)",
+        "subtype": "income-tax",
+        "amount": 18000000000
+      },
+      {
+        "name": "Imposto sobre o Rendimento das Pessoas Coletivas (IRC)",
+        "subtype": "income-tax",
+        "amount": 8000000000
+      },
+      {
+        "name": "Imposto sobre o Valor Acrescentado (IVA)",
+        "subtype": "consumption-tax",
+        "amount": 23000000000
+      },
+      {
+        "name": "Imposto sobre Produtos Petrolíferos (ISP)",
+        "subtype": "excise-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Imposto sobre o Tabaco",
+        "subtype": "excise-tax",
+        "amount": 1500000000
+      },
+      {
+        "name": "Imposto do Selo",
+        "subtype": "other-tax",
+        "amount": 3000000000
+      },
+      {
+        "name": "Direitos Aduaneiros",
+        "subtype": "customs-duty",
+        "amount": 200000000
+      },
+      {
+        "name": "Contribuições para a Segurança Social",
+        "subtype": "social-contribution",
+        "amount": 24000000000
+      },
+      {
+        "name": "Receitas não fiscais (taxas, etc.)",
+        "subtype": "non-tax-revenue",
+        "amount": 5000000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensões", "subtype": "pensions", "amount": 20000000000 },
+      { "name": "Saúde", "subtype": "health", "amount": 13000000000 },
+      { "name": "Educação", "subtype": "education", "amount": 8000000000 },
+      { "name": "Defesa", "subtype": "defense", "amount": 3000000000 },
+      {
+        "name": "Segurança interna",
+        "subtype": "public-safety",
+        "amount": 4000000000
+      },
+      { "name": "Transportes", "subtype": "transport", "amount": 2000000000 },
+      {
+        "name": "Juros da dívida",
+        "subtype": "debt-service",
+        "amount": 5000000000
+      },
+      {
+        "name": "Proteção social",
+        "subtype": "social-protection",
+        "amount": 5000000000
+      },
+      {
+        "name": "Administração pública",
+        "subtype": "administration",
+        "amount": 3000000000
       }
     ]
   }

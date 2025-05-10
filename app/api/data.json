@@ -3790,5 +3790,108 @@
         "amount": 3000000000
       }
     ]
+  },
+  {
+    "name": "Romania",
+    "year": 2024,
+    "code": "RO",
+    "currency": "RON",
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "OSCE"
+    ],
+    "national_incidents": [],
+    "capital": "Bucharest",
+    "timezone": "Europe/Bucharest",
+    "continent": "Europe",
+    "flag": "https://flagcdn.com/w40/ro.png",
+    "population": 18936132,
+    "gdpNominal": 403395000000,
+    "worldGdpShare": 0.33,
+    "coordinates": {
+      "latitude": 44.439663,
+      "longitude": 26.096306
+    },
+    "languages": ["Romanian"],
+    "revenue": [
+      {
+        "name": "Impozit pe venit",
+        "subtype": "income-tax",
+        "amount": 35000000000
+      },
+      {
+        "name": "Impozit pe profit",
+        "subtype": "income-tax",
+        "amount": 25000000000
+      },
+      {
+        "name": "Taxa pe valoarea adăugată (TVA)",
+        "subtype": "consumption-tax",
+        "amount": 120000000000
+      },
+      { "name": "Accize", "subtype": "excise-tax", "amount": 40000000000 },
+      {
+        "name": "Taxe vamale",
+        "subtype": "customs-duty",
+        "amount": 2000000000
+      },
+      {
+        "name": "Contribuții de asigurări sociale (CAS)",
+        "subtype": "social-contribution",
+        "amount": 100000000000
+      },
+      {
+        "name": "Contribuții de asigurări de sănătate (CASS)",
+        "subtype": "social-contribution",
+        "amount": 50000000000
+      },
+      {
+        "name": "Contribuții de șomaj",
+        "subtype": "social-contribution",
+        "amount": 2000000000
+      },
+      {
+        "name": "Venituri nefiscale (dividende etc.)",
+        "subtype": "non-tax-revenue",
+        "amount": 10000000000
+      }
+    ],
+    "spending": [
+      { "name": "Pensii", "subtype": "pensions", "amount": 150000000000 },
+      { "name": "Sănătate", "subtype": "health", "amount": 70000000000 },
+      { "name": "Învățământ", "subtype": "education", "amount": 40000000000 },
+      { "name": "Apărare", "subtype": "defense", "amount": 40000000000 },
+      {
+        "name": "Ordine publică și siguranță națională",
+        "subtype": "public-safety",
+        "amount": 30000000000
+      },
+      { "name": "Transporturi", "subtype": "transport", "amount": 30000000000 },
+      {
+        "name": "Dobânzi la datorie",
+        "subtype": "debt-service",
+        "amount": 30000000000
+      },
+      {
+        "name": "Asistență socială",
+        "subtype": "social-protection",
+        "amount": 20000000000
+      },
+      {
+        "name": "Administrație publică",
+        "subtype": "administration",
+        "amount": 15000000000
+      },
+      {
+        "name": "Agricultură și dezvoltare rurală",
+        "subtype": "economic-affairs",
+        "amount": 25000000000
+      }
+    ]
   }
 ]

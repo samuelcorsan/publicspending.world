@@ -11,6 +11,7 @@ import {
   BanknotesIcon,
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
+import { SVGProps } from "react";
 
 const formatNumber = (num: number) => {
   if (num >= 1e12) {
@@ -68,8 +69,10 @@ const TopicTitles: Record<ValidTopic, string> = {
   revenue: "Government Revenue",
 };
 
-const TopicIcons: Record<ValidTopic, React.ElementType> = {
-  population: UsersIcon,
+const TopicIcons: Record<
+  ValidTopic,
+  React.ComponentType<SVGProps<SVGSVGElement>>
+> = {  population: UsersIcon,
   "gdp-nominal": ChartBarIcon,
   "world-gdp-share": GlobeAltIcon,
   spending: BanknotesIcon,

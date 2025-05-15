@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/samuelcorsan/publicspending.world.git"
   },
-  "engines": {
-    "node": "20.x"
-  },
   "author": "",
   "bugs": {
     "url": "https://github.com/samuelcorsan/publicspending.world/issues"

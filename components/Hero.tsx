@@ -29,21 +29,19 @@ export default function Hero() {
 
       <div className="px-6 lg:px-8 absolute inset-x-0 top-1/4 z-10">
         <div className="mx-auto max-w-5xl py-16 sm:py-28">
-          <div className="absolute left-1/2 -translate-x-1/2 -top-36 whitespace-nowrap bg-neutral-50 dark:bg-neutral-950 rounded-full px-3 py-1 text-sm text-zinc-600 dark:text-zinc-400 border border-neutral-200 hover:border-neutral-300 dark:border-zinc-800 dark:hover:border-zinc-700 transition-colors duration-300">
-            New feature.{" "}
+          {/*<div className="absolute left-1/2 -translate-x-1/2 -top-36 whitespace-nowrap bg-neutral-50 dark:bg-neutral-950 rounded-full px-3 py-1 text-sm text-zinc-600 dark:text-zinc-400 border border-neutral-200 hover:border-neutral-300 dark:border-zinc-800 dark:hover:border-zinc-700 transition-colors duration-300">
+            Added +10 countries.{" "}
             <a href="#" className="text-indigo-500">
               <span aria-hidden="true" className="absolute inset-0" />
               Read more
             </a>
-          </div>
+          </div>*/}
           <div className="text-center max-w-3xl mx-auto relative z-[1]">
             <h1 className="text-balance text-4xl font-semibold tracking-tight text-zinc-800 dark:text-transparent bg-clip-text bg-gradient-to-b from-neutral-300 via-white to-neutral-300 sm:text-6xl">
-              Connect the World, Share Without Borders
+              It’s Your Money. See Where It Goes.
             </h1>
             <p className="mt-6 md:mt-8 text-balance text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
-              Unite communities and bridge distances with a platform designed to
-              foster global collaboration, inspire creativity, and break down
-              barriers—wherever you are.
+            Discover how governments spend public funds — from taxes to healthcare, education, and more. Transparent. Global. Open to everyone.
             </p>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
               <SearchBar countries={countryData} />

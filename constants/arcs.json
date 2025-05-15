@@ -1,0 +1,32 @@
+{
+  "arcs": [
+    {
+      "startLat": 48.85,
+      "startLon": 2.35,
+      "endLat": 40.71,
+      "endLon": -74.0,
+      "arcAltitude": 0.15
+    },
+    {
+      "startLat": 40.71,
+      "startLon": -74.0,
+      "endLat": -23.55,
+      "endLon": -46.63,
+      "arcAltitude": 0.15
+    },
+    {
+      "startLat": -23.55,
+      "startLon": -46.63,
+      "endLat": 35.68,
+      "endLon": 139.69,
+      "arcAltitude": 0.15
+    },
+    {
+      "startLat": 35.68,
+      "startLon": 139.69,
+      "endLat": 48.85,
+      "endLon": 2.35,
+      "arcAltitude": 0.15
+    }
+  ]
+}

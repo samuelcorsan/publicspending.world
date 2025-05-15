@@ -11,6 +11,7 @@ import {
   BanknotesIcon,
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
+import { SVGProps } from "react";
 
 const validTopics = [
   "population",
@@ -29,10 +30,13 @@ const TopicTitles: Record<ValidTopic, string> = {
   revenue: "Government Revenue",
 };
 
-const TopicIcons: Record<ValidTopic, React.ElementType> = {
+const TopicIcons: Record<
+  ValidTopic,
+  React.ComponentType<SVGProps<SVGSVGElement>>
+> = {
   population: UsersIcon,
-  "gdp-nominal": ChartBarIcon,
-  "world-gdp-share": GlobeAltIcon,
+  'gdp-nominal': ChartBarIcon,
+  'world-gdp-share': GlobeAltIcon,
   spending: BanknotesIcon,
   revenue: BuildingLibraryIcon,
 };
@@ -136,7 +140,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                       : "data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50"
                   }`}
               >
-                <TopicIcon />
+                <TopicIcon className="w-4 h-4" />
                 {TopicTitles[topic]}
               </TabsTrigger>
             );

@@ -21,11 +21,11 @@ export default function Hero() {
             <h1 className="text-balance text-4xl font-semibold tracking-tight text-zinc-800 dark:text-transparent bg-clip-text bg-gradient-to-b from-neutral-300 via-white to-neutral-300 sm:text-6xl">
               It’s Your Money. See Where It Goes.
             </h1>
-            <p className="mt-6 md:mt-8 text-balance text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
+            <h2 className="mt-6 md:mt-8 text-balance text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
               Discover how governments spend public funds — from taxes to
               healthcare, education, and more. Transparent. Global. Open to
               everyone.
-            </p>
+            </h2>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
               <SearchBar countries={countryData} />
             </div>

@@ -108,18 +108,11 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
         <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
           {validTopics.map((topic) => {
             const TopicIcon = TopicIcons[topic];
-            const isDisabled = topic !== "population";
             return (
               <TabsTrigger
                 key={topic}
                 value={topic}
-                disabled={isDisabled}
-                className={`flex-shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-medium transition-all rounded-lg
-                  ${
-                    isDisabled
-                      ? "opacity-50 cursor-not-allowed backdrop-blur-sm"
-                      : "data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50"
-                  }`}
+                className="flex-shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-medium transition-all rounded-lg data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50"
               >
                 <TopicIcon className="w-4 h-4" />
                 {TopicTitles[topic]}

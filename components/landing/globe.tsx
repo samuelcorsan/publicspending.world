@@ -47,15 +47,10 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({
   rotationSpeed,
 }) => {
   const globeRef = useRef<ThreeGlobe | null>(null);
-  const speedRef = useRef(rotationSpeed);
-
-  useEffect(() => {
-    speedRef.current = rotationSpeed;
-  }, [rotationSpeed]);
 
   useFrame(() => {
     if (globeRef.current) {
-      globeRef.current.rotation.y += speedRef.current;
+      globeRef.current.rotation.y += rotationSpeed;
     }
   });
 

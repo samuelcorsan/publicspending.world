@@ -4,14 +4,9 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/Footer";
 import countryData from "./api/data.json";
 import { WorldRankings } from "@/components/WorldRankings";
-import dynamic from "next/dynamic";
-
-const DynamicHero = dynamic(() => import('../components/Hero'), {
-  ssr: false,
-});
+import Hero from "@/components/Hero";
 
 export default function Home() {
-  
   return (
     <>
       <Navbar />
@@ -19,8 +14,8 @@ export default function Home() {
         <div className="min-h-screen flex flex-col items-center pt-2 px-4 md:px-8 lg:px-16">
           <main className="max-w-7xl w-full">
             <div className="flex flex-col items-center text-center mb-12">
-            <DynamicHero />  
-            <WorldRankings countries={countryData} />
+              <Hero />
+              <WorldRankings countries={countryData} />
             </div>
           </main>
         </div>

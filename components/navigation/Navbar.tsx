@@ -86,6 +86,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Open navigation menu"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-500 hover:bg-gray-50"
             >
               <svg

@@ -29,7 +29,10 @@ export function SearchBar({ countries }: SearchBarProps) {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
         setIsSearchFocused(false);
       }
     }
@@ -56,7 +59,8 @@ export function SearchBar({ countries }: SearchBarProps) {
             <button
               key={country.name}
               className={`flex items-center gap-3 w-full p-3 hover:bg-gray-50 text-left ${
-                search && !country.name.toLowerCase().includes(search.toLowerCase())
+                search &&
+                !country.name.toLowerCase().includes(search.toLowerCase())
                   ? "hidden"
                   : ""
               }`}
@@ -75,7 +79,10 @@ export function SearchBar({ countries }: SearchBarProps) {
           ))}
         </div>
       )}
-      <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors">
+      <button
+        aria-label="Search for countries"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors"
+      >
         <svg
           className="w-5 h-5"
           fill="none"

@@ -35,8 +35,8 @@ const TopicIcons: Record<
   React.ComponentType<SVGProps<SVGSVGElement>>
 > = {
   population: UsersIcon,
-  'gdp-nominal': ChartBarIcon,
-  'world-gdp-share': GlobeAltIcon,
+  "gdp-nominal": ChartBarIcon,
+  "world-gdp-share": GlobeAltIcon,
   spending: BanknotesIcon,
   revenue: BuildingLibraryIcon,
 };
@@ -75,9 +75,13 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
     if (topic === "gdp-nominal") return country.gdpNominal;
     if (topic === "world-gdp-share") return country.worldGdpShare;
     if (topic === "spending")
-      return country.spending.find((item) => item.subtype === "total")?.amount ?? 0;
+      return (
+        country.spending.find((item) => item.subtype === "total")?.amount ?? 0
+      );
     if (topic === "revenue")
-      return country.revenue.find((item) => item.subtype === "total")?.amount ?? 0;
+      return (
+        country.revenue.find((item) => item.subtype === "total")?.amount ?? 0
+      );
     if (topic === "population") return country.population;
     return 0;
   };
@@ -100,29 +104,6 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
 
   return (
     <div className="w-full">
-      <div className="flex flex-col items-center text-center mb-12">
-        <div className="mb-6">
-          <svg
-            className="w-16 h-16 text-blue-500 mx-auto"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
-          </svg>
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          World Rankings
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Discover the world's leading economies and their key metrics. Our prestigious
-          rankings showcase the most comprehensive and up-to-date global economic data.
-        </p>
-      </div>
-
       <Tabs defaultValue="population" className="w-full space-y-4">
         <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
           {validTopics.map((topic) => {
@@ -151,7 +132,9 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
           <TabsContent key={topic} value={topic}>
             <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
               <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
-                <div className="w-16 sm:w-24 font-medium text-gray-500">Rank</div>
+                <div className="w-16 sm:w-24 font-medium text-gray-500">
+                  Rank
+                </div>
                 <div className="font-medium text-gray-500">Country</div>
                 <div className="w-32 sm:w-48 text-right font-medium text-gray-500">
                   {TopicTitles[topic]}

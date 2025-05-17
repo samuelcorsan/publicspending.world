@@ -8,29 +8,28 @@ import Script from "next/script";
 const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "World Public Spending - Transparency and Open Data on Public Spending",
+  title: "World Public Spending - Transparency on Government Spending",
   description:
-    "Explore public spending data from countries around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
+    "Explore government spending data around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
   keywords:
-    "public spending, government transparency, open data, government budgets, public finance, government expenditure, fiscal transparency",
+    "government spending, public spending, government transparency, open data, government budgets, public finance, government expenditure, fiscal transparency",
   authors: [{ name: "World Public Spending" }],
   creator: "World Public Spending",
   publisher: "World Public Spending",
   openGraph: {
     title: "World Public Spending - Global Public Finance Transparency",
     description:
-      "Explore public spending data from countries around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
+      "Explore government spending data around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
     url: "https://publicspending.world",
     siteName: "World Public Spending",
-    images: [
+    /*images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "World Public Spending - Transparency Portal",
       },
-    ],
+    ],*/
     locale: "en_US",
     type: "website",
   },
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     title: "World Public Spending - Global Public Finance Transparency",
     description:
       "Explore public spending data from countries around the world. Access transparent, up-to-date information about government expenditures.",
-    images: ["/og-image.jpg"],
+    /*images: ["/og-image.jpg"],*/
     creator: "@worldpublicspending",
   },
   robots: {

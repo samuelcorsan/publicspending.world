@@ -47,10 +47,15 @@ const GlobeComponent: React.FC<GlobeComponentProps> = ({
   rotationSpeed,
 }) => {
   const globeRef = useRef<ThreeGlobe | null>(null);
+  const speedRef = useRef(rotationSpeed);
+
+  useEffect(() => {
+    speedRef.current = rotationSpeed;
+  }, [rotationSpeed]);
 
   useFrame(() => {
     if (globeRef.current) {
-      globeRef.current.rotation.y += rotationSpeed;
+      globeRef.current.rotation.y += speedRef.current;
     }
   });
 
@@ -134,7 +139,12 @@ const Globe: React.FC<GlobeProps> = ({ rotationSpeed = 0.0015 }) => {
 
   return (
     <div className="h-full w-full">
-      <Canvas camera={{ position: [0, 0, 225] }}>
+      <Canvas
+        camera={{ position: [0, 0, 225] }}
+        gl={{
+          powerPreference: "high-performance",
+        }}
+      >
         <ambientLight intensity={3} />
 
         <GlobeComponent

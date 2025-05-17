@@ -3893,5 +3893,203 @@
         "amount": 25000000000
       }
     ]
+  },
+  {
+    "name": "Slovakia",
+    "code": "SK",
+    "year": 2024,
+    "currency": "EUR",
+    "capital": "Bratislava",
+    "continent": "Europe",
+    "timezone": "Europe",
+    "flag": "https://flagcdn.com/w40/sk.png",
+    "population": 5422194,
+    "gdpNominal": 141000000000,
+    "worldGdpShare": 0.13,
+    "coordinates": {
+      "latitude": 48.148598,
+      "longitude": 17.107748
+    },
+    "languages": ["Slovak"],
+    "national_incidents": [],
+    "spendingEfficiency": "Slovakia’s public‑spending efficiency falls below EU‑27 and OECD averages due to persistently low absorption of EU funds, weak oversight and fragmented appraisal—especially in transport projects leading to overruns—and a World Bank DEA analysis confirms it lags peer “smart” OECD countries in delivering value for money.",
+    "controversies": "Bratislava’s 2024 judicial reforms, which dissolved key anti‑corruption bodies and reduced penalties for financial crime, led the EU to suspend €799 million in grants; at the same time, MEPs and the EPPO are investigating alleged nepotism and fraud in EU‑subsidised agricultural estates, accusing authorities of diverting CAP funds to private interests.",
+    "organizations": [
+      "EU",
+      "NATO",
+      "United Nations",
+      "OECD",
+      "WTO",
+      "eurozone",
+      "Schengen Area",
+      "Council of Europe",
+      "Visegrád Group",
+      "OSCE",
+      "CERN"
+    ],
+    "revenue": [
+      {
+        "name": "Daň z príjmov fyzických osôb",
+        "subtype": "income-tax",
+        "amount": 200000000
+      },
+      {
+        "name": "Daň z príjmov právnických osôb",
+        "subtype": "income-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Daň z pridanej hodnoty (DPH)",
+        "subtype": "consumption-tax",
+        "amount": 8000000000
+      },
+      {
+        "name": "Spotrebné dane",
+        "subtype": "excise-tax",
+        "amount": 2500000000
+      },
+      { "name": "Clo", "subtype": "customs-duty", "amount": 100000000 },
+      {
+        "name": "Sociálne poistenie",
+        "subtype": "social-contribution",
+        "amount": 9000000000
+      },
+      {
+        "name": "Nedaňové príjmy (dividendy a poplatky)",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000
+      }
+    ],
+    "spending": [
+      { "name": "Dôchodky", "subtype": "pensions", "amount": 9000000000 },
+      { "name": "Zdravotníctvo", "subtype": "health", "amount": 6000000000 },
+      { "name": "Školstvo", "subtype": "education", "amount": 4000000000 },
+      { "name": "Obrana", "subtype": "defense", "amount": 2000000000 },
+      {
+        "name": "Verejný poriadok a bezpečnosť",
+        "subtype": "public-safety",
+        "amount": 2000000000
+      },
+      { "name": "Doprava", "subtype": "transport", "amount": 2000000000 },
+      {
+        "name": "Dlhová služba",
+        "subtype": "debt-service",
+        "amount": 1000000000
+      },
+      {
+        "name": "Sociálne dávky",
+        "subtype": "social-protection",
+        "amount": 2000000000
+      },
+      {
+        "name": "Štátna správa",
+        "subtype": "administration",
+        "amount": 1000000000
+      }
+    ]
+  },
+  {
+    "name": "Slovenia",
+    "code": "SI",
+    "year": 2024,
+    "currency": "EUR",
+    "capital": "Ljubljana",
+    "continent": "Europe",
+    "timezone": "Europe",
+    "flag": "https://flagcdn.com/w40/si.png",
+    "population": 2130850,
+    "gdpNominal": 72000000000,
+    "worldGdpShare": 0.07,
+    "coordinates": {
+      "latitude": 46.1512,
+      "longitude": 14.9955
+    },
+    "languages": ["Slovene"],
+    "national_incidents": [],
+    "spendingefficiency": "Slovenia’s public spending in 2024–25 has been hampered by opaque procurement practices, cost overruns in flood reconstruction, systemic corruption losses estimated at up to 7.5% of GDP annually, and insufficient oversight in law‑enforcement funding, all of which have eroded value for taxpayers",
+    "controversies": "The key scandals include the 2024 ‘Laptopgate’ procurement of outdated school laptops, budget overruns in the €1.1 billion flood‑reconstruction programme, persistent high‑level corruption losses, the early 2025 police Special Unit misconduct scandal, and the politically charged 2024 EU Commissioner nomination fallout",
+    "organizations": [
+      "EU",
+      "NATO",
+      "United Nations",
+      "OECD",
+      "WTO",
+      "eurozone",
+      "Schengen Area",
+      "Council of Europe",
+      "OSCE",
+      "CERN"
+    ],
+    "revenue": [
+      { "name": "Dohodnina", "subtype": "income-tax", "amount": 2000000000 },
+      {
+        "name": "Davek od dohodkov pravnih oseb",
+        "subtype": "income-tax",
+        "amount": 1300000000
+      },
+      {
+        "name": "Davek na dodano vrednost (DDV)",
+        "subtype": "consumption-tax",
+        "amount": 4000000000
+      },
+      { "name": "Trošarine", "subtype": "excise-tax", "amount": 1500000000 },
+      { "name": "Carine", "subtype": "customs-duty", "amount": 50000000 },
+      {
+        "name": "Prispevki za pokojninsko in invalidsko zavarovanje",
+        "subtype": "social-contribution",
+        "amount": 4000000000
+      },
+      {
+        "name": "Prispevki za zdravstveno zavarovanje",
+        "subtype": "social-contribution",
+        "amount": 3000000000
+      },
+      {
+        "name": "Prispevki za zaposlovanje",
+        "subtype": "social-contribution",
+        "amount": 300000000
+      },
+      {
+        "name": "Nefinančni prihodki (dividende itd.)",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000
+      }
+    ],
+    "spending": [
+      { "name": "Pokojnine", "subtype": "pensions", "amount": 5000000000 },
+      { "name": "Zdravstvo", "subtype": "health", "amount": 3000000000 },
+      { "name": "Izobraževanje", "subtype": "education", "amount": 2000000000 },
+      { "name": "Obramba", "subtype": "defense", "amount": 800000000 },
+      {
+        "name": "Notranja varnost",
+        "subtype": "public-safety",
+        "amount": 1000000000
+      },
+      {
+        "name": "Promet in infrastruktura",
+        "subtype": "transport",
+        "amount": 1000000000
+      },
+      {
+        "name": "Obresti na dolg",
+        "subtype": "debt-service",
+        "amount": 800000000
+      },
+      {
+        "name": "Socialna pomoč",
+        "subtype": "social-protection",
+        "amount": 1000000000
+      },
+      {
+        "name": "Javna uprava",
+        "subtype": "administration",
+        "amount": 500000000
+      },
+      {
+        "name": "Gospodarski izdatki",
+        "subtype": "economic-affairs",
+        "amount": 500000000
+      }
+    ]
   }
 ]

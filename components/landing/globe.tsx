@@ -139,12 +139,7 @@ const Globe: React.FC<GlobeProps> = ({ rotationSpeed = 0.0015 }) => {
 
   return (
     <div className="h-full w-full">
-      <Canvas
-        camera={{ position: [0, 0, 225] }}
-        gl={{
-          powerPreference: "high-performance",
-        }}
-      >
+      <Canvas camera={{ position: [0, 0, 225] }}>
         <ambientLight intensity={3} />
 
         <GlobeComponent

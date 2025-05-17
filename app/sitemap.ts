@@ -33,13 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Ranking topic routes
-  const rankingRoutes = validTopics.map((topic) => ({
-    url: `${baseUrl}/ranking/${topic}`,
-    lastModified: new Date(),
-    changeFrequency: "daily" as const,
-    priority: 0.6,
-  }));
-
-  return [...staticRoutes, ...countryRoutes, ...rankingRoutes];
+  return [...staticRoutes, ...countryRoutes];
 }

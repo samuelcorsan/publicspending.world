@@ -5277,5 +5277,239 @@
         "amount": 35000000000
       }
     ]
+  },
+  {
+    "name": "Montenegro",
+    "code": "ME",
+    "year": 2024,
+    "currency": "EUR",
+    "capital": "Podgorica",
+    "continent": "Europe",
+    "timezone": "Europe/Podgorica",
+    "flag": "https://flagcdn.com/w40/me.png",
+    "population": 620000,
+    "gdpNominal": 6100000000,
+    "worldGdpShare": 0.006,
+    "coordinates": {
+      "latitude": 42.4304,
+      "longitude": 19.2594
+    },
+    "languages": ["Montenegrin", "Serbian", "Bosnian", "Albanian", "Croatian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "NATO",
+      "Council of Europe",
+      "OSCE",
+      "CEFTA",
+      "World Trade Organization",
+      "EU candidate country",
+      "World Bank",
+      "IMF",
+      "Open Balkan"
+    ],
+    "controversies": "Montenegro's governance challenges in 2024-25 include the €250 million highway construction project facing cost overruns and transparency concerns, the €85 million tourism development initiative criticized for environmental impact assessment shortcomings, and a €30 million energy infrastructure program with procurement procedures flagged by independent monitors. The European Commission progress report highlighted approximately €120 million in public expenditures with insufficient documentation or procedural irregularities, while state auditors identified roughly €45 million in questionable public-private partnership arrangements lacking comprehensive value-for-money assessments and proper risk allocation mechanisms.",
+    "spendingEfficiency": "Independent assessments indicate mixed spending efficiency: public administration reforms delivered approximately 40% of targeted efficiency improvements despite full budget utilization, infrastructure projects routinely face 30-40% cost overruns and implementation delays averaging 16 months, while EU pre-accession funded initiatives show higher implementation rates and outcome achievement compared to nationally-funded programs. Municipal spending demonstrates significant variance in efficiency, with comparable services delivered at costs differing by up to 35% between similar-sized municipalities, while sectoral spending reviews identified approximately €35 million in potential savings through consolidation of overlapping programs and improved procurement practices.",
+    "revenue": [
+      {
+        "name": "Porez na dohodak fizičkih lica / Personal Income Tax",
+        "subtype": "income-tax",
+        "amount": 180000000
+      },
+      {
+        "name": "Porez na dobit pravnih lica / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 95000000
+      },
+      {
+        "name": "PDV / VAT",
+        "subtype": "consumption-tax",
+        "amount": 820000000
+      },
+      {
+        "name": "Akcize / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 240000000
+      },
+      {
+        "name": "Carine / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 25000000
+      },
+      {
+        "name": "Doprinosi za socijalno osiguranje / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 520000000
+      },
+      {
+        "name": "Neporeski prihodi / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 120000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Penzije / Pensions",
+        "subtype": "pensions",
+        "amount": 470000000
+      },
+      {
+        "name": "Zdravstvo / Healthcare",
+        "subtype": "health",
+        "amount": 350000000
+      },
+      {
+        "name": "Obrazovanje / Education",
+        "subtype": "education",
+        "amount": 280000000
+      },
+      {
+        "name": "Odbrana / Defense",
+        "subtype": "defense",
+        "amount": 90000000
+      },
+      {
+        "name": "Javni red i bezbjednost / Public Safety",
+        "subtype": "public-safety",
+        "amount": 120000000
+      },
+      {
+        "name": "Transport / Transport",
+        "subtype": "transport",
+        "amount": 150000000
+      },
+      {
+        "name": "Servisiranje duga / Debt Service",
+        "subtype": "debt-service",
+        "amount": 180000000
+      },
+      {
+        "name": "Socijalna zaštita / Social Protection",
+        "subtype": "social-protection",
+        "amount": 215000000
+      },
+      {
+        "name": "Administracija / Administration",
+        "subtype": "administration",
+        "amount": 145000000
+      }
+    ]
+  },
+  {
+    "name": "Moldova",
+    "code": "MD",
+    "year": 2024,
+    "currency": "MDL",
+    "capital": "Chișinău",
+    "continent": "Europe",
+    "timezone": "Europe/Chisinau",
+    "flag": "https://flagcdn.com/w40/md.png",
+    "population": 2620000,
+    "gdpNominal": 14800000000,
+    "worldGdpShare": 0.014,
+    "coordinates": {
+      "latitude": 47.0105,
+      "longitude": 28.8638
+    },
+    "languages": ["Romanian", "Russian", "Gagauz", "Ukrainian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "Council of Europe",
+      "OSCE",
+      "GUAM",
+      "CEFTA",
+      "Energy Community",
+      "EU candidate country",
+      "World Bank",
+      "IMF",
+      "CIS (Associate)"
+    ],
+    "controversies": "Moldova's governance challenges in 2024-25 include the 1.2 billion MDL transportation infrastructure program with procurement irregularities identified by state auditors, the 450 million MDL energy security initiative implemented through emergency procedures with limited competitive bidding, and 320 million MDL in agricultural subsidy programs with questioned targeting criteria and oversight mechanisms. International partners raised concerns about approximately 750 million MDL in public expenditures with inadequate documentation or procedural compliance, while the energy sector audit identified roughly 280 million MDL in contracts awarded without proper competitive procedures or value-for-money assessments.",
+    "spendingEfficiency": "Independent assessments reveal mixed spending efficiency: public administration reforms achieved approximately 50% of targeted improvements while consuming full budget allocations, infrastructure projects routinely face 25-35% cost overruns and implementation delays averaging 14 months, while EU-supported programs demonstrate higher implementation rates and outcome achievement compared to nationally-funded initiatives. Sectoral spending reviews identified approximately 650 million MDL in potential savings through improved procurement practices and program consolidation, while municipal spending shows significant variance in efficiency with comparable services delivered at costs differing by up to 40% between similar-sized localities.",
+    "revenue": [
+      {
+        "name": "Impozit pe venit personal / Personal Income Tax",
+        "subtype": "income-tax",
+        "amount": 5800000000
+      },
+      {
+        "name": "Impozit pe profit / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 3200000000
+      },
+      {
+        "name": "TVA / VAT",
+        "subtype": "consumption-tax",
+        "amount": 18500000000
+      },
+      {
+        "name": "Accize / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 6300000000
+      },
+      {
+        "name": "Taxe vamale / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 1200000000
+      },
+      {
+        "name": "Contribuții de asigurări sociale / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 16000000000
+      },
+      {
+        "name": "Venituri nefiscale / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 2400000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Pensii / Pensions",
+        "subtype": "pensions",
+        "amount": 15000000000
+      },
+      {
+        "name": "Sănătate / Healthcare",
+        "subtype": "health",
+        "amount": 10500000000
+      },
+      {
+        "name": "Educație / Education",
+        "subtype": "education",
+        "amount": 9000000000
+      },
+      {
+        "name": "Apărare / Defense",
+        "subtype": "defense",
+        "amount": 1800000000
+      },
+      {
+        "name": "Ordine publică / Public Safety",
+        "subtype": "public-safety",
+        "amount": 4200000000
+      },
+      {
+        "name": "Transport / Transport",
+        "subtype": "transport",
+        "amount": 4800000000
+      },
+      {
+        "name": "Serviciul datoriei / Debt Service",
+        "subtype": "debt-service",
+        "amount": 2500000000
+      },
+      {
+        "name": "Protecție socială / Social Protection",
+        "subtype": "social-protection",
+        "amount": 7500000000
+      },
+      {
+        "name": "Administrație / Administration",
+        "subtype": "administration",
+        "amount": 4000000000
+      }
+    ]
   }
 ]

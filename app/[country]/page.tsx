@@ -8,6 +8,7 @@ import { AlertCircle, Gauge, BarChart2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Footer } from "@/components/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Metadata } from "next";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -193,19 +194,17 @@ export default async function CountryPage({ params }: Props) {
   );
 }
 
-// TODO: To fix params error in build
-/* export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { country } = await params;
   const countryName = formatCountryName(country);
   return {
     title: `${countryName} - Public Spending`,
     description: `Public spending and revenue information for ${countryName}`,
   };
-} 
+}
 function formatCountryName(country: string): string {
   return country
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 }
-*/

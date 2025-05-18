@@ -4006,7 +4006,7 @@
     },
     "languages": ["Slovene"],
     "national_incidents": [],
-    "spendingefficiency": "Slovenia’s public spending in 2024–25 has been hampered by opaque procurement practices, cost overruns in flood reconstruction, systemic corruption losses estimated at up to 7.5% of GDP annually, and insufficient oversight in law‑enforcement funding, all of which have eroded value for taxpayers",
+    "spendingEfficiency": "Slovenia’s public spending in 2024–25 has been hampered by opaque procurement practices, cost overruns in flood reconstruction, systemic corruption losses estimated at up to 7.5% of GDP annually, and insufficient oversight in law‑enforcement funding, all of which have eroded value for taxpayers",
     "controversies": "The key scandals include the 2024 ‘Laptopgate’ procurement of outdated school laptops, budget overruns in the €1.1 billion flood‑reconstruction programme, persistent high‑level corruption losses, the early 2025 police Special Unit misconduct scandal, and the politically charged 2024 EU Commissioner nomination fallout",
     "organizations": [
       "EU",
@@ -4089,6 +4089,370 @@
         "name": "Gospodarski izdatki",
         "subtype": "economic-affairs",
         "amount": 500000000
+      }
+    ]
+  },
+  {
+    "name": "Serbia",
+    "code": "RS",
+    "year": 2024,
+    "currency": "RSD",
+    "capital": "Belgrade",
+    "continent": "Europe",
+    "timezone": "Europe",
+    "flag": "https://flagcdn.com/w40/rs.png",
+    "population": 6605168,
+    "gdpNominal": 92550000000,
+    "worldGdpShare": 0.08,
+    "coordinates": {
+      "latitude": 44.817345,
+      "longitude": 20.457243
+    },
+    "languages": ["Serbian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "International Monetary Fund",
+      "World Bank",
+      "World Trade Organization (Observer)",
+      "Council of Europe",
+      "OSCE",
+      "CEFTA",
+      "BSEC",
+      "AIIB",
+      "Open Balkan"
+    ],
+    "controversies": "Several major 2024–25 episodes—like the €3.5 billion Belgrade Waterfront deal approved by special decree, the $500 million Jared Kushner hotel lease tainted by forged heritage‑protection documents, a €4.8 million luxury hotel subsidy questioned for poor job creation, the U.S. withdrawal of $14 million procurement reform aid after missed milestones, and secretive emergency medical equipment contracts awarded without open tender—have sparked legal investigations, parliamentary inquiries and widespread public criticism over opaque decision‑making and governance failures.",
+    "spendingEfficiency": "In each case, public money delivered little measurable return: flagship investments remain stalled or legally frozen, promised procurement savings evaporated, small‑scale subsidies lacked clear cost‑benefit analysis, and emergency purchases remain unaccounted, demonstrating weak oversight, absent transparency and low spending efficiency overall.",
+    "revenue": [
+      {
+        "name": "Daň z príjmov fyzických osôb",
+        "subtype": "income-tax",
+        "amount": 200000000
+      },
+      {
+        "name": "Daň z príjmov právnických osôb",
+        "subtype": "income-tax",
+        "amount": 4000000000
+      },
+      {
+        "name": "Daň z pridanej hodnoty (DPH)",
+        "subtype": "consumption-tax",
+        "amount": 8000000000
+      },
+      {
+        "name": "Spotrebné dane",
+        "subtype": "excise-tax",
+        "amount": 2500000000
+      },
+      {
+        "name": "Clo",
+        "subtype": "customs-duty",
+        "amount": 100000000
+      },
+      {
+        "name": "Sociálne poistenie",
+        "subtype": "social-contribution",
+        "amount": 9000000000
+      },
+      {
+        "name": "Nedaňové príjmy (dividendy a poplatky)",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Dôchodky",
+        "subtype": "pensions",
+        "amount": 9000000000
+      },
+      {
+        "name": "Zdravotníctvo",
+        "subtype": "health",
+        "amount": 6000000000
+      },
+      {
+        "name": "Školstvo",
+        "subtype": "education",
+        "amount": 4000000000
+      },
+      {
+        "name": "Obrana",
+        "subtype": "defense",
+        "amount": 2000000000
+      },
+      {
+        "name": "Verejný poriadok a bezpečnosť",
+        "subtype": "public-safety",
+        "amount": 2000000000
+      },
+      {
+        "name": "Doprava",
+        "subtype": "transport",
+        "amount": 2000000000
+      },
+      {
+        "name": "Dlhová služba",
+        "subtype": "debt-service",
+        "amount": 1000000000
+      },
+      {
+        "name": "Sociálne dávky",
+        "subtype": "social-protection",
+        "amount": 2000000000
+      },
+      {
+        "name": "Štátna správa",
+        "subtype": "administration",
+        "amount": 1000000000
+      }
+    ]
+  },
+  {
+    "name": "Norway",
+    "code": "NO",
+    "year": 2024,
+    "currency": "NOK",
+    "capital": "Oslo",
+    "continent": "Europe",
+    "timezone": "Europe/Oslo",
+    "flag": "https://flagcdn.com/w40/no.png",
+    "population": 5550203,
+    "gdpNominal": 495100000000,
+    "worldGdpShare": 0.47,
+    "coordinates": {
+      "latitude": 60.472024,
+      "longitude": 8.468946
+    },
+    "languages": ["Norwegian", "Sami"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "International Monetary Fund",
+      "World Bank",
+      "World Trade Organization",
+      "Council of Europe",
+      "Organisation for Economic Co‑operation and Development (OECD)",
+      "European Free Trade Association (EFTA)",
+      "European Economic Area (EEA)"
+    ],
+    "controversies": "In 2024–25, Norway faced criticism over expanded oil and gas licensing in the Arctic, sparking environmental protests and legal challenges; parliamentary scrutiny of sovereign wealth fund withdrawals to cover budget deficits amid market volatility; investigations into alleged local fish‑farm pollution in Western fjords; and debates over pension reform delays leading to equity concerns for younger workers.",
+    "spendingEfficiency": "Despite robust per‑capita spending on health and education, outcomes have shown stagnating waiting‑times in specialised care, mixed performance on PISA scores, and cost‑overruns on rail infrastructure projects, indicating persistent challenges in translating high public investment into commensurate service improvements.",
+    "revenue": [
+      {
+        "name": "Daň z príjmov fyzických osôb",
+        "subtype": "income-tax",
+        "amount": 486000000000
+      },
+      {
+        "name": "Daň z príjmov právnických osôb",
+        "subtype": "income-tax",
+        "amount": 150000000000
+      },
+      {
+        "name": "Daň z pridanej hodnoty (MVA)",
+        "subtype": "consumption-tax",
+        "amount": 300000000000
+      },
+      {
+        "name": "Spotrebné dane (akcyzné)",
+        "subtype": "excise-tax",
+        "amount": 100000000000
+      },
+      {
+        "name": "Clo",
+        "subtype": "customs-duty",
+        "amount": 10000000000
+      },
+      {
+        "name": "Sociálne poistenie",
+        "subtype": "social-contribution",
+        "amount": 187000000000
+      },
+      {
+        "name": "Nedaňové príjmy (poplatky, dividendy)",
+        "subtype": "non-tax-revenue",
+        "amount": 500000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Dôchodky",
+        "subtype": "pensions",
+        "amount": 400000000000
+      },
+      {
+        "name": "Zdravotníctvo",
+        "subtype": "health",
+        "amount": 250000000000
+      },
+      {
+        "name": "Školstvo",
+        "subtype": "education",
+        "amount": 220000000000
+      },
+      {
+        "name": "Obrana",
+        "subtype": "defense",
+        "amount": 80000000000
+      },
+      {
+        "name": "Verejný poriadok a bezpečnosť",
+        "subtype": "public-safety",
+        "amount": 60000000000
+      },
+      {
+        "name": "Doprava",
+        "subtype": "transport",
+        "amount": 50000000000
+      },
+      {
+        "name": "Dlhová služba",
+        "subtype": "debt-service",
+        "amount": 20000000000
+      },
+      {
+        "name": "Sociálne dávky",
+        "subtype": "social-protection",
+        "amount": 300000000000
+      },
+      {
+        "name": "Štátna správa",
+        "subtype": "administration",
+        "amount": 70000000000
+      }
+    ]
+  },
+  {
+    "name": "Switzerland",
+    "code": "CH",
+    "year": 2024,
+    "currency": "CHF",
+    "capital": "Bern",
+    "continent": "Europe",
+    "timezone": "Europe/Zurich",
+    "flag": "https://flagcdn.com/w40/ch.png",
+    "population": 8981565,
+    "gdpNominal": 947130000000,
+    "worldGdpShare": 0.89,
+    "coordinates": {
+      "latitude": 46.948,
+      "longitude": 7.4481
+    },
+    "languages": ["German", "French", "Italian", "Romansh"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "International Monetary Fund",
+      "World Bank",
+      "World Trade Organization",
+      "European Free Trade Association",
+      "Schengen Area",
+      "OECD",
+      "Council of Europe",
+      "European Space Agency",
+      "CERN"
+    ],
+    "controversies": "Recent 2024-25 Swiss governance challenges include the controversial CHF 4 billion UBS-Credit Suisse emergency merger that prompted parliamentary investigations into financial oversight failures, several contentious weapon export permits to conflict regions worth CHF 955 million despite neutrality concerns, a CHF 1.2 billion public procurement scandal with alleged insider favoritism in healthcare IT contracts, and criticism over secretive bilateral agreements with China worth approximately CHF 2 billion that bypassed traditional democratic scrutiny processes.",
+    "spendingEfficiency": "While Switzerland maintains generally high public spending efficiency, several recent issues have emerged: the CHF 4 billion financial sector intervention created moral hazard concerns while protecting systemic stability, defense procurement programs experienced a 15% cost overrun averaging CHF 230 million per project, cantonal healthcare subsidies showed uneven cost-benefit outcomes with 30% variance in administrative overhead ratios, and infrastructure projects faced an average 18-month delay and 22% budget increases due to complex stakeholder consultation requirements.",
+    "revenue": [
+      {
+        "name": "Federal Direct Tax",
+        "subtype": "income-tax",
+        "amount": 25000000000
+      },
+      {
+        "name": "Value Added Tax (VAT)",
+        "subtype": "consumption-tax",
+        "amount": 23000000000
+      },
+      {
+        "name": "Withholding Tax",
+        "subtype": "income-tax",
+        "amount": 7500000000
+      },
+      {
+        "name": "Stamp Duties",
+        "subtype": "financial-transaction-tax",
+        "amount": 2500000000
+      },
+      {
+        "name": "Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 1200000000
+      },
+      {
+        "name": "Mineral Oil Tax",
+        "subtype": "excise-tax",
+        "amount": 4500000000
+      },
+      {
+        "name": "Tobacco Tax",
+        "subtype": "excise-tax",
+        "amount": 2000000000
+      },
+      {
+        "name": "Social Security Contributions",
+        "subtype": "social-contribution",
+        "amount": 48000000000
+      },
+      {
+        "name": "Non-Tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 5000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Social Security",
+        "subtype": "social-protection",
+        "amount": 23000000000
+      },
+      {
+        "name": "Healthcare",
+        "subtype": "health",
+        "amount": 22500000000
+      },
+      {
+        "name": "Education",
+        "subtype": "education",
+        "amount": 38000000000
+      },
+      {
+        "name": "Transport",
+        "subtype": "transport",
+        "amount": 10000000000
+      },
+      {
+        "name": "Defense",
+        "subtype": "defense",
+        "amount": 5000000000
+      },
+      {
+        "name": "Agriculture",
+        "subtype": "agriculture",
+        "amount": 3600000000
+      },
+      {
+        "name": "International Relations",
+        "subtype": "foreign-affairs",
+        "amount": 3400000000
+      },
+      {
+        "name": "Public Administration",
+        "subtype": "administration",
+        "amount": 3000000000
+      },
+      {
+        "name": "Debt Service",
+        "subtype": "debt-service",
+        "amount": 1000000000
+      },
+      {
+        "name": "Environmental Protection",
+        "subtype": "environment",
+        "amount": 1700000000
       }
     ]
   }

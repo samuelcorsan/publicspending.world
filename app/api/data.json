@@ -4455,5 +4455,827 @@
         "amount": 1700000000
       }
     ]
+  },
+  {
+    "name": "Sweden",
+    "code": "SE",
+    "year": 2024,
+    "currency": "SEK",
+    "capital": "Stockholm",
+    "continent": "Europe",
+    "timezone": "Europe/Stockholm",
+    "flag": "https://flagcdn.com/w40/se.png",
+    "population": 10450000,
+    "gdpNominal": 585000000000,
+    "worldGdpShare": 0.56,
+    "coordinates": {
+      "latitude": 59.329323,
+      "longitude": 18.068581
+    },
+    "languages": ["Swedish"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "European Union",
+      "NATO",
+      "OECD",
+      "Council of Europe",
+      "Nordic Council",
+      "World Trade Organization",
+      "International Monetary Fund",
+      "World Bank",
+      "OSCE"
+    ],
+    "controversies": "Sweden's 2024 policy shifts include controversial immigration reforms introducing stricter family reunification requirements and temporary residency permits, NATO membership formalization despite historical neutrality, and nuclear energy expansion with SEK 400 billion investment plans causing environmental protests. Urban safety concerns intensified after gang violence in Stockholm and Malmö suburbs, prompting a SEK 1.5 billion police funding boost but raising civil liberties questions about expanded surveillance powers.",
+    "spendingEfficiency": "Recent evaluations reveal mixed spending efficiency outcomes: the SEK 30 billion healthcare digitalization initiative faced implementation delays with 40% cost overruns, climate adaptation funds remained partially unallocated (SEK 5 billion), while the comprehensive education reform successfully streamlined vocational training with 22% improved employment outcomes. Municipal spending autonomy continues creating regional disparities, with efficiency audits showing northern regions achieving 15-20% lower service delivery per krona spent compared to southern regions.",
+    "revenue": [
+      {
+        "name": "Inkomstskatt / Income Tax",
+        "subtype": "income-tax",
+        "amount": 92000000000
+      },
+      {
+        "name": "Bolagsskatt / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 30000000000
+      },
+      {
+        "name": "Mervärdesskatt (Moms) / VAT",
+        "subtype": "consumption-tax",
+        "amount": 47500000000
+      },
+      {
+        "name": "Punktskatter / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 11000000000
+      },
+      {
+        "name": "Tullavgifter / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 550000000
+      },
+      {
+        "name": "Sociala avgifter / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 40000000000
+      },
+      {
+        "name": "Icke-skatteintäkter / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 5500000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Pensioner / Pensions",
+        "subtype": "pensions",
+        "amount": 38000000000
+      },
+      {
+        "name": "Sjukvård / Healthcare",
+        "subtype": "health",
+        "amount": 55000000000
+      },
+      {
+        "name": "Utbildning / Education",
+        "subtype": "education",
+        "amount": 32000000000
+      },
+      {
+        "name": "Försvar / Defense",
+        "subtype": "defense",
+        "amount": 12000000000
+      },
+      {
+        "name": "Rättsväsende / Justice System",
+        "subtype": "public-safety",
+        "amount": 10000000000
+      },
+      {
+        "name": "Transport / Transport",
+        "subtype": "transport",
+        "amount": 13500000000
+      },
+      {
+        "name": "Skuldtjänst / Debt Service",
+        "subtype": "debt-service",
+        "amount": 2500000000
+      },
+      {
+        "name": "Socialt skydd / Social Protection",
+        "subtype": "social-protection",
+        "amount": 30000000000
+      },
+      {
+        "name": "Statsförvaltning / Administration",
+        "subtype": "administration",
+        "amount": 7500000000
+      }
+    ]
+  },
+  {
+    "name": "Iceland",
+    "code": "IS",
+    "year": 2024,
+    "currency": "ISK",
+    "capital": "Reykjavík",
+    "continent": "Europe",
+    "timezone": "Atlantic/Reykjavik",
+    "flag": "https://flagcdn.com/w40/is.png",
+    "population": 380000,
+    "gdpNominal": 27500000000,
+    "worldGdpShare": 0.026,
+    "coordinates": {
+      "latitude": 64.126521,
+      "longitude": -21.817439
+    },
+    "languages": ["Icelandic"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "NATO",
+      "EFTA",
+      "Council of Europe",
+      "Nordic Council",
+      "OECD",
+      "Schengen Area",
+      "International Monetary Fund",
+      "World Bank",
+      "Arctic Council"
+    ],
+    "controversies": "Iceland's 2024-25 policy challenges include the controversial ISK 30 billion geothermal expansion project facing indigenous land rights disputes, a ISK 5.6 billion tourism infrastructure initiative criticized for weak environmental impact assessments, and an offshore wind development program that bypassed standard public consultation processes. Ongoing investigations probe emergency COVID equipment procurements made without competitive bidding, while a parliamentary inquiry examines the ISK 2 billion digital infrastructure grant allocated through expedited procedures with limited transparency.",
+    "spendingEfficiency": "Independent assessments indicate mixed fiscal performance: healthcare investments delivered measurable service improvements with 12% shorter wait times, while housing subsidies failed to appreciably improve affordability despite ISK 7 billion allocation. Transportation projects routinely exceed budgets by 25-40%, and the ISK 3.5 billion digital governance initiative faces significant implementation delays. Public spending reviews identified approximately ISK 9 billion in potential efficiency gains through program consolidation and improved procurement practices.",
+    "revenue": [
+      {
+        "name": "Tekjuskattur / Income Tax",
+        "subtype": "income-tax",
+        "amount": 2900000000
+      },
+      {
+        "name": "Fyrirtækjaskattur / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 850000000
+      },
+      {
+        "name": "Virðisaukaskattur / VAT",
+        "subtype": "consumption-tax",
+        "amount": 3200000000
+      },
+      {
+        "name": "Vörugjöld / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 600000000
+      },
+      {
+        "name": "Tollar / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 30000000
+      },
+      {
+        "name": "Tryggingagjöld / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 1800000000
+      },
+      {
+        "name": "Aðrar tekjur / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 450000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Lífeyrir / Pensions",
+        "subtype": "pensions",
+        "amount": 1700000000
+      },
+      {
+        "name": "Heilbrigðisþjónusta / Healthcare",
+        "subtype": "health",
+        "amount": 2600000000
+      },
+      {
+        "name": "Menntun / Education",
+        "subtype": "education",
+        "amount": 1900000000
+      },
+      {
+        "name": "Varnarmál / Defense",
+        "subtype": "defense",
+        "amount": 150000000
+      },
+      {
+        "name": "Lögregla og öryggi / Public Safety",
+        "subtype": "public-safety",
+        "amount": 500000000
+      },
+      {
+        "name": "Samgöngur / Transport",
+        "subtype": "transport",
+        "amount": 680000000
+      },
+      {
+        "name": "Skuldaþjónusta / Debt Service",
+        "subtype": "debt-service",
+        "amount": 550000000
+      },
+      {
+        "name": "Félagsleg vernd / Social Protection",
+        "subtype": "social-protection",
+        "amount": 1200000000
+      },
+      {
+        "name": "Stjórnsýsla / Administration",
+        "subtype": "administration",
+        "amount": 620000000
+      }
+    ]
+  },
+  {
+    "name": "Ukraine",
+    "code": "UA",
+    "year": 2024,
+    "currency": "UAH",
+    "capital": "Kyiv",
+    "continent": "Europe",
+    "timezone": "Europe/Kyiv",
+    "flag": "https://flagcdn.com/w40/ua.png",
+    "population": 37800000,
+    "gdpNominal": 173400000000,
+    "worldGdpShare": 0.17,
+    "coordinates": {
+      "latitude": 50.4501,
+      "longitude": 30.5234
+    },
+    "languages": ["Ukrainian"],
+    "national_incidents": [
+      {
+        "title": "Largest Drone Attack Since 2022 Hits Ukraine",
+        "description": "On May 18, 2025, Russia deployed 273 explosive and decoy drones, killing one woman and injuring three others in its largest drone offensive to date.",
+        "news_url": "https://www.reuters.com/world/europe/one-killed-kyiv-region-russia-steps-up-attacks-after-peace-talks-ukraine-says-2025-05-18/"
+      }
+    ],
+    "organizations": [
+      "United Nations",
+      "IMF",
+      "World Bank",
+      "World Trade Organization",
+      "OSCE",
+      "Council of Europe",
+      "GUAM",
+      "BSEC",
+      "European Energy Community",
+      "EU candidate country"
+    ],
+    "controversies": "Ukraine's 2024-25 governance challenges include the ₴12 billion defense procurement program facing scrutiny over expedited contracts with limited competition, the ₴8.4 billion reconstruction initiative with questioned contractor selection processes, and emergency power infrastructure repairs awarded through special wartime provisions bypassing standard oversight. International aid utilization faces monitoring challenges with approximately ₴40 billion in assistance flowing through various channels with differing transparency requirements, while the ₴5 billion digital transformation program operates under special wartime provisions with streamlined procurement procedures.",
+    "spendingEfficiency": "Under wartime conditions, spending efficiency shows mixed outcomes: emergency reconstruction delivers critical infrastructure repairs at 20-30% premium cost but in accelerated timeframes, defense spending necessarily prioritizes speed over optimal procurement practices, while civilian sector funding achieves varied efficiency - healthcare digital transformation shows measurable 15% service improvements despite challenging conditions, but housing assistance programs struggle with delivery mechanisms and coordination. International partner organizations note substantial progress in transparency systems despite wartime pressures, with approximately 75% of non-security spending now tracked in public procurement portals.",
+    "revenue": [
+      {
+        "name": "Податок на доходи фізичних осіб / Personal Income Tax",
+        "subtype": "income-tax",
+        "amount": 15000000000
+      },
+      {
+        "name": "Податок на прибуток підприємств / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 8500000000
+      },
+      {
+        "name": "Податок на додану вартість / VAT",
+        "subtype": "consumption-tax",
+        "amount": 30000000000
+      },
+      {
+        "name": "Акцизний податок / Excise Tax",
+        "subtype": "excise-tax",
+        "amount": 6000000000
+      },
+      {
+        "name": "Мито / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 1500000000
+      },
+      {
+        "name": "Соціальні внески / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 14000000000
+      },
+      {
+        "name": "Неподаткові надходження / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 5500000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Пенсії / Pensions",
+        "subtype": "pensions",
+        "amount": 16000000000
+      },
+      {
+        "name": "Охорона здоров'я / Healthcare",
+        "subtype": "health",
+        "amount": 10000000000
+      },
+      {
+        "name": "Освіта / Education",
+        "subtype": "education",
+        "amount": 11000000000
+      },
+      {
+        "name": "Оборона / Defense",
+        "subtype": "defense",
+        "amount": 43000000000
+      },
+      {
+        "name": "Громадський порядок / Public Safety",
+        "subtype": "public-safety",
+        "amount": 7500000000
+      },
+      {
+        "name": "Транспорт / Transport",
+        "subtype": "transport",
+        "amount": 8000000000
+      },
+      {
+        "name": "Обслуговування боргу / Debt Service",
+        "subtype": "debt-service",
+        "amount": 5000000000
+      },
+      {
+        "name": "Соціальний захист / Social Protection",
+        "subtype": "social-protection",
+        "amount": 9500000000
+      },
+      {
+        "name": "Державне управління / Administration",
+        "subtype": "administration",
+        "amount": 4000000000
+      }
+    ]
+  },
+  {
+    "name": "Belarus",
+    "code": "BY",
+    "year": 2024,
+    "currency": "BYN",
+    "capital": "Minsk",
+    "continent": "Europe",
+    "timezone": "Europe/Minsk",
+    "flag": "https://flagcdn.com/w40/by.png",
+    "population": 9255000,
+    "gdpNominal": 70800000000,
+    "worldGdpShare": 0.068,
+    "coordinates": {
+      "latitude": 53.9045,
+      "longitude": 27.5615
+    },
+    "languages": ["Belarusian", "Russian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "Commonwealth of Independent States (CIS)",
+      "EAEU (Eurasian Economic Union)",
+      "CSTO (Collective Security Treaty Organization)",
+      "Union State with Russia",
+      "Non-Aligned Movement",
+      "OSCE (suspended participation)"
+    ],
+    "controversies": "Belarus's governance challenges in 2024-25 include the 3.5 billion BYN state enterprise support program criticized for lack of transparent allocation criteria, state media funding of 450 million BYN without clear performance metrics, and a 1.2 billion BYN infrastructure development initiative with procurement processes largely shielded from public scrutiny. The 800 million BYN IT sector development fund faces questions about selective benefits to politically connected firms, while international sanctions compliance monitoring reveals limited transparency in state procurement for strategic sectors with approximately 6 billion BYN in expenditures operating through specialized procurement channels with minimal public reporting.",
+    "spendingEfficiency": "State audits reveal mixed efficiency outcomes across sectors: social housing initiatives delivered 22% below targeted unit production despite full budget execution, transportation infrastructure projects averaged 35% cost overruns with limited explanation for variances, while healthcare equipment modernization achieved stated delivery targets but with minimal performance improvement metrics. The state enterprise support program's economic impact assessment identified approximately 1.8 billion BYN in subsidies generating negligible productivity improvements, while digital government initiatives show partial implementation success with approximately 40% of allocated resources delivering measurable service improvements.",
+    "revenue": [
+      {
+        "name": "Подоходный налог / Income Tax",
+        "subtype": "income-tax",
+        "amount": 5200000000
+      },
+      {
+        "name": "Налог на прибыль / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 3800000000
+      },
+      {
+        "name": "НДС / VAT",
+        "subtype": "consumption-tax",
+        "amount": 9500000000
+      },
+      {
+        "name": "Акцизы / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 2700000000
+      },
+      {
+        "name": "Таможенные пошлины / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 1200000000
+      },
+      {
+        "name": "Социальные отчисления / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 7800000000
+      },
+      {
+        "name": "Неналоговые доходы / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 2500000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Пенсии / Pensions",
+        "subtype": "pensions",
+        "amount": 8200000000
+      },
+      {
+        "name": "Здравоохранение / Healthcare",
+        "subtype": "health",
+        "amount": 4500000000
+      },
+      {
+        "name": "Образование / Education",
+        "subtype": "education",
+        "amount": 4200000000
+      },
+      {
+        "name": "Оборона / Defense",
+        "subtype": "defense",
+        "amount": 3500000000
+      },
+      {
+        "name": "Правопорядок / Public Safety",
+        "subtype": "public-safety",
+        "amount": 2800000000
+      },
+      {
+        "name": "Транспорт / Transport",
+        "subtype": "transport",
+        "amount": 3100000000
+      },
+      {
+        "name": "Обслуживание долга / Debt Service",
+        "subtype": "debt-service",
+        "amount": 1900000000
+      },
+      {
+        "name": "Социальная защита / Social Protection",
+        "subtype": "social-protection",
+        "amount": 3600000000
+      },
+      {
+        "name": "Государственное управление / Administration",
+        "subtype": "administration",
+        "amount": 2200000000
+      }
+    ]
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "code": "BA",
+    "year": 2024,
+    "currency": "BAM",
+    "capital": "Sarajevo",
+    "continent": "Europe",
+    "timezone": "Europe/Sarajevo",
+    "flag": "https://flagcdn.com/w40/ba.png",
+    "population": 3270000,
+    "gdpNominal": 24800000000,
+    "worldGdpShare": 0.024,
+    "coordinates": {
+      "latitude": 43.8563,
+      "longitude": 18.4131
+    },
+    "languages": ["Bosnian", "Croatian", "Serbian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "Council of Europe",
+      "OSCE",
+      "CEFTA",
+      "Energy Community",
+      "EU candidate country",
+      "NATO Partnership for Peace",
+      "World Bank",
+      "IMF",
+      "OIC (Observer)"
+    ],
+    "controversies": "Bosnia and Herzegovina's governance challenges in 2024-25 include the 350 million BAM infrastructure development program facing implementation fragmentation across entity jurisdictions, the 120 million BAM public administration reform initiative stalled by entity-level disagreements over implementation authority, and a 75 million BAM energy sector investment program with procurement irregularities identified by independent monitors. The European Union suspended 95 million BAM in sectoral funding following missed reform milestones, while international observers documented approximately 180 million BAM in entity-level procurements conducted with limited transparency and questionable competitive procedures.",
+    "spendingEfficiency": "External assessments highlight significant efficiency challenges in public spending: administrative duplication between state and entity levels consumes approximately 15% of total governance expenditure, infrastructure projects routinely face 30-40% cost overruns and implementation delays averaging 18 months, while social protection programs show significant targeting inefficiencies with approximately 70 million BAM in benefits not reaching intended recipients. Entity-level differences in procurement practices create significant price disparities for comparable goods and services, while fragmented IT systems prevent comprehensive spending analysis and oversight across governance levels.",
+    "revenue": [
+      {
+        "name": "Porez na dohodak / Income Tax",
+        "subtype": "income-tax",
+        "amount": 1200000000
+      },
+      {
+        "name": "Porez na dobit / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 850000000
+      },
+      {
+        "name": "PDV / VAT",
+        "subtype": "consumption-tax",
+        "amount": 4500000000
+      },
+      {
+        "name": "Trošarine / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 1300000000
+      },
+      {
+        "name": "Carine / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 230000000
+      },
+      {
+        "name": "Socijalni doprinosi / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 3200000000
+      },
+      {
+        "name": "Neporezni prihodi / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 600000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Penzije / Pensions",
+        "subtype": "pensions",
+        "amount": 3100000000
+      },
+      {
+        "name": "Zdravstvo / Healthcare",
+        "subtype": "health",
+        "amount": 2800000000
+      },
+      {
+        "name": "Obrazovanje / Education",
+        "subtype": "education",
+        "amount": 1700000000
+      },
+      {
+        "name": "Odbrana / Defense",
+        "subtype": "defense",
+        "amount": 320000000
+      },
+      {
+        "name": "Javna sigurnost / Public Safety",
+        "subtype": "public-safety",
+        "amount": 950000000
+      },
+      {
+        "name": "Transport / Transport",
+        "subtype": "transport",
+        "amount": 780000000
+      },
+      {
+        "name": "Servisiranje duga / Debt Service",
+        "subtype": "debt-service",
+        "amount": 520000000
+      },
+      {
+        "name": "Socijalna zaštita / Social Protection",
+        "subtype": "social-protection",
+        "amount": 1400000000
+      },
+      {
+        "name": "Administracija / Administration",
+        "subtype": "administration",
+        "amount": 1050000000
+      }
+    ]
+  },
+  {
+    "name": "North Macedonia",
+    "code": "MK",
+    "year": 2024,
+    "currency": "MKD",
+    "capital": "Skopje",
+    "continent": "Europe",
+    "timezone": "Europe/Skopje",
+    "flag": "https://flagcdn.com/w40/mk.png",
+    "population": 1830000,
+    "gdpNominal": 14500000000,
+    "worldGdpShare": 0.014,
+    "coordinates": {
+      "latitude": 41.9981,
+      "longitude": 21.4254
+    },
+    "languages": ["Macedonian", "Albanian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "NATO",
+      "Council of Europe",
+      "OSCE",
+      "CEFTA",
+      "World Trade Organization",
+      "EU candidate country",
+      "World Bank",
+      "IMF",
+      "Open Balkan"
+    ],
+    "controversies": "North Macedonia's governance challenges in 2024-25 include the 7.5 billion MKD transportation infrastructure program facing procurement irregularities identified by state auditors, the 2.8 billion MKD renewable energy subsidies awarded through procedures lacking clear evaluation criteria, and 900 million MKD in digital infrastructure contracts with limited competitive bidding. Anti-corruption investigators launched inquiries into the 550 million MKD hospital equipment procurement process after whistleblower allegations, while European Commission progress reports highlighted approximately 3.5 billion MKD in public expenditures with documentation deficiencies indicating potential governance weaknesses.",
+    "spendingEfficiency": "Independent assessments reveal mixed spending efficiency: education sector reforms achieved 15% improvement in technical education outcomes despite implementation delays, healthcare modernization projects delivered approximately 60% of targeted service improvements while consuming full budget allocation, and social housing initiatives completed only 45% of planned units despite 85% budget execution. Municipal-level spending shows significant efficiency variance, with top-performing local governments delivering comparable services at 25-30% lower cost than worst performers, while national infrastructure projects face persistent challenges with cost containment and implementation timelines, averaging 35% budget overruns.",
+    "revenue": [
+      {
+        "name": "Данок на личен доход / Personal Income Tax",
+        "subtype": "income-tax",
+        "amount": 960000000
+      },
+      {
+        "name": "Данок на добивка / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 520000000
+      },
+      {
+        "name": "ДДВ / VAT",
+        "subtype": "consumption-tax",
+        "amount": 2700000000
+      },
+      {
+        "name": "Акцизи / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 750000000
+      },
+      {
+        "name": "Царини / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 120000000
+      },
+      {
+        "name": "Социјални придонеси / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 1800000000
+      },
+      {
+        "name": "Неданочни приходи / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 340000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Пензии / Pensions",
+        "subtype": "pensions",
+        "amount": 1750000000
+      },
+      {
+        "name": "Здравство / Healthcare",
+        "subtype": "health",
+        "amount": 1450000000
+      },
+      {
+        "name": "Образование / Education",
+        "subtype": "education",
+        "amount": 950000000
+      },
+      {
+        "name": "Одбрана / Defense",
+        "subtype": "defense",
+        "amount": 250000000
+      },
+      {
+        "name": "Јавен ред и безбедност / Public Safety",
+        "subtype": "public-safety",
+        "amount": 380000000
+      },
+      {
+        "name": "Транспорт / Transport",
+        "subtype": "transport",
+        "amount": 520000000
+      },
+      {
+        "name": "Сервисирање на долг / Debt Service",
+        "subtype": "debt-service",
+        "amount": 350000000
+      },
+      {
+        "name": "Социјална заштита / Social Protection",
+        "subtype": "social-protection",
+        "amount": 680000000
+      },
+      {
+        "name": "Администрација / Administration",
+        "subtype": "administration",
+        "amount": 520000000
+      }
+    ]
+  },
+  {
+    "name": "Albania",
+    "code": "AL",
+    "year": 2024,
+    "currency": "ALL",
+    "capital": "Tirana",
+    "continent": "Europe",
+    "timezone": "Europe/Tirane",
+    "flag": "https://flagcdn.com/w40/al.png",
+    "population": 2780000,
+    "gdpNominal": 18900000000,
+    "worldGdpShare": 0.018,
+    "coordinates": {
+      "latitude": 41.3275,
+      "longitude": 19.8187
+    },
+    "languages": ["Albanian"],
+    "national_incidents": [],
+    "organizations": [
+      "United Nations",
+      "NATO",
+      "Council of Europe",
+      "OSCE",
+      "OIC",
+      "WTO",
+      "EU candidate country",
+      "World Bank",
+      "IMF",
+      "Open Balkan"
+    ],
+    "controversies": "Albania's governance challenges in 2024-25 include the 15 billion ALL infrastructure development program flagged for procurement irregularities by state auditors, the 8.5 billion ALL tourism development initiative criticized for weak environmental impact assessments, and a 3.2 billion ALL energy sector modernization project facing transparency concerns regarding contractor selection. An EU-funded evaluation identified approximately 7 billion ALL in public-private partnership arrangements with questionable value-for-money assessments, while the State Supreme Audit institution flagged 2.8 billion ALL in public expenditures with insufficient documentation or procurement irregularities across multiple ministries.",
+    "spendingEfficiency": "Independent assessments reveal mixed spending efficiency outcomes: healthcare system reforms achieved approximately 60% of targeted service improvements despite full budget utilization, education modernization projects delivered measurable outcomes in digital literacy but with significant regional disparities in implementation, and public infrastructure projects routinely face 25-35% cost overruns with implementation delays averaging 14 months. Municipal spending shows significant variance in efficiency, with comparable services delivered at costs differing by up to 40% between similar-sized municipalities, while EU pre-accession funds demonstrate higher implementation and outcome achievement rates compared to nationally-funded programs.",
+    "revenue": [
+      {
+        "name": "Tatimi mbi të ardhurat personale / Personal Income Tax",
+        "subtype": "income-tax",
+        "amount": 42000000000
+      },
+      {
+        "name": "Tatimi mbi fitimin / Corporate Tax",
+        "subtype": "income-tax",
+        "amount": 35000000000
+      },
+      {
+        "name": "TVSH / VAT",
+        "subtype": "consumption-tax",
+        "amount": 160000000000
+      },
+      {
+        "name": "Akciza / Excise Duties",
+        "subtype": "excise-tax",
+        "amount": 45000000000
+      },
+      {
+        "name": "Taksa doganore / Customs Duties",
+        "subtype": "customs-duty",
+        "amount": 6500000000
+      },
+      {
+        "name": "Kontributet sociale / Social Contributions",
+        "subtype": "social-contribution",
+        "amount": 90000000000
+      },
+      {
+        "name": "Të ardhura jo tatimore / Non-tax Revenue",
+        "subtype": "non-tax-revenue",
+        "amount": 18000000000
+      }
+    ],
+    "spending": [
+      {
+        "name": "Pensionet / Pensions",
+        "subtype": "pensions",
+        "amount": 95000000000
+      },
+      {
+        "name": "Kujdesi shëndetësor / Healthcare",
+        "subtype": "health",
+        "amount": 72000000000
+      },
+      {
+        "name": "Arsimi / Education",
+        "subtype": "education",
+        "amount": 58000000000
+      },
+      {
+        "name": "Mbrojtja / Defense",
+        "subtype": "defense",
+        "amount": 18000000000
+      },
+      {
+        "name": "Siguria publike / Public Safety",
+        "subtype": "public-safety",
+        "amount": 25000000000
+      },
+      {
+        "name": "Transporti / Transport",
+        "subtype": "transport",
+        "amount": 32000000000
+      },
+      {
+        "name": "Shërbimi i borxhit / Debt Service",
+        "subtype": "debt-service",
+        "amount": 29000000000
+      },
+      {
+        "name": "Mbrojtja sociale / Social Protection",
+        "subtype": "social-protection",
+        "amount": 48000000000
+      },
+      {
+        "name": "Administrata / Administration",
+        "subtype": "administration",
+        "amount": 35000000000
+      }
+    ]
   }
 ]

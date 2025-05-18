@@ -9,6 +9,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -40,6 +41,7 @@ async function getCountryData(country: string) {
 
 export default async function CountryPage({ params }: Props) {
   const { country } = await params;
+  const t = await getTranslations("CountryPage");
 
   const countryData = await getCountryData(country);
   return (
@@ -67,7 +69,7 @@ export default async function CountryPage({ params }: Props) {
 
             <div className="max-w-4xl mx-auto">
               <h3 className="text-lg text-gray-900 mb-4 text-center font-bold">
-                Member Organizations
+                {t("memberOrgsTitle")}
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {countryData.organizations.map((org: string) => (
@@ -94,14 +96,14 @@ export default async function CountryPage({ params }: Props) {
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"
               >
                 <BarChart2 className="w-4 h-4" />
-                Financial Overview
+                {t("tabs.overview")}
               </TabsTrigger>
               <TabsTrigger
                 value="analysis"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"
               >
                 <AlertCircle className="w-4 h-4" />
-                Analysis & Insights
+                {t("tabs.analysis")}
               </TabsTrigger>
             </TabsList>
 
@@ -117,9 +119,9 @@ export default async function CountryPage({ params }: Props) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">
-                    <BarChart2 className="w-6 h-6 mr-2 text-blue-500" /> Revenue
-                    Sources
-                    <Tooltip text="Shows the main sources of government income, helping to understand how the country funds its public services." />
+                    <BarChart2 className="w-6 h-6 mr-2 text-blue-500" />{" "}
+                    {t("overview.revenueSources")}
+                    <Tooltip text={t("overview.revenueTooltip")} />
                   </h3>
                   <div className="space-y-4">
                     {countryData.revenue.map((item: any) => (
@@ -138,9 +140,9 @@ export default async function CountryPage({ params }: Props) {
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">
-                    <BarChart2 className="w-6 h-6 mr-2 text-green-500" />{" "}
-                    Spending Allocation
-                    <Tooltip text="Shows how government funds are distributed across different sectors, revealing national priorities and commitments." />
+                    <BarChart2 className="w-6 h-6 mr-2 text-green-500" />
+                    {t("overview.spendingAllocation")}
+                    <Tooltip text={t("overview.spendingTooltip")} />
                   </h3>
                   <div className="space-y-4">
                     {countryData.spending.map((item: any) => (
@@ -165,23 +167,23 @@ export default async function CountryPage({ params }: Props) {
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
                     <AlertCircle className="w-6 h-6 mr-2 text-red-500" />{" "}
-                    Controversies
-                    <Tooltip text="Fiscal controversies highlight political, social, or economic challenges that can affect a country's stability and future policy direction." />
+                    {t("analysis.controversies")}
+                    <Tooltip text={t("analysis.controversiesTooltip")} />
                   </h3>
                   <p className="mb-2 text-gray-700">
                     {countryData.controversies ||
-                      "No major recent controversies reported."}
+                      t("analysis.controversiesEmpty")}
                   </p>
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
-                    <Gauge className="w-6 h-6 mr-2 text-yellow-500" /> Spending
-                    Efficiency
-                    <Tooltip text="Measures how well public funds are used to achieve desired outcomes. High efficiency means more value for taxpayers and better services." />
+                    <Gauge className="w-6 h-6 mr-2 text-yellow-500" />{" "}
+                    {t("analysis.efficiency")}
+                    <Tooltip text={t("analysis.efficiencyTooltip")} />
                   </h3>
                   <p className="mb-2 text-gray-700">
                     {countryData.spendingEfficiency ||
-                      "No data on spending efficiency."}
+                      t("analysis.efficiencyEmpty")}
                   </p>
                 </section>
               </div>
@@ -202,6 +204,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Public spending and revenue information for ${countryName}`,
   };
 }
+
 function formatCountryName(country: string): string {
   return country
     .split("-")

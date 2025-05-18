@@ -17,6 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { useTranslations } from "next-intl";
 
 const chartColors = [
   "hsl(215, 70%, 50%)", // Blue
@@ -44,6 +45,8 @@ interface CountryData {
 }
 
 export function RevenuePieChart({ countryData }: { countryData: CountryData }) {
+  const t = useTranslations("CountryPage");
+
   const chartData = React.useMemo(() => {
     return countryData.revenue
       .filter((item) => item.subtype !== "total")
@@ -69,7 +72,7 @@ export function RevenuePieChart({ countryData }: { countryData: CountryData }) {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Government Revenue</CardTitle>
+        <CardTitle>{t("overview.revenueTitle")}</CardTitle>
         <CardDescription>Fiscal Year 2024</CardDescription>
       </CardHeader>
       <CardContent>
@@ -124,7 +127,7 @@ export function RevenuePieChart({ countryData }: { countryData: CountryData }) {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="leading-none text-muted-foreground">
-          Government revenue breakdown by source
+          {t("overview.revenueBreakdown")}
         </div>
       </CardFooter>
     </Card>

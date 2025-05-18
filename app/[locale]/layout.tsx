@@ -7,58 +7,9 @@ import Script from "next/script";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
 const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "World Public Spending - Transparency on Government Spending",
-  description:
-    "Explore government spending data around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
-  keywords:
-    "government spending, public spending, government transparency, open data, government budgets, public finance, government expenditure, fiscal transparency",
-  authors: [{ name: "World Public Spending" }],
-  creator: "World Public Spending",
-  publisher: "World Public Spending",
-  openGraph: {
-    title: "World Public Spending - Global Public Finance Transparency",
-    description:
-      "Explore government spending data around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
-    url: "https://publicspending.world",
-    siteName: "World Public Spending",
-    /*images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "World Public Spending - Transparency Portal",
-      },
-    ],*/
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "World Public Spending - Global Public Finance Transparency",
-    description:
-      "Explore public spending data from countries around the world. Access transparent, up-to-date information about government expenditures.",
-    /*images: ["/og-image.jpg"],*/
-    creator: "@worldpublicspending",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://publicspending.world",
-  },
-};
 
 export default async function RootLayout({
   children,
@@ -104,4 +55,63 @@ export default async function RootLayout({
       </body>
     </html>
   );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const t = await getTranslations("Metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+    authors: [{ name: t("authors") }],
+    creator: t("creator"),
+    publisher: t("publisher"),
+    openGraph: {
+      title: t("openGraph.title"),
+      description: t("openGraph.description"),
+      url: t("openGraph.url"),
+      siteName: t("openGraph.siteName"),
+      /*images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "World Public Spending - Transparency Portal",
+        },
+      ],*/
+      locale: t("openGraph.locale"),
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("twitter.title"),
+      description: t("twitter.description"),
+      /*images: ["/og-image.jpg"],*/
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    alternates: {
+      canonical: t("alternates.canonical"),
+    },
+  };
 }

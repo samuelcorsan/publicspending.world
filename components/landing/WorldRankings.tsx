@@ -60,7 +60,7 @@ interface WorldRankingsProps {
 
 export function WorldRankings({ countries }: WorldRankingsProps) {
   const router = useRouter();
-  const t = useTranslations("LandingPage");
+  const t = useTranslations("RankingPage");
 
   const formatNumber = (num: number) => {
     if (num >= 1e12) {
@@ -128,9 +128,11 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
             <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
               <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
                 <div className="w-16 sm:w-24 font-medium text-gray-500">
-                  Rank
+                  {t("rankTitle")}
                 </div>
-                <div className="font-medium text-gray-500">Country</div>
+                <div className="font-medium text-gray-500">
+                  {t("countryTitle")}
+                </div>
                 <div className="w-32 sm:w-48 text-right font-medium text-gray-500">
                   {TopicTitles[topic]}
                 </div>

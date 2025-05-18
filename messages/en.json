@@ -1,4 +1,26 @@
 {
+  "Metadata": {
+    "title": "World Public Spending - Transparency on Government Spending",
+    "description": "Explore government spending data around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
+    "keywords": "government spending, public spending, government transparency, open data, government budgets, public finance, government expenditure, fiscal transparency",
+    "authors": [{ "name": "World Public Spending" }],
+    "creator": "World Public Spending",
+    "publisher": "World Public Spending",
+    "openGraph": {
+      "title": "World Public Spending - Global Public Finance Transparency",
+      "description": "Explore government spending data around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
+      "url": "https://publicspending.world",
+      "siteName": "World Public Spending",
+      "locale": "en_US"
+    },
+    "twitter": {
+      "title": "World Public Spending - Global Public Finance Transparency",
+      "description": "Explore public spending data from countries around the world. Access transparent, up-to-date information about government expenditures."
+    },
+    "alternates": {
+      "canonical": "https://publicspending.world"
+    }
+  },
   "Navbar": {
     "pageTitle": "publicspending.world",
     "homeLink": "Home",
@@ -11,11 +33,66 @@
   "LandingPage": {
     "title": "It’s Your Money. See Where It Goes.",
     "description": "Discover how governments spend public funds — from taxes to healthcare, education, and more. Transparent. Global. Open to everyone.",
-    "input": "Search for a country...",
-    "completeRankingsBtn": "View Complete Ranking"
+    "input": "Search for a country..."
   },
   "RankingPage": {
     "rankTitle": "Rank",
-    "countryTitle": "Country"
+    "countryTitle": "Country",
+    "completeRankingsBtn": "View Complete Ranking"
+  },
+  "AboutPage": {
+    "title": "About Public Spending World",
+    "description": "Explore how countries around the world collect and spend public money. Understanding taxes. Understanding world.",
+    "missionTitle": "Our Mission",
+    "missionText": "We believe that public finances should be transparent, accessible, and understandable for everyone. Our mission is to break down tax revenues and government expenditures, showing exactly where your money goes and empowering citizens with knowledge about public spending worldwide.",
+    "offerTitle": "What We Offer",
+    "offerText": "Our platform provides insights into controversial taxes, their efficiency and fairness, and the real impact of public spending on society. We aggregate and standardize financial data from countries across the globe, making it easy to analyze and understand how governments manage public resources.",
+    "featuresTitle": "Key Features",
+    "feature1Title": "Tax Analysis",
+    "feature1Text": "Explore controversial taxes, understand their necessity, and evaluate their efficiency and fairness across different countries.",
+    "feature2Title": "Spending Impact",
+    "feature2Text": "Discover the real impact of public spending on society through comprehensive data analysis and visualization.",
+    "feature3Title": "Global Insights",
+    "feature3Text": "Compare how different countries collect and spend public money, with regular updates and historical trends.",
+    "contributeTitle": "Get Involved",
+    "contributeText": "Want to contribute data about your country? Whether you're a developer, data scientist, or citizen interested in public finance, your contributions are welcome! Help us make public finances more transparent for everyone.",
+    "viewOnGitHub": "View on GitHub"
+  },
+  "CountryPage": {
+    "memberOrgsTitle": "Member Organizations",
+    "tabs": {
+      "overview": "Financial Overview",
+      "analysis": "Analysis & Insights"
+    },
+    "overview": {
+      "financialOverview": "Financial Overview",
+      "revenueTitle": "Government Revenue",
+      "spendingTitle": "Government Spending",
+      "revenueBreakdown": "Government revenue breakdown by source",
+      "spendingBreakdown": "Government spending breakdown by category",
+      "revenueSources": "Revenue Sources",
+      "revenueTooltip": "Shows the main sources of government income, helping to understand how the country funds its public services.",
+      "spendingAllocation": "Spending Allocation",
+      "spendingTooltip": "Shows how government funds are distributed across different sectors, revealing national priorities and commitments."
+    },
+    "analysis": {
+      "controversies": "Controversies",
+      "controversiesTooltip": "Fiscal controversies highlight political, social, or economic challenges that can affect a country's stability and future policy direction.",
+      "controversiesEmpty": "No major recent controversies reported.",
+      "efficiency": "Spending Efficiency",
+      "efficiencyTooltip": "Measures how well public funds are used to achieve desired outcomes. High efficiency means more value for taxpayers and better services.",
+      "efficiencyEmpty": "No data on spending efficiency."
+    }
+  },
+  "Footer": {
+    "brand": "Public Spending World",
+    "description": "Empowering transparency in global public spending through accessible data and insights.",
+    "linksTitle": "Links",
+    "links": {
+      "about": "About Us",
+      "github": "GitHub ↗",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© 2025 Public Spending World. All rights reserved."
   }
 }

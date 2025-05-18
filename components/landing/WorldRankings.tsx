@@ -12,6 +12,7 @@ import {
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
+import { useTranslations } from "next-intl";
 
 const validTopics = [
   "population",
@@ -59,6 +60,7 @@ interface WorldRankingsProps {
 
 export function WorldRankings({ countries }: WorldRankingsProps) {
   const router = useRouter();
+  const t = useTranslations("LandingPage");
 
   const formatNumber = (num: number) => {
     if (num >= 1e12) {
@@ -204,7 +206,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                     className="z-10 group transition-transform hover:scale-105"
                   >
                     <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition-all shadow-lg text-lg font-semibold cursor-pointer flex items-center gap-2 group-hover:gap-3">
-                      View Complete Rankings
+                      {t("completeRankingsBtn")}
                       <svg
                         className="w-5 h-5 transition-transform group-hover:transform group-hover:translate-x-1"
                         fill="none"

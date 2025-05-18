@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "pageTitle": "Gasto Público en el Mundo",
+    "homeLink": "Inicio",
+    "rankingsLink": "Rankings",
+    "compareLink": "Compara",
+    "aboutLink": "Sobre nosotros",
+    "contributeLink": "Contribuye en GitHub",
+    "ariaLabel-MobileBtn": "Abrir el menú de navegación"
+  },
+  "LandingPage": {
+    "title": "Es tu dinero. Descubre en qué se gasta.",
+    "description": "Descubre cómo los gobiernos gastan los fondos públicos: desde los impuestos hasta la salud, la educación y mucho más. Transparente. Global. Abierto para todos.",
+    "input": "Busca datos de países...",
+    "completeRankingsBtn": "Ver Ranking Completo"
+  },
+  "RankingPage": {
+    "rankTitle": "Posición",
+    "countryTitle": "País"
+  }
+}

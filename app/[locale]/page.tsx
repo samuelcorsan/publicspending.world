@@ -1,10 +1,10 @@
 "use client";
 
-import { Navbar } from "@/components/navigation/Navbar";
-import { Footer } from "@/components/Footer";
-import countryData from "./api/data.json";
-import { WorldRankings } from "@/components/WorldRankings";
-import Hero from "@/components/Hero";
+import { Navbar } from "@/components/global/Navbar";
+import { Footer } from "@/components/global/Footer";
+import countryData from "../api/data.json";
+import { WorldRankings } from "@/components/landing/WorldRankings";
+import Hero from "@/components/landing/Hero";
 
 export default function Home() {
   return (

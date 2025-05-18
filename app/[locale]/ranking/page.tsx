@@ -1,5 +1,5 @@
 "use client";
-import data from "../api/data.json";
+import data from "@/app/api/data.json";
 import Image from "next/image";
 import Link from "next/link";
 import { Country, validTopics, ValidTopic } from "@/lib/types";
@@ -12,6 +12,7 @@ import {
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
+import { useTranslations } from "next-intl";
 
 const formatNumber = (num: number) => {
   if (num >= 1e12) {
@@ -72,30 +73,26 @@ const TopicTitles: Record<ValidTopic, string> = {
 const TopicIcons: Record<
   ValidTopic,
   React.ComponentType<SVGProps<SVGSVGElement>>
-> = {  population: UsersIcon,
+> = {
+  population: UsersIcon,
   "gdp-nominal": ChartBarIcon,
   "world-gdp-share": GlobeAltIcon,
   spending: BanknotesIcon,
   revenue: BuildingLibraryIcon,
 };
 
-const TopicDescriptions: Record<ValidTopic, string> = {
-  population: "Total number of inhabitants in each country",
-  "gdp-nominal": "Gross Domestic Product in current US dollars",
-  "world-gdp-share": "Percentage share of global GDP",
-  spending: "Total government expenditure",
-  revenue: "Total government income and tax collection",
-};
-
 const RankingList = ({ topic }: { topic: ValidTopic }) => {
   const rankingData = getTopicData(topic);
   const topicTitle = TopicTitles[topic];
+  const t = useTranslations("RankingPage");
 
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
       <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
-        <div className="w-16 sm:w-24 font-medium text-gray-500">Rank</div>
-        <div className="font-medium text-gray-500">Country</div>
+        <div className="w-16 sm:w-24 font-medium text-gray-500">
+          {t("rankTitle")}
+        </div>
+        <div className="font-medium text-gray-500">{t("countryTitle")}</div>
         <div className="w-32 sm:w-48 text-right font-medium text-gray-500">
           {topicTitle}
         </div>

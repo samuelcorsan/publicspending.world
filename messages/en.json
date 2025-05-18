@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "pageTitle": "publicspending.world",
+    "homeLink": "Home",
+    "rankingsLink": "Rankings",
+    "compareLink": "Compare",
+    "aboutLink": "About",
+    "contributeLink": "Contribute on GitHub",
+    "ariaLabel-MobileBtn": "Open navigation menu"
+  },
+  "LandingPage": {
+    "title": "It’s Your Money. See Where It Goes.",
+    "description": "Discover how governments spend public funds — from taxes to healthcare, education, and more. Transparent. Global. Open to everyone.",
+    "input": "Search for a country...",
+    "completeRankingsBtn": "View Complete Ranking"
+  },
+  "RankingPage": {
+    "rankTitle": "Rank",
+    "countryTitle": "Country"
+  }
+}

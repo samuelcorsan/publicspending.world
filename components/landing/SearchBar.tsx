@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface Country {
   name: string;
@@ -17,6 +18,7 @@ export function SearchBar({ countries }: SearchBarProps) {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const t = useTranslations("LandingPage");
 
   const getCountrySlug = (name: string) => {
     return name.toLowerCase().replace(/\s+/g, "-");
@@ -47,7 +49,7 @@ export function SearchBar({ countries }: SearchBarProps) {
     <div className="w-full max-w-2xl relative mb-16" ref={searchRef}>
       <input
         type="text"
-        placeholder="Search for a country..."
+        placeholder={t("input")}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         onFocus={() => setIsSearchFocused(true)}
@@ -80,7 +82,7 @@ export function SearchBar({ countries }: SearchBarProps) {
         </div>
       )}
       <button
-        aria-label="Search for countries"
+        aria-label={t("input")}
         className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors"
       >
         <svg

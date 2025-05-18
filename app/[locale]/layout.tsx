@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
 
@@ -57,11 +60,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
     <html lang="en">
       <head>
@@ -86,9 +96,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${merriweather.className} antialiased`}>
-        {children}
-        <Toaster richColors expand={true} position="top-right" />
-        <Analytics />
+        <NextIntlClientProvider>
+          {children}
+          <Toaster richColors expand={true} position="top-right" />
+          <Analytics />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

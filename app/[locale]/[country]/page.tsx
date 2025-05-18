@@ -1,14 +1,14 @@
-import { notFound } from "next/navigation";
 import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
-import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
-import { NationalIncidentsToast } from "@/components/NationalIncidentsToast";
-import Link from "next/link";
+import { AnimatedCountryStats } from "@/components/countries/AnimatedCountryStats";
+import { NationalIncidentsToast } from "@/components/countries/NationalIncidentsToast";
 import { AlertCircle, Gauge, BarChart2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/global/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ country: string }>;

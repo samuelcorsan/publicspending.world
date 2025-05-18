@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Navbar } from "@/components/navigation/Navbar";
-import { AnimatedCountryStats } from "@/components/AnimatedCountryStats";
+import { Navbar } from "@/components/global/Navbar";
+import { AnimatedCountryStats } from "@/components/countries/AnimatedCountryStats";
 import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
 import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
 import countryData from "@/app/api/data.json";
 import type { Country } from "@/lib/types";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/global/Footer";
 
 function ComparePage() {
   const router = useRouter();

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { GithubIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export type RankingTopic = { id: string; name: string };
 
@@ -13,15 +14,16 @@ interface NavbarProps {
 
 export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations("Navbar");
 
   const menuItems = [
-    { name: "Home", href: "/" },
-    ...(!rankingTopics ? [{ name: "Rankings", href: "/ranking" }] : []),
-    { name: "Compare", href: "/compare" },
+    { name: t("homeLink"), href: "/" },
+    ...(!rankingTopics ? [{ name: t("rankingsLink"), href: "/ranking" }] : []),
+    { name: t("compareLink"), href: "/compare" },
     ...(!hideAbout
       ? [
           {
-            name: "About",
+            name: t("aboutLink"),
             href: "/about",
           },
         ]
@@ -47,7 +49,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
               <span className="font-bold text-xl text-gray-900">
-                publicspending.world
+                {t("pageTitle")}
               </span>
             </Link>
           </div>
@@ -78,7 +80,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
             >
               <button className="flex items-center cursor-pointer ml-4 px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
                 <GithubIcon className="w-4 mr-1" />
-                Contribute on GitHub
+                {t("contributeLink")}
               </button>
             </Link>
           </div>
@@ -86,7 +88,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Open navigation menu"
+              aria-label={t("ariaLabel-MobileBtn")}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-500 hover:bg-gray-50"
             >
               <svg

@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import data from "./api/data.json";
+import data from "../api/data.json";
 
 // Valid ranking topics
 const validTopics = [

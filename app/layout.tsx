@@ -46,10 +46,7 @@ export default function RootLayout({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://publicspending.world"),
-  title: {
-    default: "publicspending.world - Global Government Budget & Spending Data",
-    template: "%s | publicspending.world",
-  },
+  title: "publicspending.world - Global Government Budget & Spending Data",
   description:
     "Explore public spending data from 190+ countries worldwide. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations. Compare fiscal policies globally.",
   keywords: [
@@ -79,11 +76,6 @@ export const metadata: Metadata = {
   ],
   creator: "publicspending.world",
   publisher: "publicspending.world",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   openGraph: {
     title: "publicspending.world - Global Government Budget & Spending Data",
     description:
@@ -94,7 +86,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "publicspending.world - Global Government Spending Data",
@@ -106,7 +98,7 @@ export const metadata: Metadata = {
     title: "publicspending.world - Global Government Budget Data",
     description:
       "Explore public spending data from 190+ countries worldwide. Compare government budgets and fiscal transparency.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

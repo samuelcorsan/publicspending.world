@@ -51,11 +51,11 @@ export function SearchBar({ countries }: SearchBarProps) {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         onFocus={() => setIsSearchFocused(true)}
-        className="w-full px-6 py-4 rounded-full border border-gray-200 focus:outline-none focus:border-blue-500 shadow-sm"
+        className="w-full px-6 py-4 rounded-xl border border-gray-200 focus:outline-none focus:border-blue-500 shadow-sm"
         suppressHydrationWarning
       />
       {isSearchFocused && (
-        <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-lg border border-gray-200 shadow-lg max-h-60 overflow-auto z-10">
+        <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl border border-gray-200 shadow-lg max-h-60 overflow-auto z-10">
           {countries.map((country) => (
             <button
               key={country.name}
@@ -82,7 +82,7 @@ export function SearchBar({ countries }: SearchBarProps) {
       )}
       <button
         aria-label="Search countries"
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600 transition-colors"
       >
         <svg
           className="w-5 h-5"

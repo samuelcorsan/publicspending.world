@@ -31,7 +31,7 @@ export default function RankingPage() {
                   className="group bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-lg hover:border-blue-200 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className="p-3 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                    <div className="p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-colors">
                       <TopicIcon className="w-8 h-8 text-blue-600" />
                     </div>
                     <ArrowRightIcon className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
@@ -61,7 +61,7 @@ export default function RankingPage() {
                   className="group bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-lg hover:border-blue-200 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className="p-3 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                    <div className="p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-colors">
                       <TopicIcon className="w-8 h-8 text-blue-600" />
                     </div>
                     <ArrowRightIcon className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />

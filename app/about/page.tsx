@@ -51,7 +51,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             <div className="group relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                <div className="p-3 bg-blue-100 rounded-xl mr-4">
                   <svg
                     className="w-6 h-6 text-blue-600"
                     fill="none"
@@ -79,7 +79,7 @@ export default function About() {
 
             <div className="group relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                <div className="p-3 bg-blue-100 rounded-xl mr-4">
                   <svg
                     className="w-6 h-6 text-blue-600"
                     fill="none"
@@ -224,7 +224,7 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent 
-                text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 
+                text-base font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 
                 transition-colors duration-150"
             >
               View on GitHub

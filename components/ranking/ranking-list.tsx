@@ -127,7 +127,7 @@ export default function RankingList({ topic, showHeader = true }: RankingListPro
               <div className="w-16 sm:w-24 flex items-center">
                 <span
                   className={`
-                  text-lg sm:text-2xl font-bold rounded-lg px-2 sm:px-4 py-1 sm:py-2
+                  text-lg sm:text-2xl font-bold rounded-xl px-2 sm:px-4 py-1 sm:py-2
                   ${
                     index === 0
                       ? "bg-yellow-100 text-yellow-700"

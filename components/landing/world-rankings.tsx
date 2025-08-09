@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -59,6 +60,7 @@ interface WorldRankingsProps {
 
 export function WorldRankings({ countries }: WorldRankingsProps) {
   const router = useRouter();
+  const [activeTab, setActiveTab] = useState<ValidTopic>("population");
 
   const formatNumber = (num: number) => {
     if (num >= 1e12) {
@@ -104,7 +106,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
 
   return (
     <div className="w-full">
-      <Tabs defaultValue="population" className="w-full space-y-4">
+      <Tabs defaultValue="population" className="w-full space-y-4" onValueChange={(value) => setActiveTab(value as ValidTopic)}>
         <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
           {validTopics.map((topic) => {
             const TopicIcon = TopicIcons[topic];
@@ -112,7 +114,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
               <TabsTrigger
                 key={topic}
                 value={topic}
-                className="flex-shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-medium transition-all rounded-lg data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50"
+                className="flex-shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-medium transition-all rounded-xl data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50"
               >
                 <TopicIcon className="w-4 h-4" />
                 {TopicTitles[topic]}
@@ -151,7 +153,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                         <div className="w-16 sm:w-24 flex items-center">
                           <span
                             className={`
-                              text-lg sm:text-2xl font-bold rounded-lg px-2 sm:px-4 py-1 sm:py-2
+                              text-lg sm:text-2xl font-bold rounded-xl px-2 sm:px-4 py-1 sm:py-2
                               ${
                                 index === 0
                                   ? "bg-yellow-100 text-yellow-700"
@@ -202,10 +204,10 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                   style={{ top: "200px" }}
                 >
                   <Link
-                    href="/ranking"
+                    href={`/ranking/${activeTab}`}
                     className="z-10 group transition-transform hover:scale-105"
                   >
-                    <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition-all shadow-lg text-lg font-semibold cursor-pointer flex items-center gap-2 group-hover:gap-3">
+                    <button className="bg-blue-500 text-white px-8 py-4 rounded-xl hover:bg-blue-600 transition-all shadow-lg text-lg font-semibold cursor-pointer flex items-center gap-2 group-hover:gap-3">
                       View Complete Rankings
                       <svg
                         className="w-5 h-5 transition-transform group-hover:transform group-hover:translate-x-1"

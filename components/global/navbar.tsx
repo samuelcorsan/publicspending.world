@@ -76,7 +76,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
               href="https://github.com/samuelcorsan/publicspending.world/pulls"
               target="_blank"
             >
-              <button className="flex items-center cursor-pointer ml-4 px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
+              <button className="flex items-center cursor-pointer ml-4 px-4 py-2 rounded-xl bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
                 <GithubIcon className="w-4 mr-1" />
                 Contribute
               </button>
@@ -142,7 +142,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
               href="https://github.com/samuelcorsan/publicspending.world/pulls"
               target="_blank"
             >
-              <button className="w-full flex items-center cursor-pointer px-4 py-2 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
+              <button className="w-full flex items-center cursor-pointer px-4 py-2 rounded-xl bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
                 <GithubIcon className="w-4 mr-1" />
                 Contribute on GitHub
               </button>

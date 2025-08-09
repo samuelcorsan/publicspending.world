@@ -67,6 +67,12 @@ export const metadata: Metadata = {
     "government revenue",
     "tax spending",
     "public sector finances",
+    "country public spending",
+    "government budget by country",
+    "compare government spending",
+    "gdp rankings",
+    "population rankings",
+    "world spending data",
   ],
   authors: [
     { name: "publicspending.world", url: "https://publicspending.world" },

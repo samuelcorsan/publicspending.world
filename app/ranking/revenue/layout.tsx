@@ -3,9 +3,9 @@ import { Footer } from "@/components/global/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Government Revenue Rankings - Countries by Public Revenue Collection",
-  description: "Explore countries ranked by government revenue and public income. Discover fiscal capacity and revenue generation across nations worldwide.",
-  keywords: "government revenue rankings, public revenue, tax revenue, government income, fiscal capacity, revenue collection, public finance rankings",
+  title: "Government Revenue Rankings | Countries by Revenue 2025 | Tax Revenue",
+  description: "Government revenue rankings by country 2025. Countries ranked by public revenue, tax revenue and fiscal capacity worldwide.",
+  keywords: "government revenue rankings, countries by revenue, revenue by country, tax revenue rankings, government income rankings, fiscal capacity rankings, public revenue rankings, countries revenue 2025",
   openGraph: {
     title: "Government Revenue Rankings - Public Revenue by Country",
     description: "See how countries rank by government revenue collection. Explore public income and fiscal capacity worldwide.",

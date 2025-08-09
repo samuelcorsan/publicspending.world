@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compare Countries - Government Spending Analysis",
+  title: "Compare Countries Government Spending | Budget Analysis & GDP Comparison",
   description:
-    "Compare government spending, revenue sources, and budget allocations between countries. Side-by-side analysis of public expenditure and fiscal policies worldwide.",
+    "Compare countries government spending, GDP, corruption levels, and budget allocations. Side-by-side analysis of public expenditure, revenue sources, and fiscal policies between any two nations worldwide.",
   keywords:
-    "compare government spending, country budget comparison, fiscal policy comparison, government expenditure analysis, public spending comparison tool",
+    "compare countries, compare government spending, compare countries GDP, compare countries corruption, country budget comparison, fiscal policy comparison, government expenditure analysis, public spending comparison tool, compare nations spending, countries vs comparison",
   openGraph: {
-    title: "Compare Countries - Government Budget Analysis",
+    title: "Compare Countries Government Budget & Spending Analysis",
     description:
-      "Compare government spending and revenue sources between any two countries. Analyze fiscal policies side-by-side.",
+      "Compare countries government spending, GDP, corruption and revenue sources between any two nations. Analyze fiscal policies and budgets side-by-side.",
     url: "https://publicspending.world/compare",
     siteName: "publicspending.world",
     locale: "en_US",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compare Government Spending Between Countries",
+    title: "Compare Countries Government Spending & Budget Analysis",
     description:
-      "Side-by-side comparison of government budgets, spending, and revenue sources worldwide.",
+      "Compare countries government spending, GDP, corruption levels. Side-by-side comparison of government budgets and revenue sources worldwide.",
   },
   alternates: {
     canonical: "https://publicspending.world/compare",

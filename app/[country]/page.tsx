@@ -247,12 +247,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const populationFormatted = (countryData.population / 1e6).toFixed(1);
 
     return {
-      title: `${countryName} Public Spending & Government Budget | publicspending.world`,
-      description: `Explore ${countryName}'s government spending, revenue sources, and budget allocation. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. Compare public expenditure and fiscal transparency.`,
-      keywords: `${countryName} government spending, ${countryName} budget, ${countryName} public expenditure, ${countryName} fiscal policy, government revenue ${countryName}, public finance ${countryName}`,
+      title: `${countryName} Public Spending | Government Budget & GDP Data 2025`,
+      description: `${countryName} public spending, government budget and fiscal data 2025. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. ${countryName} government expenditure, revenue sources and budget allocation analysis.`,
+      keywords: `${countryName} public spending, ${countryName} government spending, ${countryName} budget, ${countryName} GDP, ${countryName} government budget, ${countryName} public expenditure, ${countryName} fiscal policy, ${countryName} economy, government revenue ${countryName}, public finance ${countryName}`,
       openGraph: {
-        title: `${countryName} Public Spending & Budget Analysis`,
-        description: `Discover how ${countryName} allocates its public budget. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M citizens.`,
+        title: `${countryName} Public Spending & Government Budget 2025`,
+        description: `${countryName} public spending and government budget 2025. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. ${countryName} fiscal data and budget allocation.`,
         url: `https://publicspending.world/${country}`,
         siteName: "publicspending.world",
         locale: "en_US",
@@ -268,8 +268,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
       twitter: {
         card: "summary_large_image",
-        title: `${countryName} Public Spending Analysis`,
-        description: `Government budget breakdown for ${countryName}. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M.`,
+        title: `${countryName} Public Spending & Government Budget`,
+        description: `${countryName} public spending data 2025. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. Government budget breakdown.`,
       },
       alternates: {
         canonical: `https://publicspending.world/${country}`,

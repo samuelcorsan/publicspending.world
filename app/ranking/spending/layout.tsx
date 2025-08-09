@@ -3,9 +3,9 @@ import { Footer } from "@/components/global/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Government Spending Rankings - Countries by Public Expenditure",
-  description: "Explore countries ranked by government spending and public expenditure. Discover which nations allocate the most resources to public services and infrastructure.",
-  keywords: "government spending rankings, public expenditure, government budget, fiscal spending, public sector spending, government outlays, budget expenditure rankings",
+  title: "Government Spending Rankings | Countries by Public Spending 2025",
+  description: "Government spending rankings by country 2025. Countries ranked by public expenditure, fiscal spending and government budget allocation worldwide.",
+  keywords: "government spending rankings, countries by government spending, public spending by country, government expenditure rankings, fiscal spending rankings, public sector spending, budget spending rankings, countries public spending 2025",
   openGraph: {
     title: "Government Spending Rankings - Public Expenditure by Country",
     description: "See how countries rank by government spending. Explore public expenditure and fiscal allocation worldwide.",

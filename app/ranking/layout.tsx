@@ -3,12 +3,12 @@ import { Footer } from "@/components/global/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Global Country Rankings - Economic & Demographic Data",
-  description: "Explore comprehensive country rankings by GDP, population, government spending, and revenue. Compare economic indicators and fiscal data across all nations.",
-  keywords: "country rankings, GDP rankings, population rankings, government spending rankings, global economic data, country comparison, world statistics, economic indicators",
+  title: "World Rankings | GDP Rankings, Population Rankings & Government Spending",
+  description: "World rankings by GDP, population, government spending, revenue and economic indicators. Compare countries rankings across key fiscal metrics and economic data worldwide.",
+  keywords: "world rankings, GDP rankings, population rankings, country rankings, government spending rankings, economic rankings, fiscal rankings, countries by GDP, countries by population, world economic data, global rankings",
   openGraph: {
-    title: "Global Country Rankings - Economic & Demographic Data",
-    description: "Discover how countries rank across key economic and demographic indicators. Interactive global rankings and comparisons.",
+    title: "World Rankings - GDP, Population & Government Spending",
+    description: "Discover world rankings by GDP, population, government spending. Interactive global rankings and countries comparison across economic indicators.",
     url: "https://publicspending.world/ranking",
     siteName: "PublicSpending.world",
     locale: "en_US",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Global Country Rankings Hub",
-    description: "Explore comprehensive rankings of countries by economic and demographic indicators worldwide.",
+    title: "World Rankings - GDP & Population Rankings",
+    description: "Explore world rankings by GDP, population, government spending. Comprehensive countries rankings and economic indicators worldwide.",
   },
   alternates: {
     canonical: "https://publicspending.world/ranking",

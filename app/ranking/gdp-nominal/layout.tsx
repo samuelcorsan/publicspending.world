@@ -3,12 +3,12 @@ import { Footer } from "@/components/global/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GDP Rankings - Countries by Nominal GDP (Gross Domestic Product)",
-  description: "Explore countries ranked by nominal GDP. Discover the world's largest economies and their economic output in absolute terms.",
-  keywords: "GDP rankings, nominal GDP, largest economies, economic output, country GDP, world economy, economic data, gross domestic product rankings",
+  title: "GDP Rankings | Countries by GDP Nominal 2025 | Largest Economies",
+  description: "GDP rankings by country 2025. Countries ranked by nominal GDP - world's largest economies, economic output and gross domestic product data by nation.",
+  keywords: "GDP rankings, countries by GDP, GDP by country, nominal GDP rankings, largest economies, world GDP ranking, economic ranking, countries GDP 2025, GDP per country, world economy rankings",
   openGraph: {
-    title: "Global GDP Rankings - Countries by Economic Output",
-    description: "See how countries rank by nominal GDP. Explore the world's largest economies and their economic performance.",
+    title: "GDP Rankings - Countries by GDP 2025",
+    description: "See countries ranked by GDP nominal 2025. Explore world's largest economies and economic output by country.",
     url: "https://publicspending.world/ranking/gdp-nominal",
     siteName: "PublicSpending.world",
     locale: "en_US",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "World GDP Rankings - Largest Economies by GDP",
-    description: "Discover which countries have the highest nominal GDP and economic output worldwide.",
+    title: "GDP Rankings | Countries by GDP 2025",
+    description: "GDP rankings by country. Discover countries with highest GDP nominal and economic output worldwide.",
   },
   alternates: {
     canonical: "https://publicspending.world/ranking/gdp-nominal",

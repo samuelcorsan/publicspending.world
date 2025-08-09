@@ -1,8 +1,7 @@
 "use client";
 
-import { SearchBar } from "./SearchBar";
+import { SearchBar } from "./search-bar";
 import countryData from "@/app/api/data.json";
-import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 
 const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
@@ -10,7 +9,6 @@ const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
 });
 
 export default function Hero() {
-  const t = useTranslations("LandingPage");
 
   return (
     <div className="relative z-[1] w-full">
@@ -22,10 +20,10 @@ export default function Hero() {
         <div className="mx-auto max-w-5xl py-16 sm:py-28">
           <div className="text-center max-w-3xl mx-auto relative z-[1]">
             <h1 className="text-balance text-4xl font-semibold tracking-tight text-zinc-800 dark:text-transparent bg-clip-text bg-gradient-to-b from-neutral-300 via-white to-neutral-300 sm:text-6xl">
-              {t("title")}
+              Explore Government Spending Worldwide
             </h1>
             <h2 className="mt-6 md:mt-8 text-balance text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
-              {t("description")}
+              Discover how governments around the world allocate and spend public funds. Compare spending patterns, explore fiscal policies, and gain insights into public financial transparency.
             </h2>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
               <SearchBar countries={countryData} />

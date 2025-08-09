@@ -133,7 +133,6 @@ export function BentoGridCharts() {
         </CardFooter>
       </Card>
 
-      {/* Pie Chart - Donut with Text */}
       <Card className="flex flex-col">
         <CardHeader className="items-center pb-0">
           <CardTitle>Browser Distribution</CardTitle>

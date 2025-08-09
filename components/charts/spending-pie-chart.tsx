@@ -17,19 +17,18 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { useTranslations } from "next-intl";
 
 const chartColors = [
-  "hsl(215, 70%, 50%)", // Blue
-  "hsl(25, 70%, 50%)", // Orange
-  "hsl(145, 70%, 50%)", // Green
-  "hsl(280, 70%, 50%)", // Purple
-  "hsl(355, 70%, 50%)", // Red
-  "hsl(55, 70%, 50%)", // Yellow
-  "hsl(185, 70%, 50%)", // Cyan
-  "hsl(325, 70%, 50%)", // Pink
-  "hsl(95, 70%, 50%)", // Lime
-  "hsl(245, 70%, 50%)", // Indigo
+  "hsl(215, 70%, 50%)",
+  "hsl(25, 70%, 50%)",
+  "hsl(145, 70%, 50%)",
+  "hsl(280, 70%, 50%)",
+  "hsl(355, 70%, 50%)",
+  "hsl(55, 70%, 50%)",
+  "hsl(185, 70%, 50%)",
+  "hsl(325, 70%, 50%)",
+  "hsl(95, 70%, 50%)",
+  "hsl(245, 70%, 50%)",
 ];
 
 interface SpendingItem {
@@ -49,14 +48,13 @@ export function SpendingPieChart({
 }: {
   countryData: CountryData;
 }) {
-  const t = useTranslations("CountryPage");
 
   const chartData = React.useMemo(() => {
     return countryData.spending
       .filter((item) => item.subtype !== "total")
       .map((item, index) => ({
         name: item.name,
-        value: item.amount / 1e9, // Convert to billions
+        value: item.amount / 1e9,
         fill: chartColors[index % chartColors.length],
       }));
   }, [countryData]);
@@ -76,7 +74,7 @@ export function SpendingPieChart({
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>{t("overview.spendingTitle")}</CardTitle>
+        <CardTitle>Government Spending</CardTitle>
         <CardDescription>Fiscal Year 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
@@ -131,7 +129,7 @@ export function SpendingPieChart({
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="leading-none text-muted-foreground">
-          {t("overview.spendingBreakdown")}
+          Spending breakdown by category
         </div>
       </CardFooter>
     </Card>

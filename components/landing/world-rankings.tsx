@@ -12,7 +12,6 @@ import {
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
-import { useTranslations } from "next-intl";
 
 const validTopics = [
   "population",
@@ -60,7 +59,6 @@ interface WorldRankingsProps {
 
 export function WorldRankings({ countries }: WorldRankingsProps) {
   const router = useRouter();
-  const t = useTranslations("RankingPage");
 
   const formatNumber = (num: number) => {
     if (num >= 1e12) {
@@ -128,10 +126,10 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
             <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
               <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
                 <div className="w-16 sm:w-24 font-medium text-gray-500">
-                  {t("rankTitle")}
+                  Rank
                 </div>
                 <div className="font-medium text-gray-500">
-                  {t("countryTitle")}
+                  Country
                 </div>
                 <div className="w-32 sm:w-48 text-right font-medium text-gray-500">
                   {TopicTitles[topic]}
@@ -208,7 +206,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                     className="z-10 group transition-transform hover:scale-105"
                   >
                     <button className="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-600 transition-all shadow-lg text-lg font-semibold cursor-pointer flex items-center gap-2 group-hover:gap-3">
-                      {t("completeRankingsBtn")}
+                      View Complete Rankings
                       <svg
                         className="w-5 h-5 transition-transform group-hover:transform group-hover:translate-x-1"
                         fill="none"

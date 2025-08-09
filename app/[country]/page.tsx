@@ -1,15 +1,15 @@
-import { SpendingPieChart } from "@/components/charts/SpendingPieChart";
-import { RevenuePieChart } from "@/components/charts/RevenuePieChart";
-import { AnimatedCountryStats } from "@/components/countries/AnimatedCountryStats";
-import { NationalIncidentsToast } from "@/components/countries/NationalIncidentsToast";
+import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
+import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
+import { AnimatedCountryStats } from "@/components/countries/animated-country-stats";
+import { NationalIncidentsToast } from "@/components/countries/national-incidents-toast";
 import { AlertCircle, Gauge, BarChart2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
-import { Footer } from "@/components/global/Footer";
+import { Footer } from "@/components/global/footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import Script from "next/script";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -18,11 +18,7 @@ type Props = {
 async function getCountryData(country: string) {
   try {
     const res = await fetch(
-      `${
-        process.env.NODE_ENV === "production"
-          ? "https://publicspending.world"
-          : "http://localhost:3000"
-      }/api/name/${country}`
+      `${process.env.NEXT_PUBLIC_APP_BASE_URL}/api/name/${country}`
     );
 
     if (!res.ok) {
@@ -41,11 +37,56 @@ async function getCountryData(country: string) {
 
 export default async function CountryPage({ params }: Props) {
   const { country } = await params;
-  const t = await getTranslations("CountryPage");
 
   const countryData = await getCountryData(country);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Country",
+    name: countryData.name,
+    identifier: countryData.code,
+    description: `Government spending and budget information for ${
+      countryData.name
+    }. GDP: $${(countryData.gdpNominal / 1e12).toFixed(2)}T, Population: ${(
+      countryData.population / 1e6
+    ).toFixed(1)}M`,
+    url: `https://publicspending.world/${country}`,
+    sameAs: [
+      `https://en.wikipedia.org/wiki/${countryData.name.replace(/\s+/g, "_")}`,
+    ],
+    geo: {
+      "@type": "GeoCoordinates",
+      addressCountry: countryData.code,
+    },
+    government: {
+      "@type": "GovernmentOrganization",
+      name: `Government of ${countryData.name}`,
+      foundingLocation: {
+        "@type": "Place",
+        name: countryData.capital,
+      },
+    },
+    mainEntity: {
+      "@type": "Dataset",
+      name: `${countryData.name} Public Spending Data`,
+      description: `Government budget, revenue, and expenditure data for ${countryData.name}`,
+      keywords: [
+        `${countryData.name} budget`,
+        "government spending",
+        "public expenditure",
+      ],
+    },
+  };
+
   return (
     <>
+      <Script
+        id={`structured-data-${countryData.code}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <main className="min-h-screen bg-gray-50">
         <NationalIncidentsToast incidents={countryData.national_incidents} />
         <div className="bg-white">
@@ -69,7 +110,7 @@ export default async function CountryPage({ params }: Props) {
 
             <div className="max-w-4xl mx-auto">
               <h3 className="text-lg text-gray-900 mb-4 text-center font-bold">
-                {t("memberOrgsTitle")}
+                Member Organizations
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {countryData.organizations.map((org: string) => (
@@ -96,14 +137,14 @@ export default async function CountryPage({ params }: Props) {
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"
               >
                 <BarChart2 className="w-4 h-4" />
-                {t("tabs.overview")}
+                Overview
               </TabsTrigger>
               <TabsTrigger
                 value="analysis"
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm hover:bg-white/50 rounded-lg"
               >
                 <AlertCircle className="w-4 h-4" />
-                {t("tabs.analysis")}
+                Analysis
               </TabsTrigger>
             </TabsList>
 
@@ -119,9 +160,9 @@ export default async function CountryPage({ params }: Props) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">
-                    <BarChart2 className="w-6 h-6 mr-2 text-blue-500" />{" "}
-                    {t("overview.revenueSources")}
-                    <Tooltip text={t("overview.revenueTooltip")} />
+                    <BarChart2 className="w-6 h-6 mr-2 text-blue-500" /> Revenue
+                    Sources
+                    <Tooltip text="Government revenue sources and their amounts" />
                   </h3>
                   <div className="space-y-4">
                     {countryData.revenue.map((item: any) => (
@@ -141,8 +182,8 @@ export default async function CountryPage({ params }: Props) {
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-6">
                     <BarChart2 className="w-6 h-6 mr-2 text-green-500" />
-                    {t("overview.spendingAllocation")}
-                    <Tooltip text={t("overview.spendingTooltip")} />
+                    Spending Allocation
+                    <Tooltip text="Government spending allocation by category" />
                   </h3>
                   <div className="space-y-4">
                     {countryData.spending.map((item: any) => (
@@ -167,23 +208,23 @@ export default async function CountryPage({ params }: Props) {
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
                     <AlertCircle className="w-6 h-6 mr-2 text-red-500" />{" "}
-                    {t("analysis.controversies")}
-                    <Tooltip text={t("analysis.controversiesTooltip")} />
+                    Controversies
+                    <Tooltip text="Notable controversies and governance issues" />
                   </h3>
                   <p className="mb-2 text-gray-700">
                     {countryData.controversies ||
-                      t("analysis.controversiesEmpty")}
+                      "No major controversies reported."}
                   </p>
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
                     <Gauge className="w-6 h-6 mr-2 text-yellow-500" />{" "}
-                    {t("analysis.efficiency")}
-                    <Tooltip text={t("analysis.efficiencyTooltip")} />
+                    Efficiency
+                    <Tooltip text="Government spending efficiency assessment" />
                   </h3>
                   <p className="mb-2 text-gray-700">
                     {countryData.spendingEfficiency ||
-                      t("analysis.efficiencyEmpty")}
+                      "No efficiency data available."}
                   </p>
                 </section>
               </div>
@@ -199,10 +240,51 @@ export default async function CountryPage({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { country } = await params;
   const countryName = formatCountryName(country);
-  return {
-    title: `${countryName} - Public Spending`,
-    description: `Public spending and revenue information for ${countryName}`,
-  };
+
+  try {
+    const countryData = await getCountryData(country);
+    const gdpFormatted = (countryData.gdpNominal / 1e12).toFixed(2);
+    const populationFormatted = (countryData.population / 1e6).toFixed(1);
+
+    return {
+      title: `${countryName} Public Spending & Government Budget | publicspending.world`,
+      description: `Explore ${countryName}'s government spending, revenue sources, and budget allocation. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. Compare public expenditure and fiscal transparency.`,
+      keywords: `${countryName} government spending, ${countryName} budget, ${countryName} public expenditure, ${countryName} fiscal policy, government revenue ${countryName}, public finance ${countryName}`,
+      openGraph: {
+        title: `${countryName} Public Spending & Budget Analysis`,
+        description: `Discover how ${countryName} allocates its public budget. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M citizens.`,
+        url: `https://publicspending.world/${country}`,
+        siteName: "publicspending.world",
+        locale: "en_US",
+        type: "article",
+        images: [
+          {
+            url: `https://publicspending.world/api/og/${country}`,
+            width: 1200,
+            height: 630,
+            alt: `${countryName} Public Spending Overview`,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `${countryName} Public Spending Analysis`,
+        description: `Government budget breakdown for ${countryName}. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M.`,
+      },
+      alternates: {
+        canonical: `https://publicspending.world/${country}`,
+      },
+      other: {
+        "geo.region": countryData.code,
+        "geo.country": countryData.code,
+      },
+    };
+  } catch (error) {
+    return {
+      title: `${countryName} - Public Spending Data | publicspending.world`,
+      description: `Explore ${countryName}'s government spending and budget information on publicspending.world`,
+    };
+  }
 }
 
 function formatCountryName(country: string): string {

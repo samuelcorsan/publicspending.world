@@ -1,5 +1,37 @@
-import { Navbar } from "@/components/global/Navbar";
-import { Footer } from "@/components/global/Footer";
+import { Navbar } from "@/components/global/navbar";
+import { Footer } from "@/components/global/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Privacy Policy - Data Protection & User Privacy | publicspending.world",
+  description:
+    "Learn about publicspending.world's privacy policy, data collection practices, and commitment to protecting user privacy while providing government spending transparency.",
+  keywords:
+    "privacy policy, data protection, user privacy, GDPR, data security, government spending data privacy",
+  openGraph: {
+    title: "Privacy Policy - PublicSpending.world Data Protection",
+    description:
+      "Our commitment to protecting your privacy while providing transparent government spending data.",
+    url: "https://publicspending.world/privacy",
+    siteName: "PublicSpending.world",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy - PublicSpending.world",
+    description:
+      "Learn about our privacy practices and data protection measures.",
+  },
+  alternates: {
+    canonical: "https://publicspending.world/privacy",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+};
 
 export default function PrivacyPolicy() {
   return (

@@ -60,7 +60,6 @@ function ComparePage() {
     }
   }, [selectedA, selectedB, router]);
 
-  // Handle click outside to close dropdowns
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRefA.current && !dropdownRefA.current.contains(event.target as Node)) {
@@ -119,7 +118,6 @@ function ComparePage() {
           )}
           
           <div className={`${selectorsMargin} ${selectorsTopMargin}`} suppressHydrationWarning>
-            {/* Reset button when both countries are selected */}
             {bothSelected && (
               <div className="text-center mb-6">
                 <button
@@ -141,7 +139,6 @@ function ComparePage() {
             )}
             
             <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center max-w-5xl mx-auto">
-              {/* First country selector */}
               <div className="flex justify-center">
                 <div ref={dropdownRefA} className="w-full max-w-md relative">
                   {!bothSelected && (
@@ -193,12 +190,10 @@ function ComparePage() {
                 </div>
               </div>
               
-              {/* VS divider */}
               <div className="flex items-center justify-center">
                 <div className="text-2xl md:text-3xl font-bold text-blue-600 px-6">VS</div>
               </div>
               
-              {/* Second country selector */}
               <div className="flex justify-center">
                 <div ref={dropdownRefB} className="w-full max-w-md relative">
                   {!bothSelected && (

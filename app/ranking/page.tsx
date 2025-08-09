@@ -8,7 +8,6 @@ export default function RankingPage() {
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
       <div className="max-w-7xl mx-auto py-6 sm:py-12 px-3 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Global Rankings
@@ -19,9 +18,7 @@ export default function RankingPage() {
           </p>
         </div>
 
-        {/* Ranking Categories Grid */}
         <div className="mb-12">
-          {/* Top row - 3 cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {validTopics.slice(0, 3).map((topic) => {
               const TopicIcon = TopicIcons[topic];
@@ -52,7 +49,6 @@ export default function RankingPage() {
             })}
           </div>
           
-          {/* Bottom row - 2 cards centered */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {validTopics.slice(3, 5).map((topic) => {
               const TopicIcon = TopicIcons[topic];

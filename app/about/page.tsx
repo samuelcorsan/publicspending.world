@@ -33,7 +33,6 @@ export default function About() {
     <>
       <Navbar />
       <div className="min-h-screen bg-gray-50 mt-16">
-        {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
@@ -49,7 +48,6 @@ export default function About() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          {/* Mission & Vision Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             <div className="group relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
               <div className="flex items-center mb-4">
@@ -114,7 +112,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Key Features */}
           <div className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -213,7 +210,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="bg-blue-50 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">
               Contribute to Transparency

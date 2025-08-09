@@ -43,7 +43,7 @@ export class DataUpdater {
         });
       });
     } catch (error) {
-      console.error('Error loading static data:', error);
+      // Static data loading failed
     }
   }
 
@@ -53,29 +53,66 @@ export class DataUpdater {
       throw new Error(`No static data found for country code: ${countryCode}`);
     }
 
-    const worldBankData = await this.worldBank.getCountryData(countryCode);
-    const worldGdpShare = await this.worldBank.getWorldGdpShare(countryCode);
     const originalData = await this.getOriginalCountryData(countryCode);
 
-    return {
-      ...staticData,
-      population: worldBankData.population || 0,
-      gdpNominal: worldBankData.gdpNominal || 0,
-      worldGdpShare: worldGdpShare || 0,
-      debtToGdp: worldBankData.debtToGdp || 0,
-      controversies: originalData?.controversies || 'No recent data available.',
-      spendingEfficiency: originalData?.spendingEfficiency || 'Standard monitoring in place.',
-      revenue: originalData?.revenue || [],
-      spending: originalData?.spending || [],
-      lastUpdated: new Date().toISOString()
-    };
+    try {
+      const worldBankData = await this.worldBank.getCountryData(countryCode);
+      const worldGdpShare = await this.worldBank.getWorldGdpShare(countryCode);
+
+      const hasValidData = (worldBankData.population || 0) > 0 || (worldBankData.gdpNominal || 0) > 0;
+
+      if (!hasValidData && originalData) {
+        return {
+          ...staticData,
+          population: originalData.population || 0,
+          gdpNominal: originalData.gdpNominal || 0,
+          worldGdpShare: originalData.worldGdpShare || 0,
+          debtToGdp: originalData.debtToGdp || 0,
+          controversies: originalData.controversies || 'No recent data available.',
+          spendingEfficiency: originalData.spendingEfficiency || 'Standard monitoring in place.',
+          revenue: originalData.revenue || [],
+          spending: originalData.spending || [],
+          lastUpdated: new Date().toISOString()
+        };
+      }
+
+      return {
+        ...staticData,
+        population: worldBankData.population || originalData?.population || 0,
+        gdpNominal: worldBankData.gdpNominal || originalData?.gdpNominal || 0,
+        worldGdpShare: worldGdpShare || originalData?.worldGdpShare || 0,
+        debtToGdp: worldBankData.debtToGdp || originalData?.debtToGdp || 0,
+        controversies: originalData?.controversies || 'No recent data available.',
+        spendingEfficiency: originalData?.spendingEfficiency || 'Standard monitoring in place.',
+        revenue: originalData?.revenue || [],
+        spending: originalData?.spending || [],
+        lastUpdated: new Date().toISOString()
+      };
+
+    } catch (error) {
+      if (originalData) {
+        return {
+          ...staticData,
+          population: originalData.population || 0,
+          gdpNominal: originalData.gdpNominal || 0,
+          worldGdpShare: originalData.worldGdpShare || 0,
+          debtToGdp: originalData.debtToGdp || 0,
+          controversies: originalData.controversies || 'No recent data available.',
+          spendingEfficiency: originalData.spendingEfficiency || 'Standard monitoring in place.',
+          revenue: originalData.revenue || [],
+          spending: originalData.spending || [],
+          lastUpdated: new Date().toISOString()
+        };
+      }
+
+      throw error;
+    }
   }
 
   private async getOriginalCountryData(countryCode: string): Promise<any> {
     try {
       return staticCountries.find((country: any) => country.code === countryCode);
     } catch (error) {
-      console.error('Error loading original data:', error);
       return null;
     }
   }

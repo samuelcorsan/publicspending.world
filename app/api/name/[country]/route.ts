@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { DataUpdater } from "@/lib/services/data-updater";
 
 function formatCountryName(urlCountry: string): string {
@@ -16,7 +16,7 @@ async function getCachedCountryByName(countryCode: string) {
 }
 
 export async function GET(
-  request: Request,
+  req: NextRequest,
   { params }: { params: Promise<{ country: string }> }
 ) {
   try {
@@ -49,7 +49,6 @@ export async function GET(
     
     return NextResponse.json(liveCountryData);
   } catch (error) {
-    console.error("Error in name API:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

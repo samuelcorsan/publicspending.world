@@ -13,19 +13,7 @@ export async function GET(request: Request) {
 
   const sortedData = [...data]
     .sort((a, b) => {
-      if (sortBy === "population") {
-        return sortOrder === "asc"
-          ? a.population - b.population
-          : b.population - a.population;
-      } else if (sortBy === "gdpNominal") {
-        return sortOrder === "asc"
-          ? a.gdpNominal - b.gdpNominal
-          : b.gdpNominal - a.gdpNominal;
-      } else if (sortBy === "worldGdpShare") {
-        return sortOrder === "asc"
-          ? a.worldGdpShare - b.worldGdpShare
-          : b.worldGdpShare - a.worldGdpShare;
-      } else if (sortBy === "spending") {
+      if (sortBy === "spending") {
         return sortOrder === "asc"
           ? parseAmount(
               a.spending.find((item) => item.subtype === "total")?.amount ?? 0
@@ -59,7 +47,6 @@ export async function GET(request: Request) {
     .map((item, index) => ({
       rank: index + 1,
       name: item.name,
-      population: item.population,
       flag: item.flag,
       code: item.code,
       languages: item.languages,

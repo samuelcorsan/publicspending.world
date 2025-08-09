@@ -5,7 +5,6 @@ import { Navbar } from "@/components/global/navbar";
 import { AnimatedCountryStats } from "@/components/countries/animated-country-stats";
 import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
 import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
-import countryData from "@/app/api/data.json";
 import type { Country } from "@/lib/types";
 import { Footer } from "@/components/global/footer";
 
@@ -18,22 +17,49 @@ function ComparePage() {
   const [selectedB, setSelectedB] = useState<Country | null>(null);
   const [focusA, setFocusA] = useState(false);
   const [focusB, setFocusB] = useState(false);
+  const [countryData, setCountryData] = useState<Country[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   
   const dropdownRefA = useRef<HTMLDivElement>(null);
   const dropdownRefB = useRef<HTMLDivElement>(null);
 
-  const filteredA = (countryData as Country[]).filter((c) =>
+  // Load live country data
+  useEffect(() => {
+    fetch('/api/countries-live')
+      .then(res => {
+        if (res.status === 429) {
+          throw new Error('Rate limit exceeded. Please wait before making more requests.');
+        }
+        return res.json();
+      })
+      .then(data => {
+        if (data.error) {
+          throw new Error(data.error);
+        }
+        setCountryData(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error.message);
+        setLoading(false);
+      });
+  }, []);
+
+  const filteredA = countryData.filter((c) =>
     c.name.toLowerCase().includes(searchA.toLowerCase())
   );
-  const filteredB = (countryData as Country[]).filter((c) =>
+  const filteredB = countryData.filter((c) =>
     c.name.toLowerCase().includes(searchB.toLowerCase())
   );
 
   useEffect(() => {
+    if (loading || countryData.length === 0) return;
+    
     const a = searchParams.get("a");
     const b = searchParams.get("b");
     if (a) {
-      const foundA = (countryData as Country[]).find(
+      const foundA = countryData.find(
         (c) => c.name.toLowerCase().replace(/\s+/g, "-") === a.toLowerCase()
       );
       if (foundA) {
@@ -42,7 +68,7 @@ function ComparePage() {
       }
     }
     if (b) {
-      const foundB = (countryData as Country[]).find(
+      const foundB = countryData.find(
         (c) => c.name.toLowerCase().replace(/\s+/g, "-") === b.toLowerCase()
       );
       if (foundB) {
@@ -50,7 +76,7 @@ function ComparePage() {
         setSearchB(foundB.name);
       }
     }
-  }, [searchParams]);
+  }, [searchParams, loading, countryData]);
 
   useEffect(() => {
     if (selectedA && selectedB) {
@@ -96,6 +122,46 @@ function ComparePage() {
   const titleMargin = bothSelected ? "mb-4" : "mb-10";
   const selectorsJustify = bothSelected ? "items-center" : "items-center";
   const selectorsTopMargin = bothSelected ? "mt-4" : "";
+
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <main className="min-h-screen bg-gray-50 pt-24">
+          <div className="container mx-auto px-4 py-12">
+            <div className="flex items-center justify-center py-12">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <span className="ml-3 text-gray-600">Loading countries...</span>
+            </div>
+          </div>
+        </main>
+      </>
+    );
+  }
+
+  if (error) {
+    return (
+      <>
+        <Navbar />
+        <main className="min-h-screen bg-gray-50 pt-24">
+          <div className="container mx-auto px-4 py-12">
+            <div className="flex flex-col items-center justify-center py-12">
+              <div className="bg-red-50 border border-red-200 rounded-xl p-6 max-w-md text-center">
+                <div className="text-red-600 text-lg font-semibold mb-2">Error</div>
+                <div className="text-red-700 mb-4">{error}</div>
+                <button 
+                  onClick={() => window.location.reload()} 
+                  className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+                >
+                  Try Again
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </>
+    );
+  }
 
   return (
     <>

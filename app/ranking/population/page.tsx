@@ -9,7 +9,7 @@ export default function PopulationRankingPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/data')
+    fetch('/api/countries-live')
       .then(res => res.json())
       .then(data => {
         setCountries(data);

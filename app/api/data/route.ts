@@ -8,7 +8,6 @@ export async function GET(req: NextRequest) {
     const allData = dataUpdater.getStaticData();
     return NextResponse.json(allData);
   } catch (error) {
-    console.error("Error fetching all country data:", error);
     return NextResponse.json(
       { error: "Failed to fetch country data" }, 
       { status: 500 }

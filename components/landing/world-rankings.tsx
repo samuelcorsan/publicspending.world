@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   ChartBarIcon,
   GlobeAltIcon,
@@ -149,7 +150,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                       }`}
                       onClick={() => handleCountrySelect(country.name)}
                     >
-                      <div className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center cursor-pointer">
+                      <div className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center">
                         <div className="w-16 sm:w-24 flex items-center">
                           <span
                             className={`

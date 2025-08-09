@@ -19,6 +19,7 @@ export class WorldBankAPI {
   private baseUrl = 'https://api.worldbank.org/v2';
   
   async getCountryData(countryCode: string) {
+
     const indicators = {
       gdpNominal: 'NY.GDP.MKTP.CD',
       population: 'SP.POP.TOTL',
@@ -53,7 +54,6 @@ export class WorldBankAPI {
       
       return latestData?.value || null;
     } catch (error) {
-      console.error(`Error fetching indicator ${indicator} for ${countryCode}:`, error);
       return null;
     }
   }
@@ -65,9 +65,9 @@ export class WorldBankAPI {
       
       if (!worldGdp || !countryGdp) return null;
       
-      return (countryGdp / worldGdp) * 100;
+      const share = (countryGdp / worldGdp) * 100;
+      return Math.round(share * 1000) / 1000;
     } catch (error) {
-      console.error(`Error calculating world GDP share for ${countryCode}:`, error);
       return null;
     }
   }

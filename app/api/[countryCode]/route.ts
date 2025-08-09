@@ -26,7 +26,6 @@ export async function GET(
 
     return NextResponse.json(countryData);
   } catch (error) {
-    console.error("Error fetching country data:", error);
     return NextResponse.json(
       { error: "Failed to fetch country data" }, 
       { status: 500 }

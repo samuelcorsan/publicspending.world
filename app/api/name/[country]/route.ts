@@ -1,11 +1,18 @@
 import { NextResponse } from "next/server";
-import data from "../../data.json";
+import { DataUpdater } from "@/lib/services/data-updater";
 
 function formatCountryName(urlCountry: string): string {
   return urlCountry
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
+}
+
+const dataUpdater = new DataUpdater();
+
+async function getCachedCountryByName(countryCode: string) {
+  'use cache';
+  return await dataUpdater.updateCountryData(countryCode);
 }
 
 export async function GET(
@@ -16,28 +23,33 @@ export async function GET(
     const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
-    let countryData = data.find((item) => item.name === formattedCountryName);
+    const { default: staticData } = await import('../../data.json');
+    
+    let countryEntry = staticData.find((item: any) => item.name === formattedCountryName);
 
-    if (!countryData) {
-      countryData = data.find(
-        (item) => item.name.toLowerCase() === formattedCountryName.toLowerCase()
+    if (!countryEntry) {
+      countryEntry = staticData.find(
+        (item: any) => item.name.toLowerCase() === formattedCountryName.toLowerCase()
       );
     }
 
-    if (!countryData) {
+    if (!countryEntry) {
       const searchWords = formattedCountryName.toLowerCase().split(" ");
-      countryData = data.find((item) => {
+      countryEntry = staticData.find((item: any) => {
         const itemWords = item.name.toLowerCase().split(" ");
         return searchWords.every((word) => itemWords.includes(word));
       });
     }
 
-    if (!countryData) {
+    if (!countryEntry) {
       return NextResponse.json({ error: "Country not found" }, { status: 404 });
     }
 
-    return NextResponse.json(countryData);
+    const liveCountryData = await getCachedCountryByName(countryEntry.code);
+    
+    return NextResponse.json(liveCountryData);
   } catch (error) {
+    console.error("Error in name API:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

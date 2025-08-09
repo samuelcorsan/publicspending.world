@@ -2,7 +2,7 @@ import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
 import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
 import { AnimatedCountryStats } from "@/components/countries/animated-country-stats";
 import { NationalIncidentsToast } from "@/components/countries/national-incidents-toast";
-import { AlertCircle, Gauge, BarChart2 } from "lucide-react";
+import { AlertCircle, Gauge, BarChart2, Radio } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Footer } from "@/components/global/footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -99,6 +99,18 @@ export default async function CountryPage({ params }: Props) {
 
         <div className="bg-white border-b">
           <div className="container mx-auto px-4 py-20">
+            <div className="flex justify-center mb-6">
+              <div className="flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full">
+                <Radio className="w-4 h-4 text-green-600 animate-pulse" />
+                <span className="text-sm font-medium text-green-700">
+                  Live Economic Data
+                </span>
+                <span className="text-xs text-green-600">
+                  Updated: {new Date(countryData.lastUpdated).toLocaleDateString()}
+                </span>
+              </div>
+            </div>
+            
             <AnimatedCountryStats
               name={countryData.name}
               code={countryData.code}

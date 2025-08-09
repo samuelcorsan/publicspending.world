@@ -1,5 +1,4 @@
 "use client";
-import data from "@/app/api/data.json";
 import Image from "next/image";
 import Link from "next/link";
 import { Country, ValidTopic } from "@/lib/types";
@@ -42,8 +41,10 @@ const getValue = (country: Country, topic: ValidTopic): number => {
   return 0;
 };
 
-const getTopicData = (topic: ValidTopic): Country[] => {
-  let sortedData = [...data].map((country) => ({
+const getTopicData = (topic: ValidTopic, countries: any[]): Country[] => {
+  if (!countries || countries.length === 0) return [];
+  
+  let sortedData = [...countries].map((country) => ({
     name: country.name,
     flag: country.flag.replace("w40", "w320"),
     code: country.code,
@@ -82,10 +83,11 @@ export const TopicIcons: Record<
 interface RankingListProps {
   topic: ValidTopic;
   showHeader?: boolean;
+  countries?: any[];
 }
 
-export default function RankingList({ topic, showHeader = true }: RankingListProps) {
-  const rankingData = getTopicData(topic);
+export default function RankingList({ topic, showHeader = true, countries = [] }: RankingListProps) {
+  const rankingData = getTopicData(topic, countries);
   const topicTitle = TopicTitles[topic];
   const TopicIcon = TopicIcons[topic];
 

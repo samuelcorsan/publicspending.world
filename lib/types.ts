@@ -10,16 +10,8 @@ export interface SpendingItem {
   subtype: string;
 }
 
-export interface TaxBurdenPerCapita {
-  amount: number;
-  currency: string;
-  convertedCurrencyAmount?: number;
-  convertedCurrency?: string;
-}
-
 export interface Country {
   name: string;
-
   code: string;
   flag: string;
   population: number;
@@ -29,7 +21,6 @@ export interface Country {
   spending: SpendingItem[];
   currency: string;
   capital?: string;
-  taxBurdenPerCapita?: TaxBurdenPerCapita;
   debtToGdp?: number;
 }
 

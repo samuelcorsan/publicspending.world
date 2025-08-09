@@ -17,20 +17,18 @@
     ],
     "capital": "Washington, D.C.",
     "currency": "USD",
-    "languages": ["English"],
+    "languages": [
+      "English"
+    ],
     "timezone": "America/New_York",
     "continent": "North America",
     "flag": "https://flagcdn.com/w40/us.png",
-    "population": 341685984,
-    "gdpNominal": 30507000000000,
-    "worldGdpShare": 26.11,
     "coordinates": {
       "latitude": 37.0902,
       "longitude": -95.7129
     },
     "controversies": "There is an ongoing and highly politicized debate over raising the federal debt ceiling to avoid default, as well as concerns about the long-term sustainability of large deficits accumulated during and after the COVID-19 pandemic. The Biden administration's proposed tax reforms targeting high earners and corporate rate adjustments have sparked heated discussions on fairness, economic growth impact, and potential revenue shortfalls.",
     "spendingEfficiency": "The United States consistently ranks highly on global indicators of government effectiveness and transparency, but inefficiencies remain, particularly in the health care sector where administrative costs are among the highest worldwide. Social insurance programs are well-administered, yet overlapping welfare schemes and complex eligibility rules create administrative burdens and resource waste.",
-    "debtToGdp": 125.0,
     "revenue": [
       {
         "name": "Individual Income Tax",
@@ -147,17 +145,15 @@
     "timezone": "Europe/London",
     "continent": "Europe",
     "flag": "https://flagpedia.net/data/flags/w1160/gb.webp",
-    "population": 68682962,
-    "gdpNominal": 3380850000000,
-    "worldGdpShare": 3.18,
     "coordinates": {
       "latitude": 51.5074,
       "longitude": -0.0799
     },
     "controversies": "Recent budgets have reignited controversy over planned spending cuts and proposed increases in corporation tax to close fiscal gaps. Debates over the ‘migration levy’ on employers and shifts in VAT rates for digital services and hospitality have also been contentious, drawing criticism from industry groups about competitiveness and consumer impact.",
     "spendingEfficiency": "The UK performs well on transparency and budget execution metrics, but suffers from service delivery bottlenecks in the NHS leading to long waiting times. Devolved administrations add complexity to program delivery, causing duplication of administrative functions despite high overall public sector productivity.",
-    "debtToGdp": 96.0,
-    "languages": ["English"],
+    "languages": [
+      "English"
+    ],
     "revenue": [
       {
         "name": "Income Tax",
@@ -246,7 +242,11 @@
         "subtype": "education",
         "amount": 100000000000
       },
-      { "name": "Defence", "subtype": "defense", "amount": 60000000000 },
+      {
+        "name": "Defence",
+        "subtype": "defense",
+        "amount": 60000000000
+      },
       {
         "name": "Interest on Debt",
         "subtype": "debt-service",
@@ -295,18 +295,15 @@
     "timezone": "Asia/Tokyo",
     "continent": "Asia",
     "flag": "https://flagcdn.com/w40/jp.png",
-    "population": 124370947,
-    "gdpNominal": 4204490000000,
-    "worldGdpShare": 3.96,
     "coordinates": {
       "latitude": 36.2048,
       "longitude": 138.2529
     },
-    "languages": ["Japanese"],
+    "languages": [
+      "Japanese"
+    ],
     "controversies": "The 2019 consumption tax increase from 8% to 10% remains politically sensitive, with critics arguing it dampened household spending. Ongoing proposals to raise the retirement age and adjust pension formulas to sustain the system have faced public protests amid concerns over fairness for aging workers.",
-
     "spendingEfficiency": "Japan scores very high on government effectiveness indices and achieves excellent social outcomes in health and longevity, but there is recognized inefficiency in health care spending and administrative overlap across central and local governments. Streamlining these processes could yield significant savings.",
-    "debtToGdp": 260.0,
     "revenue": [
       {
         "name": "所得税 (Shotoku-zei, Income Tax)",
@@ -443,17 +440,15 @@
     "timezone": "Europe/Rome",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/it.png",
-    "population": 59499453,
-    "gdpNominal": 2300940000000,
-    "worldGdpShare": 2.17,
     "coordinates": {
       "latitude": 41.9033,
       "longitude": 12.4534
     },
-    "languages": ["Italian"],
+    "languages": [
+      "Italian"
+    ],
     "controversies": "Italy’s complex tax code fuels high levels of tax evasion, and repeated postponements of planned VAT increases to stimulate growth have raised questions about long-term fiscal stability. Pension reform proposals, including raising retirement ages and modifying benefit calculations, continue to provoke public sector strikes.",
     "spendingEfficiency": "EU and IMF assessments highlight inefficiencies due to regional budget fragmentation and bureaucratic overhead, particularly in health care and justice systems. Improving administrative digitalization and consolidating regional procurement could significantly enhance budgetary productivity.",
-    "debtToGdp": 135.3,
     "revenue": [
       {
         "name": "IRPEF (Imposta sul reddito delle persone fisiche)",
@@ -507,7 +502,11 @@
         "subtype": "education",
         "amount": 80000000000
       },
-      { "name": "Difesa", "subtype": "defense", "amount": 30000000000 },
+      {
+        "name": "Difesa",
+        "subtype": "defense",
+        "amount": 30000000000
+      },
       {
         "name": "Servizio del debito (Interessi)",
         "subtype": "debt-service",
@@ -558,17 +557,15 @@
     "timezone": "Europe/Paris",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/fr.png",
-    "population": 66438822,
-    "gdpNominal": 3051830000000,
-    "worldGdpShare": 2.87,
     "coordinates": {
       "latitude": 46.2276,
       "longitude": 2.2137
     },
-    "languages": ["French"],
+    "languages": [
+      "French"
+    ],
     "controversies": "Pension reform raising the retirement age to 64 has sparked widespread protests and strikes. Revisions to wealth taxes and targeted VAT reductions for tourism sectors have also triggered debates over equity and budgetary impact.",
     "spendingEfficiency": "France is transparent and effective in budget execution, but the high cost of public services, especially in health and education, yields mixed performance outcomes. Streamlining spending in these sectors could further improve value for money.",
-    "debtToGdp": 110.6,
     "revenue": [
       {
         "name": "Taxe sur la valeur ajoutée (TVA)",
@@ -612,7 +609,11 @@
         "subtype": "education",
         "amount": 60000000000
       },
-      { "name": "Défense", "subtype": "defense", "amount": 44000000000 },
+      {
+        "name": "Défense",
+        "subtype": "defense",
+        "amount": 44000000000
+      },
       {
         "name": "Recherche et enseignement supérieur",
         "subtype": "education",
@@ -676,17 +677,15 @@
     "timezone": "Europe/Berlin",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/de.png",
-    "population": 84548231,
-    "gdpNominal": 4745700000000,
-    "worldGdpShare": 4.26,
     "coordinates": {
       "latitude": 52.52,
       "longitude": 13.405
     },
-    "languages": ["German"],
+    "languages": [
+      "German"
+    ],
     "controversies": "Debates around the constitutional ‘debt brake’ focus on whether to relax borrowing limits for infrastructure and green investments. The phased repeal of the Soli surcharge has also prompted discussions on replacing lost revenue without raising other taxes.",
     "spendingEfficiency": "Germany scores very high on efficiency and transparency indices; its health system delivers good outcomes at moderate cost. Challenges remain in digitalizing federal and state services to reduce redundancy and improve citizen access.",
-    "debtToGdp": 62.0,
     "revenue": [
       {
         "name": "Lohn- und Einkommensteuer (Personal Income Tax)",
@@ -808,18 +807,16 @@
     "timezone": "America/Toronto",
     "continent": "North America",
     "flag": "https://flagcdn.com/w40/ca.png",
-    "population": 39299105,
-    "gdpNominal": 2142470000000,
-    "worldGdpShare": 2.02,
     "coordinates": {
       "latitude": 45.4215,
       "longitude": -75.6904
     },
-    "languages": ["English", "French"],
+    "languages": [
+      "English",
+      "French"
+    ],
     "controversies": "The federal carbon tax has been challenged by several provinces as overreaching, and debates over introducing a global minimum corporate tax have drawn industry lobbying against increased rates. Calls to expand child care subsidies also fuel discussions on where to allocate new revenues.",
     "spendingEfficiency": "Canada ranks highly for the efficiency of its health care and education spending, but provincial variations lead to uneven service delivery and duplication. Further central–provincial coordination could yield cost savings and improve access.",
-
-    "debtToGdp": 69.4,
     "revenue": [
       {
         "name": "Personal Income Tax",
@@ -929,17 +926,15 @@
     "timezone": "America/Sao_Paulo",
     "continent": "South America",
     "flag": "https://flagcdn.com/w40/br.png",
-    "population": 212677722,
-    "gdpNominal": 2173670000000,
-    "worldGdpShare": 2.02,
     "coordinates": {
       "latitude": -14.235,
       "longitude": -51.9253
     },
-    "languages": ["Portuguese"],
+    "languages": [
+      "Portuguese"
+    ],
     "controversies": "Proposals for a comprehensive tax reform to unify multiple federal and state levies into a single value-added tax have stalled amid political disagreements. High subsidies to energy sectors and delayed pension reform continue to strain public finances and provoke legal challenges.",
     "spendingEfficiency": "Despite high social spending, outcomes in health and education lag OECD peers, reflecting inefficiencies in procurement, lack of oversight in federal transfers, and fragmentation across states. Transparency initiatives have improved data access but have yet to translate into efficiency gains.",
-    "debtToGdp": 76.1,
     "revenue": [
       {
         "name": "Imposto de Renda (IR)",
@@ -993,7 +988,11 @@
         "subtype": "education",
         "amount": 179000000000
       },
-      { "name": "Saúde", "subtype": "health", "amount": 215000000000 },
+      {
+        "name": "Saúde",
+        "subtype": "health",
+        "amount": 215000000000
+      },
       {
         "name": "Defesa Nacional",
         "subtype": "defense",
@@ -1040,17 +1039,16 @@
     "timezone": "Asia/Kolkata",
     "continent": "Asia",
     "flag": "https://flagcdn.com/w40/in.png",
-    "population": 1438069596,
-    "gdpNominal": 4190000000000,
-    "worldGdpShare": 2.02,
     "coordinates": {
       "latitude": 20.5937,
       "longitude": 78.9629
     },
-    "languages": ["Hindi", "English"],
+    "languages": [
+      "Hindi",
+      "English"
+    ],
     "controversies": "Implementation of the unified Goods and Services Tax (GST) encountered compliance hurdles and legal challenges from states seeking exemptions. Ongoing debates center on broadening the tax base to include informal sectors and introducing a wealth tax to boost revenues without hampering growth.",
     "spendingEfficiency": "India scores low on transparency and government effectiveness rankings, with high levels of leakage in subsidy programs and underfunded health and education systems. Digitization of welfare transfers has improved targeting but overall efficiency remains constrained by bureaucratic complexity.",
-    "debtToGdp": 85.0,
     "revenue": [
       {
         "name": "Corporation Tax",
@@ -1109,7 +1107,11 @@
         "subtype": "education",
         "amount": 1120000000000
       },
-      { "name": "Health", "subtype": "health", "amount": 860000000000 },
+      {
+        "name": "Health",
+        "subtype": "health",
+        "amount": 860000000000
+      },
       {
         "name": "Interest Payments",
         "subtype": "debt-service",
@@ -1146,17 +1148,15 @@
     "timezone": "Asia/Shanghai",
     "continent": "Asia",
     "flag": "https://flagcdn.com/w40/cn.png",
-    "population": 1422584933,
-    "gdpNominal": 19230000000000,
-    "worldGdpShare": 16.5,
     "coordinates": {
       "latitude": 35.8617,
       "longitude": 104.1954
     },
-    "languages": ["Chinese"],
+    "languages": [
+      "Chinese"
+    ],
     "controversies": "Recent VAT rate reductions for small businesses have raised concerns over narrowing the tax base without compensatory revenue measures. Pilots of property taxes in select cities have faced local resistance and calls for clearer central guidelines on wealth taxation.",
     "spendingEfficiency": "China’s rapid infrastructure build-out demonstrates strong execution capacity, yet IMF reviews point to inefficiencies in overlapping local government projects and overinvestment in unprofitable state-owned enterprises. Greater transparency in budget reporting could improve resource allocation.",
-    "debtToGdp": 70.0,
     "revenue": [
       {
         "name": "增值税 (VAT)",
@@ -1188,7 +1188,11 @@
         "subtype": "non-tax-revenue",
         "amount": 2000000000000
       },
-      { "name": "总收入", "subtype": "total", "amount": 16350000000000 }
+      {
+        "name": "总收入",
+        "subtype": "total",
+        "amount": 16350000000000
+      }
     ],
     "spending": [
       {
@@ -1226,7 +1230,11 @@
         "subtype": "other",
         "amount": 2100000000000
       },
-      { "name": "总支出", "subtype": "total", "amount": 18770000000000 }
+      {
+        "name": "总支出",
+        "subtype": "total",
+        "amount": 18770000000000
+      }
     ]
   },
   {
@@ -1248,17 +1256,15 @@
     "timezone": "Europe/Moscow",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/ru.png",
-    "population": 145440500,
-    "gdpNominal": 2021420000000,
-    "worldGdpShare": 1.35,
     "coordinates": {
       "latitude": 55.7558,
       "longitude": 37.6173
     },
-    "languages": ["Russian"],
+    "languages": [
+      "Russian"
+    ],
     "controversies": "Elevated reliance on oil and gas revenues skews budget stability, while the recent VAT hike to 22% has been criticized for fueling inflation. Discussions are underway on introducing environmental and digital services taxes to diversify revenue.",
     "spendingEfficiency": "Russia’s budget transparency is low, with significant off-budget military and security expenditures. World Bank assessments point to inefficient health and education spending, hampered by bureaucratic delays and underinvestment in regional infrastructures.",
-    "debtToGdp": 14.6,
     "revenue": [
       {
         "name": "Налог на прибыль организаций (Corporate Profit Tax)",
@@ -1349,22 +1355,28 @@
     "code": "MX",
     "year": 2024,
     "currency": "MXN",
-    "organizations": ["G20", "UN", "OECD", "WTO", "IMF", "World Bank", "APEC"],
+    "organizations": [
+      "G20",
+      "UN",
+      "OECD",
+      "WTO",
+      "IMF",
+      "World Bank",
+      "APEC"
+    ],
     "capital": "Mexico City",
     "timezone": "America/Mexico_City",
     "continent": "North America",
     "flag": "https://flagcdn.com/w40/mx.png",
-    "population": 129739759,
-    "gdpNominal": 1789110000000,
-    "worldGdpShare": 1.04,
     "coordinates": {
       "latitude": 23.6345,
       "longitude": -102.5528
     },
-    "languages": ["Spanish"],
+    "languages": [
+      "Spanish"
+    ],
     "controversies": "The gradual corporate tax cut from 30% to 25% has sparked debate on its adequacy to stimulate investment versus the resulting revenue shortfall. The regressive nature of exemptions on basic food items under the VAT regime also remains highly contested.",
     "spendingEfficiency": "Mexico’s spending on health and education yields outcomes below OECD averages, due in part to program fragmentation across federal, state, and municipal levels. Anti-corruption measures and better performance tracking are needed to improve value-for-money.",
-    "debtToGdp": 54.0,
     "revenue": [
       {
         "name": "Impuesto sobre la Renta (ISR)",
@@ -1465,17 +1477,15 @@
     "timezone": "Europe/Madrid",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/es.png",
-    "population": 49077984,
-    "gdpNominal": 1799090000000,
-    "worldGdpShare": 1.03,
     "coordinates": {
       "latitude": 40.4168,
       "longitude": -3.7038
     },
-    "languages": ["Spanish"],
+    "languages": [
+      "Spanish"
+    ],
     "controversies": "Spain’s pension system currently runs a structural deficit—as of 2024 absorbing about 25 % of public spending—due to a declining worker-to-retiree ratio. Recent income-tax bracket adjustments favoring middle earners have prompted concerns over fairness and revenue stability, while proposed regional wealth taxes on high-net-worth individuals remain the subject of ongoing debate.",
     "spendingEfficiency": "Spain’s universal health and education systems are well-ranked for coverage, but inefficiencies persist in hospital wait times and regional disparities in school performance. The OCDE recommends stronger program evaluation frameworks to redirect funding to highest-impact areas.",
-    "debtToGdp": 110.0,
     "revenue": [
       {
         "name": "Impuesto sobre la Renta de las Personas Físicas (IRPF)",
@@ -1529,7 +1539,11 @@
         "subtype": "education",
         "amount": 59000000000
       },
-      { "name": "Defensa", "subtype": "defense", "amount": 15000000000 },
+      {
+        "name": "Defensa",
+        "subtype": "defense",
+        "amount": 15000000000
+      },
       {
         "name": "Pago de Intereses de la Deuda",
         "subtype": "debt-service",
@@ -1570,17 +1584,16 @@
     "timezone": "Europe/Dublin",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/ie.png",
-    "population": 7185600,
-    "gdpNominal": 587220000000,
-    "worldGdpShare": 0.53,
     "coordinates": {
       "latitude": 53.3498,
       "longitude": -6.2603
     },
-    "languages": ["English", "Irish"],
+    "languages": [
+      "English",
+      "Irish"
+    ],
     "controversies": "Ireland’s heavy reliance on corporate tax—88% paid by foreign multinationals, with the top 10 firms contributing 57% of receipts—has drawn EU scrutiny and highlighted vulnerability to U.S. policy shifts. Domestic debates over housing affordability and water charges continue to spark protests.",
     "spendingEfficiency": "Ireland’s universal healthcare faces long waiting lists for elective procedures, driving uptake of private insurance; social housing delivery lags, exacerbating homelessness and fueling voter frustration over public service quality. The OECD recommends streamlining hospital capacity planning and enhancing procurement frameworks to boost impact per euro spent.",
-    "debtToGdp": 41.6,
     "revenue": [
       {
         "name": "Income Tax (including USC)",
@@ -1697,17 +1710,15 @@
     "timezone": "Australia/Sydney",
     "continent": "Oceania",
     "flag": "https://flagcdn.com/w40/au.png",
-    "population": 26930748,
-    "gdpNominal": 1660550000000,
-    "worldGdpShare": 1.62,
     "coordinates": {
       "latitude": -25.2744,
       "longitude": 133.7751
     },
-    "languages": ["English"],
+    "languages": [
+      "English"
+    ],
     "controversies": "Australia’s gradual 'stage three' personal tax cuts, due from July 2024, have drawn criticism for favoring higher-income earners and risking further bracket creep; debates over federal-state health funding and water rights in the Murray–Darling basin remain highly contentious.",
     "spendingEfficiency": "Despite high per-capita health expenditure, public hospital wait times and elective surgery backlogs remain among the longest in the OECD; infrastructure project cost overruns (e.g. Melbourne Metro, WestConnex) highlight weaknesses in project evaluation and procurement processes.",
-    "debtToGdp": 49.01,
     "revenue": [
       {
         "name": "Individual Income Tax",
@@ -1813,19 +1824,21 @@
     "timezone": "Europe/Vienna",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/at.png",
-    "population": 9159993,
-    "gdpNominal": 559220000000,
-    "worldGdpShare": 0.34,
     "coordinates": {
       "latitude": 48.2082,
       "longitude": 16.3738
     },
-    "languages": ["German"],
+    "languages": [
+      "German"
+    ],
     "controversies": "Pension reform in Austria is debated due to rising costs, with expenditures set to reach 15% of GDP by 2030. Key issues include raising the retirement age, linking it to life expectancy, and cutting benefits, which may impact vulnerable groups. Without reform, future pension spending will continue to grow.",
     "spendingEfficiency": "Austria’s healthcare system ranks highly for outcomes but faces challenges with cost containment and regional disparities; education performance is strong though the OECD recommends enhanced vocational training pathways.",
-    "debtToGdp": 81.8,
     "revenue": [
-      { "name": "Lohnsteuer", "subtype": "income-tax", "amount": 35300000000 },
+      {
+        "name": "Lohnsteuer",
+        "subtype": "income-tax",
+        "amount": 35300000000
+      },
       {
         "name": "Einkommensteuer (veranlagt)",
         "subtype": "income-tax",
@@ -1851,7 +1864,11 @@
         "subtype": "excise-tax",
         "amount": 4000000000
       },
-      { "name": "Tabaksteuer", "subtype": "excise-tax", "amount": 2000000000 },
+      {
+        "name": "Tabaksteuer",
+        "subtype": "excise-tax",
+        "amount": 2000000000
+      },
       {
         "name": "Normverbrauchsabgabe",
         "subtype": "excise-tax",
@@ -1867,7 +1884,11 @@
         "subtype": "property-tax",
         "amount": 1400000000
       },
-      { "name": "Zölle", "subtype": "customs-duty", "amount": 200000000 },
+      {
+        "name": "Zölle",
+        "subtype": "customs-duty",
+        "amount": 200000000
+      },
       {
         "name": "Übrige Steuern und Abgaben",
         "subtype": "other-tax",
@@ -1900,7 +1921,11 @@
         "subtype": "pensions",
         "amount": 12807700000
       },
-      { "name": "Arbeit", "subtype": "unemployment", "amount": 9469600000 },
+      {
+        "name": "Arbeit",
+        "subtype": "unemployment",
+        "amount": 9469600000
+      },
       {
         "name": "Soziales und Konsumentenschutz",
         "subtype": "social-protection",
@@ -1911,26 +1936,46 @@
         "subtype": "social-protection",
         "amount": 8841700000
       },
-      { "name": "Gesundheit", "subtype": "health", "amount": 3249300000 },
-      { "name": "Bildung", "subtype": "education", "amount": 11517600000 },
+      {
+        "name": "Gesundheit",
+        "subtype": "health",
+        "amount": 3249300000
+      },
+      {
+        "name": "Bildung",
+        "subtype": "education",
+        "amount": 11517600000
+      },
       {
         "name": "Wissenschaft und Forschung",
         "subtype": "R&D",
         "amount": 6417700000
       },
-      { "name": "Mobilität", "subtype": "transport", "amount": 5917100000 },
+      {
+        "name": "Mobilität",
+        "subtype": "transport",
+        "amount": 5917100000
+      },
       {
         "name": "Klima, Umwelt und Energie",
         "subtype": "environment",
         "amount": 3834000000
       },
-      { "name": "Inneres", "subtype": "public-safety", "amount": 4072000000 },
+      {
+        "name": "Inneres",
+        "subtype": "public-safety",
+        "amount": 4072000000
+      },
       {
         "name": "Landesverteidigung",
         "subtype": "defense",
         "amount": 2700000000
       },
-      { "name": "Justiz", "subtype": "public-safety", "amount": 2977900000 },
+      {
+        "name": "Justiz",
+        "subtype": "public-safety",
+        "amount": 2977900000
+      },
       {
         "name": "Intergovernmental Transfers (Bund-Länder-Ausgleiche)",
         "subtype": "transfers",
@@ -1962,17 +2007,18 @@
     "timezone": "PET (UTC−05:00)",
     "continent": "South America",
     "flag": "https://flagcdn.com/w40/pe.png",
-    "population": 34517139,
-    "gdpNominal": 294903000000,
-    "worldGdpShare": 0.27,
     "coordinates": {
       "latitude": -9.19,
       "longitude": -75.0152
     },
-    "languages": ["Spanish", "Quechua", "Aymara", "Other indigenous"],
+    "languages": [
+      "Spanish",
+      "Quechua",
+      "Aymara",
+      "Other indigenous"
+    ],
     "controversies": "High presidential turnover and continuous cabinet changes in 2023-2024 have undermined confidence in institutional stability, prompting debates on far-reaching political reforms.",
     "spendingEfficiency": "Although health and education coverage is extensive, logistical bottlenecks persist in the Andean and Amazonian regions, and the OECD recommends improving programme evaluation to optimise resources.",
-    "debtToGdp": 34.0,
     "revenue": [
       {
         "name": "Total Revenues",
@@ -2008,17 +2054,15 @@
     "timezone": "Europe/Budapest",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/hu.png",
-    "population": 9584627,
-    "gdpNominal": 245619000000,
-    "worldGdpShare": 0.23,
     "coordinates": {
       "latitude": 47.4979,
       "longitude": 19.0402
     },
-    "languages": ["Hungarian"],
+    "languages": [
+      "Hungarian"
+    ],
     "controversies": "Ongoing rule-of-law disputes with the EU over judicial independence, media freedom and electoral reforms, leading to conditional budget disbursements under the Recovery and Resilience Facility. ",
     "spendingEfficiency": "Healthcare outcomes outperform spending levels but suffer regional inequalities; PISA scores remain below the OECD average, with calls to strengthen vocational training. ",
-    "debtToGdp": 71.8,
     "revenue": [
       {
         "name": "Személyi jövedelemadó (SZJA)",
@@ -2040,9 +2084,21 @@
         "subtype": "excise-tax",
         "amount": 1500000000000
       },
-      { "name": "Vámok", "subtype": "customs-duty", "amount": 50000000000 },
-      { "name": "Illetékek", "subtype": "other-tax", "amount": 200000000000 },
-      { "name": "Különadók", "subtype": "other-tax", "amount": 500000000000 },
+      {
+        "name": "Vámok",
+        "subtype": "customs-duty",
+        "amount": 50000000000
+      },
+      {
+        "name": "Illetékek",
+        "subtype": "other-tax",
+        "amount": 200000000000
+      },
+      {
+        "name": "Különadók",
+        "subtype": "other-tax",
+        "amount": 500000000000
+      },
       {
         "name": "Társadalombiztosítási járulékok",
         "subtype": "social-contribution",
@@ -2060,16 +2116,36 @@
       }
     ],
     "spending": [
-      { "name": "Nyugdíjak", "subtype": "pensions", "amount": 5000000000000 },
-      { "name": "Egészségügy", "subtype": "health", "amount": 3000000000000 },
-      { "name": "Oktatás", "subtype": "education", "amount": 2500000000000 },
-      { "name": "Honvédelem", "subtype": "defense", "amount": 1000000000000 },
+      {
+        "name": "Nyugdíjak",
+        "subtype": "pensions",
+        "amount": 5000000000000
+      },
+      {
+        "name": "Egészségügy",
+        "subtype": "health",
+        "amount": 3000000000000
+      },
+      {
+        "name": "Oktatás",
+        "subtype": "education",
+        "amount": 2500000000000
+      },
+      {
+        "name": "Honvédelem",
+        "subtype": "defense",
+        "amount": 1000000000000
+      },
       {
         "name": "Közrend és biztonság",
         "subtype": "public-safety",
         "amount": 1500000000000
       },
-      { "name": "Közlekedés", "subtype": "transport", "amount": 2000000000000 },
+      {
+        "name": "Közlekedés",
+        "subtype": "transport",
+        "amount": 2000000000000
+      },
       {
         "name": "Adósságszolgálat",
         "subtype": "debt-service",
@@ -2112,19 +2188,21 @@
     "timezone": "Europe/Sofia",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/bg.png",
-    "population": 6817548,
-    "gdpNominal": 88960000000,
-    "worldGdpShare": 0.08,
     "coordinates": {
       "latitude": 42.6977,
       "longitude": 23.3219
     },
-    "languages": ["Bulgarian"],
+    "languages": [
+      "Bulgarian"
+    ],
     "controversies": "High levels of perceived corruption in public procurement and slow judicial reforms have repeatedly triggered EU infringement procedures and conditional funding clauses. ",
     "spendingEfficiency": "Healthcare indicators lag regional peers despite moderate spending; recent PISA performance is improving but vocational pathways remain underdeveloped. ",
-    "debtToGdp": 25.6,
     "revenue": [
-      { "name": "Income Tax", "subtype": "income-tax", "amount": 6400000000 },
+      {
+        "name": "Income Tax",
+        "subtype": "income-tax",
+        "amount": 6400000000
+      },
       {
         "name": "Value Added Tax (VAT)",
         "subtype": "consumption-tax",
@@ -2150,7 +2228,11 @@
         "subtype": "non-tax-revenue",
         "amount": 2000000000
       },
-      { "name": "Total Revenue", "subtype": "total", "amount": 48900000000 }
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": 48900000000
+      }
     ],
     "spending": [
       {
@@ -2168,7 +2250,11 @@
         "subtype": "education",
         "amount": 5000000000
       },
-      { "name": "Defense", "subtype": "defense", "amount": 800000000 },
+      {
+        "name": "Defense",
+        "subtype": "defense",
+        "amount": 800000000
+      },
       {
         "name": "Debt Interest",
         "subtype": "debt-service",
@@ -2179,8 +2265,16 @@
         "subtype": "housing",
         "amount": 600000000
       },
-      { "name": "Other Expenditure", "subtype": "other", "amount": 9000000000 },
-      { "name": "Total Expenditure", "subtype": "total", "amount": 41700000000 }
+      {
+        "name": "Other Expenditure",
+        "subtype": "other",
+        "amount": 9000000000
+      },
+      {
+        "name": "Total Expenditure",
+        "subtype": "total",
+        "amount": 41700000000
+      }
     ]
   },
   {
@@ -2202,19 +2296,21 @@
     "timezone": "Europe/Zagreb",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/hr.png",
-    "population": 4003453,
-    "gdpNominal": 71930000000,
-    "worldGdpShare": 0.07,
     "coordinates": {
       "latitude": 45.815,
       "longitude": 15.9819
     },
-    "languages": ["Croatian"],
+    "languages": [
+      "Croatian"
+    ],
     "controversies": "Slow judicial reform and backlog in the European Court of Human Rights, as well as tourism‐driven housing pressures, have sparked social and EU‐level debates. ",
     "spendingEfficiency": "Healthcare outcomes are on par with regional EU peers; educational reform is in progress to boost STEM and vocational training. ",
-    "debtToGdp": 71.2,
     "revenue": [
-      { "name": "Income Tax", "subtype": "income-tax", "amount": 12500000000 },
+      {
+        "name": "Income Tax",
+        "subtype": "income-tax",
+        "amount": 12500000000
+      },
       {
         "name": "Value Added Tax (VAT)",
         "subtype": "consumption-tax",
@@ -2240,7 +2336,11 @@
         "subtype": "non-tax-revenue",
         "amount": 4000000000
       },
-      { "name": "Total Revenue", "subtype": "total", "amount": 61000000000 }
+      {
+        "name": "Total Revenue",
+        "subtype": "total",
+        "amount": 61000000000
+      }
     ],
     "spending": [
       {
@@ -2258,7 +2358,11 @@
         "subtype": "education",
         "amount": 7000000000
       },
-      { "name": "Defense", "subtype": "defense", "amount": 1000000000 },
+      {
+        "name": "Defense",
+        "subtype": "defense",
+        "amount": 1000000000
+      },
       {
         "name": "Debt Interest",
         "subtype": "debt-service",
@@ -2269,8 +2373,16 @@
         "subtype": "housing",
         "amount": 500000000
       },
-      { "name": "Other Expenditure", "subtype": "other", "amount": 9500000000 },
-      { "name": "Total Expenditure", "subtype": "total", "amount": 58500000000 }
+      {
+        "name": "Other Expenditure",
+        "subtype": "other",
+        "amount": 9500000000
+      },
+      {
+        "name": "Total Expenditure",
+        "subtype": "total",
+        "amount": 58500000000
+      }
     ]
   },
   {
@@ -2292,17 +2404,17 @@
     "timezone": "Europe/Brussels",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/be.png",
-    "population": 11860000,
-    "gdpNominal": 689360000000,
-    "worldGdpShare": 0.44,
     "coordinates": {
       "latitude": 50.84667,
       "longitude": 4.3525
     },
-
     "controversies": "Belgium’s budget deficit rose to 4.6% of GDP in 2024, risking EU rule violations and drawing criticism for poor fiscal coordination. Controversy surrounds reclassifying infrastructure and frozen assets to meet NATO defence targets. Meanwhile, Brussels is under scrutiny after a Huawei-linked EU bribery probe exposed lobbying and transparency failures.",
     "spendingEfficiency": "Belgium spends over 54% of GDP on public services, among the highest in the OECD, but with limited efficiency, especially in healthcare, long-term care, and education. The OECD and IMF urge comprehensive spending reviews, better digital tools, and stricter coordination between federal and regional governments to improve value-for-money and reduce wasteful outlays.",
-    "languages": ["Dutch", "French", "German"],
+    "languages": [
+      "Dutch",
+      "French",
+      "German"
+    ],
     "revenue": [
       {
         "name": "Impôt des personnes physiques",
@@ -2346,20 +2458,36 @@
       }
     ],
     "spending": [
-      { "name": "Pensions", "subtype": "pensions", "amount": 50000000000 },
-      { "name": "Soins de santé", "subtype": "health", "amount": 15000000000 },
+      {
+        "name": "Pensions",
+        "subtype": "pensions",
+        "amount": 50000000000
+      },
+      {
+        "name": "Soins de santé",
+        "subtype": "health",
+        "amount": 15000000000
+      },
       {
         "name": "Chômage et aide sociale",
         "subtype": "social-protection",
         "amount": 8000000000
       },
-      { "name": "Défense", "subtype": "defense", "amount": 6000000000 },
+      {
+        "name": "Défense",
+        "subtype": "defense",
+        "amount": 6000000000
+      },
       {
         "name": "Sécurité publique (police & justice)",
         "subtype": "public-safety",
         "amount": 5000000000
       },
-      { "name": "Transports", "subtype": "transport", "amount": 4000000000 },
+      {
+        "name": "Transports",
+        "subtype": "transport",
+        "amount": 4000000000
+      },
       {
         "name": "Intérêts de la dette",
         "subtype": "debt-service",
@@ -2391,16 +2519,16 @@
     "timezone": "Europe/Nicosia",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/cy.png",
-    "population": 1368780,
-    "gdpNominal": 38736000000,
-    "worldGdpShare": 0.034,
     "coordinates": {
       "latitude": 35.1725,
       "longitude": 33.365
     },
     "controversies": "Cyprus’s main public‐spending woes are an inflated wage bill (especially in education) and meagre R&D investment; a costly “golden passports” VAT fraud; major procurement scandals (a €542 M LNG terminal and a €46 M waste‐treatment plant); and weak oversight, seen in the Auditor‐General’s dismissal and dwindling tender competition",
     "spendingEfficiency": "Cyprus spends 40 % of GDP, with strong governance and a falling debt ratio, but efficiency is limited by weak procurement, poor SOE oversight, and low R&D and environmental investment. Reforms like accrual accounting and digital services are improving transparency, but challenges remain despite credit-rating upgrades.",
-    "languages": ["Greek", "Turkish"],
+    "languages": [
+      "Greek",
+      "Turkish"
+    ],
     "revenue": [
       {
         "name": "Φόρος εισοδήματος φυσικών προσώπων",
@@ -2444,16 +2572,36 @@
       }
     ],
     "spending": [
-      { "name": "Συντάξεις", "subtype": "pensions", "amount": 2000000000 },
-      { "name": "Υγεία", "subtype": "health", "amount": 500000000 },
-      { "name": "Παιδεία", "subtype": "education", "amount": 1000000000 },
-      { "name": "Άμυνα", "subtype": "defense", "amount": 600000000 },
+      {
+        "name": "Συντάξεις",
+        "subtype": "pensions",
+        "amount": 2000000000
+      },
+      {
+        "name": "Υγεία",
+        "subtype": "health",
+        "amount": 500000000
+      },
+      {
+        "name": "Παιδεία",
+        "subtype": "education",
+        "amount": 1000000000
+      },
+      {
+        "name": "Άμυνα",
+        "subtype": "defense",
+        "amount": 600000000
+      },
       {
         "name": "Δημόσια Τάξη και Ασφάλεια",
         "subtype": "public-safety",
         "amount": 400000000
       },
-      { "name": "Μεταφορές", "subtype": "transport", "amount": 200000000 },
+      {
+        "name": "Μεταφορές",
+        "subtype": "transport",
+        "amount": 200000000
+      },
       {
         "name": "Τόκοι δημοσίου χρέους",
         "subtype": "debt-service",
@@ -2490,16 +2638,15 @@
     "timezone": "Europe/Prague",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/cz.png",
-    "population": 10900555,
-    "gdpNominal": 343208000000,
-    "worldGdpShare": 0.32,
     "coordinates": {
       "latitude": 50.0755,
       "longitude": 14.4378
     },
     "controversies": "Despite generally strong institutions, the Czech Republic contends with recurring procurement and corruption scandals—most notably the 2025 Motol Hospital bribery case and EU subsidy fraud allegations against prominent political figures—underscoring weaknesses in public contracting and delayed anti-corruption reforms.",
     "spendingEfficiency": "Government spending runs at about 43.7% of GDP, supported by falling debt, accrual accounting, and expanding digital services; however, efficiency is undermined by weak procurement oversight, low R&D investment (~2% of GDP), and ongoing integrity challenges in public contracting.",
-    "languages": ["Czech"],
+    "languages": [
+      "Czech"
+    ],
     "revenue": [
       {
         "name": "Daň z příjmů fyzických osob",
@@ -2521,7 +2668,11 @@
         "subtype": "excise-tax",
         "amount": 170000000000
       },
-      { "name": "Clo", "subtype": "customs-duty", "amount": 10000000000 },
+      {
+        "name": "Clo",
+        "subtype": "customs-duty",
+        "amount": 10000000000
+      },
       {
         "name": "Ostatní daně (hazard, atd.)",
         "subtype": "other-tax",
@@ -2544,16 +2695,36 @@
       }
     ],
     "spending": [
-      { "name": "Důchody", "subtype": "pensions", "amount": 690000000000 },
-      { "name": "Zdravotnictví", "subtype": "health", "amount": 80000000000 },
-      { "name": "Školství", "subtype": "education", "amount": 150000000000 },
-      { "name": "Obrana", "subtype": "defense", "amount": 140000000000 },
+      {
+        "name": "Důchody",
+        "subtype": "pensions",
+        "amount": 690000000000
+      },
+      {
+        "name": "Zdravotnictví",
+        "subtype": "health",
+        "amount": 80000000000
+      },
+      {
+        "name": "Školství",
+        "subtype": "education",
+        "amount": 150000000000
+      },
+      {
+        "name": "Obrana",
+        "subtype": "defense",
+        "amount": 140000000000
+      },
       {
         "name": "Veřejný pořádek a bezpečnost",
         "subtype": "public-safety",
         "amount": 100000000000
       },
-      { "name": "Doprava", "subtype": "transport", "amount": 100000000000 },
+      {
+        "name": "Doprava",
+        "subtype": "transport",
+        "amount": 100000000000
+      },
       {
         "name": "Obsluha státního dluhu",
         "subtype": "debt-service",
@@ -2594,15 +2765,14 @@
     "timezone": "Europe/Copenhagen",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/dk.png",
-    "population": 5998555,
-    "gdpNominal": 431230000000,
-    "worldGdpShare": 0.26,
     "coordinates": {
       "latitude": 56.2639,
       "longitude": 9.5018
     },
     "spendingEfficiency": "Denmark consistently ranks among the top OECD countries for converting public funds into high-quality services, thanks to its rigorous, centrally coordinated spending reviews that target genuine efficiency gains rather than across-the-board cuts. Its procurement system, representing roughly 14 % of GDP, is guided by transparent rules and digital oversight, ensuring value for money and minimal waste. Public investment levels hover around the OECD average, with capital projects regularly re-evaluated to maximize long-term returns.",
-    "languages": ["Danish"],
+    "languages": [
+      "Danish"
+    ],
     "currency": "DKK",
     "revenue": [
       {
@@ -2615,7 +2785,11 @@
         "subtype": "income-tax",
         "amount": 80000000000
       },
-      { "name": "Moms", "subtype": "consumption-tax", "amount": 280000000000 },
+      {
+        "name": "Moms",
+        "subtype": "consumption-tax",
+        "amount": 280000000000
+      },
       {
         "name": "Punktafgifter",
         "subtype": "excise-tax",
@@ -2631,8 +2805,16 @@
         "subtype": "property-tax",
         "amount": 10000000000
       },
-      { "name": "Told", "subtype": "customs-duty", "amount": 4000000000 },
-      { "name": "Andre skatter", "subtype": "other-tax", "amount": 5000000000 },
+      {
+        "name": "Told",
+        "subtype": "customs-duty",
+        "amount": 4000000000
+      },
+      {
+        "name": "Andre skatter",
+        "subtype": "other-tax",
+        "amount": 5000000000
+      },
       {
         "name": "Udbytter og indtægter fra offentlige virksomheder",
         "subtype": "non-tax-revenue",
@@ -2645,10 +2827,26 @@
       }
     ],
     "spending": [
-      { "name": "Pensioner", "subtype": "pensions", "amount": 140000000000 },
-      { "name": "Sundhedsvæsen", "subtype": "health", "amount": 120000000000 },
-      { "name": "Uddannelse", "subtype": "education", "amount": 100000000000 },
-      { "name": "Forsvar", "subtype": "defense", "amount": 40000000000 },
+      {
+        "name": "Pensioner",
+        "subtype": "pensions",
+        "amount": 140000000000
+      },
+      {
+        "name": "Sundhedsvæsen",
+        "subtype": "health",
+        "amount": 120000000000
+      },
+      {
+        "name": "Uddannelse",
+        "subtype": "education",
+        "amount": 100000000000
+      },
+      {
+        "name": "Forsvar",
+        "subtype": "defense",
+        "amount": 40000000000
+      },
       {
         "name": "Politi og retsvæsen",
         "subtype": "public-safety",
@@ -2700,16 +2898,15 @@
     "timezone": "Europe/Tallinn",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/ee.png",
-    "population": 1369995,
-    "gdpNominal": 43486000000,
-    "worldGdpShare": 0.0435,
     "coordinates": {
       "latitude": 59.417,
       "longitude": 24.75
     },
     "controversies": "Estonia’s defence budget row erupted in late 2024 when a €1.6 billion ammunition package and the resignation of Permanent Secretary Kusti Salm laid bare weaknesses in parliamentary oversight. The transition to a voluntary second-pillar pension scheme at the start of 2024 unleashed a liquidity surge equal to nearly 5 % of GDP, prompting warnings of economic overheating and intergenerational unfairness. Justice Minister Kalle Laanet’s sudden spring 2024 resignation over a €12,000 state-funded rental expense scandal highlighted ethics and transparency lapses at the highest level.",
     "spendingEfficiency": "Estonia’s public finances are characterized by a lean government structure and a strong commitment to digital innovation, which together enable the country to deliver high-quality services at relatively low cost. By keeping overall spending below the OECD average and harnessing pioneering e-governance platforms, Estonia minimizes administrative overhead and streamlines citizen access to services. In healthcare, despite only moderate expenditure, Estonia achieves outcomes that rival those of wealthier peers.",
-    "languages": ["Estonian"],
+    "languages": [
+      "Estonian"
+    ],
     "revenue": [
       {
         "name": "Füüsilise isiku tulumaks",
@@ -2726,8 +2923,16 @@
         "subtype": "consumption-tax",
         "amount": 3000000000
       },
-      { "name": "Aktsiisid", "subtype": "excise-tax", "amount": 1000000000 },
-      { "name": "Tollimaksud", "subtype": "customs-duty", "amount": 50000000 },
+      {
+        "name": "Aktsiisid",
+        "subtype": "excise-tax",
+        "amount": 1000000000
+      },
+      {
+        "name": "Tollimaksud",
+        "subtype": "customs-duty",
+        "amount": 50000000
+      },
       {
         "name": "Sotsiaalmaks (pensionikindlustus)",
         "subtype": "social-contribution",
@@ -2755,10 +2960,26 @@
       }
     ],
     "spending": [
-      { "name": "Pensionid", "subtype": "pensions", "amount": 2500000000 },
-      { "name": "Tervishoid", "subtype": "health", "amount": 1700000000 },
-      { "name": "Haridus", "subtype": "education", "amount": 1000000000 },
-      { "name": "Kaitse", "subtype": "defense", "amount": 800000000 },
+      {
+        "name": "Pensionid",
+        "subtype": "pensions",
+        "amount": 2500000000
+      },
+      {
+        "name": "Tervishoid",
+        "subtype": "health",
+        "amount": 1700000000
+      },
+      {
+        "name": "Haridus",
+        "subtype": "education",
+        "amount": 1000000000
+      },
+      {
+        "name": "Kaitse",
+        "subtype": "defense",
+        "amount": 800000000
+      },
       {
         "name": "Avalik kord ja julgeolek",
         "subtype": "public-safety",
@@ -2809,14 +3030,14 @@
     "timezone": "Europe/Helsinki",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/fi.png",
-    "population": 5640437,
-    "gdpNominal": 306083000000,
-    "worldGdpShare": 0.28,
     "coordinates": {
-      "latitude": 64.0,
-      "longitude": 26.0
+      "latitude": 64,
+      "longitude": 26
     },
-    "languages": ["Finnish", "Swedish"],
+    "languages": [
+      "Finnish",
+      "Swedish"
+    ],
     "currency": "EUR",
     "spendingEfficiency": "Finland is widely recognized for its high-quality public services, with citizen satisfaction levels well above OECD averages. Its governance and stakeholder engagement in budgeting are strong, though green budgeting and healthcare efficiency need improvement. The well-being services counties, which now manage healthcare, face rising deficits, challenging sustainability. The OECD urges Finland to enhance cost-effectiveness, especially in these regions. Overall, public spending remains effective, but fiscal pressures are mounting.",
     "controversies": "In 2024, Finland breached EU debt and deficit limits, sparking heated debate over planned spending cuts and tax hikes. Over half of the country’s new healthcare counties admitted they cannot meet legal budget balance deadlines, with some refusing to comply. The government faces criticism for failing to provide realistic funding or flexibility. At the same time, Finland’s €9.6 billion F-35 fighter jet deal raised concerns over underestimated operating costs. Together, these issues highlight deepening fiscal tensions despite Finland’s reputation for sound governance.",
@@ -2826,7 +3047,11 @@
         "subtype": "income-tax",
         "amount": 6500000000
       },
-      { "name": "Yhteisövero", "subtype": "income-tax", "amount": 3500000000 },
+      {
+        "name": "Yhteisövero",
+        "subtype": "income-tax",
+        "amount": 3500000000
+      },
       {
         "name": "Arvonlisävero (ALV)",
         "subtype": "consumption-tax",
@@ -2837,7 +3062,11 @@
         "subtype": "excise-tax",
         "amount": 5000000000
       },
-      { "name": "Tulli", "subtype": "customs-duty", "amount": 200000000 },
+      {
+        "name": "Tulli",
+        "subtype": "customs-duty",
+        "amount": 200000000
+      },
       {
         "name": "Perintö- ja lahjavero",
         "subtype": "income-tax",
@@ -2865,10 +3094,26 @@
       }
     ],
     "spending": [
-      { "name": "Eläkkeet", "subtype": "pensions", "amount": 6000000000 },
-      { "name": "Terveydenhuolto", "subtype": "health", "amount": 14000000000 },
-      { "name": "Koulutus", "subtype": "education", "amount": 5000000000 },
-      { "name": "Puolustus", "subtype": "defense", "amount": 6000000000 },
+      {
+        "name": "Eläkkeet",
+        "subtype": "pensions",
+        "amount": 6000000000
+      },
+      {
+        "name": "Terveydenhuolto",
+        "subtype": "health",
+        "amount": 14000000000
+      },
+      {
+        "name": "Koulutus",
+        "subtype": "education",
+        "amount": 5000000000
+      },
+      {
+        "name": "Puolustus",
+        "subtype": "defense",
+        "amount": 6000000000
+      },
       {
         "name": "Sisäinen turvallisuus",
         "subtype": "public-safety",
@@ -2889,7 +3134,11 @@
         "subtype": "social-protection",
         "amount": 4000000000
       },
-      { "name": "Hallinto", "subtype": "administration", "amount": 2000000000 }
+      {
+        "name": "Hallinto",
+        "subtype": "administration",
+        "amount": 2000000000
+      }
     ]
   },
   {
@@ -2911,14 +3160,13 @@
     "timezone": "Europe/Athens",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/gr.png",
-    "population": 10400720,
-    "gdpNominal": 267348000000,
-    "worldGdpShare": 0.22,
     "coordinates": {
       "latitude": 37.983807,
       "longitude": 23.727583
     },
-    "languages": ["Greek"],
+    "languages": [
+      "Greek"
+    ],
     "controversies": "Greece’s bid in April 2025 to exempt €500 million of defence spending from the EU’s 3 % deficit ceiling reignited debate over fiscal discipline versus security needs. In May 2025, revelations of opaque contracts between the ruling New Democracy party and a PR firm spurred calls for an independent probe into campaign-finance and procurement breaches. Meanwhile, endemic “envelope” bribery—spotlighted by a Rhodes planning officer raid—alongside a national civil-service strike in November 2024 and fresh EU cohesion-funds oversight concerns have all underscored deep governance challenges.",
     "spendingEfficiency": "Despite solid growth, Greece’s fragmented social-benefit system and heavy tilt toward current consumption hamper long-term returns on public outlays. A debt-to-GDP ratio near 162 % further constrains fiscal leeway and heightens market vulnerability. Consistently low scores in global government-efficiency and economic-freedom indices reflect lingering bureaucracy, red-tape hurdles and widespread tax evasion that erode both revenue mobilisation and public trust.",
     "revenue": [
@@ -2969,10 +3217,26 @@
       }
     ],
     "spending": [
-      { "name": "Συντάξεις", "subtype": "pensions", "amount": 18000000000 },
-      { "name": "Υγεία", "subtype": "health", "amount": 5000000000 },
-      { "name": "Εκπαίδευση", "subtype": "education", "amount": 6000000000 },
-      { "name": "Άμυνα", "subtype": "defense", "amount": 7000000000 },
+      {
+        "name": "Συντάξεις",
+        "subtype": "pensions",
+        "amount": 18000000000
+      },
+      {
+        "name": "Υγεία",
+        "subtype": "health",
+        "amount": 5000000000
+      },
+      {
+        "name": "Εκπαίδευση",
+        "subtype": "education",
+        "amount": 6000000000
+      },
+      {
+        "name": "Άμυνα",
+        "subtype": "defense",
+        "amount": 7000000000
+      },
       {
         "name": "Δημόσια Τάξη και Ασφάλεια",
         "subtype": "public-safety",
@@ -3019,14 +3283,13 @@
     "timezone": "Europe/Riga",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/lv.png",
-    "population": 1877445,
-    "gdpNominal": 42250000000,
-    "worldGdpShare": 0.000398,
     "coordinates": {
       "latitude": 56.946285,
       "longitude": 24.105078
     },
-    "languages": ["Latvian"],
+    "languages": [
+      "Latvian"
+    ],
     "spendingEfficiency": "Latvia continues to face challenges with public spending efficiency, especially in healthcare, pensions, and internal security. International institutions urge better targeting of social aid and strategic tax shifts to improve outcomes. Recent reforms to budget planning have laid a foundation for improved control and oversight. However, maximizing EU fund absorption remains critical to support growth without increasing deficits.",
     "controversies": "The Rail Baltica project's cost explosion to nearly €10 billion has sparked outrage, with lawmakers calling it a major fiscal failure. Defence prepayments caused unexpected budget deficits in early 2025, raising questions about spending priorities. Latvia's rapid expenditure growth has also drawn EU warnings over breaching deficit thresholds. These controversies reflect deeper governance and accountability issues in managing public funds.",
     "revenue": [
@@ -3067,16 +3330,36 @@
       }
     ],
     "spending": [
-      { "name": "Pensijas", "subtype": "pensions", "amount": 3000000000 },
-      { "name": "Veselība", "subtype": "health", "amount": 1500000000 },
-      { "name": "Izglītība", "subtype": "education", "amount": 1000000000 },
-      { "name": "Aizsardzība", "subtype": "defense", "amount": 900000000 },
+      {
+        "name": "Pensijas",
+        "subtype": "pensions",
+        "amount": 3000000000
+      },
+      {
+        "name": "Veselība",
+        "subtype": "health",
+        "amount": 1500000000
+      },
+      {
+        "name": "Izglītība",
+        "subtype": "education",
+        "amount": 1000000000
+      },
+      {
+        "name": "Aizsardzība",
+        "subtype": "defense",
+        "amount": 900000000
+      },
       {
         "name": "Sabiedriskā kārtība un drošība",
         "subtype": "public-safety",
         "amount": 700000000
       },
-      { "name": "Transports", "subtype": "transport", "amount": 500000000 },
+      {
+        "name": "Transports",
+        "subtype": "transport",
+        "amount": 500000000
+      },
       {
         "name": "Parāda apkalpošana",
         "subtype": "debt-service",
@@ -3113,14 +3396,13 @@
     "timezone": "Europe/Vilnius",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/lt.png",
-    "population": 2854099,
-    "gdpNominal": 87980000000,
-    "worldGdpShare": 0.08,
     "coordinates": {
       "latitude": 55.169438,
       "longitude": 23.881275
     },
-    "languages": ["Lithuanian"],
+    "languages": [
+      "Lithuanian"
+    ],
     "spendingEfficiency": "Lithuania faces persistent inefficiencies in public spending, especially in healthcare, with high preventable deaths and low outcomes despite moderate funding. The shadow economy and aging population strain finances, prompting calls for reforms like digital tax systems, better spending reviews, and boosting property tax revenues.",
     "controversies": "Major scandals in 2024–2025 exposed deep flaws in Lithuania’s public finance oversight, from fintech-linked laundering and rigged tenders to large-scale embezzlement and bribery in state agencies. These incidents triggered resignations, EU-level investigations, and demands for stronger regulatory and ethical safeguards.",
     "revenue": [
@@ -3139,7 +3421,11 @@
         "subtype": "consumption-tax",
         "amount": 5000000000
       },
-      { "name": "Akcizai", "subtype": "excise-tax", "amount": 1500000000 },
+      {
+        "name": "Akcizai",
+        "subtype": "excise-tax",
+        "amount": 1500000000
+      },
       {
         "name": "Muito mokesčiai",
         "subtype": "customs-duty",
@@ -3157,14 +3443,26 @@
       }
     ],
     "spending": [
-      { "name": "Pensijos", "subtype": "pensions", "amount": 5000000000 },
+      {
+        "name": "Pensijos",
+        "subtype": "pensions",
+        "amount": 5000000000
+      },
       {
         "name": "Sveikatos apsauga",
         "subtype": "health",
         "amount": 2000000000
       },
-      { "name": "Švietimas", "subtype": "education", "amount": 2000000000 },
-      { "name": "Gynyba", "subtype": "defense", "amount": 1200000000 },
+      {
+        "name": "Švietimas",
+        "subtype": "education",
+        "amount": 2000000000
+      },
+      {
+        "name": "Gynyba",
+        "subtype": "defense",
+        "amount": 1200000000
+      },
       {
         "name": "Viešasis saugumas",
         "subtype": "public-safety",
@@ -3211,14 +3509,15 @@
     "timezone": "Europe/Luxembourg",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/lu.png",
-    "population": 672050,
-    "gdpNominal": 96993000000,
-    "worldGdpShare": 0.081,
     "coordinates": {
       "latitude": 49.77,
       "longitude": 6.13
     },
-    "languages": ["Luxembourgish", "French", "German"],
+    "languages": [
+      "Luxembourgish",
+      "French",
+      "German"
+    ],
     "spendingEfficiency": "Luxembourg maintains a high level of public service delivery while keeping total spending below the OECD average, signaling efficient use of resources. Strong investment in infrastructure and digitalization reflects strategic prioritization. Public procurement practices are well-aligned with international standards. The push for performance-based budgeting aims to further enhance fiscal accountability.",
     "controversies": "Recent fiscal controversies have raised concerns about oversight and transparency in Luxembourg’s public spending. A €61 million embezzlement scandal within Caritas Luxembourg shook public confidence. The EU flagged the 2024 budget for breaching spending growth limits. Continued broad subsidies and rising fraud investigations have intensified scrutiny of fiscal governance.",
     "revenue": [
@@ -3264,16 +3563,36 @@
       }
     ],
     "spending": [
-      { "name": "Pensions", "subtype": "pensions", "amount": 4000000000 },
-      { "name": "Santé", "subtype": "health", "amount": 2000000000 },
-      { "name": "Éducation", "subtype": "education", "amount": 1500000000 },
-      { "name": "Défense", "subtype": "defense", "amount": 500000000 },
+      {
+        "name": "Pensions",
+        "subtype": "pensions",
+        "amount": 4000000000
+      },
+      {
+        "name": "Santé",
+        "subtype": "health",
+        "amount": 2000000000
+      },
+      {
+        "name": "Éducation",
+        "subtype": "education",
+        "amount": 1500000000
+      },
+      {
+        "name": "Défense",
+        "subtype": "defense",
+        "amount": 500000000
+      },
       {
         "name": "Police et sécurité",
         "subtype": "public-safety",
         "amount": 600000000
       },
-      { "name": "Transports", "subtype": "transport", "amount": 1000000000 },
+      {
+        "name": "Transports",
+        "subtype": "transport",
+        "amount": 1000000000
+      },
       {
         "name": "Intérêts de la dette",
         "subtype": "debt-service",
@@ -3311,14 +3630,14 @@
     "timezone": "Europe/Malta",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/mt.png",
-    "population": 519562,
-    "gdpNominal": 22737000000,
-    "worldGdpShare": 0.02,
     "coordinates": {
       "latitude": 35.9,
       "longitude": 14.517
     },
-    "languages": ["Maltese", "English"],
+    "languages": [
+      "Maltese",
+      "English"
+    ],
     "spendingEfficiency": "Malta continues to underperform relative to its EU peers, with non‐parametric analysis placing its efficiency score at just 0.38—suggesting that over 60 % of current outlays could be trimmed without jeopardizing core service delivery. Recent IMF assessments emphasize the need for a full Public Investment Management Assessment alongside the digitalization of procurement to secure better value in infrastructure and health projects. Strategic measures in the 2025 Budget target reductions in energy subsidies and non-essential recurrent spending while shielding social transfers, aiming to streamline expenditure and improve fiscal sustainability.",
     "controversies": "High-profile scandals have shaken Malta’s public finances, notably the self-suspension of the Central Bank governor—formerly finance minister—amid fraud allegations linked to a 2015 hospitals privatization ruled fraudulent by Maltese courts. The €15 million settlement by Steward Health Care over a disputed hospital concession highlighted opaque practices in public–private deals . Meanwhile, the European Public Prosecutor’s Office has brought charges against customs officers and intermediaries in a major fraud and corruption probe, underlining systemic procurement and revenue-collection weaknesses.",
     "revenue": [
@@ -3369,10 +3688,26 @@
       }
     ],
     "spending": [
-      { "name": "Penzjonijiet", "subtype": "pensions", "amount": 1000000000 },
-      { "name": "Saħħa", "subtype": "health", "amount": 800000000 },
-      { "name": "Edukazzjoni", "subtype": "education", "amount": 600000000 },
-      { "name": "Difiża", "subtype": "defense", "amount": 70000000 },
+      {
+        "name": "Penzjonijiet",
+        "subtype": "pensions",
+        "amount": 1000000000
+      },
+      {
+        "name": "Saħħa",
+        "subtype": "health",
+        "amount": 800000000
+      },
+      {
+        "name": "Edukazzjoni",
+        "subtype": "education",
+        "amount": 600000000
+      },
+      {
+        "name": "Difiża",
+        "subtype": "defense",
+        "amount": 70000000
+      },
       {
         "name": "Sigurtà pubblika",
         "subtype": "public-safety",
@@ -3419,14 +3754,14 @@
     "timezone": "Europe/Amsterdam",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/nl.png",
-    "population": 18066249,
-    "gdpNominal": 1154360000000,
-    "worldGdpShare": 1.1,
     "coordinates": {
       "latitude": 52.132633,
       "longitude": 5.291266
     },
-    "languages": ["Dutch", "Frisian"],
+    "languages": [
+      "Dutch",
+      "Frisian"
+    ],
     "spendingEfficiency": "The Netherlands is recognized for its highly efficient public spending, underpinned by rigorous processes such as systematic spending reviews and a sophisticated public procurement framework. With procurement accounting for over 20% of GDP—well above the OECD average—the Dutch government leverages its institutional maturity to ensure value for money across sectors. Longstanding practices of evaluating and adjusting budget programs have helped sustain fiscal discipline while maintaining high-quality public services. Despite emerging pressures from an ageing population and climate-related investments, the country’s prudent management has generally allowed for well-targeted and effective use of public funds.",
     "controversies": "Despite its reputation for fiscal prudence, the Netherlands has recently faced growing criticism over its budget trajectory. In 2024, it was singled out as the only EU country to fail the European Commission’s deficit-and-debt test for 2025, casting doubt on the credibility of its spending plans. Political tensions have also flared over steep cuts to overseas aid and the prospect of major increases in defence expenditure to meet NATO commitments. A new right-leaning coalition has prioritized deficit reduction, but its approach has sparked controversy at home and in Brussels, exposing deep divides over how to balance fiscal rules with evolving geopolitical and social priorities.",
     "revenue": [
@@ -3445,7 +3780,11 @@
         "subtype": "consumption-tax",
         "amount": 65000000000
       },
-      { "name": "Accijnzen", "subtype": "excise-tax", "amount": 14000000000 },
+      {
+        "name": "Accijnzen",
+        "subtype": "excise-tax",
+        "amount": 14000000000
+      },
       {
         "name": "Vennootschapsbelasting",
         "subtype": "income-tax",
@@ -3508,13 +3847,21 @@
         "subtype": "social-protection",
         "amount": 20000000000
       },
-      { "name": "Zorg", "subtype": "health", "amount": 20000000000 },
+      {
+        "name": "Zorg",
+        "subtype": "health",
+        "amount": 20000000000
+      },
       {
         "name": "Onderwijs, Cultuur en Wetenschap",
         "subtype": "education",
         "amount": 50000000000
       },
-      { "name": "Defensie", "subtype": "defense", "amount": 15000000000 },
+      {
+        "name": "Defensie",
+        "subtype": "defense",
+        "amount": 15000000000
+      },
       {
         "name": "Justitie en Veiligheid",
         "subtype": "public-safety",
@@ -3560,14 +3907,13 @@
     "timezone": "Europe/Warsaw",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/pl.png",
-    "population": 39616730,
-    "gdpNominal": 809201000000,
-    "worldGdpShare": 0.77,
     "coordinates": {
       "latitude": 52.237049,
       "longitude": 21.017532
     },
-    "languages": ["Polish"],
+    "languages": [
+      "Polish"
+    ],
     "spendingEfficiency": "Poland has made some strides in aligning its budgetary outlays with strategic priorities, yet efficiency gains remain uneven across sectors. While the government has introduced a framework for spending reviews and medium-term expenditure ceilings, the actual reallocation of resources toward high-impact areas—especially healthcare and defence—has been limited. Demographic pressures, notably an ageing population and rising pension commitments, further strain public finances, underscoring the need for more rigorous cost-benefit analyses and performance-based budgeting to ensure that each zloty spent delivers measurable social and economic returns.",
     "controversies": "Recent years have seen Poland enmeshed in high-profile disputes over the use and oversight of public funds. Allegations of “suspected illegal spending” under the former administration have led to criminal investigations into hundreds of officials and potential irregularities amounting to tens of billions of zlotys. Brussels has also flexed its conditionality powers, withholding and imposing fines on EU budget transfers in response to rule-of-law concerns, while procurement integrity disputes and debates over defence spending thresholds highlight ongoing challenges in transparency and accountability.",
     "currency": "PLN",
@@ -3592,7 +3938,11 @@
         "subtype": "excise-tax",
         "amount": 85000000000
       },
-      { "name": "Cło", "subtype": "customs-duty", "amount": 5000000000 },
+      {
+        "name": "Cło",
+        "subtype": "customs-duty",
+        "amount": 5000000000
+      },
       {
         "name": "Podatek od gier",
         "subtype": "other-tax",
@@ -3706,14 +4056,13 @@
     "timezone": "Europe/Lisbon",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/pt.png",
-    "population": 10639726,
-    "gdpNominal": 289800000000,
-    "worldGdpShare": 0.28,
     "coordinates": {
       "latitude": 39.3999,
       "longitude": -8.2245
     },
-    "languages": ["Portuguese"],
+    "languages": [
+      "Portuguese"
+    ],
     "spendingEfficiency": "Portugal has made gradual progress in improving public spending efficiency, largely under pressure from the European Union and the OECD. Reforms have focused on institutionalizing spending reviews, particularly in social protection, health and education, and on introducing performance-based budgeting. Despite these steps, inefficiencies remain widespread—especially in procurement processes and digital infrastructure management. International bodies continue to urge Portugal to broaden its expenditure reviews and strengthen links between spending and outcomes to better support long-term fiscal sustainability.",
     "controversies": "In the past two years, Portugal has faced a wave of fiscal scandals that have shaken its political system. The most prominent include Operation Influencer, a corruption probe into lithium and hydrogen contracts that implicated top government officials, and a major IT-procurement investigation involving multiple public institutions. Political fallout from ethics violations led to the collapse of the minority government in early 2025, while tensions over tax policies nearly derailed the 2025 budget. At the same time, controversies over state aid to TAP Air Portugal and a sharp drop in the budget surplus have raised fresh concerns about transparency and financial discipline.",
     "revenue": [
@@ -3764,16 +4113,36 @@
       }
     ],
     "spending": [
-      { "name": "Pensões", "subtype": "pensions", "amount": 20000000000 },
-      { "name": "Saúde", "subtype": "health", "amount": 13000000000 },
-      { "name": "Educação", "subtype": "education", "amount": 8000000000 },
-      { "name": "Defesa", "subtype": "defense", "amount": 3000000000 },
+      {
+        "name": "Pensões",
+        "subtype": "pensions",
+        "amount": 20000000000
+      },
+      {
+        "name": "Saúde",
+        "subtype": "health",
+        "amount": 13000000000
+      },
+      {
+        "name": "Educação",
+        "subtype": "education",
+        "amount": 8000000000
+      },
+      {
+        "name": "Defesa",
+        "subtype": "defense",
+        "amount": 3000000000
+      },
       {
         "name": "Segurança interna",
         "subtype": "public-safety",
         "amount": 4000000000
       },
-      { "name": "Transportes", "subtype": "transport", "amount": 2000000000 },
+      {
+        "name": "Transportes",
+        "subtype": "transport",
+        "amount": 2000000000
+      },
       {
         "name": "Juros da dívida",
         "subtype": "debt-service",
@@ -3810,14 +4179,13 @@
     "timezone": "Europe/Bucharest",
     "continent": "Europe",
     "flag": "https://flagcdn.com/w40/ro.png",
-    "population": 18936132,
-    "gdpNominal": 403395000000,
-    "worldGdpShare": 0.33,
     "coordinates": {
       "latitude": 44.439663,
       "longitude": 26.096306
     },
-    "languages": ["Romanian"],
+    "languages": [
+      "Romanian"
+    ],
     "revenue": [
       {
         "name": "Impozit pe venit",
@@ -3834,7 +4202,11 @@
         "subtype": "consumption-tax",
         "amount": 120000000000
       },
-      { "name": "Accize", "subtype": "excise-tax", "amount": 40000000000 },
+      {
+        "name": "Accize",
+        "subtype": "excise-tax",
+        "amount": 40000000000
+      },
       {
         "name": "Taxe vamale",
         "subtype": "customs-duty",
@@ -3862,16 +4234,36 @@
       }
     ],
     "spending": [
-      { "name": "Pensii", "subtype": "pensions", "amount": 150000000000 },
-      { "name": "Sănătate", "subtype": "health", "amount": 70000000000 },
-      { "name": "Învățământ", "subtype": "education", "amount": 40000000000 },
-      { "name": "Apărare", "subtype": "defense", "amount": 40000000000 },
+      {
+        "name": "Pensii",
+        "subtype": "pensions",
+        "amount": 150000000000
+      },
+      {
+        "name": "Sănătate",
+        "subtype": "health",
+        "amount": 70000000000
+      },
+      {
+        "name": "Învățământ",
+        "subtype": "education",
+        "amount": 40000000000
+      },
+      {
+        "name": "Apărare",
+        "subtype": "defense",
+        "amount": 40000000000
+      },
       {
         "name": "Ordine publică și siguranță națională",
         "subtype": "public-safety",
         "amount": 30000000000
       },
-      { "name": "Transporturi", "subtype": "transport", "amount": 30000000000 },
+      {
+        "name": "Transporturi",
+        "subtype": "transport",
+        "amount": 30000000000
+      },
       {
         "name": "Dobânzi la datorie",
         "subtype": "debt-service",
@@ -3903,14 +4295,13 @@
     "continent": "Europe",
     "timezone": "Europe",
     "flag": "https://flagcdn.com/w40/sk.png",
-    "population": 5422194,
-    "gdpNominal": 141000000000,
-    "worldGdpShare": 0.13,
     "coordinates": {
       "latitude": 48.148598,
       "longitude": 17.107748
     },
-    "languages": ["Slovak"],
+    "languages": [
+      "Slovak"
+    ],
     "national_incidents": [],
     "spendingEfficiency": "Slovakia’s public‑spending efficiency falls below EU‑27 and OECD averages due to persistently low absorption of EU funds, weak oversight and fragmented appraisal—especially in transport projects leading to overruns—and a World Bank DEA analysis confirms it lags peer “smart” OECD countries in delivering value for money.",
     "controversies": "Bratislava’s 2024 judicial reforms, which dissolved key anti‑corruption bodies and reduced penalties for financial crime, led the EU to suspend €799 million in grants; at the same time, MEPs and the EPPO are investigating alleged nepotism and fraud in EU‑subsidised agricultural estates, accusing authorities of diverting CAP funds to private interests.",
@@ -3948,7 +4339,11 @@
         "subtype": "excise-tax",
         "amount": 2500000000
       },
-      { "name": "Clo", "subtype": "customs-duty", "amount": 100000000 },
+      {
+        "name": "Clo",
+        "subtype": "customs-duty",
+        "amount": 100000000
+      },
       {
         "name": "Sociálne poistenie",
         "subtype": "social-contribution",
@@ -3961,16 +4356,36 @@
       }
     ],
     "spending": [
-      { "name": "Dôchodky", "subtype": "pensions", "amount": 9000000000 },
-      { "name": "Zdravotníctvo", "subtype": "health", "amount": 6000000000 },
-      { "name": "Školstvo", "subtype": "education", "amount": 4000000000 },
-      { "name": "Obrana", "subtype": "defense", "amount": 2000000000 },
+      {
+        "name": "Dôchodky",
+        "subtype": "pensions",
+        "amount": 9000000000
+      },
+      {
+        "name": "Zdravotníctvo",
+        "subtype": "health",
+        "amount": 6000000000
+      },
+      {
+        "name": "Školstvo",
+        "subtype": "education",
+        "amount": 4000000000
+      },
+      {
+        "name": "Obrana",
+        "subtype": "defense",
+        "amount": 2000000000
+      },
       {
         "name": "Verejný poriadok a bezpečnosť",
         "subtype": "public-safety",
         "amount": 2000000000
       },
-      { "name": "Doprava", "subtype": "transport", "amount": 2000000000 },
+      {
+        "name": "Doprava",
+        "subtype": "transport",
+        "amount": 2000000000
+      },
       {
         "name": "Dlhová služba",
         "subtype": "debt-service",
@@ -3997,14 +4412,13 @@
     "continent": "Europe",
     "timezone": "Europe",
     "flag": "https://flagcdn.com/w40/si.png",
-    "population": 2130850,
-    "gdpNominal": 72000000000,
-    "worldGdpShare": 0.07,
     "coordinates": {
       "latitude": 46.1512,
       "longitude": 14.9955
     },
-    "languages": ["Slovene"],
+    "languages": [
+      "Slovene"
+    ],
     "national_incidents": [],
     "spendingEfficiency": "Slovenia’s public spending in 2024–25 has been hampered by opaque procurement practices, cost overruns in flood reconstruction, systemic corruption losses estimated at up to 7.5% of GDP annually, and insufficient oversight in law‑enforcement funding, all of which have eroded value for taxpayers",
     "controversies": "The key scandals include the 2024 ‘Laptopgate’ procurement of outdated school laptops, budget overruns in the €1.1 billion flood‑reconstruction programme, persistent high‑level corruption losses, the early 2025 police Special Unit misconduct scandal, and the politically charged 2024 EU Commissioner nomination fallout",
@@ -4021,7 +4435,11 @@
       "CERN"
     ],
     "revenue": [
-      { "name": "Dohodnina", "subtype": "income-tax", "amount": 2000000000 },
+      {
+        "name": "Dohodnina",
+        "subtype": "income-tax",
+        "amount": 2000000000
+      },
       {
         "name": "Davek od dohodkov pravnih oseb",
         "subtype": "income-tax",
@@ -4032,8 +4450,16 @@
         "subtype": "consumption-tax",
         "amount": 4000000000
       },
-      { "name": "Trošarine", "subtype": "excise-tax", "amount": 1500000000 },
-      { "name": "Carine", "subtype": "customs-duty", "amount": 50000000 },
+      {
+        "name": "Trošarine",
+        "subtype": "excise-tax",
+        "amount": 1500000000
+      },
+      {
+        "name": "Carine",
+        "subtype": "customs-duty",
+        "amount": 50000000
+      },
       {
         "name": "Prispevki za pokojninsko in invalidsko zavarovanje",
         "subtype": "social-contribution",
@@ -4056,10 +4482,26 @@
       }
     ],
     "spending": [
-      { "name": "Pokojnine", "subtype": "pensions", "amount": 5000000000 },
-      { "name": "Zdravstvo", "subtype": "health", "amount": 3000000000 },
-      { "name": "Izobraževanje", "subtype": "education", "amount": 2000000000 },
-      { "name": "Obramba", "subtype": "defense", "amount": 800000000 },
+      {
+        "name": "Pokojnine",
+        "subtype": "pensions",
+        "amount": 5000000000
+      },
+      {
+        "name": "Zdravstvo",
+        "subtype": "health",
+        "amount": 3000000000
+      },
+      {
+        "name": "Izobraževanje",
+        "subtype": "education",
+        "amount": 2000000000
+      },
+      {
+        "name": "Obramba",
+        "subtype": "defense",
+        "amount": 800000000
+      },
       {
         "name": "Notranja varnost",
         "subtype": "public-safety",
@@ -4101,14 +4543,13 @@
     "continent": "Europe",
     "timezone": "Europe",
     "flag": "https://flagcdn.com/w40/rs.png",
-    "population": 6605168,
-    "gdpNominal": 92550000000,
-    "worldGdpShare": 0.08,
     "coordinates": {
       "latitude": 44.817345,
       "longitude": 20.457243
     },
-    "languages": ["Serbian"],
+    "languages": [
+      "Serbian"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -4218,14 +4659,14 @@
     "continent": "Europe",
     "timezone": "Europe/Oslo",
     "flag": "https://flagcdn.com/w40/no.png",
-    "population": 5550203,
-    "gdpNominal": 495100000000,
-    "worldGdpShare": 0.47,
     "coordinates": {
       "latitude": 60.472024,
       "longitude": 8.468946
     },
-    "languages": ["Norwegian", "Sami"],
+    "languages": [
+      "Norwegian",
+      "Sami"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -4333,14 +4774,16 @@
     "continent": "Europe",
     "timezone": "Europe/Zurich",
     "flag": "https://flagcdn.com/w40/ch.png",
-    "population": 8981565,
-    "gdpNominal": 947130000000,
-    "worldGdpShare": 0.89,
     "coordinates": {
       "latitude": 46.948,
       "longitude": 7.4481
     },
-    "languages": ["German", "French", "Italian", "Romansh"],
+    "languages": [
+      "German",
+      "French",
+      "Italian",
+      "Romansh"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -4465,14 +4908,13 @@
     "continent": "Europe",
     "timezone": "Europe/Stockholm",
     "flag": "https://flagcdn.com/w40/se.png",
-    "population": 10450000,
-    "gdpNominal": 585000000000,
-    "worldGdpShare": 0.56,
     "coordinates": {
       "latitude": 59.329323,
       "longitude": 18.068581
     },
-    "languages": ["Swedish"],
+    "languages": [
+      "Swedish"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -4582,14 +5024,13 @@
     "continent": "Europe",
     "timezone": "Atlantic/Reykjavik",
     "flag": "https://flagcdn.com/w40/is.png",
-    "population": 380000,
-    "gdpNominal": 27500000000,
-    "worldGdpShare": 0.026,
     "coordinates": {
       "latitude": 64.126521,
       "longitude": -21.817439
     },
-    "languages": ["Icelandic"],
+    "languages": [
+      "Icelandic"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -4699,14 +5140,13 @@
     "continent": "Europe",
     "timezone": "Europe/Kyiv",
     "flag": "https://flagcdn.com/w40/ua.png",
-    "population": 37800000,
-    "gdpNominal": 173400000000,
-    "worldGdpShare": 0.17,
     "coordinates": {
       "latitude": 50.4501,
       "longitude": 30.5234
     },
-    "languages": ["Ukrainian"],
+    "languages": [
+      "Ukrainian"
+    ],
     "national_incidents": [
       {
         "title": "Largest Drone Attack Since 2022 Hits Ukraine",
@@ -4822,14 +5262,14 @@
     "continent": "Europe",
     "timezone": "Europe/Minsk",
     "flag": "https://flagcdn.com/w40/by.png",
-    "population": 9255000,
-    "gdpNominal": 70800000000,
-    "worldGdpShare": 0.068,
     "coordinates": {
       "latitude": 53.9045,
       "longitude": 27.5615
     },
-    "languages": ["Belarusian", "Russian"],
+    "languages": [
+      "Belarusian",
+      "Russian"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -4936,14 +5376,15 @@
     "continent": "Europe",
     "timezone": "Europe/Sarajevo",
     "flag": "https://flagcdn.com/w40/ba.png",
-    "population": 3270000,
-    "gdpNominal": 24800000000,
-    "worldGdpShare": 0.024,
     "coordinates": {
       "latitude": 43.8563,
       "longitude": 18.4131
     },
-    "languages": ["Bosnian", "Croatian", "Serbian"],
+    "languages": [
+      "Bosnian",
+      "Croatian",
+      "Serbian"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -5053,14 +5494,13 @@
     "continent": "Europe",
     "timezone": "Europe/Tirane",
     "flag": "https://flagcdn.com/w40/al.png",
-    "population": 2780000,
-    "gdpNominal": 18900000000,
-    "worldGdpShare": 0.018,
     "coordinates": {
       "latitude": 41.3275,
       "longitude": 19.8187
     },
-    "languages": ["Albanian"],
+    "languages": [
+      "Albanian"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -5170,14 +5610,17 @@
     "continent": "Europe",
     "timezone": "Europe/Podgorica",
     "flag": "https://flagcdn.com/w40/me.png",
-    "population": 620000,
-    "gdpNominal": 6100000000,
-    "worldGdpShare": 0.006,
     "coordinates": {
       "latitude": 42.4304,
       "longitude": 19.2594
     },
-    "languages": ["Montenegrin", "Serbian", "Bosnian", "Albanian", "Croatian"],
+    "languages": [
+      "Montenegrin",
+      "Serbian",
+      "Bosnian",
+      "Albanian",
+      "Croatian"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",
@@ -5287,14 +5730,16 @@
     "continent": "Europe",
     "timezone": "Europe/Chisinau",
     "flag": "https://flagcdn.com/w40/md.png",
-    "population": 2620000,
-    "gdpNominal": 14800000000,
-    "worldGdpShare": 0.014,
     "coordinates": {
       "latitude": 47.0105,
       "longitude": 28.8638
     },
-    "languages": ["Romanian", "Russian", "Gagauz", "Ukrainian"],
+    "languages": [
+      "Romanian",
+      "Russian",
+      "Gagauz",
+      "Ukrainian"
+    ],
     "national_incidents": [],
     "organizations": [
       "United Nations",

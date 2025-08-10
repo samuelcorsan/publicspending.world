@@ -73,7 +73,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
                 </Link>
               ))}
             <Link
-              href="https://github.com/samuelcorsan/publicspending.world/pulls"
+              href="https://github.com/samuelcorsan/publicspending.world"
               target="_blank"
             >
               <button className="flex items-center cursor-pointer ml-4 px-4 py-2 rounded-xl bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">
@@ -139,7 +139,7 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
                 </Link>
               ))}
             <Link
-              href="https://github.com/samuelcorsan/publicspending.world/pulls"
+              href="https://github.com/samuelcorsan/publicspending.world"
               target="_blank"
             >
               <button className="w-full flex items-center cursor-pointer px-4 py-2 rounded-xl bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors">

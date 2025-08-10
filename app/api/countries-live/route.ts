@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { DataUpdater } from "@/lib/services/data-updater";
 import { ValidTopic } from "@/lib/types";
+import { getCachedCountries } from "@/lib/services/country-cache";
 
-const dataUpdater = new DataUpdater();
 const ITEMS_PER_PAGE = 20;
 
 const getValue = (country: any, topic: ValidTopic): number => {
@@ -48,53 +47,6 @@ const VALID_TOPICS: ValidTopic[] = [
   "revenue",
 ];
 
-let cachedCountries: any[] | null = null;
-let cacheExpiry: number = 0;
-const CACHE_DURATION = 5 * 60 * 1000;
-
-async function getCachedCountries(): Promise<any[]> {
-  const now = Date.now();
-
-  if (cachedCountries && now < cacheExpiry) {
-    return cachedCountries;
-  }
-
-  const staticCountries = dataUpdater.getStaticData();
-
-  const countriesWithLiveData = await Promise.allSettled(
-    staticCountries.map(async (country) => {
-      try {
-        return await dataUpdater.updateCountryData(country.code);
-      } catch {
-        return {
-          ...country,
-          population: country.population || 0,
-          gdpNominal: country.gdpNominal || 0,
-          worldGdpShare: country.worldGdpShare || 0,
-          debtToGdp: country.debtToGdp || 0,
-          lastUpdated: new Date().toISOString(),
-        };
-      }
-    })
-  );
-
-  cachedCountries = countriesWithLiveData.map((result, index) =>
-    result.status === "fulfilled"
-      ? result.value
-      : {
-          ...staticCountries[index],
-          population: staticCountries[index].population || 1000000,
-          gdpNominal: staticCountries[index].gdpNominal || 50000000000,
-          worldGdpShare: staticCountries[index].worldGdpShare || 0.1,
-          debtToGdp: staticCountries[index].debtToGdp || 60,
-          lastUpdated: new Date().toISOString(),
-        }
-  );
-
-  cacheExpiry = now + CACHE_DURATION;
-  return cachedCountries;
-}
-
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
@@ -136,7 +88,6 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("API Error:", error);
     return NextResponse.json(
       { error: "Failed to fetch countries data" },
       { status: 500 }

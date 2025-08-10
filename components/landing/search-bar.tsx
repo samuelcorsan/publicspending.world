@@ -44,7 +44,11 @@ export function SearchBar({ countries }: SearchBarProps) {
   }, []);
 
   return (
-    <div className="w-full max-w-2xl relative mb-16" ref={searchRef} suppressHydrationWarning>
+    <div
+      className="w-full max-w-2xl relative mb-16"
+      ref={searchRef}
+      suppressHydrationWarning
+    >
       <input
         type="text"
         placeholder="Search countries..."

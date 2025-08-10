@@ -7,6 +7,7 @@ import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
 import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
 import type { Country } from "@/lib/types";
 import { Footer } from "@/components/global/footer";
+import { ErrorState } from "@/components/ui/error-state";
 
 function ComparePage() {
   const router = useRouter();
@@ -20,27 +21,32 @@ function ComparePage() {
   const [countryData, setCountryData] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  
+
   const dropdownRefA = useRef<HTMLDivElement>(null);
   const dropdownRefB = useRef<HTMLDivElement>(null);
 
   // Load live country data
   useEffect(() => {
-    fetch('/api/countries-live')
-      .then(res => {
-        if (res.status === 429) {
-          throw new Error('Rate limit exceeded. Please wait before making more requests.');
+    fetch("/api/countries")
+      .then((res) => {
+        if (!res.ok) {
+          if (res.status === 429) {
+            throw new Error(
+              "Rate limit exceeded. Please wait before making more requests."
+            );
+          }
+          throw new Error(`Failed to load data (${res.status})`);
         }
         return res.json();
       })
-      .then(data => {
+      .then((data) => {
         if (data.error) {
           throw new Error(data.error);
         }
         setCountryData(data);
         setLoading(false);
       })
-      .catch(error => {
+      .catch((error) => {
         setError(error.message);
         setLoading(false);
       });
@@ -55,7 +61,7 @@ function ComparePage() {
 
   useEffect(() => {
     if (loading || countryData.length === 0) return;
-    
+
     const a = searchParams.get("a");
     const b = searchParams.get("b");
     if (a) {
@@ -88,17 +94,23 @@ function ComparePage() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRefA.current && !dropdownRefA.current.contains(event.target as Node)) {
+      if (
+        dropdownRefA.current &&
+        !dropdownRefA.current.contains(event.target as Node)
+      ) {
         setFocusA(false);
       }
-      if (dropdownRefB.current && !dropdownRefB.current.contains(event.target as Node)) {
+      if (
+        dropdownRefB.current &&
+        !dropdownRefB.current.contains(event.target as Node)
+      ) {
         setFocusB(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -123,40 +135,18 @@ function ComparePage() {
   const selectorsJustify = bothSelected ? "items-center" : "items-center";
   const selectorsTopMargin = bothSelected ? "mt-4" : "";
 
-  if (loading) {
-    return (
-      <>
-        <Navbar />
-        <main className="min-h-screen bg-gray-50 pt-24">
-          <div className="container mx-auto px-4 py-12">
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-3 text-gray-600">Loading countries...</span>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
-
   if (error) {
     return (
       <>
         <Navbar />
         <main className="min-h-screen bg-gray-50 pt-24">
           <div className="container mx-auto px-4 py-12">
-            <div className="flex flex-col items-center justify-center py-12">
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6 max-w-md text-center">
-                <div className="text-red-600 text-lg font-semibold mb-2">Error</div>
-                <div className="text-red-700 mb-4">{error}</div>
-                <button 
-                  onClick={() => window.location.reload()} 
-                  className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
-                >
-                  Try Again
-                </button>
-              </div>
-            </div>
+            <ErrorState
+              title="Failed to load countries"
+              message={error}
+              onRetry={() => window.location.reload()}
+              showHome={true}
+            />
           </div>
         </main>
       </>
@@ -171,19 +161,24 @@ function ComparePage() {
           {!bothSelected && (
             <>
               <div className="text-center mb-12">
-                <h1 className={`text-4xl md:text-5xl font-bold text-gray-900 ${titleMargin}`}>
+                <h1
+                  className={`text-4xl md:text-5xl font-bold text-gray-900 ${titleMargin}`}
+                >
                   Compare Countries
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  Select two countries to see a detailed side-by-side comparison of their
-                  public spending, revenue sources, and key economic indicators.
+                  Select two countries to see a detailed side-by-side comparison
+                  of their public spending, revenue sources, and key economic
+                  indicators.
                 </p>
-                
               </div>
             </>
           )}
-          
-          <div className={`${selectorsMargin} ${selectorsTopMargin}`} suppressHydrationWarning>
+
+          <div
+            className={`${selectorsMargin} ${selectorsTopMargin}`}
+            suppressHydrationWarning
+          >
             {bothSelected && (
               <div className="text-center mb-6">
                 <button
@@ -192,18 +187,28 @@ function ComparePage() {
                     setSelectedB(null);
                     setSearchA("");
                     setSearchB("");
-                    router.replace('/compare');
+                    router.replace("/compare");
                   }}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors duration-200 cursor-pointer"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    />
                   </svg>
                   Compare Different Countries
                 </button>
               </div>
             )}
-            
+
             <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center max-w-5xl mx-auto">
               <div className="flex justify-center">
                 <div ref={dropdownRefA} className="w-full max-w-md relative">
@@ -225,41 +230,61 @@ function ComparePage() {
                       className="w-full px-6 py-4 pl-12 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 shadow-sm transition-all duration-200"
                     />
                     <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      <svg
+                        className="w-5 h-5 text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
                       </svg>
                     </div>
                   </div>
                   {focusA && (
                     <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl border border-gray-200 shadow-xl max-h-60 overflow-auto z-10">
-                      {filteredA
-                        .filter(
-                          (country) =>
-                            !selectedB || country.code !== selectedB.code
-                        )
-                        .map((country) => (
-                          <button
-                            key={country.name}
-                            className="flex items-center gap-3 w-full p-4 hover:bg-blue-50 text-left transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
-                            onClick={() => handleSelectA(country)}
-                          >
-                            <img
-                              src={country.flag}
-                              alt={`${country.name} flag`}
-                              className="w-6 h-6 rounded-full object-cover shadow-sm"
-                            />
-                            <span className="font-medium text-gray-900">{country.name}</span>
-                          </button>
-                        ))}
+                      {filteredA.length === 0 ? (
+                        <div className="p-4 text-gray-500 text-center">
+                          No countries found
+                        </div>
+                      ) : (
+                        filteredA
+                          .filter(
+                            (country) =>
+                              !selectedB || country.code !== selectedB.code
+                          )
+                          .map((country) => (
+                            <button
+                              key={country.name}
+                              className="flex items-center gap-3 w-full p-4 hover:bg-blue-50 text-left transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
+                              onClick={() => handleSelectA(country)}
+                            >
+                              <img
+                                src={country.flag}
+                                alt={`${country.name} flag`}
+                                className="w-6 h-6 rounded-full object-cover shadow-sm"
+                              />
+                              <span className="font-medium text-gray-900">
+                                {country.name}
+                              </span>
+                            </button>
+                          ))
+                      )}
                     </div>
                   )}
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-center">
-                <div className="text-2xl md:text-3xl font-bold text-blue-600 px-6">VS</div>
+                <div className="text-2xl md:text-3xl font-bold text-blue-600 px-6">
+                  VS
+                </div>
               </div>
-              
+
               <div className="flex justify-center">
                 <div ref={dropdownRefB} className="w-full max-w-md relative">
                   {!bothSelected && (
@@ -280,39 +305,57 @@ function ComparePage() {
                       className="w-full px-6 py-4 pl-12 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 shadow-sm transition-all duration-200"
                     />
                     <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      <svg
+                        className="w-5 h-5 text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
                       </svg>
                     </div>
                   </div>
                   {focusB && (
                     <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl border border-gray-200 shadow-xl max-h-60 overflow-auto z-10">
-                      {filteredB
-                        .filter(
-                          (country) =>
-                            !selectedA || country.code !== selectedA.code
-                        )
-                        .map((country) => (
-                          <button
-                            key={country.name}
-                            className="flex items-center gap-3 w-full p-4 hover:bg-blue-50 text-left transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
-                            onClick={() => handleSelectB(country)}
-                          >
-                            <img
-                              src={country.flag}
-                              alt={`${country.name} flag`}
-                              className="w-6 h-6 rounded-full object-cover shadow-sm"
-                            />
-                            <span className="font-medium text-gray-900">{country.name}</span>
-                          </button>
-                        ))}
+                      {filteredB.length === 0 ? (
+                        <div className="p-4 text-gray-500 text-center">
+                          No countries found
+                        </div>
+                      ) : (
+                        filteredB
+                          .filter(
+                            (country) =>
+                              !selectedA || country.code !== selectedA.code
+                          )
+                          .map((country) => (
+                            <button
+                              key={country.name}
+                              className="flex items-center gap-3 w-full p-4 hover:bg-blue-50 text-left transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
+                              onClick={() => handleSelectB(country)}
+                            >
+                              <img
+                                src={country.flag}
+                                alt={`${country.name} flag`}
+                                className="w-6 h-6 rounded-full object-cover shadow-sm"
+                              />
+                              <span className="font-medium text-gray-900">
+                                {country.name}
+                              </span>
+                            </button>
+                          ))
+                      )}
                     </div>
                   )}
                 </div>
               </div>
             </div>
           </div>
-          
+
           {selectedA && selectedB && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
               {[selectedA, selectedB].map((country, idx) => (

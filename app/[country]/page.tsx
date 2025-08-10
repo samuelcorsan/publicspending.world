@@ -21,11 +21,9 @@ async function getCountryData(country: string) {
       process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
     const url = `${baseUrl}/api/name/${country}`;
 
-    console.log(`Fetching country data from: ${url}`);
     const res = await fetch(url);
 
     if (!res.ok) {
-      console.error(`API returned ${res.status} for country: ${country}`);
       if (res.status === 404) {
         notFound();
       }
@@ -33,10 +31,8 @@ async function getCountryData(country: string) {
     }
 
     const data = await res.json();
-    console.log(`Successfully fetched data for: ${data.name}`);
     return data;
   } catch (error) {
-    console.error("Error fetching country data:", error);
     throw error;
   }
 }

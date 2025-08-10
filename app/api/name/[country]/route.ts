@@ -17,9 +17,7 @@ async function getCountryWithFallback(countryEntry: any) {
       return liveData;
     }
   } catch (error) {
-    console.log(
-      `Failed to get live data for ${countryEntry.code}, using static data`
-    );
+    // Fallback to static data if live data fails
   }
 
   return {
@@ -63,7 +61,6 @@ export async function GET(
     }
 
     if (!countryEntry) {
-      console.log(`Country not found: ${formattedCountryName}`);
       return NextResponse.json({ error: "Country not found" }, { status: 404 });
     }
 
@@ -71,7 +68,6 @@ export async function GET(
 
     return NextResponse.json(countryData);
   } catch (error) {
-    console.error("Error in country API:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

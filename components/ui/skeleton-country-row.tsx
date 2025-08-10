@@ -6,27 +6,21 @@ interface SkeletonCountryRowProps {
 
 export function SkeletonCountryRow({ showRank = true }: SkeletonCountryRowProps) {
   return (
-    <li className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center animate-pulse">
-      {/* Rank skeleton */}
+        <li className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center animate-pulse">
       <div className="w-16 sm:w-24 flex items-center">
         {showRank && (
           <div className="h-8 sm:h-12 w-12 sm:w-16 bg-gray-200 rounded-xl"></div>
         )}
       </div>
       
-      {/* Country info skeleton */}
       <div className="flex items-center gap-2 sm:gap-4">
-        {/* Flag skeleton */}
         <div className="h-8 w-8 sm:h-10 sm:w-10 bg-gray-200 rounded-sm flex-shrink-0"></div>
-        
-        {/* Country name and capital skeleton */}
         <div className="space-y-2 flex-1">
           <div className="h-4 sm:h-5 bg-gray-200 rounded w-32 sm:w-40"></div>
           <div className="h-3 sm:h-4 bg-gray-100 rounded w-20 sm:w-24"></div>
         </div>
       </div>
-      
-      {/* Value skeleton */}
+
       <div className="w-32 sm:w-48 text-right">
         <div className="h-5 sm:h-6 bg-gray-200 rounded w-20 sm:w-28 ml-auto"></div>
       </div>

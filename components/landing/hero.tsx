@@ -9,7 +9,6 @@ const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
 });
 
 export default function Hero() {
-
   return (
     <div className="relative z-[1] w-full">
       <div className="relative h-[900px] w-full before:absolute before:inset-0 before:bottom-0 before:z-[1] md:before:[mask-image:radial-gradient(ellipse_30%_40%_at_50%_20%,transparent_50%,#000_100%)] before:[mask-image:radial-gradient(ellipse_70%_30%_at_50%_20%,transparent_50%,#000_100%)] before:bg-gray-50 dark:before:bg-black">
@@ -23,7 +22,9 @@ export default function Hero() {
               Explore Government Spending Worldwide
             </h1>
             <h2 className="mt-6 md:mt-8 text-balance text-base text-zinc-600 dark:text-zinc-400 sm:text-lg">
-              Discover how governments around the world allocate and spend public funds. Compare spending patterns, explore fiscal policies, and gain insights into public financial transparency.
+              Discover how governments around the world allocate and spend
+              public funds. Compare spending patterns, explore fiscal policies,
+              and gain insights into public financial transparency.
             </h2>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
               <SearchBar countries={countryData} />

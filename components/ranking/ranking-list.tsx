@@ -13,6 +13,7 @@ import { SVGProps } from "react";
 import { useInfiniteCountries } from "@/lib/hooks/use-infinite-countries";
 import { InfiniteScroll } from "@/components/ui/infinite-scroll";
 import { SkeletonCountryList } from "@/components/ui/skeleton-country-row";
+import { InlineErrorState } from "@/components/ui/error-state";
 
 const formatNumber = (num: number): string => {
   if (num >= 1e12) return `${(num / 1e12).toFixed(2)}T`;
@@ -147,24 +148,22 @@ const LoadingState = ({
   </div>
 );
 
-const ErrorState = ({
+const RankingErrorState = ({
   TopicIcon,
   topicTitle,
   showHeader,
+  onRetry,
 }: {
   TopicIcon: any;
   topicTitle: string;
   showHeader: boolean;
+  onRetry?: () => void;
 }) => (
   <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
     {showHeader && (
       <RankingHeader TopicIcon={TopicIcon} topicTitle={topicTitle} />
     )}
-    <div className="flex items-center justify-center py-12">
-      <div className="text-red-600">
-        Error loading rankings. Please try again.
-      </div>
-    </div>
+    <InlineErrorState message="Failed to load ranking data" onRetry={onRetry} />
   </div>
 );
 
@@ -179,6 +178,7 @@ export default function RankingList({
     isFetchingNextPage,
     isLoading,
     error,
+    refetch,
   } = useInfiniteCountries(topic);
 
   const topicTitle = TopicTitles[topic];
@@ -195,10 +195,11 @@ export default function RankingList({
     );
   if (error)
     return (
-      <ErrorState
+      <RankingErrorState
         TopicIcon={TopicIcon}
         topicTitle={topicTitle}
         showHeader={showHeader}
+        onRetry={() => refetch()}
       />
     );
 

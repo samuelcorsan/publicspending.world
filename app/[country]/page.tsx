@@ -17,7 +17,6 @@ type Props = {
 
 async function getCountryData(country: string) {
   try {
-    // Use relative URL for server-side fetching
     const baseUrl =
       process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
     const url = `${baseUrl}/api/name/${country}`;

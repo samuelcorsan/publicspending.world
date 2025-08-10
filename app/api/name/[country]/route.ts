@@ -10,9 +10,27 @@ function formatCountryName(urlCountry: string): string {
 
 const dataUpdater = new DataUpdater();
 
-async function getCachedCountryByName(countryCode: string) {
-  'use cache';
-  return await dataUpdater.updateCountryData(countryCode);
+async function getCountryWithFallback(countryEntry: any) {
+  try {
+    const liveData = await dataUpdater.updateCountryData(countryEntry.code);
+    if (liveData) {
+      return liveData;
+    }
+  } catch (error) {
+    console.log(
+      `Failed to get live data for ${countryEntry.code}, using static data`
+    );
+  }
+
+  return {
+    ...countryEntry,
+    population: countryEntry.population || 0,
+    gdpNominal: countryEntry.gdpNominal || 0,
+    worldGdpShare: countryEntry.worldGdpShare || 0,
+    debtToGdp: countryEntry.debtToGdp || 0,
+    lastUpdated: new Date().toISOString(),
+    national_incidents: countryEntry.national_incidents || [],
+  };
 }
 
 export async function GET(
@@ -23,13 +41,16 @@ export async function GET(
     const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
-    const { default: staticData } = await import('../../data.json');
-    
-    let countryEntry = staticData.find((item: any) => item.name === formattedCountryName);
+    const { default: staticData } = await import("../../data.json");
+
+    let countryEntry = staticData.find(
+      (item: any) => item.name === formattedCountryName
+    );
 
     if (!countryEntry) {
       countryEntry = staticData.find(
-        (item: any) => item.name.toLowerCase() === formattedCountryName.toLowerCase()
+        (item: any) =>
+          item.name.toLowerCase() === formattedCountryName.toLowerCase()
       );
     }
 
@@ -42,13 +63,15 @@ export async function GET(
     }
 
     if (!countryEntry) {
+      console.log(`Country not found: ${formattedCountryName}`);
       return NextResponse.json({ error: "Country not found" }, { status: 404 });
     }
 
-    const liveCountryData = await getCachedCountryByName(countryEntry.code);
-    
-    return NextResponse.json(liveCountryData);
+    const countryData = await getCountryWithFallback(countryEntry);
+
+    return NextResponse.json(countryData);
   } catch (error) {
+    console.error("Error in country API:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

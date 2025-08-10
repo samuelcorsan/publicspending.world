@@ -48,10 +48,9 @@ const VALID_TOPICS: ValidTopic[] = [
   "revenue",
 ];
 
-// Cache for countries data with 5-minute expiry
 let cachedCountries: any[] | null = null;
 let cacheExpiry: number = 0;
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 5 * 60 * 1000;
 
 async function getCachedCountries(): Promise<any[]> {
   const now = Date.now();
@@ -60,7 +59,6 @@ async function getCachedCountries(): Promise<any[]> {
     return cachedCountries;
   }
 
-  // Refresh cache
   const staticCountries = dataUpdater.getStaticData();
 
   const countriesWithLiveData = await Promise.allSettled(
@@ -70,10 +68,10 @@ async function getCachedCountries(): Promise<any[]> {
       } catch {
         return {
           ...country,
-          population: country.population || 1000000,
-          gdpNominal: country.gdpNominal || 50000000000,
-          worldGdpShare: country.worldGdpShare || 0.1,
-          debtToGdp: country.debtToGdp || 60,
+          population: country.population || 0,
+          gdpNominal: country.gdpNominal || 0,
+          worldGdpShare: country.worldGdpShare || 0,
+          debtToGdp: country.debtToGdp || 0,
           lastUpdated: new Date().toISOString(),
         };
       }

@@ -17,18 +17,25 @@ type Props = {
 
 async function getCountryData(country: string) {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_BASE_URL}/api/name/${country}`
-    );
+    // Use relative URL for server-side fetching
+    const baseUrl =
+      process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
+    const url = `${baseUrl}/api/name/${country}`;
+
+    console.log(`Fetching country data from: ${url}`);
+    const res = await fetch(url);
 
     if (!res.ok) {
+      console.error(`API returned ${res.status} for country: ${country}`);
       if (res.status === 404) {
         notFound();
       }
       throw new Error(`HTTP error! status: ${res.status}`);
     }
 
-    return res.json();
+    const data = await res.json();
+    console.log(`Successfully fetched data for: ${data.name}`);
+    return data;
   } catch (error) {
     console.error("Error fetching country data:", error);
     throw error;
@@ -106,11 +113,12 @@ export default async function CountryPage({ params }: Props) {
                   Live Economic Data
                 </span>
                 <span className="text-xs text-green-600">
-                  Updated: {new Date(countryData.lastUpdated).toLocaleDateString()}
+                  Updated:{" "}
+                  {new Date(countryData.lastUpdated).toLocaleDateString()}
                 </span>
               </div>
             </div>
-            
+
             <AnimatedCountryStats
               name={countryData.name}
               code={countryData.code}

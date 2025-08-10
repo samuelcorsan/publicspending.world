@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ValidTopic } from "@/lib/types";
-import { getCachedCountries } from "@/lib/services/country-cache";
+import { DataUpdater } from "@/lib/services/data-updater";
+import { unstable_cacheLife as cacheLife } from "next/cache";
 
+const dataUpdater = new DataUpdater();
 const ITEMS_PER_PAGE = 20;
 
 const getValue = (country: any, topic: ValidTopic): number => {
@@ -47,6 +49,43 @@ const VALID_TOPICS: ValidTopic[] = [
   "revenue",
 ];
 
+async function getAllCountries(): Promise<any[]> {
+  "use cache";
+  cacheLife("weeks");
+
+  const staticCountries = dataUpdater.getStaticData();
+
+  const countriesWithLiveData = await Promise.allSettled(
+    staticCountries.map(async (country) => {
+      try {
+        return await dataUpdater.updateCountryData(country.code);
+      } catch {
+        return {
+          ...country,
+          population: country.population || 0,
+          gdpNominal: country.gdpNominal || 0,
+          worldGdpShare: country.worldGdpShare || 0,
+          debtToGdp: 0,
+          lastUpdated: new Date().toISOString(),
+        };
+      }
+    })
+  );
+
+  return countriesWithLiveData.map((result, index) =>
+    result.status === "fulfilled"
+      ? result.value
+      : {
+          ...staticCountries[index],
+          population: staticCountries[index].population || 0,
+          gdpNominal: staticCountries[index].gdpNominal || 0,
+          worldGdpShare: staticCountries[index].worldGdpShare || 0,
+          debtToGdp: 60,
+          lastUpdated: new Date().toISOString(),
+        }
+  );
+}
+
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
@@ -63,7 +102,7 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const allCountries = await getCachedCountries();
+    const allCountries = await getAllCountries();
     const sortedCountries = sortCountries(allCountries, topic, sortOrder);
 
     const totalCountries = sortedCountries.length;

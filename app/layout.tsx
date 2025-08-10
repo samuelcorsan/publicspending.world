@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import QueryProvider from "@/components/providers/query-provider";
 
 const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
 
@@ -36,9 +37,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${merriweather.className} antialiased`}>
-        {children}
-        <Toaster richColors expand={true} position="top-right" />
-        <Analytics />
+        <QueryProvider>
+          {children}
+          <Toaster richColors expand={true} position="top-right" />
+          <Analytics />
+        </QueryProvider>
       </body>
     </html>
   );

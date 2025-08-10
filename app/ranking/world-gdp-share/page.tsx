@@ -1,26 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
 import RankingList from "@/components/ranking/ranking-list";
 import Link from "next/link";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 
 export default function WorldGDPShareRankingPage() {
-  const [countries, setCountries] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('/api/countries-live')
-      .then(res => res.json())
-      .then(data => {
-        setCountries(data);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching country data:', error);
-        setLoading(false);
-      });
-  }, []);
-
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
       <div className="max-w-7xl mx-auto py-6 sm:py-12 px-3 sm:px-6 lg:px-8">
@@ -33,20 +16,14 @@ export default function WorldGDPShareRankingPage() {
             All Rankings
           </Link>
         </div>
-        
-        {loading ? (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-            <span className="ml-3 text-gray-600">Loading GDP share rankings...</span>
-          </div>
-        ) : (
-          <RankingList topic="world-gdp-share" showHeader={true} countries={countries} />
-        )}
-        
+
+        <RankingList topic="world-gdp-share" showHeader={true} />
+
         <div className="mt-8 text-center">
           <p className="text-gray-600 text-sm">
-            World GDP Share represents each country's percentage contribution to the total global 
-            gross domestic product, showing economic influence on the world stage.
+            World GDP Share represents each country's percentage contribution to
+            the total global gross domestic product, showing economic influence
+            on the world stage.
           </p>
         </div>
       </div>

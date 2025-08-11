@@ -48,12 +48,12 @@ export default function PrivacyPolicy() {
                 Introduction
               </h2>
               <p className="text-gray-600">
-                Public Spending World is committed to protecting your privacy
-                and ensuring transparency in how we handle data. This Privacy
-                Policy explains how we collect, use, and safeguard your
-                information when you visit our website. We strive to use only
-                the minimum amount of data necessary to provide you with the
-                best possible experience.
+                publicspending.world is committed to protecting your privacy and
+                ensuring transparency in how we handle data. This Privacy Policy
+                explains how we collect, use, and safeguard your information
+                when you visit our website. We strive to use only the minimum
+                amount of data necessary to provide you with the best possible
+                experience.
               </p>
             </section>
 

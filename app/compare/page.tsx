@@ -7,7 +7,6 @@ import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
 import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
 import type { Country } from "@/types/country";
 import { Footer } from "@/components/global/footer";
-import { ErrorState } from "@/components/ui/error-state";
 
 function ComparePage() {
   const router = useRouter();
@@ -20,35 +19,14 @@ function ComparePage() {
   const [focusB, setFocusB] = useState(false);
   const [countryData, setCountryData] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   const dropdownRefA = useRef<HTMLDivElement>(null);
   const dropdownRefB = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    fetch("/api/countries")
-      .then((res) => {
-        if (!res.ok) {
-          if (res.status === 429) {
-            throw new Error(
-              "Rate limit exceeded. Please wait before making more requests."
-            );
-          }
-          throw new Error(`Failed to load data (${res.status})`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        if (data.error) {
-          throw new Error(data.error);
-        }
-        setCountryData(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error.message);
-        setLoading(false);
-      });
+    // Use static data instead of API call to prevent DDoS vulnerability
+    setCountryData(countryData);
+    setLoading(false);
   }, []);
 
   const filteredA = countryData.filter((c) =>
@@ -133,24 +111,6 @@ function ComparePage() {
   const titleMargin = bothSelected ? "mb-4" : "mb-10";
   const selectorsJustify = bothSelected ? "items-center" : "items-center";
   const selectorsTopMargin = bothSelected ? "mt-4" : "";
-
-  if (error) {
-    return (
-      <>
-        <Navbar />
-        <main className="min-h-screen bg-gray-50 pt-24">
-          <div className="container mx-auto px-4 py-12">
-            <ErrorState
-              title="Failed to load countries"
-              message={error}
-              onRetry={() => window.location.reload()}
-              showHome={true}
-            />
-          </div>
-        </main>
-      </>
-    );
-  }
 
   return (
     <>

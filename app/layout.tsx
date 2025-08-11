@@ -23,13 +23,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "World Public Spending",
+              name: "publicspending.world",
               url: "https://publicspending.world",
               description:
                 "Explore public spending data from countries around the world. Access transparent, up-to-date information about government expenditures, budgets, and financial allocations globally.",
               publisher: {
                 "@type": "Organization",
-                name: "World Public Spending",
+                name: "publicspending.world",
                 url: "https://publicspending.world",
               },
             }),

@@ -34,8 +34,6 @@ export async function GET(
     const cachedData = await ControversiesCache.getCountryData(country);
 
     if (cachedData) {
-      console.log(`⚡ Serving cached data for ${cachedData.country}`);
-
       const limitedArticles = cachedData.articles.slice(0, limit);
 
       return NextResponse.json({
@@ -56,20 +54,11 @@ export async function GET(
       });
     }
 
-    console.log(
-      `🔴 No cached data for ${
-        COUNTRIES[country]?.name || country
-      }, fetching live...`
-    );
-
     const data = await newsService.fetchPoliticalNews(country, limit);
     const formattedArticles = newsService.formatArticles(data.articles || []);
 
     let aiSummary: string | null = null;
     if (data.articles && data.articles.length > 0 && process.env.GROQ_API_KEY) {
-      console.log(
-        `🤖 Generating AI summary for ${COUNTRIES[country]?.name || country}...`
-      );
       aiSummary = await aiService.generatePoliticalSummary(
         data.articles,
         country

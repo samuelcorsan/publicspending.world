@@ -2,7 +2,15 @@ import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
 import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
 import { AnimatedCountryStats } from "@/components/countries/animated-country-stats";
 import { NationalIncidentsToast } from "@/components/countries/national-incidents-toast";
-import { AlertCircle, Gauge, BarChart2, Radio } from "lucide-react";
+import { SourceFavicons } from "@/components/countries/source-favicons";
+import {
+  AlertCircle,
+  Gauge,
+  BarChart2,
+  Radio,
+  Clock,
+  Info,
+} from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Footer } from "@/components/global/footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -10,6 +18,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import { ControversyData, COUNTRY_CODE_MAP } from "@/types/controversies";
 
 type Props = {
   params: Promise<{ country: string }>;
@@ -37,10 +46,39 @@ async function getCountryData(country: string) {
   }
 }
 
+async function getControversyData(
+  country: string
+): Promise<ControversyData | null> {
+  try {
+    const countryCode = COUNTRY_CODE_MAP[country.toLowerCase()];
+    if (!countryCode) {
+      return null;
+    }
+
+    const baseUrl =
+      process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
+    const url = `${baseUrl}/api/get-controversies?country=${countryCode}`;
+
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      return null;
+    }
+
+    const data = await res.json();
+    return data.success ? data : null;
+  } catch (error) {
+    return null;
+  }
+}
+
 export default async function CountryPage({ params }: Props) {
   const { country } = await params;
 
-  const countryData = await getCountryData(country);
+  const [countryData, controversyData] = await Promise.all([
+    getCountryData(country),
+    getControversyData(country),
+  ]);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -53,9 +91,6 @@ export default async function CountryPage({ params }: Props) {
       countryData.population / 1e6
     ).toFixed(1)}M`,
     url: `https://publicspending.world/${country}`,
-    sameAs: [
-      `https://en.wikipedia.org/wiki/${countryData.name.replace(/\s+/g, "_")}`,
-    ],
     geo: {
       "@type": "GeoCoordinates",
       addressCountry: countryData.code,
@@ -100,20 +135,7 @@ export default async function CountryPage({ params }: Props) {
         </div>
 
         <div className="bg-white border-b">
-          <div className="container mx-auto px-4 py-20">
-            <div className="flex justify-center mb-6">
-              <div className="flex items-center gap-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full">
-                <Radio className="w-4 h-4 text-green-600 animate-pulse" />
-                <span className="text-sm font-medium text-green-700">
-                  Live Economic Data
-                </span>
-                <span className="text-xs text-green-600">
-                  Updated:{" "}
-                  {new Date(countryData.lastUpdated).toLocaleDateString()}
-                </span>
-              </div>
-            </div>
-
+          <div className="container mx-auto px-4 py-12">
             <AnimatedCountryStats
               name={countryData.name}
               code={countryData.code}
@@ -124,14 +146,14 @@ export default async function CountryPage({ params }: Props) {
             />
 
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-lg text-gray-900 mb-4 text-center font-bold">
+              <h3 className="text-lg text-gray-900 mb-3 text-center font-bold">
                 Member Organizations
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {countryData.organizations.map((org: string) => (
                   <span
                     key={org}
-                    className="bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium"
+                    className="bg-blue-100 text-blue-800 px-3 py-1.5 rounded-xl text-sm font-medium"
                   >
                     {org}
                   </span>
@@ -221,21 +243,61 @@ export default async function CountryPage({ params }: Props) {
             <TabsContent value="analysis">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <section className="bg-white rounded-xl shadow-sm p-8">
-                  <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
-                    <AlertCircle className="w-6 h-6 mr-2 text-red-500" />{" "}
-                    Controversies
-                    <Tooltip text="Notable controversies and governance issues" />
-                  </h3>
-                  <p className="mb-2 text-gray-700">
-                    {countryData.controversies ||
-                      "No major controversies reported."}
-                  </p>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="flex items-center text-2xl font-semibold text-gray-900">
+                      <AlertCircle className="w-6 h-6 mr-2 text-red-500" />{" "}
+                      Recent Controversies
+                    </h3>
+                    <span className="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-green-100 text-green-800">
+                      Updated a few days ago
+                    </span>
+                  </div>
+
+                  {controversyData ? (
+                    <div className="space-y-4">
+                      {controversyData.cached && (
+                        <div className="flex items-center gap-2 bg-green-50 border border-green-200 px-3 py-2 rounded-lg">
+                          <Clock className="w-4 h-4 text-green-600" />
+                          <span className="text-sm text-green-700">
+                            Last updated:{" "}
+                            {new Date(
+                              controversyData.lastUpdated!
+                            ).toLocaleDateString()}
+                          </span>
+                        </div>
+                      )}
+
+                      {controversyData.aiSummary && (
+                        <div className="mb-4">
+                          <h4 className="font-semibold text-gray-900 mb-2">
+                            Political Summary
+                          </h4>
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            {controversyData.aiSummary}
+                          </p>
+                        </div>
+                      )}
+
+                      <div className="pt-4 border-t border-gray-200">
+                        <div className="flex items-center justify-between mb-3">
+                          <h4 className="font-semibold text-gray-900">
+                            Sources
+                          </h4>
+                          <SourceFavicons articles={controversyData.articles} />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-gray-700">
+                      {countryData.controversies ||
+                        "No major controversies reported."}
+                    </p>
+                  )}
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
                     <Gauge className="w-6 h-6 mr-2 text-yellow-500" />{" "}
                     Efficiency
-                    <Tooltip text="Government spending efficiency assessment" />
                   </h3>
                   <p className="mb-2 text-gray-700">
                     {countryData.spendingEfficiency ||
@@ -262,7 +324,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const populationFormatted = (countryData.population / 1e6).toFixed(1);
 
     return {
-      title: `${countryName} Public Spending | Government Budget & GDP Data 2025`,
+      title: `${countryName} Public Spending`,
       description: `${countryName} public spending, government budget and fiscal data 2025. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. ${countryName} government expenditure, revenue sources and budget allocation analysis.`,
       keywords: `${countryName} public spending, ${countryName} government spending, ${countryName} budget, ${countryName} GDP, ${countryName} government budget, ${countryName} public expenditure, ${countryName} fiscal policy, ${countryName} economy, government revenue ${countryName}, public finance ${countryName}`,
       openGraph: {
@@ -270,16 +332,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: `${countryName} public spending and government budget 2025. GDP: $${gdpFormatted}T, Population: ${populationFormatted}M. ${countryName} fiscal data and budget allocation.`,
         url: `https://publicspending.world/${country}`,
         siteName: "publicspending.world",
-        locale: "en_US",
-        type: "article",
-        images: [
-          {
-            url: `https://publicspending.world/api/og/${country}`,
-            width: 1200,
-            height: 630,
-            alt: `${countryName} Public Spending Overview`,
-          },
-        ],
       },
       twitter: {
         card: "summary_large_image",
@@ -288,10 +340,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
       alternates: {
         canonical: `https://publicspending.world/${country}`,
-      },
-      other: {
-        "geo.region": countryData.code,
-        "geo.country": countryData.code,
       },
     };
   } catch (error) {

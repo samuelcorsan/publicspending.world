@@ -14,7 +14,6 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // We only need the first page (20 countries) since WorldRankings only shows top 10
     fetch("/api/countries-live?page=1&topic=population&sortOrder=desc")
       .then((res) => {
         if (!res.ok) {
@@ -31,7 +30,6 @@ export default function Home() {
         if (data.error) {
           throw new Error(data.error);
         }
-        // Extract just the countries array from the paginated response
         setCountryData(data.countries || []);
         setLoading(false);
       })

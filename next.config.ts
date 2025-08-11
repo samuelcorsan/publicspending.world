@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   experimental: {
     useCache: true,
   },
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {

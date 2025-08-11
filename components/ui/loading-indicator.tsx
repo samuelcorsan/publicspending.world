@@ -6,21 +6,21 @@ interface LoadingIndicatorProps {
   text?: string;
 }
 
-export function LoadingIndicator({ 
-  variant = "spinner", 
-  size = "md", 
-  text = "Loading..." 
+export function LoadingIndicator({
+  variant = "spinner",
+  size = "md",
+  text = "Loading...",
 }: LoadingIndicatorProps) {
   const sizeClasses = {
     sm: "h-4 w-4",
-    md: "h-6 w-6", 
-    lg: "h-8 w-8"
+    md: "h-6 w-6",
+    lg: "h-8 w-8",
   };
 
   const textSizeClasses = {
     sm: "text-sm",
     md: "text-base",
-    lg: "text-lg"
+    lg: "text-lg",
   };
 
   if (variant === "dots") {
@@ -33,7 +33,7 @@ export function LoadingIndicator({
               className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-bounce`}
               style={{
                 animationDelay: `${index * 0.1}s`,
-                animationDuration: '0.6s'
+                animationDuration: "0.6s",
               }}
             />
           ))}
@@ -46,16 +46,19 @@ export function LoadingIndicator({
   if (variant === "pulse") {
     return (
       <div className="flex items-center gap-3">
-        <div className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`} />
+        <div
+          className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`}
+        />
         <span className={`text-gray-600 ${textSizeClasses[size]}`}>{text}</span>
       </div>
     );
   }
 
-  // Default spinner
   return (
     <div className="flex items-center gap-3">
-      <div className={`${sizeClasses[size]} border-2 border-gray-200 border-t-blue-600 rounded-full animate-spin`} />
+      <div
+        className={`${sizeClasses[size]} border-2 border-gray-200 border-t-blue-600 rounded-full animate-spin`}
+      />
       <span className={`text-gray-600 ${textSizeClasses[size]}`}>{text}</span>
     </div>
   );
@@ -72,12 +75,14 @@ export function InlineLoadingIndicator() {
               className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
               style={{
                 animationDelay: `${index * 0.15}s`,
-                animationDuration: '0.8s'
+                animationDuration: "0.8s",
               }}
             />
           ))}
         </div>
-        <span className="text-blue-700 text-sm font-medium">Loading more countries</span>
+        <span className="text-blue-700 text-sm font-medium">
+          Loading more countries
+        </span>
       </div>
     </div>
   );

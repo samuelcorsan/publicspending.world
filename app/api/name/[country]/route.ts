@@ -17,7 +17,7 @@ async function getCountryWithFallback(countryEntry: any) {
       return liveData;
     }
   } catch (error) {
-    // Fallback to static data if live data fails
+    console.error("Error updating country data:", error);
   }
 
   return {

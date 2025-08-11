@@ -25,7 +25,6 @@ function ComparePage() {
   const dropdownRefA = useRef<HTMLDivElement>(null);
   const dropdownRefB = useRef<HTMLDivElement>(null);
 
-  // Load live country data
   useEffect(() => {
     fetch("/api/countries")
       .then((res) => {

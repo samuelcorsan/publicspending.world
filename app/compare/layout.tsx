@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compare Countries Government Spending | Budget Analysis & GDP Comparison",
+  title: "Compare Countries Government Spending",
   description:
     "Compare countries government spending, GDP, corruption levels, and budget allocations. Side-by-side analysis of public expenditure, revenue sources, and fiscal policies between any two nations worldwide.",
   keywords:

@@ -1,5 +1,5 @@
-import { WorldBankAPI } from '@/services/data-sources/world-bank';
-import staticCountries from '../../app/api/data.json';
+import { WorldBankAPI } from "@/services/data-sources/world-bank";
+import staticCountries from "../../app/api/data.json";
 
 interface StaticCountryData {
   name: string;
@@ -39,11 +39,11 @@ export class DataUpdater {
           timezone: country.timezone,
           continent: country.continent,
           flag: country.flag,
-          coordinates: country.coordinates
+          coordinates: country.coordinates,
         });
       });
     } catch (error) {
-      // Static data loading failed
+      console.error("Error loading static data:", error);
     }
   }
 
@@ -59,7 +59,9 @@ export class DataUpdater {
       const worldBankData = await this.worldBank.getCountryData(countryCode);
       const worldGdpShare = await this.worldBank.getWorldGdpShare(countryCode);
 
-      const hasValidData = (worldBankData.population || 0) > 0 || (worldBankData.gdpNominal || 0) > 0;
+      const hasValidData =
+        (worldBankData.population || 0) > 0 ||
+        (worldBankData.gdpNominal || 0) > 0;
 
       if (!hasValidData && originalData) {
         return {
@@ -68,11 +70,13 @@ export class DataUpdater {
           gdpNominal: originalData.gdpNominal || 0,
           worldGdpShare: originalData.worldGdpShare || 0,
           debtToGdp: originalData.debtToGdp || 0,
-          controversies: originalData.controversies || 'No recent data available.',
-          spendingEfficiency: originalData.spendingEfficiency || 'Standard monitoring in place.',
+          controversies:
+            originalData.controversies || "No recent data available.",
+          spendingEfficiency:
+            originalData.spendingEfficiency || "Standard monitoring in place.",
           revenue: originalData.revenue || [],
           spending: originalData.spending || [],
-          lastUpdated: new Date().toISOString()
+          lastUpdated: new Date().toISOString(),
         };
       }
 
@@ -82,13 +86,14 @@ export class DataUpdater {
         gdpNominal: worldBankData.gdpNominal || originalData?.gdpNominal || 0,
         worldGdpShare: worldGdpShare || originalData?.worldGdpShare || 0,
         debtToGdp: worldBankData.debtToGdp || originalData?.debtToGdp || 0,
-        controversies: originalData?.controversies || 'No recent data available.',
-        spendingEfficiency: originalData?.spendingEfficiency || 'Standard monitoring in place.',
+        controversies:
+          originalData?.controversies || "No recent data available.",
+        spendingEfficiency:
+          originalData?.spendingEfficiency || "Standard monitoring in place.",
         revenue: originalData?.revenue || [],
         spending: originalData?.spending || [],
-        lastUpdated: new Date().toISOString()
+        lastUpdated: new Date().toISOString(),
       };
-
     } catch (error) {
       if (originalData) {
         return {
@@ -97,11 +102,13 @@ export class DataUpdater {
           gdpNominal: originalData.gdpNominal || 0,
           worldGdpShare: originalData.worldGdpShare || 0,
           debtToGdp: originalData.debtToGdp || 0,
-          controversies: originalData.controversies || 'No recent data available.',
-          spendingEfficiency: originalData.spendingEfficiency || 'Standard monitoring in place.',
+          controversies:
+            originalData.controversies || "No recent data available.",
+          spendingEfficiency:
+            originalData.spendingEfficiency || "Standard monitoring in place.",
           revenue: originalData.revenue || [],
           spending: originalData.spending || [],
-          lastUpdated: new Date().toISOString()
+          lastUpdated: new Date().toISOString(),
         };
       }
 
@@ -111,7 +118,9 @@ export class DataUpdater {
 
   private async getOriginalCountryData(countryCode: string): Promise<any> {
     try {
-      return staticCountries.find((country: any) => country.code === countryCode);
+      return staticCountries.find(
+        (country: any) => country.code === countryCode
+      );
     } catch (error) {
       return null;
     }
@@ -120,5 +129,4 @@ export class DataUpdater {
   getStaticData(): any[] {
     return staticCountries;
   }
-
 }

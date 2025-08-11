@@ -3,8 +3,7 @@ import { Footer } from "@/components/global/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Privacy Policy - Data Protection & User Privacy | publicspending.world",
+  title: "Privacy Policy | publicspending.world",
   description:
     "Learn about publicspending.world's privacy policy, data collection practices, and commitment to protecting user privacy while providing government spending transparency.",
   keywords:

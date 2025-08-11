@@ -245,7 +245,7 @@ function ComparePage() {
                       </svg>
                     </div>
                   </div>
-                  {focusA && (
+                  {focusA && !loading && (
                     <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl border border-gray-200 shadow-xl max-h-60 overflow-auto z-10">
                       {filteredA.length === 0 ? (
                         <div className="p-4 text-gray-500 text-center">
@@ -320,7 +320,7 @@ function ComparePage() {
                       </svg>
                     </div>
                   </div>
-                  {focusB && (
+                  {focusB && !loading && (
                     <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl border border-gray-200 shadow-xl max-h-60 overflow-auto z-10">
                       {filteredB.length === 0 ? (
                         <div className="p-4 text-gray-500 text-center">

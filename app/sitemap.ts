@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import data from "./api/data.json";
-import { validTopics } from "@/lib/types";
+import { validTopics } from "@/types/country";
 
 const currentDate = new Date();
 const oneWeekAgo = new Date(currentDate.getTime() - 7 * 24 * 60 * 60 * 1000);

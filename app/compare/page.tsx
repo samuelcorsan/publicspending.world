@@ -5,7 +5,7 @@ import { Navbar } from "@/components/global/navbar";
 import { AnimatedCountryStats } from "@/components/countries/animated-country-stats";
 import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
 import { RevenuePieChart } from "@/components/charts/revenue-pie-chart";
-import type { Country } from "@/lib/types";
+import type { Country } from "@/types/country";
 import { Footer } from "@/components/global/footer";
 import { ErrorState } from "@/components/ui/error-state";
 

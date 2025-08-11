@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { DataUpdater } from "@/lib/services/data-updater";
+import { DataUpdater } from "@/services/api/data-updater";
 
 const dataUpdater = new DataUpdater();
 
 async function getCachedCountryData(countryCode: string) {
-  'use cache';
+  "use cache";
   return await dataUpdater.updateCountryData(countryCode);
 }
 
@@ -14,20 +14,17 @@ export async function GET(
 ) {
   try {
     const { countryCode } = await params;
-    
+
     const countryData = await getCachedCountryData(countryCode.toUpperCase());
-    
+
     if (!countryData) {
-      return NextResponse.json(
-        { error: "Country not found" }, 
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "Country not found" }, { status: 404 });
     }
 
     return NextResponse.json(countryData);
   } catch (error) {
     return NextResponse.json(
-      { error: "Failed to fetch country data" }, 
+      { error: "Failed to fetch country data" },
       { status: 500 }
     );
   }

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { validTopics } from "@/lib/types";
+import { validTopics } from "@/types/country";
 import { TopicTitles, TopicIcons } from "@/components/ranking/ranking-list";
 
 export function SkeletonRankings() {

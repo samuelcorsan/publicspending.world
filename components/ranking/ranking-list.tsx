@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Country, ValidTopic } from "@/lib/types";
+import { Country, ValidTopic } from "@/types/country";
 import {
   ChartBarIcon,
   GlobeAltIcon,
@@ -10,9 +10,8 @@ import {
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
-import { useInfiniteCountries } from "@/lib/hooks/use-infinite-countries";
+import { useInfiniteCountries } from "@/hooks/use-infinite-countries";
 import { InfiniteScroll } from "@/components/ui/infinite-scroll";
-import { SkeletonCountryList } from "@/components/ui/skeleton-country-row";
 import { InlineErrorState } from "@/components/ui/error-state";
 
 const formatNumber = (num: number): string => {

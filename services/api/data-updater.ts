@@ -1,4 +1,4 @@
-import { WorldBankAPI } from '../data-sources/world-bank';
+import { WorldBankAPI } from '@/services/data-sources/world-bank';
 import staticCountries from '../../app/api/data.json';
 
 interface StaticCountryData {

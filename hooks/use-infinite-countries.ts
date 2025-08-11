@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { ValidTopic } from "@/lib/types";
+import { ValidTopic } from "@/types/country";
 
 interface Country {
   name: string;

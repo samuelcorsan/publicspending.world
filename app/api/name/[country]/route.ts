@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { DataUpdater } from "@/lib/services/data-updater";
+import { DataUpdater } from "@/services/api/data-updater";
 
 function formatCountryName(urlCountry: string): string {
   return urlCountry

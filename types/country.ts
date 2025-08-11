@@ -22,6 +22,7 @@ export interface Country {
   currency: string;
   capital?: string;
   debtToGdp?: number;
+  rank?: number;
 }
 
 export const validTopics = [

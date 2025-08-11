@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { DataUpdater } from "@/lib/services/data-updater";
+import { DataUpdater } from "@/services/api/data-updater";
 import { unstable_cacheLife as cacheLife } from "next/cache";
 
 const dataUpdater = new DataUpdater();

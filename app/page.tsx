@@ -14,7 +14,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/countries-live?page=1&topic=population&sortOrder=desc")
+    fetch("/api/countries?page=1&topic=population&sortOrder=desc")
       .then((res) => {
         if (!res.ok) {
           if (res.status === 429) {

@@ -38,7 +38,7 @@ const fetchCountriesPage = async ({
   topic,
   sortOrder = "desc",
 }: FetchCountriesParams): Promise<PaginatedResponse> => {
-  const url = `/api/countries-live?page=${pageParam}&topic=${topic}&sortOrder=${sortOrder}`;
+  const url = `/api/countries?page=${pageParam}&topic=${topic}&sortOrder=${sortOrder}`;
   const response = await fetch(url);
 
   if (!response.ok) {

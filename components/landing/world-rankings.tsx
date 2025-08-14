@@ -107,7 +107,11 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
 
   return (
     <div className="w-full">
-      <Tabs defaultValue="population" className="w-full space-y-4" onValueChange={(value) => setActiveTab(value as ValidTopic)}>
+      <Tabs
+        defaultValue="population"
+        className="w-full space-y-4"
+        onValueChange={(value) => setActiveTab(value as ValidTopic)}
+      >
         <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
           {validTopics.map((topic) => {
             const TopicIcon = TopicIcons[topic];
@@ -131,9 +135,7 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
                 <div className="w-16 sm:w-24 font-medium text-gray-500">
                   Rank
                 </div>
-                <div className="font-medium text-gray-500">
-                  Country
-                </div>
+                <div className="font-medium text-gray-500">Country</div>
                 <div className="w-32 sm:w-48 text-right font-medium text-gray-500">
                   {TopicTitles[topic]}
                 </div>

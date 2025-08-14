@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { ValidTopic } from "@/types/country";
 import { DataUpdater } from "@/services/api/data-updater";
 import { unstable_cacheLife as cacheLife } from "next/cache";
-import { RateLimiter } from "@/lib/rate-limiter";
-import { getClientIP } from "@/lib/utils";
 
 const dataUpdater = new DataUpdater();
 const ITEMS_PER_PAGE = 20;
@@ -90,36 +88,6 @@ async function getAllCountries(): Promise<any[]> {
 
 export async function GET(req: NextRequest) {
   try {
-    // Rate limiting check
-    const clientIP = getClientIP(req);
-    const rateLimitResult = await RateLimiter.checkRateLimit(
-      clientIP,
-      "countries"
-    );
-
-    if (!rateLimitResult.success || rateLimitResult.blocked) {
-      return NextResponse.json(
-        {
-          error: "Rate limit exceeded",
-          message:
-            "Too many requests. Please wait before making another request.",
-          resetTime: rateLimitResult.resetTime,
-          remaining: rateLimitResult.remaining,
-        },
-        {
-          status: 429,
-          headers: {
-            "X-RateLimit-Limit": "1",
-            "X-RateLimit-Remaining": rateLimitResult.remaining.toString(),
-            "X-RateLimit-Reset": rateLimitResult.resetTime.toString(),
-            "Retry-After": Math.ceil(
-              rateLimitResult.resetTime - Math.floor(Date.now() / 1000)
-            ).toString(),
-          },
-        }
-      );
-    }
-
     const { searchParams } = new URL(req.url);
     const page = parseInt(searchParams.get("page") || "1");
     const topic = searchParams.get("topic") as ValidTopic;

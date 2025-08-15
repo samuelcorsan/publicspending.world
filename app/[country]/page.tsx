@@ -241,9 +241,12 @@ export default async function CountryPage({ params }: Props) {
                       <AlertCircle className="w-6 h-6 mr-2 text-red-500" />{" "}
                       Recent Controversies
                     </h3>
-                    <span className="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-green-100 text-green-800">
-                      Updated a few days ago
-                    </span>
+                    {controversyData && (
+                      <span className="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-green-100 text-green-800">
+                        <Clock className="w-4 h-4 mr-1" />
+                        Updated a few days ago
+                      </span>
+                    )}
                   </div>
 
                   {controversyData ? (

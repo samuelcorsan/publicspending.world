@@ -3,16 +3,24 @@
 import { SearchBar } from "./search-bar";
 import countryData from "@/app/api/data.json";
 import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
 
 const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
   ssr: false,
+  loading: () => null,
 });
 
 export default function Hero() {
   return (
     <div className="relative z-[1] w-full">
       <div className="relative h-[900px] w-full before:absolute before:inset-0 before:bottom-0 before:z-[1] md:before:[mask-image:radial-gradient(ellipse_30%_40%_at_50%_20%,transparent_50%,#000_100%)] before:[mask-image:radial-gradient(ellipse_70%_30%_at_50%_20%,transparent_50%,#000_100%)] before:bg-gray-50 dark:before:bg-black">
-        <DynamicGlobe />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-100 to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="h-full w-full flex items-center justify-center"></div>
+        </div>
+
+        <div className="absolute inset-0 h-full w-full">
+          <DynamicGlobe />
+        </div>
       </div>
 
       <div className="px-6 lg:px-8 absolute inset-x-0 top-1/4 z-10">

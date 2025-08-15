@@ -51,7 +51,8 @@ export const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-gray-100">
           <p className="text-center text-gray-500 text-sm">
-            © 2024 PublicSpending.world. All rights reserved.
+            © {new Date().getFullYear()} PublicSpending.world. All rights
+            reserved.
           </p>
         </div>
       </div>

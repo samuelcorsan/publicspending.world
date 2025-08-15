@@ -10,26 +10,16 @@ import {
   ChartBarIcon,
   GlobeAltIcon,
   UsersIcon,
-  BanknotesIcon,
-  BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
 
-const validTopics = [
-  "population",
-  "gdp-nominal",
-  "world-gdp-share",
-  "spending",
-  "revenue",
-] as const;
+const validTopics = ["population", "gdp-nominal", "world-gdp-share"] as const;
 type ValidTopic = (typeof validTopics)[number];
 
 const TopicTitles: Record<ValidTopic, string> = {
   population: "Population",
   "gdp-nominal": "GDP (Nominal)",
   "world-gdp-share": "World GDP Share",
-  spending: "Government Spending",
-  revenue: "Government Revenue",
 };
 
 const TopicIcons: Record<
@@ -39,8 +29,6 @@ const TopicIcons: Record<
   population: UsersIcon,
   "gdp-nominal": ChartBarIcon,
   "world-gdp-share": GlobeAltIcon,
-  spending: BanknotesIcon,
-  revenue: BuildingLibraryIcon,
 };
 
 interface Country {
@@ -77,14 +65,6 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
   const getValue = (country: Country, topic: ValidTopic): number => {
     if (topic === "gdp-nominal") return country.gdpNominal;
     if (topic === "world-gdp-share") return country.worldGdpShare;
-    if (topic === "spending")
-      return (
-        country.spending.find((item) => item.subtype === "total")?.amount ?? 0
-      );
-    if (topic === "revenue")
-      return (
-        country.revenue.find((item) => item.subtype === "total")?.amount ?? 0
-      );
     if (topic === "population") return country.population;
     return 0;
   };

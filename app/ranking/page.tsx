@@ -20,7 +20,7 @@ export default function RankingPage() {
           </p>
         </div>
 
-        <div className="mb-12">
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {validTopics.slice(0, 3).map((topic) => {
               const TopicIcon = TopicIcons[topic];
@@ -94,10 +94,6 @@ function getTopicDescription(topic: string): string {
       return "Explore the largest economies by nominal GDP, showcasing economic output and market size across nations.";
     case "world-gdp-share":
       return "See each country's contribution to the global economy as a percentage of world GDP.";
-    case "spending":
-      return "Compare government spending levels and public expenditure across different countries and regions.";
-    case "revenue":
-      return "Analyze government revenue collection and fiscal capacity of nations worldwide.";
     default:
       return "Explore detailed rankings and comparisons for this category.";
   }

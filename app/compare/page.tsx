@@ -127,8 +127,7 @@ function ComparePage() {
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                   Select two countries to see a detailed side-by-side comparison
-                  of their public spending, revenue sources, and key economic
-                  indicators.
+                  of their economic indicators and key demographic data.
                 </p>
               </div>
             </>

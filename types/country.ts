@@ -29,7 +29,5 @@ export const validTopics = [
   "population",
   "gdp-nominal",
   "world-gdp-share",
-  "spending",
-  "revenue",
 ] as const;
 export type ValidTopic = (typeof validTopics)[number];

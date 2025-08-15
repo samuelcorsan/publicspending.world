@@ -6,8 +6,6 @@ import {
   ChartBarIcon,
   GlobeAltIcon,
   UsersIcon,
-  BanknotesIcon,
-  BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import { SVGProps } from "react";
 import { useInfiniteCountries } from "@/hooks/use-infinite-countries";
@@ -37,14 +35,6 @@ const getValue = (country: Country, topic: ValidTopic): number => {
       return country.gdpNominal;
     case "world-gdp-share":
       return country.worldGdpShare;
-    case "spending":
-      return (
-        country.spending.find((item) => item.subtype === "total")?.amount ?? 0
-      );
-    case "revenue":
-      return (
-        country.revenue.find((item) => item.subtype === "total")?.amount ?? 0
-      );
     case "population":
       return country.population;
     default:
@@ -59,8 +49,6 @@ export const TopicIcons: Record<
   population: UsersIcon,
   "gdp-nominal": ChartBarIcon,
   "world-gdp-share": GlobeAltIcon,
-  spending: BanknotesIcon,
-  revenue: BuildingLibraryIcon,
 };
 
 const getRankBadgeClass = (rank: number): string => {
@@ -96,7 +84,6 @@ const LoadingState = ({
       <RankingHeader TopicIcon={TopicIcon} topicTitle={topicTitle} />
     )}
 
-    
     <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
       <div className="w-16 sm:w-24 font-medium text-gray-500">Rank</div>
       <div className="font-medium text-gray-500">Country</div>
@@ -105,7 +92,6 @@ const LoadingState = ({
       </div>
     </div>
 
-    
     <ul className="divide-y divide-gray-100">
       {Array.from({ length: 20 }, (_, index) => (
         <li

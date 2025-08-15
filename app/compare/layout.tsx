@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compare Countries Government Spending",
+  title: "Compare Countries Economic Data",
   description:
-    "Compare countries government spending, GDP, corruption levels, and budget allocations. Side-by-side analysis of public expenditure, revenue sources, and fiscal policies between any two nations worldwide.",
+    "Compare countries GDP, population, and economic indicators. Side-by-side analysis of economic data and demographic information between any two nations worldwide.",
   keywords:
-    "compare countries, compare government spending, compare countries GDP, compare countries corruption, country budget comparison, fiscal policy comparison, government expenditure analysis, public spending comparison tool, compare nations spending, countries vs comparison",
+    "compare countries, compare countries GDP, compare countries population, country comparison, economic comparison, demographic comparison, countries vs comparison, economic data analysis",
   openGraph: {
-    title: "Compare Countries Government Budget & Spending Analysis",
+    title: "Compare Countries Economic & Demographic Data",
     description:
-      "Compare countries government spending, GDP, corruption and revenue sources between any two nations. Analyze fiscal policies and budgets side-by-side.",
+      "Compare countries GDP, population and economic indicators between any two nations. Analyze economic data and demographics side-by-side.",
     url: "https://publicspending.world/compare",
     siteName: "publicspending.world",
     locale: "en_US",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compare Countries Government Spending & Budget Analysis",
+    title: "Compare Countries Economic Data Analysis",
     description:
-      "Compare countries government spending, GDP, corruption levels. Side-by-side comparison of government budgets and revenue sources worldwide.",
+      "Compare countries GDP, population and economic indicators. Side-by-side comparison of economic data and demographic information worldwide.",
   },
   alternates: {
     canonical: "https://publicspending.world/compare",

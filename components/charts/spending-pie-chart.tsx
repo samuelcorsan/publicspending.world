@@ -48,7 +48,6 @@ export function SpendingPieChart({
 }: {
   countryData: CountryData;
 }) {
-
   const chartData = React.useMemo(() => {
     return countryData.spending
       .filter((item) => item.subtype !== "total")

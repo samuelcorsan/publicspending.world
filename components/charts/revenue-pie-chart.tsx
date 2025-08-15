@@ -44,7 +44,6 @@ interface CountryData {
 }
 
 export function RevenuePieChart({ countryData }: { countryData: CountryData }) {
-
   const chartData = React.useMemo(() => {
     return countryData.revenue
       .filter((item) => item.subtype !== "total")

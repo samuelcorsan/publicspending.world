@@ -13,9 +13,6 @@ const getValue = (country: CountryRankingData, topic: ValidTopic): number => {
       return country.gdpNominal || 0;
     case "world-gdp-share":
       return country.worldGdpShare || 0;
-    case "spending":
-    case "revenue":
-      return 0;
     default:
       return 0;
   }
@@ -37,8 +34,6 @@ const VALID_TOPICS: ValidTopic[] = [
   "population",
   "gdp-nominal",
   "world-gdp-share",
-  "spending",
-  "revenue",
 ];
 
 async function getAllCountries(): Promise<CountryRankingData[]> {

@@ -23,17 +23,10 @@ export interface RankingErrorStateProps {
   onRetry?: () => void;
 }
 
-export type ValidTopic =
-  | "population"
-  | "gdp-nominal"
-  | "world-gdp-share"
-  | "spending"
-  | "revenue";
+export type ValidTopic = "population" | "gdp-nominal" | "world-gdp-share";
 
 export const TopicTitles: Record<ValidTopic, string> = {
   population: "Population",
   "gdp-nominal": "GDP (Nominal)",
   "world-gdp-share": "World GDP Share",
-  spending: "Government Spending",
-  revenue: "Government Revenue",
 };

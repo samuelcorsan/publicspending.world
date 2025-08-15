@@ -3,13 +3,13 @@ import { COUNTRIES } from "@/constants/controversies-countries";
 import { NewsService } from "@/services/controversies/news-service";
 import { AIService } from "@/services/controversies/ai-service";
 import { ControversiesCache, CachedControversyData } from "@/lib/redis";
+import { Country } from "@/types/controversies";
 
 const newsService = new NewsService();
 const aiService = new AIService();
 
 async function processCountryBatch(
-  countries: Array<[string, any]>,
-  batchNumber: number
+  countries: Array<[string, Country]>
 ): Promise<
   Array<{
     country: string;
@@ -25,7 +25,10 @@ async function processCountryBatch(
     processingTime: number;
   }> = [];
 
-  const processCountry = async ([countryCode, countryInfo]: [string, any]) => {
+  const processCountry = async ([countryCode, countryInfo]: [
+    string,
+    Country
+  ]) => {
     const countryStartTime = Date.now();
 
     try {
@@ -135,7 +138,7 @@ export async function POST(request: NextRequest) {
   const allCountries = Object.entries(COUNTRIES);
   const totalBatches = Math.ceil(allCountries.length / batchSize);
 
-  let countriesToProcess: Array<[string, any]>;
+  let countriesToProcess: Array<[string, Country]>;
   let batchNumber: number;
 
   if (batchParam) {
@@ -155,7 +158,7 @@ export async function POST(request: NextRequest) {
     });
   }
 
-  const results = await processCountryBatch(countriesToProcess, batchNumber);
+  const results = await processCountryBatch(countriesToProcess);
 
   const totalTime = Date.now() - startTime;
   const successCount = results.filter((r) => r.success).length;

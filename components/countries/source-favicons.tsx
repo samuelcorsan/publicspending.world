@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface Article {
   source?: string;
@@ -55,11 +56,15 @@ export function SourceFavicons({ articles }: SourceFaviconsProps) {
               }`}
             >
               <div className="w-7 h-7 rounded-full bg-white border-2 border-white shadow-sm flex items-center justify-center">
-                <img
-                  src={item.faviconUrl}
-                  alt={item.source}
-                  className="w-5 h-5 rounded-full"
-                />
+                {item.faviconUrl && item.source && (
+                  <Image
+                    src={item.faviconUrl}
+                    alt={item.source}
+                    width={20}
+                    height={20}
+                    className="w-5 h-5 rounded-full"
+                  />
+                )}
               </div>
               {sourceArticles.length > 1 && (
                 <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">

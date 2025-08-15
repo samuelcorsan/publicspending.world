@@ -38,7 +38,7 @@ async function getCountryWithFallback(countryEntry: StaticCountryData) {
       national_incidents: [],
       lastUpdated: liveData.lastUpdated,
     };
-  } catch (error) {
+  } catch {
     return {
       name: countryEntry.name,
       code: countryEntry.code,

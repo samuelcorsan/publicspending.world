@@ -21,9 +21,9 @@ export default function WorldGDPShareRankingPage() {
 
         <div className="mt-8 text-center">
           <p className="text-gray-600 text-sm">
-            World GDP Share represents each country's percentage contribution to
-            the total global gross domestic product, showing economic influence
-            on the world stage.
+            World GDP Share represents each country&apos;s percentage
+            contribution to the total global gross domestic product, showing
+            economic influence on the world stage.
           </p>
         </div>
       </div>

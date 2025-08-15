@@ -130,8 +130,8 @@ export default function PrivacyPolicy() {
                       understand website performance and user behavior
                     </li>
                     <li>
-                      This data is processed in accordance with Vercel's privacy
-                      policy
+                      This data is processed in accordance with Vercel&apos;s
+                      privacy policy
                     </li>
                     <li>
                       No personally identifiable information is collected
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
                 changes in our practices or for operational, legal, or
                 regulatory reasons. We will notify users of any material changes
                 by posting the new privacy policy on this page and updating the
-                "Last updated" date.
+                &quot;Last updated&quot; date.
               </p>
             </section>
 

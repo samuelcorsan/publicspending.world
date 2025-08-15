@@ -60,7 +60,7 @@ async function getControversyData(
 
     const data = await res.json();
     return data.success ? data : null;
-  } catch (error) {
+  } catch {
     return null;
   }
 }
@@ -350,7 +350,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         canonical: `https://publicspending.world/${country}`,
       },
     };
-  } catch (error) {
+  } catch {
     return {
       title: `${countryName} - Public Spending Data | publicspending.world`,
       description: `Explore ${countryName}'s government spending and budget information on publicspending.world`,

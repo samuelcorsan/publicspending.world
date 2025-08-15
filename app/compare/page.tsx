@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, Suspense, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { Navbar } from "@/components/global/navbar";
 import { AnimatedCountryStats } from "@/components/countries/animated-country-stats";
 import { SpendingPieChart } from "@/components/charts/spending-pie-chart";
@@ -24,10 +25,9 @@ function ComparePage() {
   const dropdownRefB = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Use static data instead of API call to prevent DDoS vulnerability
     setCountryData(countryData);
     setLoading(false);
-  }, []);
+  }, [countryData]);
 
   const filteredA = countryData.filter((c) =>
     c.name.toLowerCase().includes(searchA.toLowerCase())
@@ -109,7 +109,7 @@ function ComparePage() {
   const containerPadding = bothSelected ? "py-6" : "py-12";
   const selectorsMargin = bothSelected ? "mb-6" : "mb-12";
   const titleMargin = bothSelected ? "mb-4" : "mb-10";
-  const selectorsJustify = bothSelected ? "items-center" : "items-center";
+
   const selectorsTopMargin = bothSelected ? "mt-4" : "";
 
   return (
@@ -222,9 +222,11 @@ function ComparePage() {
                               className="flex items-center gap-3 w-full p-4 hover:bg-blue-50 text-left transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
                               onClick={() => handleSelectA(country)}
                             >
-                              <img
+                              <Image
                                 src={country.flag}
                                 alt={`${country.name} flag`}
+                                width={24}
+                                height={24}
                                 className="w-6 h-6 rounded-full object-cover shadow-sm"
                               />
                               <span className="font-medium text-gray-900">
@@ -297,9 +299,11 @@ function ComparePage() {
                               className="flex items-center gap-3 w-full p-4 hover:bg-blue-50 text-left transition-colors duration-150 first:rounded-t-xl last:rounded-b-xl"
                               onClick={() => handleSelectB(country)}
                             >
-                              <img
+                              <Image
                                 src={country.flag}
                                 alt={`${country.name} flag`}
+                                width={24}
+                                height={24}
                                 className="w-6 h-6 rounded-full object-cover shadow-sm"
                               />
                               <span className="font-medium text-gray-900">

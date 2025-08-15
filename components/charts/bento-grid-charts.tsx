@@ -3,16 +3,12 @@
 import * as React from "react";
 import { TrendingUp } from "lucide-react";
 import {
-  AreaChart,
-  Area,
   BarChart,
   Bar,
   PieChart,
   Pie,
-  ResponsiveContainer,
   XAxis,
   YAxis,
-  Tooltip,
   CartesianGrid,
   Label,
 } from "recharts";

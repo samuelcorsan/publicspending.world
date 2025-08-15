@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/global/navbar";
 import { Footer } from "@/components/global/footer";
-import { WorldRankings } from "@/components/landing/world-rankings";
+import { WorldRankings } from "@/components/ranking/world-rankings";
 import Hero from "@/components/landing/hero";
 import { ErrorState } from "@/components/ui/error-state";
 import { SkeletonRankings } from "@/components/ui/skeleton-rankings";

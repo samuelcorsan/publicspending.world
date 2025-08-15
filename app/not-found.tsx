@@ -15,7 +15,7 @@ export default function NotFoundPage() {
         <p className="text-lg text-gray-500 mb-8 text-center max-w-md">
           Oops! The page you are looking for does not exist or has been moved.
           <br />
-          Let's get you back to where you belong.
+          Let&apos;s get you back to where you belong.
         </p>
         <Link href="/">
           <button className="cursor-pointer px-8 py-2 rounded-full bg-blue-500 text-white text-lg shadow-lg hover:bg-blue-600 transition-colors">

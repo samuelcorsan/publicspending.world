@@ -4,15 +4,17 @@ interface SkeletonCountryRowProps {
   showRank?: boolean;
 }
 
-export function SkeletonCountryRow({ showRank = true }: SkeletonCountryRowProps) {
+export function SkeletonCountryRow({
+  showRank = true,
+}: SkeletonCountryRowProps) {
   return (
-        <li className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center animate-pulse">
+    <li className="px-3 sm:px-6 py-4 grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 items-center animate-pulse">
       <div className="w-16 sm:w-24 flex items-center">
         {showRank && (
           <div className="h-8 sm:h-12 w-12 sm:w-16 bg-gray-200 rounded-xl"></div>
         )}
       </div>
-      
+
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="h-8 w-8 sm:h-10 sm:w-10 bg-gray-200 rounded-sm flex-shrink-0"></div>
         <div className="space-y-2 flex-1">
@@ -28,7 +30,13 @@ export function SkeletonCountryRow({ showRank = true }: SkeletonCountryRowProps)
   );
 }
 
-export function SkeletonCountryList({ count = 20, showHeader = true }: { count?: number; showHeader?: boolean }) {
+export function SkeletonCountryList({
+  count = 20,
+  showHeader = true,
+}: {
+  count?: number;
+  showHeader?: boolean;
+}) {
   return (
     <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
       {showHeader && (
@@ -42,8 +50,7 @@ export function SkeletonCountryList({ count = 20, showHeader = true }: { count?:
           </div>
         </div>
       )}
-      
-      {/* Table header skeleton */}
+
       <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
         <div className="w-16 sm:w-24">
           <div className="h-4 bg-gray-200 rounded w-12 animate-pulse"></div>
@@ -55,8 +62,7 @@ export function SkeletonCountryList({ count = 20, showHeader = true }: { count?:
           <div className="h-4 bg-gray-200 rounded w-20 ml-auto animate-pulse"></div>
         </div>
       </div>
-      
-      {/* Country rows skeleton */}
+
       <ul className="divide-y divide-gray-100">
         {Array.from({ length: count }, (_, index) => (
           <SkeletonCountryRow key={index} />

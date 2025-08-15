@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface Country {
   name: string;
@@ -74,9 +75,11 @@ export function SearchBar({ countries }: SearchBarProps) {
                 setIsSearchFocused(false);
               }}
             >
-              <img
+              <Image
                 src={country.flag}
                 alt={`${country.name} flag`}
+                width={24}
+                height={24}
                 className="w-6 h-6 rounded-full object-cover"
               />
               <span>{country.name}</span>

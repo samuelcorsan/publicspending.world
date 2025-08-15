@@ -96,7 +96,7 @@ const LoadingState = ({
       <RankingHeader TopicIcon={TopicIcon} topicTitle={topicTitle} />
     )}
 
-    {/* Table header */}
+    
     <div className="grid grid-cols-[auto_1fr_auto] gap-2 sm:gap-4 px-3 sm:px-6 py-4 bg-gray-50 border-b border-gray-200">
       <div className="w-16 sm:w-24 font-medium text-gray-500">Rank</div>
       <div className="font-medium text-gray-500">Country</div>
@@ -105,7 +105,7 @@ const LoadingState = ({
       </div>
     </div>
 
-    {/* Skeleton rows */}
+    
     <ul className="divide-y divide-gray-100">
       {Array.from({ length: 20 }, (_, index) => (
         <li

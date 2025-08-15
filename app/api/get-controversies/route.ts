@@ -21,9 +21,7 @@ export async function GET(
         {
           success: false,
           error: "Validation failed",
-          message: validation.error.issues
-            .map((err: any) => err.message)
-            .join(", "),
+          message: validation.error.issues.map((err) => err.message).join(", "),
         },
         { status: 400 }
       );
@@ -74,18 +72,11 @@ export async function GET(
       articles: formattedArticles,
       cached: false,
     });
-  } catch (error: any) {
-    const errorMessage =
-      process.env.NODE_ENV === "production" && !error.isOperational
-        ? "Internal server error"
-        : error.message;
-
+  } catch (error) {
+    console.error("Error in get-controversies API:", error);
     return NextResponse.json(
-      {
-        success: false,
-        error: errorMessage,
-      },
-      { status: error.statusCode || 500 }
+      { success: false, error: "Internal server error" },
+      { status: 500 }
     );
   }
 }

@@ -1,34 +1,66 @@
 import { NextRequest, NextResponse } from "next/server";
+import { CountryDataCache, StaticCountryData } from "@/lib/redis";
 import { DataUpdater } from "@/services/api/data-updater";
 
 function formatCountryName(urlCountry: string): string {
   return urlCountry
     .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map(
+      (word: string) =>
+        word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    )
     .join(" ");
 }
 
-const dataUpdater = new DataUpdater();
+async function getCountryWithFallback(countryEntry: StaticCountryData) {
+  const dataUpdater = new DataUpdater();
 
-async function getCountryWithFallback(countryEntry: any) {
   try {
     const liveData = await dataUpdater.updateCountryData(countryEntry.code);
-    if (liveData) {
-      return liveData;
-    }
+    return {
+      name: countryEntry.name,
+      code: countryEntry.code,
+      organizations: countryEntry.organizations || [],
+      capital: countryEntry.capital || "",
+      currency: countryEntry.currency || "",
+      languages: countryEntry.languages || [],
+      timezone: countryEntry.timezone || "",
+      continent: countryEntry.continent || "",
+      flag: countryEntry.flag || "",
+      revenue: countryEntry.revenue || [],
+      spending: countryEntry.spending || [],
+      population: liveData.population || 0,
+      gdpNominal: liveData.gdpNominal || 0,
+      worldGdpShare: liveData.worldGdpShare || 0,
+      debtToGdp: liveData.debtToGdp || 0,
+      controversies: "Data available via controversies API",
+      spendingEfficiency: "Standard monitoring in place",
+      national_incidents: [],
+      lastUpdated: liveData.lastUpdated,
+    };
   } catch (error) {
-    console.error("Error updating country data:", error);
+    return {
+      name: countryEntry.name,
+      code: countryEntry.code,
+      organizations: countryEntry.organizations || [],
+      capital: countryEntry.capital || "",
+      currency: countryEntry.currency || "",
+      languages: countryEntry.languages || [],
+      timezone: countryEntry.timezone || "",
+      continent: countryEntry.continent || "",
+      flag: countryEntry.flag || "",
+      revenue: countryEntry.revenue || [],
+      spending: countryEntry.spending || [],
+      population: 0,
+      gdpNominal: 0,
+      worldGdpShare: 0,
+      debtToGdp: 0,
+      controversies: "Data available via controversies API",
+      spendingEfficiency: "Standard monitoring in place",
+      national_incidents: [],
+      lastUpdated: new Date().toISOString(),
+    };
   }
-
-  return {
-    ...countryEntry,
-    population: countryEntry.population || 0,
-    gdpNominal: countryEntry.gdpNominal || 0,
-    worldGdpShare: countryEntry.worldGdpShare || 0,
-    debtToGdp: countryEntry.debtToGdp || 0,
-    lastUpdated: new Date().toISOString(),
-    national_incidents: countryEntry.national_incidents || [],
-  };
 }
 
 export async function GET(
@@ -39,25 +71,42 @@ export async function GET(
     const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
-    const { default: staticData } = await import("../../data.json");
+    const allCountries = await CountryDataCache.getAllStaticCountries();
+    let countryEntry = null;
 
-    let countryEntry = staticData.find(
-      (item: any) => item.name === formattedCountryName
-    );
+    for (const countryCode of allCountries) {
+      const data = await CountryDataCache.getStaticCountryData(countryCode);
+      if (data && data.name === formattedCountryName) {
+        countryEntry = data;
+        break;
+      }
+    }
 
     if (!countryEntry) {
-      countryEntry = staticData.find(
-        (item: any) =>
-          item.name.toLowerCase() === formattedCountryName.toLowerCase()
-      );
+      for (const countryCode of allCountries) {
+        const data = await CountryDataCache.getStaticCountryData(countryCode);
+        if (
+          data &&
+          data.name.toLowerCase() === formattedCountryName.toLowerCase()
+        ) {
+          countryEntry = data;
+          break;
+        }
+      }
     }
 
     if (!countryEntry) {
       const searchWords = formattedCountryName.toLowerCase().split(" ");
-      countryEntry = staticData.find((item: any) => {
-        const itemWords = item.name.toLowerCase().split(" ");
-        return searchWords.every((word) => itemWords.includes(word));
-      });
+      for (const countryCode of allCountries) {
+        const data = await CountryDataCache.getStaticCountryData(countryCode);
+        if (data) {
+          const itemWords = data.name.toLowerCase().split(" ");
+          if (searchWords.every((word: string) => itemWords.includes(word))) {
+            countryEntry = data;
+            break;
+          }
+        }
+      }
     }
 
     if (!countryEntry) {
@@ -68,6 +117,7 @@ export async function GET(
 
     return NextResponse.json(countryData);
   } catch (error) {
+    console.error("Error in country name API:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

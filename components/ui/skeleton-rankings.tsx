@@ -1,19 +1,13 @@
 "use client";
-import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { validTopics } from "@/types/country";
-import { TopicTitles, TopicIcons } from "@/components/ranking/ranking-list";
+import { TopicTitles } from "@/types/ranking";
+import { TopicIcons } from "@/components/ranking/ranking-list";
 
 export function SkeletonRankings() {
-  const [activeTab, setActiveTab] = useState("population");
-
   return (
     <div className="w-full">
-      <Tabs
-        defaultValue="population"
-        className="w-full space-y-4"
-        onValueChange={setActiveTab}
-      >
+      <Tabs defaultValue="population" className="w-full space-y-4">
         <TabsList className="w-full flex justify-start overflow-x-auto scrollbar-hide bg-white/50 backdrop-blur-sm p-1 rounded-xl shadow-sm border border-gray-200">
           {validTopics.map((topic) => {
             const TopicIcon = TopicIcons[topic];

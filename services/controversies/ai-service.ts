@@ -66,15 +66,20 @@ Political Summary:`;
       }
 
       return summary;
-    } catch (error: any) {
-      if (error.message.includes("401") || error.status === 401) {
-        return "AI summarization failed - Invalid GROQ_API_KEY.";
-      } else if (error.message.includes("429") || error.status === 429) {
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+      if (errorMessage.includes("401") || (error as any).status === 401) {
+        return "AI summarization failed";
+      } else if (
+        errorMessage.includes("429") ||
+        (error as any).status === 429
+      ) {
         return "AI summarization failed - Rate limit exceeded.";
-      } else if (error.message.includes("model")) {
+      } else if (errorMessage.includes("model")) {
         return "AI summarization failed - Model not available.";
       } else {
-        return `AI summarization failed - ${error.message}`;
+        return `AI summarization failed - ${errorMessage}`;
       }
     }
   }

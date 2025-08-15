@@ -1,132 +1,112 @@
 import { WorldBankAPI } from "@/services/data-sources/world-bank";
-import staticCountries from "../../app/api/data.json";
-
-interface StaticCountryData {
-  name: string;
-  code: string;
-  organizations: string[];
-  capital: string;
-  currency: string;
-  languages: string[];
-  timezone: string;
-  continent: string;
-  flag: string;
-  coordinates: {
-    latitude: number;
-    longitude: number;
-  };
-}
+import {
+  CountryDataCache,
+  StaticCountryData,
+  CountryRankingData,
+} from "@/lib/redis";
 
 export class DataUpdater {
-  private worldBank: WorldBankAPI;
-  private staticData: Map<string, StaticCountryData> = new Map();
+  private worldBankAPI: WorldBankAPI;
 
   constructor() {
-    this.worldBank = new WorldBankAPI();
-    this.loadStaticData();
+    this.worldBankAPI = new WorldBankAPI();
   }
 
-  private async loadStaticData() {
+  async updateCountryData(countryCode: string) {
     try {
-      staticCountries.forEach((country: any) => {
-        this.staticData.set(country.code, {
-          name: country.name,
-          code: country.code,
-          organizations: country.organizations,
-          capital: country.capital,
-          currency: country.currency,
-          languages: country.languages,
-          timezone: country.timezone,
-          continent: country.continent,
-          flag: country.flag,
-          coordinates: country.coordinates,
-        });
-      });
-    } catch (error) {
-      console.error("Error loading static data:", error);
-    }
-  }
-
-  async updateCountryData(countryCode: string): Promise<any> {
-    const staticData = this.staticData.get(countryCode);
-    if (!staticData) {
-      throw new Error(`No static data found for country code: ${countryCode}`);
-    }
-
-    const originalData = await this.getOriginalCountryData(countryCode);
-
-    try {
-      const worldBankData = await this.worldBank.getCountryData(countryCode);
-      const worldGdpShare = await this.worldBank.getWorldGdpShare(countryCode);
-
-      const hasValidData =
-        (worldBankData.population || 0) > 0 ||
-        (worldBankData.gdpNominal || 0) > 0;
-
-      if (!hasValidData && originalData) {
-        return {
-          ...staticData,
-          population: originalData.population || 0,
-          gdpNominal: originalData.gdpNominal || 0,
-          worldGdpShare: originalData.worldGdpShare || 0,
-          debtToGdp: originalData.debtToGdp || 0,
-          controversies:
-            originalData.controversies || "No recent data available.",
-          spendingEfficiency:
-            originalData.spendingEfficiency || "Standard monitoring in place.",
-          revenue: originalData.revenue || [],
-          spending: originalData.spending || [],
-          lastUpdated: new Date().toISOString(),
-        };
+      const staticData = await CountryDataCache.getStaticCountryData(
+        countryCode
+      );
+      if (!staticData) {
+        throw new Error(`No static data found for country: ${countryCode}`);
       }
 
-      return {
-        ...staticData,
-        population: worldBankData.population || originalData?.population || 0,
-        gdpNominal: worldBankData.gdpNominal || originalData?.gdpNominal || 0,
-        worldGdpShare: worldGdpShare || originalData?.worldGdpShare || 0,
-        debtToGdp: worldBankData.debtToGdp || originalData?.debtToGdp || 0,
-        controversies:
-          originalData?.controversies || "No recent data available.",
-        spendingEfficiency:
-          originalData?.spendingEfficiency || "Standard monitoring in place.",
-        revenue: originalData?.revenue || [],
-        spending: originalData?.spending || [],
+      const worldBankData = await this.worldBankAPI.getCountryData(countryCode);
+      const gdpShare = await this.worldBankAPI.getWorldGdpShare(countryCode);
+
+      const updatedData: CountryRankingData = {
+        code: countryCode,
+        name: staticData.name,
+        population: worldBankData.population || 0,
+        gdpNominal: worldBankData.gdpNominal || 0,
+        worldGdpShare: gdpShare || 0,
+        debtToGdp: worldBankData.debtToGdp || 0,
+        controversies: "Data available via controversies API",
+        spendingEfficiency: "Standard monitoring in place",
         lastUpdated: new Date().toISOString(),
       };
+
+      return updatedData;
     } catch (error) {
-      if (originalData) {
-        return {
-          ...staticData,
-          population: originalData.population || 0,
-          gdpNominal: originalData.gdpNominal || 0,
-          worldGdpShare: originalData.worldGdpShare || 0,
-          debtToGdp: originalData.debtToGdp || 0,
-          controversies:
-            originalData.controversies || "No recent data available.",
-          spendingEfficiency:
-            originalData.spendingEfficiency || "Standard monitoring in place.",
-          revenue: originalData.revenue || [],
-          spending: originalData.spending || [],
-          lastUpdated: new Date().toISOString(),
-        };
-      }
-
-      throw error;
-    }
-  }
-
-  private async getOriginalCountryData(countryCode: string): Promise<any> {
-    try {
-      return staticCountries.find(
-        (country: any) => country.code === countryCode
+      throw new Error(
+        `Failed to update country data for ${countryCode}: ${error}`
       );
-    } catch (error) {
-      return null;
     }
   }
 
-  getStaticData(): any[] {
-    return staticCountries;
+  async getAllCountries(): Promise<CountryRankingData[]> {
+    const staticCountries = await CountryDataCache.getAllStaticCountries();
+    const countriesWithLiveData = await Promise.allSettled(
+      staticCountries.map(async (countryCode) => {
+        try {
+          return await this.updateCountryData(countryCode);
+        } catch (error) {
+          const staticData = await CountryDataCache.getStaticCountryData(
+            countryCode
+          );
+          return {
+            code: countryCode,
+            name: staticData?.name || countryCode,
+            population: 0,
+            gdpNominal: 0,
+            worldGdpShare: 0,
+            debtToGdp: 0,
+            controversies: "Data available via controversies API",
+            spendingEfficiency: "Standard monitoring in place",
+            lastUpdated: new Date().toISOString(),
+          };
+        }
+      })
+    );
+    return countriesWithLiveData.map((result) =>
+      result.status === "fulfilled"
+        ? result.value
+        : {
+            code: "unknown",
+            name: "Unknown",
+            population: 0,
+            gdpNominal: 0,
+            worldGdpShare: 0,
+            debtToGdp: 0,
+            controversies: "Data available via controversies API",
+            spendingEfficiency: "Standard monitoring in place",
+            lastUpdated: new Date().toISOString(),
+          }
+    );
+  }
+
+  async updateRankings(): Promise<void> {
+    const rankings = await this.getAllCountries();
+    if (rankings.length > 0) {
+      await CountryDataCache.setRankings(rankings);
+    }
+  }
+
+  async getRankings(): Promise<CountryRankingData[]> {
+    const cachedRankings = await CountryDataCache.getRankings();
+    if (cachedRankings && cachedRankings.length > 0) {
+      return cachedRankings;
+    }
+    await this.updateRankings();
+    const freshRankings = await CountryDataCache.getRankings();
+    return freshRankings || [];
+  }
+
+  async getStaticData(): Promise<StaticCountryData[]> {
+    const countryCodes = await CountryDataCache.getAllStaticCountries();
+    const countries = await Promise.all(
+      countryCodes.map((code) => CountryDataCache.getStaticCountryData(code))
+    );
+    return countries.filter(Boolean) as StaticCountryData[];
   }
 }

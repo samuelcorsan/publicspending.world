@@ -1,38 +1,30 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ValidTopic } from "@/types/country";
 import { DataUpdater } from "@/services/api/data-updater";
-import { unstable_cacheLife as cacheLife } from "next/cache";
+import { CountryDataCache, CountryRankingData } from "@/lib/redis";
+import { ValidTopic } from "@/types/country";
 
 const dataUpdater = new DataUpdater();
-const ITEMS_PER_PAGE = 20;
 
-const getValue = (country: any, topic: ValidTopic): number => {
+const getValue = (country: CountryRankingData, topic: ValidTopic): number => {
   switch (topic) {
+    case "population":
+      return country.population || 0;
     case "gdp-nominal":
       return country.gdpNominal || 0;
     case "world-gdp-share":
       return country.worldGdpShare || 0;
     case "spending":
-      return (
-        country.spending?.find((item: any) => item.subtype === "total")
-          ?.amount || 0
-      );
     case "revenue":
-      return (
-        country.revenue?.find((item: any) => item.subtype === "total")
-          ?.amount || 0
-      );
-    case "population":
-      return country.population || 0;
+      return 0;
     default:
       return 0;
   }
 };
 
 const sortCountries = (
-  countries: any[],
+  countries: CountryRankingData[],
   topic: ValidTopic,
-  sortOrder: "asc" | "desc" = "desc"
+  sortOrder: "asc" | "desc"
 ) => {
   return [...countries].sort((a, b) => {
     const aValue = getValue(a, topic);
@@ -49,41 +41,14 @@ const VALID_TOPICS: ValidTopic[] = [
   "revenue",
 ];
 
-async function getAllCountries(): Promise<any[]> {
-  "use cache";
-  cacheLife("weeks");
+async function getAllCountries(): Promise<CountryRankingData[]> {
+  const rankings = await dataUpdater.getRankings();
+  if (rankings.length > 0) {
+    return rankings;
+  }
 
-  const staticCountries = dataUpdater.getStaticData();
-
-  const countriesWithLiveData = await Promise.allSettled(
-    staticCountries.map(async (country) => {
-      try {
-        return await dataUpdater.updateCountryData(country.code);
-      } catch {
-        return {
-          ...country,
-          population: country.population || 0,
-          gdpNominal: country.gdpNominal || 0,
-          worldGdpShare: country.worldGdpShare || 0,
-          debtToGdp: 0,
-          lastUpdated: new Date().toISOString(),
-        };
-      }
-    })
-  );
-
-  return countriesWithLiveData.map((result, index) =>
-    result.status === "fulfilled"
-      ? result.value
-      : {
-          ...staticCountries[index],
-          population: staticCountries[index].population || 0,
-          gdpNominal: staticCountries[index].gdpNominal || 0,
-          worldGdpShare: staticCountries[index].worldGdpShare || 0,
-          debtToGdp: 60,
-          lastUpdated: new Date().toISOString(),
-        }
-  );
+  await dataUpdater.updateRankings();
+  return await dataUpdater.getRankings();
 }
 
 export async function GET(req: NextRequest) {
@@ -102,33 +67,52 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const allCountries = await getAllCountries();
-    const sortedCountries = sortCountries(allCountries, topic, sortOrder);
+    const countries = await getAllCountries();
+    const sortedCountries = sortCountries(countries, topic, sortOrder);
+    const pageSize = 20;
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedCountries = sortedCountries.slice(startIndex, endIndex);
+    const totalPages = Math.ceil(sortedCountries.length / pageSize);
 
-    const totalCountries = sortedCountries.length;
-    const totalPages = Math.ceil(totalCountries / ITEMS_PER_PAGE);
-    const startIndex = (page - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const formattedCountries = await Promise.all(
+      paginatedCountries.map(async (country, index) => {
+        const staticData = await CountryDataCache.getStaticCountryData(
+          country.code
+        );
+        return {
+          rank: startIndex + index + 1,
+          name: country.name,
+          code: country.code,
+          flag: `https://flagcdn.com/w40/${country.code.toLowerCase()}.png`,
+          capital: staticData?.capital || "",
+          gdpNominal: country.gdpNominal || 0,
+          worldGdpShare: country.worldGdpShare || 0,
+          population: country.population || 0,
+          spending: staticData?.spending || [],
+          revenue: staticData?.revenue || [],
+        };
+      })
+    );
 
-    const countriesForPage = sortedCountries.slice(startIndex, endIndex);
-    const countriesWithRank = countriesForPage.map((country, index) => ({
-      ...country,
-      rank: startIndex + index + 1,
-    }));
-
-    return NextResponse.json({
-      countries: countriesWithRank,
+    const response = {
+      countries: formattedCountries,
       pagination: {
         currentPage: page,
         totalPages,
-        totalCountries,
+        totalCountries: sortedCountries.length,
         hasNextPage: page < totalPages,
-        hasPreviousPage: page > 1,
+        hasPrevPage: page > 1,
       },
-    });
+      topic,
+      sortOrder,
+    };
+
+    return NextResponse.json(response);
   } catch (error) {
+    console.error("Error in countries API:", error);
     return NextResponse.json(
-      { error: "Failed to fetch countries data" },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }

@@ -13,6 +13,13 @@ import { SVGProps } from "react";
 import { useInfiniteCountries } from "@/hooks/use-infinite-countries";
 import { InfiniteScroll } from "@/components/ui/infinite-scroll";
 import { InlineErrorState } from "@/components/ui/error-state";
+import {
+  RankingListProps,
+  RankingHeaderProps,
+  LoadingStateProps,
+  TopicTitles,
+  RankingErrorStateProps,
+} from "@/types/ranking";
 
 const formatNumber = (num: number): string => {
   if (num >= 1e12) return `${(num / 1e12).toFixed(2)}T`;
@@ -45,14 +52,6 @@ const getValue = (country: Country, topic: ValidTopic): number => {
   }
 };
 
-export const TopicTitles: Record<ValidTopic, string> = {
-  population: "Population",
-  "gdp-nominal": "GDP (Nominal)",
-  "world-gdp-share": "World GDP Share",
-  spending: "Government Spending",
-  revenue: "Government Revenue",
-};
-
 export const TopicIcons: Record<
   ValidTopic,
   React.ComponentType<SVGProps<SVGSVGElement>>
@@ -64,11 +63,6 @@ export const TopicIcons: Record<
   revenue: BuildingLibraryIcon,
 };
 
-interface RankingListProps {
-  topic: ValidTopic;
-  showHeader?: boolean;
-}
-
 const getRankBadgeClass = (rank: number): string => {
   if (rank === 1) return "bg-yellow-100 text-yellow-700";
   if (rank === 2) return "bg-gray-100 text-gray-700";
@@ -76,13 +70,7 @@ const getRankBadgeClass = (rank: number): string => {
   return "text-gray-400";
 };
 
-const RankingHeader = ({
-  TopicIcon,
-  topicTitle,
-}: {
-  TopicIcon: any;
-  topicTitle: string;
-}) => (
+const RankingHeader = ({ TopicIcon, topicTitle }: RankingHeaderProps) => (
   <div className="px-6 py-6 bg-gray-50 border-b border-gray-200">
     <div className="flex items-center gap-3">
       <TopicIcon className="w-8 h-8 text-blue-600" />
@@ -102,11 +90,7 @@ const LoadingState = ({
   showHeader,
   TopicIcon,
   topicTitle,
-}: {
-  showHeader: boolean;
-  TopicIcon: any;
-  topicTitle: string;
-}) => (
+}: LoadingStateProps) => (
   <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
     {showHeader && (
       <RankingHeader TopicIcon={TopicIcon} topicTitle={topicTitle} />
@@ -152,12 +136,7 @@ const RankingErrorState = ({
   topicTitle,
   showHeader,
   onRetry,
-}: {
-  TopicIcon: any;
-  topicTitle: string;
-  showHeader: boolean;
-  onRetry?: () => void;
-}) => (
+}: RankingErrorStateProps) => (
   <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
     {showHeader && (
       <RankingHeader TopicIcon={TopicIcon} topicTitle={topicTitle} />

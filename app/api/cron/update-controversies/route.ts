@@ -80,14 +80,13 @@ async function processCountryBatch(
         success: true,
         processingTime,
       };
-    } catch (error: any) {
-      const processingTime = Date.now() - countryStartTime;
-
+    } catch (error) {
+      console.error("Error processing country:", countryCode, error);
       return {
-        country: countryInfo.name,
+        country: countryCode,
         success: false,
-        error: error.message,
-        processingTime,
+        error: error instanceof Error ? error.message : String(error),
+        processingTime: Date.now() - countryStartTime,
       };
     }
   };

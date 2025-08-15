@@ -1,7 +1,6 @@
 "use client";
 
 import { SearchBar } from "./search-bar";
-import countryData from "@/app/api/data.json";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 
@@ -11,6 +10,21 @@ const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
 });
 
 export default function Hero() {
+  const [countries, setCountries] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/all-countries")
+      .then((res) => res.json())
+      .then((data) => {
+        setCountries(data.countries || []);
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <div className="relative z-[1] w-full">
       <div className="relative h-[900px] w-full before:absolute before:inset-0 before:bottom-0 before:z-[1] md:before:[mask-image:radial-gradient(ellipse_30%_40%_at_50%_20%,transparent_50%,#000_100%)] before:[mask-image:radial-gradient(ellipse_70%_30%_at_50%_20%,transparent_50%,#000_100%)] before:bg-gray-50 dark:before:bg-black">
@@ -35,7 +49,7 @@ export default function Hero() {
               and gain insights into public financial transparency.
             </h2>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
-              <SearchBar countries={countryData} />
+              {!loading && <SearchBar countries={countries} />}
             </div>
           </div>
         </div>

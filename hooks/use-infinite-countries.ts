@@ -8,8 +8,8 @@ interface Country {
   population: number;
   gdpNominal: number;
   worldGdpShare: number;
-  revenue: any[];
-  spending: any[];
+  revenue: Array<{ name: string; subtype: string; amount: number }>;
+  spending: Array<{ name: string; subtype: string; amount: number }>;
   currency: string;
   capital?: string;
   debtToGdp?: number;

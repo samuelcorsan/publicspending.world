@@ -17,12 +17,7 @@ export default function Home() {
     fetch("/api/countries?page=1&topic=population&sortOrder=desc")
       .then((res) => {
         if (!res.ok) {
-          if (res.status === 429) {
-            throw new Error(
-              "Rate limit exceeded. Please wait before making more requests."
-            );
-          }
-          throw new Error(`Failed to load data (${res.status})`);
+          throw new Error("Failed to fetch data");
         }
         return res.json();
       })
@@ -30,7 +25,8 @@ export default function Home() {
         if (data.error) {
           throw new Error(data.error);
         }
-        setCountryData(data.countries || []);
+        const countries = data.countries || [];
+        setCountryData(countries);
         setLoading(false);
       })
       .catch((error) => {

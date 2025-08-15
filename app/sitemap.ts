@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import data from "./api/data.json";
+import { CountryDataCache } from "@/lib/redis";
 import { validTopics } from "@/types/country";
 
 const currentDate = new Date();
@@ -9,7 +9,7 @@ const getCountrySlug = (name: string): string => {
   return name.toLowerCase().replace(/\s+/g, "-");
 };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://publicspending.world";
 
   const staticRoutes = [
@@ -32,8 +32,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const countryRoutes = data.map((country) => ({
-    url: `${baseUrl}/${getCountrySlug(country.name)}`,
+  const allCountries = await CountryDataCache.getAllStaticCountries();
+  const countryData = await Promise.all(
+    allCountries.map(async (countryCode) => {
+      const data = await CountryDataCache.getStaticCountryData(countryCode);
+      return data;
+    })
+  );
+
+  const countryRoutes = countryData.filter(Boolean).map((country) => ({
+    url: `${baseUrl}/${getCountrySlug(country!.name)}`,
     lastModified: oneWeekAgo,
     changeFrequency: "weekly" as const,
     priority: 0.8,

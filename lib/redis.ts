@@ -1,8 +1,14 @@
 import { Redis } from "@upstash/redis";
 
+if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+  throw new Error(
+    "Missing Redis environment variables. Please set KV_REST_API_URL and KV_REST_API_TOKEN in your .env.local file"
+  );
+}
+
 export const redis = new Redis({
-  url: process.env.KV_REST_API_URL!,
-  token: process.env.KV_REST_API_TOKEN!,
+  url: process.env.KV_REST_API_URL,
+  token: process.env.KV_REST_API_TOKEN,
 });
 
 export const CACHE_KEYS = {
@@ -10,6 +16,9 @@ export const CACHE_KEYS = {
   LAST_UPDATE: "controversies:last_update",
   COUNTRY_DATA: (country: string) => `controversies:${country}`,
   ALL_COUNTRIES: "controversies:countries_list",
+  STATIC_COUNTRY_DATA: (country: string) => `static:${country}`,
+  ALL_STATIC_COUNTRIES: "static:countries_list",
+  RANKINGS: "rankings",
 } as const;
 
 export interface CachedControversyData {
@@ -28,6 +37,40 @@ export interface CachedControversyData {
   }>;
   lastUpdated: string;
   processingTime: number;
+}
+
+export interface StaticCountryData {
+  name: string;
+  code: string;
+  organizations: string[];
+  capital: string;
+  currency: string;
+  languages: string[];
+  timezone: string;
+  continent: string;
+  flag: string;
+  revenue: Array<{
+    name: string;
+    subtype: string;
+    amount: number;
+  }>;
+  spending: Array<{
+    name: string;
+    subtype: string;
+    amount: number;
+  }>;
+}
+
+export interface CountryRankingData {
+  code: string;
+  name: string;
+  population: number;
+  gdpNominal: number;
+  worldGdpShare: number;
+  debtToGdp: number;
+  controversies: string;
+  spendingEfficiency: string;
+  lastUpdated: string;
 }
 
 export class ControversiesCache {
@@ -106,6 +149,63 @@ export class ControversiesCache {
 
     pipeline.del(CACHE_KEYS.ALL_COUNTRIES);
     pipeline.del(CACHE_KEYS.LAST_UPDATE);
+
+    await pipeline.exec();
+  }
+}
+
+export class CountryDataCache {
+  static async setStaticCountryData(
+    countryCode: string,
+    data: StaticCountryData
+  ): Promise<void> {
+    const key = CACHE_KEYS.STATIC_COUNTRY_DATA(countryCode);
+    const pipeline = redis.pipeline();
+
+    pipeline.set(key, data);
+    pipeline.sadd(CACHE_KEYS.ALL_STATIC_COUNTRIES, countryCode);
+
+    await pipeline.exec();
+  }
+
+  static async getStaticCountryData(
+    countryCode: string
+  ): Promise<StaticCountryData | null> {
+    const key = CACHE_KEYS.STATIC_COUNTRY_DATA(countryCode);
+    const data = await redis.get(key);
+
+    if (!data) {
+      return null;
+    }
+
+    return data as StaticCountryData;
+  }
+
+  static async getAllStaticCountries(): Promise<string[]> {
+    return (await redis.smembers(CACHE_KEYS.ALL_STATIC_COUNTRIES)) || [];
+  }
+
+  static async setRankings(rankings: CountryRankingData[]): Promise<void> {
+    await redis.setex(CACHE_KEYS.RANKINGS, 24 * 60 * 60, rankings);
+  }
+
+  static async getRankings(): Promise<CountryRankingData[] | null> {
+    const data = await redis.get(CACHE_KEYS.RANKINGS);
+    if (!data) return null;
+
+    return data as CountryRankingData[];
+  }
+
+  static async clearAll(): Promise<void> {
+    const countries = await this.getAllStaticCountries();
+    const pipeline = redis.pipeline();
+
+    countries.forEach((country) => {
+      pipeline.del(CACHE_KEYS.STATIC_COUNTRY_DATA(country));
+    });
+
+    pipeline.del(CACHE_KEYS.ALL_STATIC_COUNTRIES);
+    pipeline.del(CACHE_KEYS.RANKINGS);
 
     await pipeline.exec();
   }

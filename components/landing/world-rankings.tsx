@@ -90,14 +90,11 @@ export function WorldRankings({ countries }: WorldRankingsProps) {
   };
 
   const getTopicData = (topic: ValidTopic) => {
-    let sortedData = countries.map((country) => ({
-      ...country,
-      flag: country.flag.replace("w40", "w320"),
-    }));
+    const sortedData = [...countries].sort((a, b) => {
+      return getValue(b, topic) - getValue(a, topic);
+    });
 
-    return sortedData
-      .sort((a, b) => getValue(b, topic) - getValue(a, topic))
-      .slice(0, 10);
+    return sortedData.slice(0, 10);
   };
 
   const handleCountrySelect = (countryName: string) => {

@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { validTopics } from "@/types/country";
-import { TopicTitles, TopicIcons } from "@/components/ranking/ranking-list";
+import { TopicTitles } from "@/types/ranking";
+import { TopicIcons } from "@/components/ranking/ranking-list";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function RankingPage() {

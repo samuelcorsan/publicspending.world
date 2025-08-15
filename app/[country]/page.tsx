@@ -195,18 +195,24 @@ export default async function CountryPage({ params }: Props) {
                     <Tooltip text="Government revenue sources and their amounts" />
                   </h3>
                   <div className="space-y-4">
-                    {countryData.revenue.map((item: any) => (
-                      <div
-                        key={item.name}
-                        className="flex items-center justify-between border-b border-gray-100 pb-4"
-                      >
-                        <span className="text-gray-700">{item.name}</span>
-                        <span className="font-medium text-gray-900">
-                          {(item.amount / 1e9).toFixed(2)}B{" "}
-                          {countryData.currency}
-                        </span>
-                      </div>
-                    ))}
+                    {countryData.revenue.map(
+                      (item: {
+                        name: string;
+                        subtype: string;
+                        amount: number;
+                      }) => (
+                        <div
+                          key={item.name}
+                          className="flex items-center justify-between border-b border-gray-100 pb-4"
+                        >
+                          <span className="text-gray-700">{item.name}</span>
+                          <span className="font-medium text-gray-900">
+                            {(item.amount / 1e9).toFixed(2)}B{" "}
+                            {countryData.currency}
+                          </span>
+                        </div>
+                      )
+                    )}
                   </div>
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
@@ -216,18 +222,24 @@ export default async function CountryPage({ params }: Props) {
                     <Tooltip text="Government spending allocation by category" />
                   </h3>
                   <div className="space-y-4">
-                    {countryData.spending.map((item: any) => (
-                      <div
-                        key={item.name}
-                        className="flex items-center justify-between border-b border-gray-100 pb-4"
-                      >
-                        <span className="text-gray-700">{item.name}</span>
-                        <span className="font-medium text-gray-900">
-                          {(item.amount / 1e9).toFixed(2)}B{" "}
-                          {countryData.currency}
-                        </span>
-                      </div>
-                    ))}
+                    {countryData.spending.map(
+                      (item: {
+                        name: string;
+                        subtype: string;
+                        amount: number;
+                      }) => (
+                        <div
+                          key={item.name}
+                          className="flex items-center justify-between border-b border-gray-100 pb-4"
+                        >
+                          <span className="text-gray-700">{item.name}</span>
+                          <span className="font-medium text-gray-900">
+                            {(item.amount / 1e9).toFixed(2)}B{" "}
+                            {countryData.currency}
+                          </span>
+                        </div>
+                      )
+                    )}
                   </div>
                 </section>
               </div>

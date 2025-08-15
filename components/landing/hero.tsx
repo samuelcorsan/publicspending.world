@@ -11,17 +11,12 @@ const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
 
 export default function Hero() {
   const [countries, setCountries] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/api/all-countries")
       .then((res) => res.json())
       .then((data) => {
         setCountries(data.countries || []);
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
       });
   }, []);
 

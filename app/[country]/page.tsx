@@ -296,21 +296,40 @@ export default async function CountryPage({ params }: Props) {
                       </div>
                     </div>
                   ) : (
-                    <p className="text-gray-700">
-                      {countryData.controversies ||
-                        "No major controversies reported."}
-                    </p>
+                    <div className="bg-blue-50 border border-blue-200 px-6 py-4 rounded-lg">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Clock className="w-6 h-6 text-blue-600" />
+                        <span className="text-lg font-semibold text-blue-800">
+                          No Controversies Data Yet
+                        </span>
+                      </div>
+                      <p className="text-blue-700 text-sm leading-relaxed">
+                        This country doesn't have controversies data yet. We're
+                        building a comprehensive system to track and analyze
+                        political controversies and government incidents across
+                        all countries in real-time.
+                      </p>
+                    </div>
                   )}
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
                   <h3 className="flex items-center text-2xl font-semibold text-gray-900 mb-4">
-                    <Gauge className="w-6 h-6 mr-2 text-yellow-500" />{" "}
+                    <Gauge className="w-6 h-6 mr-2 text-yellow-500" /> Spending
                     Efficiency
                   </h3>
-                  <p className="mb-2 text-gray-700">
-                    {countryData.spendingEfficiency ||
-                      "No efficiency data available."}
-                  </p>
+                  <div className="bg-yellow-50 border border-yellow-200 px-6 py-4 rounded-lg">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Clock className="w-6 h-6 text-yellow-600" />
+                      <span className="text-lg font-semibold text-yellow-800">
+                        Coming Soon
+                      </span>
+                    </div>
+                    <p className="text-yellow-700 text-sm leading-relaxed">
+                      We're adding spending efficiency metrics that will update
+                      in real-time, showing how effectively each country
+                      allocates and manages their government budget.
+                    </p>
+                  </div>
                 </section>
               </div>
             </TabsContent>

@@ -13,10 +13,26 @@ function formatCountryName(urlCountry: string): string {
 }
 
 async function getCountryWithFallback(countryEntry: StaticCountryData) {
-  const dataUpdater = new DataUpdater();
-
   try {
-    const liveData = await dataUpdater.updateCountryData(countryEntry.code);
+    let liveData = await CountryDataCache.getCountryLiveData(countryEntry.code);
+
+    if (!liveData) {
+      const cachedRankings = await CountryDataCache.getRankings();
+      if (cachedRankings) {
+        const foundRanking = cachedRankings.find(
+          (ranking) => ranking.code === countryEntry.code
+        );
+        if (foundRanking) {
+          liveData = foundRanking;
+        }
+      }
+    }
+
+    if (!liveData) {
+      const dataUpdater = new DataUpdater();
+      liveData = await dataUpdater.updateCountryData(countryEntry.code);
+    }
+
     return {
       name: countryEntry.name,
       code: countryEntry.code,
@@ -29,14 +45,14 @@ async function getCountryWithFallback(countryEntry: StaticCountryData) {
       flag: countryEntry.flag || "",
       revenue: countryEntry.revenue || [],
       spending: countryEntry.spending || [],
-      population: liveData.population || 0,
-      gdpNominal: liveData.gdpNominal || 0,
-      worldGdpShare: liveData.worldGdpShare || 0,
-      debtToGdp: liveData.debtToGdp || 0,
+      population: liveData?.population || 0,
+      gdpNominal: liveData?.gdpNominal || 0,
+      worldGdpShare: liveData?.worldGdpShare || 0,
+      debtToGdp: liveData?.debtToGdp || 0,
       controversies: "Data available via controversies API",
       spendingEfficiency: "Standard monitoring in place",
       national_incidents: [],
-      lastUpdated: liveData.lastUpdated,
+      lastUpdated: liveData?.lastUpdated || new Date().toISOString(),
     };
   } catch {
     return {
@@ -67,57 +83,72 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ country: string }> }
 ) {
+  const startTime = Date.now();
+
   try {
     const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
-    const allCountries = await CountryDataCache.getAllStaticCountries();
-    let countryEntry = null;
+    const [allCountries, cachedRankings] = await Promise.all([
+      CountryDataCache.getAllStaticCountries(),
+      CountryDataCache.getRankings(),
+    ]);
 
-    for (const countryCode of allCountries) {
+    const countryMap = new Map<string, StaticCountryData>();
+    const countryNameMap = new Map<string, string>();
+
+    const staticDataPromises = allCountries.map(async (countryCode) => {
       const data = await CountryDataCache.getStaticCountryData(countryCode);
-      if (data && data.name === formattedCountryName) {
-        countryEntry = data;
-        break;
+      if (data) {
+        countryMap.set(countryCode, data);
+        countryNameMap.set(data.name.toLowerCase(), countryCode);
+        countryNameMap.set(
+          data.name.toLowerCase().replace(/\s+/g, "-"),
+          countryCode
+        );
+        countryNameMap.set(
+          data.name.toLowerCase().replace(/\s+/g, ""),
+          countryCode
+        );
       }
-    }
+    });
 
-    if (!countryEntry) {
-      for (const countryCode of allCountries) {
-        const data = await CountryDataCache.getStaticCountryData(countryCode);
-        if (
-          data &&
-          data.name.toLowerCase() === formattedCountryName.toLowerCase()
-        ) {
-          countryEntry = data;
+    await Promise.all(staticDataPromises);
+
+    let countryCode = countryNameMap.get(formattedCountryName.toLowerCase());
+
+    if (!countryCode) {
+      const searchWords = formattedCountryName.toLowerCase().split(" ");
+      for (const [name, code] of countryNameMap.entries()) {
+        const itemWords = name.split(" ");
+        if (searchWords.every((word: string) => itemWords.includes(word))) {
+          countryCode = code;
           break;
         }
       }
     }
 
-    if (!countryEntry) {
-      const searchWords = formattedCountryName.toLowerCase().split(" ");
-      for (const countryCode of allCountries) {
-        const data = await CountryDataCache.getStaticCountryData(countryCode);
-        if (data) {
-          const itemWords = data.name.toLowerCase().split(" ");
-          if (searchWords.every((word: string) => itemWords.includes(word))) {
-            countryEntry = data;
-            break;
-          }
-        }
-      }
+    if (!countryCode) {
+      return NextResponse.json({ error: "Country not found" }, { status: 404 });
     }
 
+    const countryEntry = countryMap.get(countryCode);
     if (!countryEntry) {
-      return NextResponse.json({ error: "Country not found" }, { status: 404 });
+      return NextResponse.json(
+        { error: "Country data not found" },
+        { status: 404 }
+      );
     }
 
     const countryData = await getCountryWithFallback(countryEntry);
 
+    const responseTime = Date.now() - startTime;
+    console.log(`Country API response time: ${responseTime}ms for ${country}`);
+
     return NextResponse.json(countryData);
   } catch (error) {
-    console.error("Error in country name API:", error);
+    const responseTime = Date.now() - startTime;
+    console.error(`Country API error after ${responseTime}ms:`, error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

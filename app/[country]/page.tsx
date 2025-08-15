@@ -12,57 +12,87 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { ControversyData, COUNTRY_CODE_MAP } from "@/types/controversies";
+import { Suspense } from "react";
 
 type Props = {
   params: Promise<{ country: string }>;
 };
 
+// Cache the fetch requests to avoid duplicate calls
+const fetchCache = new Map<string, Promise<any>>();
+
 async function getCountryData(country: string) {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
-    const url = `${baseUrl}/api/name/${country}`;
+  const cacheKey = `country:${country}`;
 
-    const res = await fetch(url);
-
-    if (!res.ok) {
-      if (res.status === 404) {
-        notFound();
-      }
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    throw error;
+  if (fetchCache.has(cacheKey)) {
+    return fetchCache.get(cacheKey);
   }
+
+  const promise = (async () => {
+    try {
+      const baseUrl =
+        process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
+      const url = `${baseUrl}/api/name/${country}`;
+
+      const res = await fetch(url, {
+        next: { revalidate: 3600 }, // Cache for 1 hour
+      });
+
+      if (!res.ok) {
+        if (res.status === 404) {
+          notFound();
+        }
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  })();
+
+  fetchCache.set(cacheKey, promise);
+  return promise;
 }
 
 async function getControversyData(
   country: string
 ): Promise<ControversyData | null> {
-  try {
-    const countryCode = COUNTRY_CODE_MAP[country.toLowerCase()];
-    if (!countryCode) {
-      return null;
-    }
+  const cacheKey = `controversy:${country}`;
 
-    const baseUrl =
-      process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
-    const url = `${baseUrl}/api/get-controversies?country=${countryCode}`;
-
-    const res = await fetch(url);
-
-    if (!res.ok) {
-      return null;
-    }
-
-    const data = await res.json();
-    return data.success ? data : null;
-  } catch {
-    return null;
+  if (fetchCache.has(cacheKey)) {
+    return fetchCache.get(cacheKey);
   }
+
+  const promise = (async () => {
+    try {
+      const countryCode = COUNTRY_CODE_MAP[country.toLowerCase()];
+      if (!countryCode) {
+        return null;
+      }
+
+      const baseUrl =
+        process.env.NEXT_PUBLIC_APP_BASE_URL || "http://localhost:3000";
+      const url = `${baseUrl}/api/get-controversies?country=${countryCode}`;
+
+      const res = await fetch(url, {
+        next: { revalidate: 3600 }, // Cache for 1 hour
+      });
+
+      if (!res.ok) {
+        return null;
+      }
+
+      const data = await res.json();
+      return data.success ? data : null;
+    } catch {
+      return null;
+    }
+  })();
+
+  fetchCache.set(cacheKey, promise);
+  return promise;
 }
 
 export default async function CountryPage({ params }: Props) {
@@ -129,14 +159,20 @@ export default async function CountryPage({ params }: Props) {
 
         <div className="bg-white border-b">
           <div className="container mx-auto px-4 py-12">
-            <AnimatedCountryStats
-              name={countryData.name}
-              code={countryData.code}
-              gdpNominal={countryData.gdpNominal}
-              population={countryData.population}
-              capital={countryData.capital}
-              currency={countryData.currency}
-            />
+            <Suspense
+              fallback={
+                <div className="h-32 bg-gray-100 animate-pulse rounded-lg" />
+              }
+            >
+              <AnimatedCountryStats
+                name={countryData.name}
+                code={countryData.code}
+                gdpNominal={countryData.gdpNominal}
+                population={countryData.population}
+                capital={countryData.capital}
+                currency={countryData.currency}
+              />
+            </Suspense>
 
             <div className="max-w-4xl mx-auto">
               <h3 className="text-lg text-gray-900 mb-3 text-center font-bold">
@@ -181,10 +217,22 @@ export default async function CountryPage({ params }: Props) {
             <TabsContent value="overview">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <section className="bg-white rounded-xl shadow-sm p-8">
-                  <RevenuePieChart countryData={countryData} />
+                  <Suspense
+                    fallback={
+                      <div className="h-64 bg-gray-100 animate-pulse rounded-lg" />
+                    }
+                  >
+                    <RevenuePieChart countryData={countryData} />
+                  </Suspense>
                 </section>
                 <section className="bg-white rounded-xl shadow-sm p-8">
-                  <SpendingPieChart countryData={countryData} />
+                  <Suspense
+                    fallback={
+                      <div className="h-64 bg-gray-100 animate-pulse rounded-lg" />
+                    }
+                  >
+                    <SpendingPieChart countryData={countryData} />
+                  </Suspense>
                 </section>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

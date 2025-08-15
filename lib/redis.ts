@@ -19,6 +19,7 @@ export const CACHE_KEYS = {
   STATIC_COUNTRY_DATA: (country: string) => `static:${country}`,
   ALL_STATIC_COUNTRIES: "static:countries_list",
   RANKINGS: "rankings",
+  COUNTRY_LIVE_DATA: (country: string) => `live:${country}`,
 } as const;
 
 export interface CachedControversyData {
@@ -196,12 +197,30 @@ export class CountryDataCache {
     return data as CountryRankingData[];
   }
 
+  static async setCountryLiveData(
+    countryCode: string,
+    data: CountryRankingData
+  ): Promise<void> {
+    const key = CACHE_KEYS.COUNTRY_LIVE_DATA(countryCode);
+    await redis.setex(key, 24 * 60 * 60, data);
+  }
+
+  static async getCountryLiveData(
+    countryCode: string
+  ): Promise<CountryRankingData | null> {
+    const key = CACHE_KEYS.COUNTRY_LIVE_DATA(countryCode);
+    const data = await redis.get(key);
+    if (!data) return null;
+    return data as CountryRankingData;
+  }
+
   static async clearAll(): Promise<void> {
     const countries = await this.getAllStaticCountries();
     const pipeline = redis.pipeline();
 
     countries.forEach((country) => {
       pipeline.del(CACHE_KEYS.STATIC_COUNTRY_DATA(country));
+      pipeline.del(CACHE_KEYS.COUNTRY_LIVE_DATA(country));
     });
 
     pipeline.del(CACHE_KEYS.ALL_STATIC_COUNTRIES);

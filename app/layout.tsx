@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     title: "publicspending.world - Global Government Budget Data",
     description:
       "Explore public spending data from 190+ countries worldwide. Compare government budgets and fiscal transparency.",
-    images: ["/og-image.jpg"],
+    images: ["https://publicspending.world/og-image.jpg"],
   },
   robots: {
     index: true,

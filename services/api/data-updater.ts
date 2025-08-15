@@ -14,6 +14,11 @@ export class DataUpdater {
 
   async updateCountryData(countryCode: string) {
     try {
+      const cachedData = await CountryDataCache.getCountryLiveData(countryCode);
+      if (cachedData) {
+        return cachedData;
+      }
+
       const staticData = await CountryDataCache.getStaticCountryData(
         countryCode
       );
@@ -35,6 +40,9 @@ export class DataUpdater {
         spendingEfficiency: "Standard monitoring in place",
         lastUpdated: new Date().toISOString(),
       };
+
+      // Cache the live data for future requests
+      await CountryDataCache.setCountryLiveData(countryCode, updatedData);
 
       return updatedData;
     } catch (error) {
@@ -89,6 +97,11 @@ export class DataUpdater {
     const rankings = await this.getAllCountries();
     if (rankings.length > 0) {
       await CountryDataCache.setRankings(rankings);
+
+      const cachePromises = rankings.map((ranking) =>
+        CountryDataCache.setCountryLiveData(ranking.code, ranking)
+      );
+      await Promise.allSettled(cachePromises);
     }
   }
 
@@ -97,6 +110,7 @@ export class DataUpdater {
     if (cachedRankings && cachedRankings.length > 0) {
       return cachedRankings;
     }
+
     await this.updateRankings();
     const freshRankings = await CountryDataCache.getRankings();
     return freshRankings || [];

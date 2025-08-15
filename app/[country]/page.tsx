@@ -304,10 +304,10 @@ export default async function CountryPage({ params }: Props) {
                         </span>
                       </div>
                       <p className="text-blue-700 text-sm leading-relaxed">
-                        This country doesn't have controversies data yet. We're
-                        building a comprehensive system to track and analyze
-                        political controversies and government incidents across
-                        all countries in real-time.
+                        This country doesn&apos;t have controversies data yet.
+                        We&apos;re building a comprehensive system to track and
+                        analyze political controversies and government incidents
+                        across all countries in real-time.
                       </p>
                     </div>
                   )}
@@ -325,8 +325,8 @@ export default async function CountryPage({ params }: Props) {
                       </span>
                     </div>
                     <p className="text-yellow-700 text-sm leading-relaxed">
-                      We're adding spending efficiency metrics that will update
-                      in real-time, showing how effectively each country
+                      We&apos;re adding spending efficiency metrics that will
+                      update in real-time, showing how effectively each country
                       allocates and manages their government budget.
                     </p>
                   </div>

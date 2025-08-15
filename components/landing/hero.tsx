@@ -49,7 +49,7 @@ export default function Hero() {
               and gain insights into public financial transparency.
             </h2>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
-              {!loading && <SearchBar countries={countries} />}
+              <SearchBar countries={countries} />
             </div>
           </div>
         </div>

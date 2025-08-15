@@ -89,9 +89,8 @@ export async function GET(
     const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
-    const [allCountries, cachedRankings] = await Promise.all([
+    const [allCountries] = await Promise.all([
       CountryDataCache.getAllStaticCountries(),
-      CountryDataCache.getRankings(),
     ]);
 
     const countryMap = new Map<string, StaticCountryData>();

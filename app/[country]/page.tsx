@@ -18,14 +18,13 @@ type Props = {
   params: Promise<{ country: string }>;
 };
 
-// Cache the fetch requests to avoid duplicate calls
-const fetchCache = new Map<string, Promise<any>>();
+const fetchCache = new Map<string, Promise<unknown>>();
 
 async function getCountryData(country: string) {
   const cacheKey = `country:${country}`;
 
   if (fetchCache.has(cacheKey)) {
-    return fetchCache.get(cacheKey);
+    return fetchCache.get(cacheKey) as Promise<unknown>;
   }
 
   const promise = (async () => {
@@ -35,7 +34,7 @@ async function getCountryData(country: string) {
       const url = `${baseUrl}/api/name/${country}`;
 
       const res = await fetch(url, {
-        next: { revalidate: 3600 }, // Cache for 1 hour
+        next: { revalidate: 3600 },
       });
 
       if (!res.ok) {
@@ -62,7 +61,7 @@ async function getControversyData(
   const cacheKey = `controversy:${country}`;
 
   if (fetchCache.has(cacheKey)) {
-    return fetchCache.get(cacheKey);
+    return fetchCache.get(cacheKey) as Promise<ControversyData | null>;
   }
 
   const promise = (async () => {
@@ -77,7 +76,7 @@ async function getControversyData(
       const url = `${baseUrl}/api/get-controversies?country=${countryCode}`;
 
       const res = await fetch(url, {
-        next: { revalidate: 3600 }, // Cache for 1 hour
+        next: { revalidate: 3600 },
       });
 
       if (!res.ok) {

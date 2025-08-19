@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { CountryDataCache, StaticCountryData } from "@/lib/redis";
+import { redis, StaticCountryData, CountryRankingData } from "@/lib/redis";
 import { DataUpdater } from "@/services/api/data-updater";
 
 function formatCountryName(urlCountry: string): string {
@@ -14,23 +14,25 @@ function formatCountryName(urlCountry: string): string {
 
 async function getCountryWithFallback(countryEntry: StaticCountryData) {
   try {
-    let liveData = await CountryDataCache.getCountryLiveData(countryEntry.code);
+    const cachedRankings = await redis.get("rankings") as CountryRankingData[] | null;
+    let liveData: CountryRankingData | null = null;
 
-    if (!liveData) {
-      const cachedRankings = await CountryDataCache.getRankings();
-      if (cachedRankings) {
-        const foundRanking = cachedRankings.find(
-          (ranking) => ranking.code === countryEntry.code
-        );
-        if (foundRanking) {
-          liveData = foundRanking;
-        }
+    if (cachedRankings) {
+      const foundRanking = cachedRankings.find(
+        (ranking) => ranking.code === countryEntry.code
+      );
+      if (foundRanking) {
+        liveData = foundRanking;
       }
     }
 
     if (!liveData) {
-      const dataUpdater = new DataUpdater();
-      liveData = await dataUpdater.updateCountryData(countryEntry.code);
+      try {
+        const dataUpdater = new DataUpdater();
+        liveData = await dataUpdater.updateCountryData(countryEntry.code);
+      } catch (error) {
+        liveData = null;
+      }
     }
 
     return {
@@ -54,7 +56,7 @@ async function getCountryWithFallback(countryEntry: StaticCountryData) {
       national_incidents: [],
       lastUpdated: liveData?.lastUpdated || new Date().toISOString(),
     };
-  } catch {
+  } catch (error) {
     return {
       name: countryEntry.name,
       code: countryEntry.code,
@@ -89,60 +91,55 @@ export async function GET(
     const { country } = await params;
     const formattedCountryName = formatCountryName(country);
 
-    const [allCountries] = await Promise.all([
-      CountryDataCache.getAllStaticCountries(),
-    ]);
+    // Try common country codes first (optimization for common cases)
+    const commonCodes = [
+      formattedCountryName.slice(0, 2).toUpperCase(),
+      formattedCountryName === "denmark" ? "DK" : null,
+      formattedCountryName === "china" ? "CN" : null,
+      formattedCountryName === "united-states" ? "US" : null,
+      formattedCountryName === "united-kingdom" ? "GB" : null,
+    ].filter(Boolean) as string[];
 
-    const countryMap = new Map<string, StaticCountryData>();
-    const countryNameMap = new Map<string, string>();
+    let countryEntry: StaticCountryData | null = null;
+    let targetCountryCode: string | null = null;
 
-    const staticDataPromises = allCountries.map(async (countryCode) => {
-      const data = await CountryDataCache.getStaticCountryData(countryCode);
-      if (data) {
-        countryMap.set(countryCode, data);
-        countryNameMap.set(data.name.toLowerCase(), countryCode);
-        countryNameMap.set(
-          data.name.toLowerCase().replace(/\s+/g, "-"),
-          countryCode
-        );
-        countryNameMap.set(
-          data.name.toLowerCase().replace(/\s+/g, ""),
-          countryCode
-        );
+    // Try direct code lookup first
+    for (const code of commonCodes) {
+      const data = await redis.get(`static:${code}`) as StaticCountryData | null;
+      if (data && data.name.toLowerCase().replace(/\s+/g, "-") === formattedCountryName.toLowerCase()) {
+        countryEntry = data;
+        targetCountryCode = code;
+        break;
       }
-    });
+    }
 
-    await Promise.all(staticDataPromises);
-
-    let countryCode = countryNameMap.get(formattedCountryName.toLowerCase());
-
-    if (!countryCode) {
-      const searchWords = formattedCountryName.toLowerCase().split(" ");
-      for (const [name, code] of countryNameMap.entries()) {
-        const itemWords = name.split(" ");
-        if (searchWords.every((word: string) => itemWords.includes(word))) {
-          countryCode = code;
-          break;
+    // If not found, fallback to searching all countries
+    if (!countryEntry) {
+      const allCountries = (await redis.smembers("static:countries_list")) || [];
+      
+      for (const countryCode of allCountries) {
+        const data = await redis.get(`static:${countryCode}`) as StaticCountryData | null;
+        if (data) {
+          const nameVariations = [
+            data.name.toLowerCase(),
+            data.name.toLowerCase().replace(/\s+/g, "-"),
+            data.name.toLowerCase().replace(/\s+/g, "")
+          ];
+          
+          if (nameVariations.includes(formattedCountryName.toLowerCase())) {
+            targetCountryCode = countryCode;
+            countryEntry = data;
+            break;
+          }
         }
       }
     }
 
-    if (!countryCode) {
+    if (!targetCountryCode || !countryEntry) {
       return NextResponse.json({ error: "Country not found" }, { status: 404 });
     }
 
-    const countryEntry = countryMap.get(countryCode);
-    if (!countryEntry) {
-      return NextResponse.json(
-        { error: "Country data not found" },
-        { status: 404 }
-      );
-    }
-
     const countryData = await getCountryWithFallback(countryEntry);
-
-    const responseTime = Date.now() - startTime;
-    console.log(`Country API response time: ${responseTime}ms for ${country}`);
 
     return NextResponse.json(countryData);
   } catch (error) {

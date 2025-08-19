@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { DataUpdater } from "@/services/api/data-updater";
-import { CountryDataCache, CountryRankingData } from "@/lib/redis";
+import { redis, CountryRankingData, StaticCountryData } from "@/lib/redis";
 import { ValidTopic } from "@/types/country";
 
 const dataUpdater = new DataUpdater();
@@ -57,10 +57,10 @@ export async function GET(req: NextRequest) {
     const mode = searchParams.get("mode");
 
     if (mode === "search") {
-      const allCountries = await CountryDataCache.getAllStaticCountries();
+      const allCountries = (await redis.smembers("static:countries_list")) || [];
       const countriesData = await Promise.all(
         allCountries.map(async (countryCode) => {
-          const data = await CountryDataCache.getStaticCountryData(countryCode);
+          const data = await redis.get(`static:${countryCode}`) as StaticCountryData | null;
           return data;
         })
       );
@@ -94,9 +94,7 @@ export async function GET(req: NextRequest) {
 
     const formattedCountries = await Promise.all(
       paginatedCountries.map(async (country, index) => {
-        const staticData = await CountryDataCache.getStaticCountryData(
-          country.code
-        );
+        const staticData = await redis.get(`static:${country.code}`) as StaticCountryData | null;
         return {
           rank: startIndex + index + 1,
           name: country.name,

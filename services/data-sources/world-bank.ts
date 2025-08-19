@@ -1,4 +1,3 @@
-import { CountryDataCache } from "@/lib/redis";
 
 interface WorldBankIndicator {
   indicator: {

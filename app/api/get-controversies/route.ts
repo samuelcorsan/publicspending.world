@@ -4,7 +4,7 @@ import { NewsService } from "@/services/controversies/news-service";
 import { AIService } from "@/services/controversies/ai-service";
 import { validateControversiesParams } from "@/lib/validation";
 import { APIResponse } from "@/types/controversies";
-import { ControversiesCache } from "@/lib/redis";
+import { redis, CachedControversyData } from "@/lib/redis";
 
 const newsService = new NewsService();
 const aiService = new AIService();
@@ -29,7 +29,16 @@ export async function GET(
 
     const { country, limit } = validation.data;
 
-    const cachedData = await ControversiesCache.getCountryData(country);
+    const cachedDataRaw = await redis.get(`controversies:${country}`);
+    let cachedData: CachedControversyData | null = null;
+    
+    if (cachedDataRaw && typeof cachedDataRaw === "string") {
+      try {
+        cachedData = JSON.parse(cachedDataRaw) as CachedControversyData;
+      } catch {
+        cachedData = null;
+      }
+    }
 
     if (cachedData) {
       const limitedArticles = cachedData.articles.slice(0, limit);

@@ -1,6 +1,6 @@
 import { WorldBankAPI } from "@/services/data-sources/world-bank";
 import {
-  CountryDataCache,
+  redis,
   StaticCountryData,
   CountryRankingData,
 } from "@/lib/redis";
@@ -14,14 +14,7 @@ export class DataUpdater {
 
   async updateCountryData(countryCode: string) {
     try {
-      const cachedData = await CountryDataCache.getCountryLiveData(countryCode);
-      if (cachedData) {
-        return cachedData;
-      }
-
-      const staticData = await CountryDataCache.getStaticCountryData(
-        countryCode
-      );
+      const staticData = await redis.get(`static:${countryCode}`) as StaticCountryData | null;
       if (!staticData) {
         throw new Error(`No static data found for country: ${countryCode}`);
       }
@@ -41,9 +34,6 @@ export class DataUpdater {
         lastUpdated: new Date().toISOString(),
       };
 
-      // Cache the live data for future requests
-      await CountryDataCache.setCountryLiveData(countryCode, updatedData);
-
       return updatedData;
     } catch (error) {
       throw new Error(
@@ -53,15 +43,13 @@ export class DataUpdater {
   }
 
   async getAllCountries(): Promise<CountryRankingData[]> {
-    const staticCountries = await CountryDataCache.getAllStaticCountries();
+    const staticCountries = (await redis.smembers("static:countries_list")) || [];
     const countriesWithLiveData = await Promise.allSettled(
       staticCountries.map(async (countryCode) => {
         try {
           return await this.updateCountryData(countryCode);
         } catch (error) {
-          const staticData = await CountryDataCache.getStaticCountryData(
-            countryCode
-          );
+          const staticData = await redis.get(`static:${countryCode}`) as StaticCountryData | null;
           return {
             code: countryCode,
             name: staticData?.name || countryCode,
@@ -96,30 +84,25 @@ export class DataUpdater {
   async updateRankings(): Promise<void> {
     const rankings = await this.getAllCountries();
     if (rankings.length > 0) {
-      await CountryDataCache.setRankings(rankings);
-
-      const cachePromises = rankings.map((ranking) =>
-        CountryDataCache.setCountryLiveData(ranking.code, ranking)
-      );
-      await Promise.allSettled(cachePromises);
+      await redis.setex("rankings", 24 * 60 * 60, rankings);
     }
   }
 
   async getRankings(): Promise<CountryRankingData[]> {
-    const cachedRankings = await CountryDataCache.getRankings();
+    const cachedRankings = await redis.get("rankings") as CountryRankingData[] | null;
     if (cachedRankings && cachedRankings.length > 0) {
       return cachedRankings;
     }
 
     await this.updateRankings();
-    const freshRankings = await CountryDataCache.getRankings();
+    const freshRankings = await redis.get("rankings") as CountryRankingData[] | null;
     return freshRankings || [];
   }
 
   async getStaticData(): Promise<StaticCountryData[]> {
-    const countryCodes = await CountryDataCache.getAllStaticCountries();
+    const countryCodes = (await redis.smembers("static:countries_list")) || [];
     const countries = await Promise.all(
-      countryCodes.map((code) => CountryDataCache.getStaticCountryData(code))
+      countryCodes.map(async (code) => await redis.get(`static:${code}`) as StaticCountryData | null)
     );
     return countries.filter(Boolean) as StaticCountryData[];
   }

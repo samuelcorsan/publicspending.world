@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { CountryDataCache } from "@/lib/redis";
+import { redis, StaticCountryData } from "@/lib/redis";
 import { validTopics } from "@/types/country";
 
 const currentDate = new Date();
@@ -31,10 +31,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const allCountries = await CountryDataCache.getAllStaticCountries();
+  const allCountries = (await redis.smembers("static:countries_list")) || [];
   const countryData = await Promise.all(
     allCountries.map(async (countryCode) => {
-      const data = await CountryDataCache.getStaticCountryData(countryCode);
+      const data = await redis.get(`static:${countryCode}`) as StaticCountryData | null;
       return data;
     })
   );

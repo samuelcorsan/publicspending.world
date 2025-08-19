@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { COUNTRIES } from "@/constants/controversies-countries";
 import { NewsService } from "@/services/controversies/news-service";
 import { AIService } from "@/services/controversies/ai-service";
-import { ControversiesCache, CachedControversyData } from "@/lib/redis";
+import { redis, CachedControversyData } from "@/lib/redis";
 import { Country } from "@/types/controversies";
 
 const newsService = new NewsService();
@@ -32,7 +32,16 @@ async function processCountryBatch(
     const countryStartTime = Date.now();
 
     try {
-      const existingData = await ControversiesCache.getCountryData(countryCode);
+      const existingDataRaw = await redis.get(`controversies:${countryCode}`);
+      let existingData: CachedControversyData | null = null;
+      
+      if (existingDataRaw && typeof existingDataRaw === "string") {
+        try {
+          existingData = JSON.parse(existingDataRaw) as CachedControversyData;
+        } catch {
+          existingData = null;
+        }
+      }
       const now = Date.now();
       const sixDaysAgo = now - 6 * 24 * 60 * 60 * 1000;
 
@@ -76,7 +85,11 @@ async function processCountryBatch(
         processingTime,
       };
 
-      await ControversiesCache.setCountryData(countryCode, cachedData);
+      await redis.pipeline()
+        .setex(`controversies:${countryCode}`, 8 * 24 * 60 * 60, JSON.stringify(cachedData))
+        .sadd("controversies:countries_list", countryCode)
+        .set("controversies:last_update", new Date().toISOString())
+        .exec();
 
       return {
         country: countryInfo.name,
@@ -163,7 +176,17 @@ export async function POST(request: NextRequest) {
   const totalTime = Date.now() - startTime;
   const successCount = results.filter((r) => r.success).length;
   const errorCount = results.filter((r) => !r.success).length;
-  const cacheStats = await ControversiesCache.getCacheStats();
+  const pipeline = redis.pipeline();
+  pipeline.scard("controversies:countries_list");
+  pipeline.get("controversies:last_update");
+  pipeline.smembers("controversies:countries_list");
+  
+  const cacheResults = await pipeline.exec();
+  const cacheStats = {
+    totalCountries: (cacheResults[0] as number) || 0,
+    lastUpdate: (cacheResults[1] as string) || null,
+    availableCountries: (cacheResults[2] as string[]) || [],
+  };
 
   return NextResponse.json({
     success: true,

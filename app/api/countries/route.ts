@@ -54,7 +54,29 @@ export async function GET(req: NextRequest) {
     const sortOrder = (searchParams.get("sortOrder") || "desc") as
       | "asc"
       | "desc";
+    const mode = searchParams.get("mode");
 
+    if (mode === "search") {
+      const allCountries = await CountryDataCache.getAllStaticCountries();
+      const countriesData = await Promise.all(
+        allCountries.map(async (countryCode) => {
+          const data = await CountryDataCache.getStaticCountryData(countryCode);
+          return data;
+        })
+      );
+
+      const formattedCountries = countriesData
+        .filter(Boolean)
+        .map((country) => ({
+          name: country!.name,
+          code: country!.code,
+          flag: `https://flagcdn.com/w40/${country!.code.toLowerCase()}.png`,
+          capital: country!.capital || "",
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      return NextResponse.json({ countries: formattedCountries });
+    }
     if (!topic || !VALID_TOPICS.includes(topic)) {
       return NextResponse.json(
         { error: "Invalid topic parameter" },

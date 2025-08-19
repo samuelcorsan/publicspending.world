@@ -18,7 +18,7 @@ export default function Hero() {
     setIsLoading(true);
     setError(null);
 
-    fetch("/api/all-countries")
+    fetch("/api/countries?mode=search")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch countries");

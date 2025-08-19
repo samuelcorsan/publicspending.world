@@ -18,7 +18,8 @@ export async function GET() {
         code: country!.code,
         flag: `https://flagcdn.com/w40/${country!.code.toLowerCase()}.png`,
         capital: country!.capital || "",
-      }));
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
 
     return NextResponse.json({ countries: formattedCountries });
   } catch (error) {

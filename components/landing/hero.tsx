@@ -11,18 +11,34 @@ const DynamicGlobe = dynamic(() => import("@/components/landing/globe"), {
 
 export default function Hero() {
   const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setIsLoading(true);
+    setError(null);
+
     fetch("/api/all-countries")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch countries");
+        }
+        return res.json();
+      })
       .then((data) => {
         setCountries(data.countries || []);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching countries:", err);
+        setError(err.message || "Failed to load countries");
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <div className="relative z-[1] w-full">
-      <div className="relative h-[900px] w-full before:absolute before:inset-0 before:bottom-0 before:z-[1] md:before:[mask-image:radial-gradient(ellipse_30%_40%_at_50%_20%,transparent_50%,#000_100%)] before:[mask-image:radial-gradient(ellipse_70%_30%_at_50%_20%,transparent_50%,#000_100%)] before:bg-gray-50 dark:before:bg-black">
+      <div className="relative h-[820px] w-full before:absolute before:inset-0 before:bottom-0 before:z-[1] md:before:[mask-image:radial-gradient(ellipse_30%_40%_at_50%_20%,transparent_50%,#000_100%)] before:[mask-image:radial-gradient(ellipse_70%_30%_at_50%_20%,transparent_50%,#000_100%)] before:bg-gray-50 dark:before:bg-black">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-100 to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
           <div className="h-full w-full flex items-center justify-center"></div>
         </div>
@@ -44,7 +60,11 @@ export default function Hero() {
               and gain insights into public financial transparency.
             </h2>
             <div className="mt-8 md:mt-10 flex items-center justify-center gap-x-6">
-              <SearchBar countries={countries} />
+              <SearchBar
+                countries={countries}
+                isLoading={isLoading}
+                error={error}
+              />
             </div>
           </div>
         </div>

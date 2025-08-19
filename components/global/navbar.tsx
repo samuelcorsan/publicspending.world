@@ -17,7 +17,6 @@ export function Navbar({ rankingTopics, hideAbout }: NavbarProps) {
   const menuItems = [
     { name: "Home", href: "/" },
     ...(!rankingTopics ? [{ name: "Rankings", href: "/ranking" }] : []),
-    { name: "Compare", href: "/compare" },
     ...(!hideAbout
       ? [
           {
